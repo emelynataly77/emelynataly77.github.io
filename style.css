@@ -1,0 +1,23 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #fefefe;
+  color: #333;
+  line-height: 1.6;
+}
+h1, h2, h3 {
+  color: #2c3e50;
+}
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  margin: 20px 0;
+  max-width: 100%;
+}

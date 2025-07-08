@@ -1,5 +1,6 @@
 ---
 title: Emely Nataly | Data Analytics Portfolio
+layout: default
 ---
 
 # Emely Nataly  

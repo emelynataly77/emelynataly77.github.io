@@ -9,7 +9,7 @@ layout: default
 Welcome to my portfolio I am so glad you are here! I’m passionate about data-driven solutions.
 
 ## Projects
-- [Bellabeat Capstone Project](bellabeat.md)
+- [Bellabeat Capstone Project](projects/bellabeat.md)
 
 ## Contact
 - Email: yourname@email.com  

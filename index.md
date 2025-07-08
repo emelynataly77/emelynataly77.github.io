@@ -4,7 +4,7 @@ layout: default
 ---
 
 # Emely Nataly  
-**Data Analyst | Excel • SQL (BigQuery) • R**
+**Data Analyst | Excel • SQL (BigQuery) • R • Tableau**
 
 Welcome to my portfolio I am so glad you are here! Below are my projects. 
 

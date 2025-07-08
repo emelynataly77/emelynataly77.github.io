@@ -1,26 +1,12 @@
 ---
 title: Emely Nataly | Data Analytics Portfolio
+layout: default
 ---
 
-# Emely Nataly
+# Emely Nataly  
+**Data Analyst | Excel • SQL (BigQuery) • R**
 
-## Data Analyst | Excel • SQL (BigQuery) • R
-
-Welcome to my portfolio I am so happy you are here! I focus on data cleaning, exploration, and visualization.
-
-### Skills
-
-- Data Cleaning & Transformation (Excel, R, SQL/BigQuery)  
-- Data Visualization & Reporting  
-- Statistical Analysis & Data Modeling  
-
-### Featured Projects
-
-- [Bellabeat Capstone Project](projects/bellabeat.md)
-
----
-
-Feel free to explore my code and datasets in the projects section!
+Welcome to my portfolio I am so glad you are here! I’m passionate about data-driven solutions.
 
 ## Projects
 - [Bellabeat Capstone Project](bellabeat.md)
@@ -29,3 +15,7 @@ Feel free to explore my code and datasets in the projects section!
 - Email: yourname@email.com  
 - GitHub: [github.com/emelynataly77](https://github.com/emelynataly77)  
 - LinkedIn: [linkedin.com/in/YOUR-LINKEDIN](https://linkedin.com/in/YOUR-LINKEDIN)
+
+Feel free to explore my code and datasets in the projects section!
+
+

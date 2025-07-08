@@ -6,7 +6,7 @@ layout: default
 # Emely Nataly  
 **Data Analyst | Excel • SQL (BigQuery) • R**
 
-Welcome to my portfolio! Below are my projects.
+Welcome to my portfolio I am so glad you are here! Below are my projects. 
 
 ## Projects
 - [Bellabeat Capstone Project](bellabeat.md)

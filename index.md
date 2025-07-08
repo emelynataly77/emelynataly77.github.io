@@ -21,3 +21,11 @@ Welcome to my portfolio I am so happy you are here! I focus on data cleaning, ex
 ---
 
 Feel free to explore my code and datasets in the projects section!
+
+## Projects
+- [Bellabeat Capstone Project](bellabeat.md)
+
+## Contact
+- Email: yourname@email.com  
+- GitHub: [github.com/emelynataly77](https://github.com/emelynataly77)  
+- LinkedIn: [linkedin.com/in/YOUR-LINKEDIN](https://linkedin.com/in/YOUR-LINKEDIN)

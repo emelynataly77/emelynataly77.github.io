@@ -6,12 +6,12 @@ layout: default
 # Emely Nataly  
 **Data Analyst | Excel • SQL (BigQuery) • R**
 
-Welcome to my portfolio! I’m a data analyst with hands-on experience in data cleaning, exploration, and visualization using Excel, SQL, and RStudio. Below are my featured projects.
+Welcome to my portfolio! Below are my projects.
 
-## 📁 Projects
-- [🔍 Bellabeat Capstone Project](bellabeat.md)
+## Projects
+- [Bellabeat Capstone Project](bellabeat.md)
 
-## 📬 Contact
-- Email: yourname@email.com  
-- GitHub: [github.com/emelynataly77](https://github.com/emelynataly77)  
+## Contact
+- Email: yourname@email.com
+- GitHub: [github.com/emelynataly77](https://github.com/emelynataly77)
 - LinkedIn: [linkedin.com/in/YOUR-LINKEDIN](https://linkedin.com/in/YOUR-LINKEDIN)

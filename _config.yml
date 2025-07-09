@@ -1,2 +1,11 @@
 theme: jekyll-theme-slate
 title: Emely Pineda | Data Analytics Portfolio
+nav:
+  - title: "Home"
+    url: /
+  - title: "Projects"
+    url: /projects/
+  - title: "Acknowledgments"
+    url: /acknowledgments/
+  - title: "Data Files"
+    url: /projects/bellabeat.html#data-files

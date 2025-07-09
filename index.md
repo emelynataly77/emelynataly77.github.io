@@ -1,18 +1,18 @@
 ---
-title: Emely Nataly | Data Analytics Portfolio
+title: Emely Pineda | Data Analytics Portfolio
 layout: default
 ---
 
-# Emely Nataly  
-**Data Analyst | Excel • SQL (BigQuery) • R**
+# Emely Pineda  
+**Data Analyst | Excel • SQL • R • Tableau**
 
-Welcome to my portfolio I am so glad you are here! I’m passionate about data-driven solutions.
+Welcome to my portfolio I am so glad you are here! 
 
 ## Projects
 - [Bellabeat Capstone Project](projects/bellabeat.md)
 
 ## Contact
-- Email: yourname@email.com  
+- Email: yourname@email.co  
 - GitHub: [github.com/emelynataly77](https://github.com/emelynataly77)  
 - LinkedIn: [linkedin.com/in/YOUR-LINKEDIN](https://linkedin.com/in/YOUR-LINKEDIN)
 

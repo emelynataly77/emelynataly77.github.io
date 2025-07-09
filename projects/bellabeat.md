@@ -87,11 +87,11 @@ The table below represents the a summary of the cleaning completed on Excel:
 
 TABLE HERE/screenshot
 
-<li><span style="color:gray;">`dailyActivity_merged.csv` → ">`dailyActivity.csv`  
-<li><span style="color:gray;">`sleepDay_merged.csv` → ">`sleepDay.csv`  
-<li><span style="color:gray;">`hourlyCalories_merged.csv` → ">`hourlyCalories.csv`  
-<li><span style="color:gray;">`hourlyIntensities_merged.csv` → ">`hourlyIntensities.csv`  
-<li><span style="color:gray;">`hourlySteps_merged.csv` → ">`hourlySteps.csv`
+<li><span style="color:gray;">`dailyActivity_merged.csv` → ">`dailyActivity.csv`</span></li>  
+<li><span style="color:gray;">`sleepDay_merged.csv` → ">`sleepDay.csv`</span></li>  
+<li><span style="color:gray;">`hourlyCalories_merged.csv` → ">`hourlyCalories.csv`</span></li>  
+<li><span style="color:gray;">`hourlyIntensities_merged.csv` → ">`hourlyIntensities.csv`</span></li>  
+<li><span style="color:gray;">`hourlySteps_merged.csv` → ">`hourlySteps.csv`</span></li>
 
 I decided that the data was too intolerabel to continue processing on Excel other than the basic cleaning mentioned above. So I decided to move over to the BigQueary platform and continue analyzing the necessary data. Nonetheless, Excel was extremely helpful in providing the first step in cleaning the data. Overall, Excel provided a quick and straightforward way to clean the data during the early stages of processing. 
 

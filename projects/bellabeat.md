@@ -42,35 +42,35 @@ The following CSV files were used during data cleaning and analysis:
 
 <div style="display: flex; gap: 40px;">
 
-  <ul style="list-style-type: disc; color: gray;">
-    <li>'dailyActivity_merged.csv'</li>
-    <li>'dailyCalories_merged.csv'</li>
-    <li>'dailyIntensities_merged.csv'</li>
-    <li>'dailySteps_merged.csv'</li>
-    <li>'heartrate_seconds_merged.csv'</li>
-    <li>'hourlyCalories_merged.csv'</li>
+  <ul style="list-style-type: disc;">
+    <li><span style="color:gray;">'dailyActivity_merged.csv'</span></li>
+    <li><span style="color:gray;">'dailyCalories_merged.csv'</span></li>
+    <li><span style="color:gray;">'dailyIntensities_merged.csv'</span></li>
+    <li><span style="color:gray;">'dailySteps_merged.csv'</span></li>
+    <li><span style="color:gray;">'heartrate_seconds_merged.csv'</span></li>
+    <li><span style="color:gray;">'hourlyCalories_merged.csv'</span></li>
   </ul>
 
-  <ul style="list-style-type: disc; color: gray;">
-    <li>'hourlyIntensities_merged.csv'</li>
-    <li>'hourlySteps_merged.csv'</li>
-    <li>'minuteCaloriesNarrow_merged.csv'</li>
-    <li>'minuteCaloriesWide_merged.csv'</li>
-    <li>'minuteIntensitiesNarrow_merged.csv'</li>
-    <li>'minuteIntensitiesWide_merged.csv'</li>
+  <ul style="list-style-type: disc;">
+    <li><span style="color:gray;">'hourlyIntensities_merged.csv'</span></li>
+    <li><span style="color:gray;">'hourlySteps_merged.csv'</span></li>
+    <li><span style="color:gray;">'minuteCaloriesNarrow_merged.csv'</span></li>
+    <li><span style="color:gray;">'minuteCaloriesWide_merged.csv'</span></li>
+    <li><span style="color:gray;">'minuteIntensitiesNarrow_merged.csv'</span></li>
+    <li><span style="color:gray;">'minuteIntensitiesWide_merged.csv'</span></li>
   </ul>
 
-  <ul style="list-style-type: disc; color: gray;">
-    <li>'minuteMETsNarrow_merged.csv'</li>
-    <li>'minuteSleep_merged.csv'</li>
-    <li>'minuteStepsNarrow_merged.csv'</li>
-    <li>'minuteStepsWide_merged.csv'</li>
-    <li>'sleepDay_merged.csv'</li>
-    <li>'weightLogInfo_merged.csv'</li>
+  <ul style="list-style-type: disc;">
+    <li><span style="color:gray;">'minuteMETsNarrow_merged.csv'</span></li>
+    <li><span style="color:gray;">'minuteSleep_merged.csv'</span></li>
+    <li><span style="color:gray;">'minuteStepsNarrow_merged.csv'</span></li>
+    <li><span style="color:gray;">'minuteStepsWide_merged.csv'</span></li>
+    <li><span style="color:gray;">'sleepDay_merged.csv'</span></li>
+    <li><span style="color:gray;">'weightLogInfo_merged.csv'</span></li>
   </ul>
 
 </div>
-
+  
 ---
 
 # 🧼 Data Cleaning in Excel <a name="excel-cleaning"></a>

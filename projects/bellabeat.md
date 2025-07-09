@@ -75,26 +75,24 @@ The following CSV files were used during data cleaning and analysis:
 
 # 🧼 Data Cleaning in Excel <a name="excel-cleaning"></a>
 
-I began with raw .csv files from the FitBit Fitness Tracker dataset. After taking a look at the datasets I decided to include the following in the analysis: 
+I began with raw .csv files from the FitBit Fitness Tracker dataset. 
 
--Insert files here
-
-Files not included: 
-
--Insert files here 
-  give explanation in why not included
--Insert files here 
-  give explanation on why not included
-
-Moreover, in Excel I completed basic cleaning including: 
+I completed basic cleaning including: 
   
 - Removed null and duplicate values   
 - Converted `datetime` columns for compatibility into SQL 
-- Used =COUNTA(UNIQUE() function to compare user ID counts across datasets
+- Used =COUNTA(UNIQUE()) function to compare user ID counts across datasets
 
 The table below represents the a summary of the cleaning completed on Excel: 
 
 TABLE HERE/screenshot
+
+After taking a look at the datasets I decided to continue processing the following datasets:
+  <li><span style="color:gray;">'dailyActivity_merged.csv'</span></li>
+  <li><span style="color:gray;">'sleepDay_merged.csv'</span></li>
+  <li><span style="color:gray;">'hourlyCalories_merged.csv'</span></li>
+  <li><span style="color:gray;">'hourlyIntensities_merged.csv'</span></li>
+  <li><span style="color:gray;">'hourlySteps_merged.csv'</span></li> 
 
 I decided that the data was too intolerabel to continue processing on Excel other than the basic cleaning mentioned above. So I decided to move over to the BigQueary platform and continue analyzing the necessary data. Nonetheless, Excel was extremely helpful in providing the first step in cleaning the data. Overall, Excel provided a quick and straightforward way to clean the data during the early stages of processing. 
 NOTE: Moving forward I will be processing the data by grouping similiar datasets by datatype (e.g., daily, hourly) to help keep things organized and simple. 

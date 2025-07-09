@@ -39,7 +39,7 @@ To further explore Bellabeat, the case study prompt or the Kaggle dataset used f
 
 # 🧼 Data Cleaning in Excel <a name="excel-cleaning"></a>
 
-I began with raw `.csv` files from the FitBit Fitness Tracker dataset. After taking a look at the datasets I decided to include the following in the analysis: 
+I began with raw .csv files from the FitBit Fitness Tracker dataset. After taking a look at the datasets I decided to include the following in the analysis: 
 
 -Insert files here
 

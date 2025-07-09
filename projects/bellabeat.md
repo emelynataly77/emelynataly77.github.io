@@ -30,8 +30,9 @@ I myself am very passionate about heath and wellness and reaching ones fitness g
 To further explore Bellabeat, the case study prompt or the kaggle dataset used for this case study, please use the links provided below:
 
 - [Bellabeat Official Website](https://bellabeat.com/)
-- [Case Study PDF](https://github.com/emelynataly77/emelynataly77.github.io/raw/main/projects/bellabeat_case_study.pdf)
+- <a href="https://github.com/emelynataly77/emelynataly77.github.io/raw/main/projects/bellabeat_case_study.pdf" target="_blank">Case Study PDF</a>
 - [FitBit Dataset on Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit)
+
 
 ---
 

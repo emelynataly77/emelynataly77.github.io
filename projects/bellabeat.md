@@ -6,12 +6,12 @@ layout: default
 # Bellabeat Capstone Project <a name="the-top"></a>
 
 **Certificate:** Google Data Analytics  
-**Tools Used:** Excel, SQL (BigQuery), RStudio  
-**Skills Applied:** Data wrangling, SQL querying, statistical analysis, data visualization
+**Tools Used:** Excel, SQL, RStudio  
+**Skills Applied:** Data manipulation, statistical analysis, data visualization, critical thinking
 
 ---
 
-## 🧭 Navigation
+# 🧭 Navigation
 
 - [Overview](#overview)  
 - [Excel Cleaning](#excel-cleaning)  
@@ -19,19 +19,19 @@ layout: default
 - [RStudio Analysis](#rstudio-analysis)  
 - [Key Insights](#insights)  
 - [Recommendations](#recommendations)  
-- [📁 Files & Code](#files)
 
 ---
 
-## 🔍 Project Overview <a name="overview"></a>
+# 🔍 Project Overview <a name="overview"></a>
 
-This capstone project for the Google Data Analytics Certificate analyzes smart device fitness data to uncover insights for Bellabeat — a women’s wellness company.
-
-The goal was to explore how consumers use fitness devices and provide actionable recommendations to Bellabeat’s marketing strategy.
+This is the Google Data Analytics capstone project I chose to persue. This case study analyzes smart device fitness data to uncover insights for Bellabeat — a women’s wellness company.
+The goal was to explore how consumers use fitness devices and provide actionable recommendations to Bellabeat’s marketing strategy. 
+I myself am very passionate about heath and wellness and reaching ones fitness goals and deeply enjoyed working on this subject matter. 
+To further explore Bellabeat, the prompt or the dataset used for this case study please use the links provided below: 
 
 ---
 
-## 🧼 Data Cleaning in Excel <a name="excel-cleaning"></a>
+# 🧼 Data Cleaning in Excel <a name="excel-cleaning"></a>
 
 I began with raw `.csv` files from the FitBit Fitness Tracker dataset. In Excel, I:
 
@@ -44,7 +44,7 @@ This prepared the data for SQL processing.
 
 ---
 
-## 🧮 SQL Queries in BigQuery <a name="sql-queries"></a>
+# 🧮 SQL Queries in BigQuery <a name="sql-queries"></a>
 
 The cleaned Excel data was uploaded to BigQuery for querying. Example queries below:
 

@@ -18,7 +18,8 @@ layout: default
 - [SQL Queries](#sql-queries)  
 - [RStudio Analysis](#rstudio-analysis)  
 - [Key Insights](#insights)  
-- [Recommendations](#recommendations)  
+- [Recommendations](#recommendations)
+- [Acknowledgements](#Acknowledgements) 
 
 ---
 

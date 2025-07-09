@@ -39,20 +39,44 @@ To further explore Bellabeat, the case study prompt or the Kaggle dataset used f
 
 # 🧼 Data Cleaning in Excel <a name="excel-cleaning"></a>
 
-I began with raw `.csv` files from the FitBit Fitness Tracker dataset. In Excel, I:
+I began with raw `.csv` files from the FitBit Fitness Tracker dataset. After taking a look at the datasets I decided to include the following in the analysis: 
 
-- Removed null and duplicate values  
-- Renamed columns to consistent `snake_case` format  
-- Converted `datetime` columns for compatibility  
-- Manually inspected entries for anomalies
+-Insert files here
 
-This prepared the data for SQL processing.
+Files not included: 
+
+-Insert files here 
+  give explanation in why not included
+-Insert files here 
+  give explanation on why not included
+
+Moreover, in Excel I completed basic cleaning including: 
+  
+- Removed null and duplicate values   
+- Converted `datetime` columns for compatibility into SQL 
+- Used =COUNTA(UNIQUE() function to compare user ID counts across datasets
+
+The table below represents the a summary of the cleaning completed on Excel: 
+
+TABLE HERE/screenshot
+
+I decided that the data was too intolerabel to continue processing on Excel other than the basic cleaning mentioned above. So I decided to move over to the BigQueary platform and continue analyzing the necessary data. Nonetheless, Excel was extremely helpful in providing the first step in cleaning the data. Overall, Excel provided a quick and straightforward way to clean the data during the early stages of processing. 
+NOTE: Moving forward I will be processing the data by grouping similiar datasets by datatype (e.g., daily, hourly) to help keep things organized and simple. 
+NOTE: After cleaning the proper data on excel the files were saved without the unnecessary "merged" title. For example 'dailyCalories_merged' was changed to 'dailyCalories' and so on. 
 
 ---
 
 # 🧮 SQL Queries in BigQuery <a name="sql-queries"></a>
 
-The cleaned Excel data was uploaded to BigQuery for querying. Example queries below:
+The dataets I decided to upload into BigQuery were: 
+
+-Insert file name here
+  give example why this was included 
+
+I checked whether a smooth upload was successful using the a few quick queries: 
+
+The new merged daily file: "" can now be uploaded into RStudio to further analyze the data. 
+NOTE: I named this file 'dailyMerged.csv' I kept the 'merged' wordage here because that is more representative of the data (which we merged) 
 
 ```sql
 -- Total steps per user per day
@@ -65,8 +89,3 @@ ORDER BY activityDate;
 SELECT Id, AVG(Calories) AS avg_calories
 FROM daily_activity
 GROUP BY Id;
-
-
----
-
-#  Acknowledgements 

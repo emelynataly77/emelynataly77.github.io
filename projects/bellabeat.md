@@ -34,6 +34,42 @@ To further explore Bellabeat, the case study prompt or the Kaggle dataset used f
 - <a href="https://github.com/emelynataly77/emelynataly77.github.io/raw/main/projects/bellabeat_case_study.pdf" target="_blank">Case Study PDF</a>
 - [FitBit Dataset on Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit)
 
+---
+
+## Data Files
+
+The following CSV files were used during data cleaning and analysis:
+
+<div style="display: flex; gap: 40px;">
+
+  <ul style="list-style-type: disc; color: gray;">
+    <li>dailyActivity_merged.csv</li>
+    <li>dailyCalories_merged.csv</li>
+    <li>dailyIntensities_merged.csv</li>
+    <li>dailySteps_merged.csv</li>
+    <li>heartrate_seconds_merged.csv</li>
+    <li>hourlyCalories_merged.csv</li>
+  </ul>
+
+  <ul style="list-style-type: disc; color: gray;">
+    <li>hourlyIntensities_merged.csv</li>
+    <li>hourlySteps_merged.csv</li>
+    <li>minuteCaloriesNarrow_merged.csv</li>
+    <li>minuteCaloriesWide_merged.csv</li>
+    <li>minuteIntensitiesNarrow_merged.csv</li>
+    <li>minuteIntensitiesWide_merged.csv</li>
+  </ul>
+
+  <ul style="list-style-type: disc; color: gray;">
+    <li>minuteMETsNarrow_merged.csv</li>
+    <li>minuteSleep_merged.csv</li>
+    <li>minuteStepsNarrow_merged.csv</li>
+    <li>minuteStepsWide_merged.csv</li>
+    <li>sleepDay_merged.csv</li>
+    <li>weightLogInfo_merged.csv</li>
+  </ul>
+
+</div>
 
 ---
 

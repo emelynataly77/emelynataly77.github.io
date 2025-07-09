@@ -2,47 +2,60 @@
 title: Bellabeat Capstone – Full Analysis
 layout: default
 ---
-# 📊 Bellabeat Capstone – Full Project Analysis
 
-**Certificate:** Google Data Analytics Capstone  
+# Bellabeat Capstone Project <a name="the-top"></a>
+
+**Certificate:** Google Data Analytics  
 **Tools Used:** Excel, SQL (BigQuery), RStudio  
-**Skills Applied:** Data cleaning, transformation, SQL querying, statistical analysis, data visualization
+**Skills Applied:** Data wrangling, SQL querying, statistical analysis, data visualization
 
 ---
 
-## 📝 Project Prompt
+## 🧭 Navigation
 
-Analyze smart device usage data to help Bellabeat, a high-tech wellness company for women, gain insights into how users use their smart devices and how that can guide marketing strategy.
-
-**Project Goal:** Provide actionable recommendations for how Bellabeat can improve its product and user engagement.
-
----
-
-## 🧼 Step 1: Data Cleaning in Excel
-
-Before any analysis, I manually inspected the raw `.csv` files in Excel to:
-
-- Remove rows with null/NA values
-- Standardize column names and formats (e.g., `snake_case`)
-- Convert date/time columns into consistent formats
-- Filter out duplicate or irrelevant entries
-
-This allowed for clean and structured input when importing into SQL.
+- [Overview](#overview)  
+- [Excel Cleaning](#excel-cleaning)  
+- [SQL Queries](#sql-queries)  
+- [RStudio Analysis](#rstudio-analysis)  
+- [Key Insights](#insights)  
+- [Recommendations](#recommendations)  
+- [📁 Files & Code](#files)
 
 ---
 
-## 🧮 Step 2: SQL Queries in BigQuery
+## 🔍 Project Overview <a name="overview"></a>
 
-I imported the cleaned data into BigQuery to run aggregation and filtering queries. Below are example code snippets:
+This capstone project for the Google Data Analytics Certificate analyzes smart device fitness data to uncover insights for Bellabeat — a women’s wellness company.
+
+The goal was to explore how consumers use fitness devices and provide actionable recommendations to Bellabeat’s marketing strategy.
+
+---
+
+## 🧼 Data Cleaning in Excel <a name="excel-cleaning"></a>
+
+I began with raw `.csv` files from the FitBit Fitness Tracker dataset. In Excel, I:
+
+- Removed null and duplicate values  
+- Renamed columns to consistent `snake_case` format  
+- Converted `datetime` columns for compatibility  
+- Manually inspected entries for anomalies
+
+This prepared the data for SQL processing.
+
+---
+
+## 🧮 SQL Queries in BigQuery <a name="sql-queries"></a>
+
+The cleaned Excel data was uploaded to BigQuery for querying. Example queries below:
 
 ```sql
--- Total steps by day
-SELECT activityDate, SUM(TotalSteps) AS total_steps
+-- Total steps per user per day
+SELECT Id, activityDate, SUM(TotalSteps) AS daily_steps
 FROM daily_activity
-GROUP BY activityDate
+GROUP BY Id, activityDate
 ORDER BY activityDate;
 
--- Average calories by user
+-- Average calories burned
 SELECT Id, AVG(Calories) AS avg_calories
 FROM daily_activity
 GROUP BY Id;

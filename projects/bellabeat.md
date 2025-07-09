@@ -27,7 +27,11 @@ layout: default
 This is the Google Data Analytics capstone project I chose to persue. This case study analyzes smart device fitness data to uncover insights for Bellabeat — a women’s wellness company.
 The goal was to explore how consumers use fitness devices and provide actionable recommendations to Bellabeat’s marketing strategy. 
 I myself am very passionate about heath and wellness and reaching ones fitness goals and deeply enjoyed working on this subject matter. 
-To further explore Bellabeat, the prompt or the dataset used for this case study please use the links provided below: 
+To further explore Bellabeat, the prompt or the dataset used for this case study, please use the links provided below:
+
+- [Bellabeat Official Website](https://bellabeat.com/)
+- [Case Study PDF](https://github.com/emelynataly77/emelynataly77.github.io/raw/main/projects/bellabeat_case_study.pdf)
+- [FitBit Dataset on Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit)
 
 ---
 

@@ -65,3 +65,8 @@ ORDER BY activityDate;
 SELECT Id, AVG(Calories) AS avg_calories
 FROM daily_activity
 GROUP BY Id;
+
+
+---
+
+#  Acknowledgements 

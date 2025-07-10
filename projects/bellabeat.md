@@ -406,3 +406,10 @@ ORDER BY login_count DESC;
 The resulting data file: <span style="color:gray;">'daily_Merged.csv'</span> can now be uploaded into RStudio to be further processed. 
 
 NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
+
+## 🖥️ rStudio Analysis <a name="rstudio-analysis"></a>
+
+This section covers the data cleaning, analysis, and visualization done in RStudio for the Bellabeat project.
+
+<!-- Add your rStudio analysis content here -->
+

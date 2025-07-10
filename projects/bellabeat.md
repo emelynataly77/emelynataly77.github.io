@@ -110,12 +110,14 @@ Many datasets were too large to process on excel. Additionally, there were a few
 <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
 
   <!-- ✅ Used Files -->
-  <ul style="flex: 1; min-width: 250px; max-width: 48%; margin-right: 2%;">
-    <li><span style="color:green;">`dailyActivity_merged.csv` → `dailyActivity.csv`</span></li>
-    <li><span style="color:green;">`sleepDay_merged.csv` → `sleepDay.csv`</span></li>
-    <li><span style="color:green;">`hourlyCalories_merged.csv` → `hourlyCalories.csv`</span></li>
-    <li><span style="color:green;">`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</span></li>
-    <li><span style="color:green;">`hourlySteps_merged.csv` → `hourlySteps.csv`</span></li>
+<ul style="flex: 1; min-width: 250px; max-width: 48%; margin-right: 2%;">
+  <li><span style="color:green; white-space: nowrap;">`dailyActivity_merged.csv` → `dailyActivity.csv`</span></li>
+  <li><span style="color:green; white-space: nowrap;">`sleepDay_merged.csv` → `sleepDay.csv`</span></li>
+  <li><span style="color:green; white-space: nowrap;">`hourlyCalories_merged.csv` → `hourlyCalories.csv`</span></li>
+  <li><span style="color:green; white-space: nowrap;">`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</span></li>
+  <li><span style="color:green; white-space: nowrap;">`hourlySteps_merged.csv` → `hourlySteps.csv`</span></li>
+</ul>
+
   </ul>
 
   <!-- ❌ Unused Files -->

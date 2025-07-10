@@ -106,39 +106,65 @@ The table below represents a summary of the cleaning completed on Excel:
 Many datasets were too large to process on excel. Additionally, there were a few datasets that lacked too much information to be helpful or provide much insights. Also, there were datasets that contained repetitive data and overlapped with other existing datasets. Those datasets were dropped from further exploration. 
 
 
-## Data Files
 
-The following CSV files were used during data cleaning and analysis:
-
-<div style="white-space: nowrap;">
-
-  <!-- ✅ Used Files -->
-  <ul style="display: inline-block; vertical-align: top; width: 45%; margin-right: 5%;">
-    <li><span style="color:green;">`dailyActivity_merged.csv` → `dailyActivity.csv`</span></li>
-    <li><span style="color:green;">`sleepDay_merged.csv` → `sleepDay.csv`</span></li>
-    <li><span style="color:green;">`hourlyCalories_merged.csv` → `hourlyCalories.csv`</span></li>
-    <li><span style="color:green;">`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</span></li>
-    <li><span style="color:green;">`hourlySteps_merged.csv` → `hourlySteps.csv`</span></li>
-  </ul>
-
-  <!-- ❌ Unused Files -->
-  <ul style="display: inline-block; vertical-align: top; width: 45%;">
-    <li><span style="color:red;">'dailyCalories_merged.csv'</span></li>
-    <li><span style="color:red;">'dailyIntensities_merged.csv'</span></li>
-    <li><span style="color:red;">'dailySteps_merged.csv'</span></li>
-    <li><span style="color:red;">'heartrate_seconds_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteCaloriesNarrow_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteCaloriesWide_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteIntensitiesNarrow_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteIntensitiesWide_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteMETsNarrow_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteSleep_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteStepsNarrow_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteStepsWide_merged.csv'</span></li>
-    <li><span style="color:red;">'weightLogInfo_merged.csv'</span></li>
-  </ul>
-
-</div>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 50%; text-align: left; color: green;">Cleaned Files</th>
+      <th style="width: 50%; text-align: left; color: red;">Files Not Used</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>dailyActivity_merged.csv</code></td>
+      <td><code>dailyCalories_merged.csv</code></td>
+    </tr>
+    <tr>
+      <td><code>hourlyCalories_merged.csv</code></td>
+      <td><code>dailyIntensities_merged.csv</code></td>
+    </tr>
+    <tr>
+      <td><code>hourlyIntensities_merged.csv</code></td>
+      <td><code>dailySteps_merged.csv</code></td>
+    </tr>
+    <tr>
+      <td><code>hourlySteps_merged.csv</code></td>
+      <td><code>heartrate_seconds_merged.csv</code></td>
+    </tr>
+    <tr>
+      <td><code>sleepDay_merged.csv</code></td>
+      <td><code>minuteCaloriesNarrow_merged.csv</code></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><code>minuteIntensitiesNarrow_merged.csv</code></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><code>minuteIntensitiesWide_merged.csv</code></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><code>minuteMETsNarrow_merged.csv</code></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><code>minuteSleep_merged.csv</code></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><code>minuteStepsNarrow_merged.csv</code></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><code>minuteStepsWide_merged.csv</code></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><code>weightLogInfo_merged.csv</code></td>
+    </tr>
+  </tbody>
+</table>
 
 
 

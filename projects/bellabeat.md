@@ -107,20 +107,36 @@ Many datasets were too large to process on excel. Additionally, there were a few
 
 ### Data Files Overview
 
-| <span style="color:green"><strong>Cleaned Files</strong></span> | <span style="color:red"><strong>Files Not Used</strong></span> |
-|---|---|
-| <span style="color:green">`dailyActivity_merged.csv`</span> | <span style="color:red">`dailyCalories_merged.csv`</span> |
-| <span style="color:green">`hourlyCalories_merged.csv`</span> | <span style="color:red">`dailyIntensities_merged.csv`</span> |
-| <span style="color:green">`hourlyIntensities_merged.csv`</span> | <span style="color:red">`dailySteps_merged.csv`</span> |
-| <span style="color:green">`hourlySteps_merged.csv`</span> | <span style="color:red">`heartrate_seconds_merged.csv`</span> |
-| <span style="color:green">`sleepDay_merged.csv`</span> | <span style="color:red">`minuteCaloriesNarrow_merged.csv`</span> |
-|  | <span style="color:red">`minuteIntensitiesNarrow_merged.csv`</span> |
-|  | <span style="color:red">`minuteIntensitiesWide_merged.csv`</span> |
-|  | <span style="color:red">`minuteMETsNarrow_merged.csv`</span> |
-|  | <span style="color:red">`minuteSleep_merged.csv`</span> |
-|  | <span style="color:red">`minuteStepsNarrow_merged.csv`</span> |
-|  | <span style="color:red">`minuteStepsWide_merged.csv`</span> |
-|  | <span style="color:red">`weightLogInfo_merged.csv`</span> |
+## Data Files
+
+The following CSV files were used during data cleaning and analysis:
+
+<ul>
+
+  <!-- ✅ Used & Cleaned Files (Green) -->
+  <li><span style="color:green;">`dailyActivity_merged.csv` → `dailyActivity.csv`</span></li>
+  <li><span style="color:green;">`sleepDay_merged.csv` → `sleepDay.csv`</span></li>
+  <li><span style="color:green;">`hourlyCalories_merged.csv` → `hourlyCalories.csv`</span></li>
+  <li><span style="color:green;">`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</span></li>
+  <li><span style="color:green;">`hourlySteps_merged.csv` → `hourlySteps.csv`</span></li>
+
+  <!-- ❌ Not Used Files (Red) -->
+  <li><span style="color:red;">'dailyCalories_merged.csv'</span></li>
+  <li><span style="color:red;">'dailyIntensities_merged.csv'</span></li>
+  <li><span style="color:red;">'dailySteps_merged.csv'</span></li>
+  <li><span style="color:red;">'heartrate_seconds_merged.csv'</span></li>
+  <li><span style="color:red;">'minuteCaloriesNarrow_merged.csv'</span></li>
+  <li><span style="color:red;">'minuteCaloriesWide_merged.csv'</span></li>
+  <li><span style="color:red;">'minuteIntensitiesNarrow_merged.csv'</span></li>
+  <li><span style="color:red;">'minuteIntensitiesWide_merged.csv'</span></li>
+  <li><span style="color:red;">'minuteMETsNarrow_merged.csv'</span></li>
+  <li><span style="color:red;">'minuteSleep_merged.csv'</span></li>
+  <li><span style="color:red;">'minuteStepsNarrow_merged.csv'</span></li>
+  <li><span style="color:red;">'minuteStepsWide_merged.csv'</span></li>
+  <li><span style="color:red;">'weightLogInfo_merged.csv'</span></li>
+
+</ul>
+
 
 
  After cleaning the proper data on excel the files were saved without the unnecessary "merged" title. For example 'dailyCalories_merged' was changed to 'dailyCalories' and so on.

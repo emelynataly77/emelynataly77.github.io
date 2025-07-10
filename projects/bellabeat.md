@@ -165,7 +165,9 @@ NOTE: Moving forward I will be processing the data by grouping similiar datasets
 The hourly datasets above were uploaded into BigQuery. I checked if a smooth upload was successful by using the a few quick queries: 
 
 ---
+
 Suucessful Upload Check 
+
 ---
 
 <!-- Add some CSS styles for collapsible code blocks -->
@@ -295,9 +297,6 @@ pre::-webkit-scrollbar-thumb:hover {
 </style>
 
 
-
-Below is an example of an SQL query embedded in a collapsible, styled code block.
-
 <details>
   <summary>Show SQL Query</summary>
   <pre><code class="language-sql">
@@ -321,10 +320,12 @@ ORDER BY login_count DESC;
 <li><span style="color:gray;">'dailySteps.csv'</span></li>
 <li><span style="color:gray;">'sleepDay.csv'</span></li>
 
+The daily datasets abover were uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below: 
  
 ---
-title: SQL Code Example
-layout: default
+
+Successful upload check
+
 ---
 
 <!-- Add some CSS styles for collapsible code blocks -->
@@ -380,9 +381,6 @@ pre::-webkit-scrollbar-thumb:hover {
 </style>
 
 
-
-Below is an example of an SQL query embedded in a collapsible, styled code block.
-
 <details>
   <summary>Show SQL Query</summary>
   <pre><code class="language-sql">
@@ -397,13 +395,7 @@ ORDER BY login_count DESC;
 
 ---
 
-You can add more `<details>` blocks for multiple queries, and they will each be collapsible and styled similarly.
 
-
--Insert file name here
-  give example why this was included 
-
-I checked whether a smooth upload was successful using the a few quick queries: 
 
 The new merged daily file: "" can now be uploaded into RStudio to further analyze the data. 
 NOTE: I named this file 'dailyMerged.csv' I kept the 'merged' wordage here because that is more representative of the data (which we merged) 

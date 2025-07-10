@@ -298,14 +298,18 @@ pre::-webkit-scrollbar-thumb:hover {
 
 <details>
   <summary>Show SQL Query</summary>
-  <pre><code class="language-sql">
--- Select user IDs and login counts
-SELECT user_id, COUNT(*) as login_count
-FROM user_logins
-WHERE login_date > '2025-01-01'
-GROUP BY user_id
-ORDER BY login_count DESC;
-  </code></pre>
+
+```sql
+SELECT A.Id, A.ActivityHour AS activity_hour, A.Calories, C.StepTotal AS step_total, I.TotalIntensity AS total_intensity, I.AverageIntensity AS average_intensity
+FROM `capstone-case-study-460717.Fitness_Tracker_Data.hourlycalories` A
+LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlysteps` C
+ON A.Id = C.Id
+AND A.ActivityHour = C.ActivityHour
+LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlyintensities` I
+ON A.Id = I.Id
+AND A.ActivityHour = C.ActivityHour
+```
+
 </details>
 
 ---

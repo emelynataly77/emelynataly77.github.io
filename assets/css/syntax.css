@@ -1,0 +1,7 @@
+/* syntax.css — minimal GitHub-style syntax highlighting */
+.highlight { background: #f8f8f8; padding: 1em; overflow-x: auto; border-radius: 6px; }
+.highlight .k   { color: #0086b3; font-weight: bold; }  /* keywords */
+.highlight .s   { color: #d14; }                         /* strings */
+.highlight .c   { color: #999988; font-style: italic; } /* comments */
+.highlight .n   { color: #333; }                         /* names/identifiers */
+.highlight .o   { color: #000; }                         /* operators */

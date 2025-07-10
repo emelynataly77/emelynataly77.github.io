@@ -103,7 +103,7 @@ The table below represents a summary of the cleaning completed on Excel:
 
 
 
-Many datasets were too large to process on excel. Additionally, there were a few datasets that lacked too much information to be helpful or provide much insights. Also, there were datasets that contained repetitive data and overlapped with other existing datasets. Those datasets were dropped from further exploration. 
+Many datasets were too large to process on excel and even too large to properly process on either Rstudio and BigQuery.  Additionally, there were a few datasets that were too inconsistent and incomplete to accurately deduct any type of analysis. Also, there were a ferw datasets that contained repetitive data and overlapped with other existing datasets. For example, dailyCalories_merged, dailyIntensities_merged adn dailySteps_merged overlapped with dailyActivity_merged which included all the information on those three files and then some. Therefore those three were dropped and only dailyActivity_merged would continue to be analyzed. Any datasets that met the criteria describes above were dropped from further exploration (red). Datasets that were eligible for proper processing were uplodaed into BigQueary and 
 
 
 
@@ -139,11 +139,10 @@ Many datasets were too large to process on excel. Additionally, there were a few
 
 
 
-
- After cleaning the proper data on excel the files were saved without the unnecessary "merged" title. For example 'dailyCalories_merged' was changed to 'dailyCalories' and so on.
+ After cleaning the proper data on excel, the files were saved without the unnecessary "merged" title. For example 'dailyCalories_merged' was changed to 'dailyCalories' and so on.
 I decided that the data was too intolerabel to continue processing on Excel other than the basic cleaning mentioned above. So I decided to move over to the BigQueary platform and continue analyzing the necessary data. Overall, Excel provided a quick and straightforward way to clean the data during the early stages of processing. 
 
-NOTE: Moving forward I will be processing the data by grouping similiar datasets by datatype (e.g., daily, hourly) to help keep things organized and simple. 
+NOTE: Moving forward I will be processing the data by grouping similiar datasets by their datatype (e.g., daily, hourly) to help keep things organized and straightforward. 
 
 ---
 

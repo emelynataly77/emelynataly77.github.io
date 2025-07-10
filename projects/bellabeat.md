@@ -85,7 +85,9 @@ I completed basic cleaning including:
 
 The table below represents the a summary of the cleaning completed on Excel: 
 
-![Excel Table Screenshot](https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Screenshot%20(67).png)
+
+![Excel Table Screenshot](https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Screenshot%20(69).png)
+
 
 
 <li><span style="color:gray;">`dailyActivity_merged.csv` → `dailyActivity.csv`</span></li>  

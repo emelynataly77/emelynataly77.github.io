@@ -299,7 +299,7 @@ pre::-webkit-scrollbar-thumb:hover {
 
 <details>
   <summary>Show SQL Query</summary>
-  <pre><code class="language-sql">
+
 ```sql
 SELECT A.Id, A.ActivityHour AS activity_hour, A.Calories, C.StepTotal AS step_total, I.TotalIntensity AS total_intensity, I.AverageIntensity AS average_intensity
 FROM `capstone-case-study-460717.Fitness_Tracker_Data.hourlycalories` A
@@ -309,8 +309,9 @@ AND A.ActivityHour = C.ActivityHour
 LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlyintensities` I
 ON A.Id = I.Id
 AND A.ActivityHour = C.ActivityHour
+
 ```
-</code></pre>
+
 </details>
 
 ---

@@ -36,7 +36,7 @@ To further explore Bellabeat, the case study prompt or the Kaggle dataset used f
 
 ---
 
-## Data Files
+## The Data 
 
 The following CSV files were used during data cleaning and analysis:
 
@@ -86,7 +86,12 @@ I completed basic cleaning including:
 The table below represents the a summary of the cleaning completed on Excel: 
 
 
+
+
+
 ![Excel Table Screenshot](https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Screenshot%20(69).png)
+
+
 
 
 

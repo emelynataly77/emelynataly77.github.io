@@ -38,7 +38,7 @@ To further explore Bellabeat, the case study prompt or the Kaggle dataset used f
 
 ### The Data 
 
-The following CSV files were used during data cleaning and analysis:
+The following .csv files were used during data cleaning and analysis:
 
 <div style="display: flex; gap: 40px;">
 
@@ -235,7 +235,6 @@ ORDER BY login_count DESC;
 ---
 
 Once I checked for a successful import of the hourly cleane dexcel file I focused on querying the data. Using BigQuery SQL I combined all three hourly datasets together. Keep in mind this must be done carefully as you dont want to create duplicate within the data. Therefore SQL is perfect to properly jpin the data. 
-
 The Query I used can be found in the code block below: 
 
 ---
@@ -309,6 +308,9 @@ ORDER BY login_count DESC;
 
 ---
 
+The resulting data file: <li><span style="color:gray;">'hourlyMerged.csv'</span></li> can now be uploaded into RStudio to be further processed. 
+
+NOTE: I named this file 'dailyMerged.csv' I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
 
 ### Daily/Sleep Data
 
@@ -319,12 +321,11 @@ ORDER BY login_count DESC;
 <li><span style="color:gray;">'sleepDay.csv'</span></li>
 
 The daily datasets abover were uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below: 
+
  
 ---
 
 Successful upload check
-
----
 
 <!-- Add some CSS styles for collapsible code blocks -->
 
@@ -394,18 +395,6 @@ ORDER BY login_count DESC;
 ---
 
 
+The resulting data file: <li><span style="color:gray;">'daily_Merged.csv'</span></li> can now be uploaded into RStudio to be further processed. 
 
-The new merged daily file: "" can now be uploaded into RStudio to further analyze the data. 
-NOTE: I named this file 'dailyMerged.csv' I kept the 'merged' wordage here because that is more representative of the data (which we merged) 
-
-```sql
--- Total steps per user per day
-SELECT Id, activityDate, SUM(TotalSteps) AS daily_steps
-FROM daily_activity
-GROUP BY Id, activityDate
-ORDER BY activityDate;
-
--- Average calories burned
-SELECT Id, AVG(Calories) AS avg_calories
-FROM daily_activity
-GROUP BY Id;
+NOTE: I named this file 'dailyMerged.csv' I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 

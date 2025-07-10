@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/assets/css/code.css">
+
 ---
 title: Bellabeat Capstone – Full Analysis
 layout: default

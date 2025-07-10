@@ -90,13 +90,13 @@ I completed basic cleaning including:
 - Converted `datetime` columns for compatibility into SQL 
 - Used =COUNTA(UNIQUE()) function to compare user ID counts across datasets
 
-The table below represents the a summary of the cleaning completed on Excel: 
+The table below represents a summary of the cleaning completed on Excel: 
 
 
 
 
 
-<img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Screenshot%20(69).png" alt="Excel Table Screenshot" width="93%">
+<img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Screenshot%20(69).png" alt="Excel Table Screenshot" width="92%">
 
 
 

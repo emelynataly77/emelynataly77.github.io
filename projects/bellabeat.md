@@ -416,7 +416,6 @@ This section covers the data cleaning, analysis, and visualization done in RStud
   <summary>Show Hourly Data R Code</summary>
 
 ```r
-# Example R code for Hourly Data analysis
 
 library(dplyr)
 hourly_data <- read.csv("hourly_data.csv")
@@ -428,4 +427,20 @@ hourly_summary <- hourly_data %>%
     avg_calories = mean(calories, na.rm = TRUE)
   )
 
-print(hourly_summary) 
+print(hourly_summary)
+
+### Daily/Sleep Data <a name="rstudio-daily-sleep-data"></a>
+
+<details>
+  <summary>Show Daily and Sleep Data R Code</summary>
+
+```r
+
+library(ggplot2)
+daily_sleep_data <- read.csv("daily_sleep_data.csv")
+
+ggplot(daily_sleep_data, aes(x = sleep_duration, y = calories_burned)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(title = "Sleep Duration vs Calories Burned")
+

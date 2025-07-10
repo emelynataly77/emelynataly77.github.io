@@ -106,21 +106,18 @@ The table below represents a summary of the cleaning completed on Excel:
 Many datasets were too large to process on excel. Additionally, there were a few datasets that lacked too much information to be helpful or provide much insights. Also, there were datasets that contained repetitive data and overlapped with other existing datasets. Those datasets were dropped from further exploration. 
 
 
-
 <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
 
-  <!-- ✅ Used Files -->
-<ul style="flex: 1; min-width: 250px; max-width: 48%; margin-right: 2%;">
-  <li><span style="color:green; white-space: nowrap;">`dailyActivity_merged.csv` → `dailyActivity.csv`</span></li>
-  <li><span style="color:green; white-space: nowrap;">`sleepDay_merged.csv` → `sleepDay.csv`</span></li>
-  <li><span style="color:green; white-space: nowrap;">`hourlyCalories_merged.csv` → `hourlyCalories.csv`</span></li>
-  <li><span style="color:green; white-space: nowrap;">`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</span></li>
-  <li><span style="color:green; white-space: nowrap;">`hourlySteps_merged.csv` → `hourlySteps.csv`</span></li>
-</ul>
-
+  <!-- ✅ Used Files (green, nowrap) -->
+  <ul style="flex: 1; min-width: 250px; max-width: 48%; margin-right: 2%;">
+    <li><span style="color:green; white-space: nowrap;">`dailyActivity_merged.csv` → `dailyActivity.csv`</span></li>
+    <li><span style="color:green; white-space: nowrap;">`sleepDay_merged.csv` → `sleepDay.csv`</span></li>
+    <li><span style="color:green; white-space: nowrap;">`hourlyCalories_merged.csv` → `hourlyCalories.csv`</span></li>
+    <li><span style="color:green; white-space: nowrap;">`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</span></li>
+    <li><span style="color:green; white-space: nowrap;">`hourlySteps_merged.csv` → `hourlySteps.csv`</span></li>
   </ul>
 
-  <!-- ❌ Unused Files -->
+  <!-- ❌ Unused Files (red) -->
   <ul style="flex: 1; min-width: 250px; max-width: 48%;">
     <li><span style="color:red;">`dailyCalories_merged.csv`</span></li>
     <li><span style="color:red;">`dailyIntensities_merged.csv`</span></li>

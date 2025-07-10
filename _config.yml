@@ -1,5 +1,6 @@
 theme: jekyll-theme-slate
 title: Emely Pineda | Data Analytics Portfolio
+
 nav:
   - title: "Home"
     url: /
@@ -9,3 +10,8 @@ nav:
     url: /acknowledgments/
   - title: "Data Files"
     url: /projects/bellabeat.html#data-files
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM

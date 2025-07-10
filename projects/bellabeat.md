@@ -107,10 +107,6 @@ Many datasets were too large to process on excel. Additionally, there were a few
 
 
 
-## Data Files
-
-The following CSV files were used during data cleaning and analysis:
-
 <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
 
   <!-- ✅ Used Files -->

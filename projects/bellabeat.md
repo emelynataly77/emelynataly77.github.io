@@ -166,9 +166,7 @@ The hourly datasets above were uploaded into BigQuery. I checked if a smooth upl
 
 ---
 
-Suucessful Upload Check 
-
----
+Sucessful Upload Check 
 
 <!-- Add some CSS styles for collapsible code blocks -->
 
@@ -238,11 +236,11 @@ ORDER BY login_count DESC;
 
 Once I checked for a successful import of the hourly cleane dexcel file I focused on querying the data. Using BigQuery SQL I combined all three hourly datasets together. Keep in mind this must be done carefully as you dont want to create duplicate within the data. Therefore SQL is perfect to properly jpin the data. 
 
-The Query I used an be found in the code blocki below: 
+The Query I used can be found in the code block below: 
 
 ---
 Merge the hourly datasets
----
+
 
 <!-- Add some CSS styles for collapsible code blocks -->
 

@@ -105,11 +105,6 @@ The table below represents a summary of the cleaning completed on Excel:
 
 Many datasets were too large to process on excel. Additionally, there were a few datasets that lacked too much information to be helpful or provide much insights. Also, there were datasets that contained repetitive data and overlapped with other existing datasets. Those datasets were dropped from further exploration. 
 
-### Data Files Overview
-
-## Data Files
-
-The following CSV files were used during data cleaning and analysis:
 
 ## Data Files
 

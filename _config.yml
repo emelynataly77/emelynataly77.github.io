@@ -16,3 +16,14 @@ highlighter: rouge
 
 kramdown:
   input: GFM
+nav:
+  - title: "Home"
+    url: /
+  - title: "Projects"
+    url: /projects/
+  - title: "Acknowledgments"
+    url: /acknowledgments/
+  - title: "Data Files"
+    url: /projects/bellabeat.html#data-files
+  - title: "🖥️ rStudio Analysis"
+    url: /projects/bellabeat.html#rstudio-analysis

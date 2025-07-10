@@ -308,7 +308,7 @@ ORDER BY login_count DESC;
 
 ---
 
-The resulting data file: <li><span style="color:gray;">'hourlyMerged.csv'</span></li> can now be uploaded into RStudio to be further processed. 
+The resulting data file: <span style="color:gray;">'hourlyMerged.csv'</span> can now be uploaded into RStudio to be further processed. 
 
 NOTE: I named this file 'dailyMerged.csv' I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
 
@@ -395,6 +395,6 @@ ORDER BY login_count DESC;
 ---
 
 
-The resulting data file: <li><span style="color:gray;">'daily_Merged.csv'</span></li> can now be uploaded into RStudio to be further processed. 
+The resulting data file: <span style="color:gray;">'daily_Merged.csv'</span> can now be uploaded into RStudio to be further processed. 
 
 NOTE: I named this file 'dailyMerged.csv' I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 

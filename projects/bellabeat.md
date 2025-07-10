@@ -106,10 +106,14 @@ The table below represents a summary of the cleaning completed on Excel:
 Many datasets were too large to process on excel. Additionally, there were a few datasets that lacked too much information to be helpful or provide much insights. Also, there were datasets that contained repetitive data and overlapped with other existing datasets. Those datasets were dropped from further exploration. 
 
 
-<div style="display: flex; gap: 60px; flex-wrap: wrap;">
+## Data Files
 
-  <!-- ✅ Used & Cleaned Files (Green List) -->
-  <ul style="list-style-type: disc; padding: 0; margin: 0;">
+The following CSV files were used during data cleaning and analysis:
+
+<div style="white-space: nowrap;">
+
+  <!-- ✅ Used Files -->
+  <ul style="display: inline-block; vertical-align: top; width: 45%; margin-right: 5%;">
     <li><span style="color:green;">`dailyActivity_merged.csv` → `dailyActivity.csv`</span></li>
     <li><span style="color:green;">`sleepDay_merged.csv` → `sleepDay.csv`</span></li>
     <li><span style="color:green;">`hourlyCalories_merged.csv` → `hourlyCalories.csv`</span></li>
@@ -117,8 +121,8 @@ Many datasets were too large to process on excel. Additionally, there were a few
     <li><span style="color:green;">`hourlySteps_merged.csv` → `hourlySteps.csv`</span></li>
   </ul>
 
-  <!-- ❌ Not Used Files (Red List) -->
-  <ul style="list-style-type: disc; padding: 0; margin: 0;">
+  <!-- ❌ Unused Files -->
+  <ul style="display: inline-block; vertical-align: top; width: 45%;">
     <li><span style="color:red;">'dailyCalories_merged.csv'</span></li>
     <li><span style="color:red;">'dailyIntensities_merged.csv'</span></li>
     <li><span style="color:red;">'dailySteps_merged.csv'</span></li>

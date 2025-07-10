@@ -36,7 +36,7 @@ To further explore Bellabeat, the case study prompt or the Kaggle dataset used f
 
 ---
 
-## The Data 
+### The Data 
 
 The following CSV files were used during data cleaning and analysis:
 
@@ -157,15 +157,15 @@ NOTE: Moving forward I will be processing the data by grouping similiar datasets
 
 ### Hourly Data
 
--Insert file name here
-  give example why this was included 
+<li><span style="color:gray;">'hourlyCalories.csv'</span></li>
+<li><span style="color:gray;">'hourlySteps.csv'</span></li>
+<li><span style="color:gray;">'hourlyIntensities.csv'</span></li>
   
 
-I checked whether a smooth upload was successful using the a few quick queries: 
+The hourly datasets above were uploaded into BigQuery. I checked if a smooth upload was successful by using the a few quick queries: 
 
 ---
-title: SQL Code Example
-layout: default
+Suucessful Upload Check 
 ---
 
 <!-- Add some CSS styles for collapsible code blocks -->

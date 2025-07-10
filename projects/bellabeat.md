@@ -220,10 +220,6 @@ pre::-webkit-scrollbar-thumb:hover {
 }
 </style>
 
-
-
-Below is an example of an SQL query embedded in a collapsible, styled code block.
-
 <details>
   <summary>Show SQL Query</summary>
   <pre><code class="language-sql">
@@ -238,16 +234,12 @@ ORDER BY login_count DESC;
 
 ---
 
-You can add more `<details>` blocks for multiple queries, and they will each be collapsible and styled similarly.
+Once I checked for a successful import of the hourly cleane dexcel file I focused on querying the data. Using BigQuery SQL I combined all three hourly datasets together. Keep in mind this must be done carefully as you dont want to create duplicate within the data. Therefore SQL is perfect to properly jpin the data. 
 
-
-
-The new merged daily file: "" can now be uploaded into RStudio to further analyze the data. 
-NOTE: I named this file 'dailyMerged.csv' I kept the 'merged' wordage here because that is more representative of the data (which we merged) 
+The Query I used an be found in the code blocki below: 
 
 ---
-title: SQL Code Example
-layout: default
+Merge the hourly datasets
 ---
 
 <!-- Add some CSS styles for collapsible code blocks -->
@@ -320,11 +312,15 @@ ORDER BY login_count DESC;
 
 ---
 
-You can add more `<details>` blocks for multiple queries, and they will each be collapsible and styled similarly.
 
+### Daily/Sleep Data
 
+<li><span style="color:gray;">'dailyActivity.csv'</span></li>
+<li><span style="color:gray;">'dailyCalories.csv'</span></li>
+<li><span style="color:gray;">'dailyIntensities.csv'</span></li>
+<li><span style="color:gray;">'dailySteps.csv'</span></li>
+<li><span style="color:gray;">'sleepDay.csv'</span></li>
 
-### Daily Data
  
 ---
 title: SQL Code Example

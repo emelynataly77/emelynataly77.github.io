@@ -89,7 +89,8 @@ The table below represents the a summary of the cleaning completed on Excel:
 
 
 
-![Excel Table Screenshot](https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Screenshot%20(69).png)
+<img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Screenshot%20(69).png" alt="Excel Table Screenshot" width="93%">
+
 
 
 

@@ -103,7 +103,7 @@ The table below represents a summary of the cleaning completed on Excel:
 
 
 
-Many datasets were too large to process on excel and even too large to properly process on either Rstudio and BigQuery.  Additionally, there were a few datasets that were too inconsistent and incomplete to accurately deduct any type of analysis. Also, there were a ferw datasets that contained repetitive data and overlapped with other existing datasets. For example, dailyCalories_merged, dailyIntensities_merged adn dailySteps_merged overlapped with dailyActivity_merged which included all the information on those three files and then some. Therefore those three were dropped and only dailyActivity_merged would continue to be analyzed. Any datasets that met the criteria describes above were dropped from further exploration (red). Datasets that were eligible for proper processing were uplodaed into BigQueary and 
+Many datasets were too large to process on excel and even too large to properly process on either Rstudio and BigQuery.  Additionally, there were a few datasets that were too inconsistent and incomplete to accurately deduct any type of analysis. Also, there were a ferw datasets that contained repetitive data and overlapped with other existing datasets. For example, dailyCalories_merged, dailyIntensities_merged adn dailySteps_merged overlapped with dailyActivity_merged which included all the information on those three files and then some. Therefore those three were dropped and only dailyActivity_merged would continue to be analyzed. Any datasets that met the criteria describes above were dropped from further exploration (red). Datasets that were eligible for proper processing were uplodaed into BigQueary and further processed
 
 
 
@@ -147,13 +147,262 @@ Many datasets were too large to process on excel and even too large to properly 
 I decided that the data was too intolerabel to continue processing on Excel other than the basic cleaning mentioned above. So I decided to move over to the BigQueary platform and continue analyzing the necessary data. Overall, Excel provided a quick and straightforward way to clean the data during the early stages of processing. 
 
 
-NOTE: Moving forward I will be processing the data by grouping similiar datasets by their datatype (e.g., daily, hourly) to help keep things organized and straightforward. 
+NOTE: Moving forward I will be processing the data by grouping similiar datasets by their datatype (e.g., daily/sleep, hourly) to help keep things organized and straightforward. 
 
 ---
 
+
 # 🧮 SQL Queries in BigQuery <a name="sql-queries"></a>
 
-The dataets I decided to upload into BigQuery were: 
+
+### Hourly Data
+
+-Insert file name here
+  give example why this was included 
+  
+
+I checked whether a smooth upload was successful using the a few quick queries: 
+
+---
+title: SQL Code Example
+layout: default
+---
+
+<!-- Add some CSS styles for collapsible code blocks -->
+
+<style>
+details {
+  border: 1px solid #ccc;
+  padding: 12px 16px;
+  border-left: 5px solid #4CAF50; /* green sidebar */
+  background: #f9f9f9;
+  margin-bottom: 1em;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px #ddd;
+  font-family: 'Fira Mono', monospace;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+pre {
+  margin: 0;
+  background: #272822;
+  color: #f8f8f2;
+  padding: 12px;
+  overflow-x: auto;
+  border-radius: 4px;
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+/* Optional: style scrollbar inside code block */
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+pre::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+pre::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+pre::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+</style>
+
+
+
+Below is an example of an SQL query embedded in a collapsible, styled code block.
+
+<details>
+  <summary>Show SQL Query</summary>
+  <pre><code class="language-sql">
+-- Select user IDs and login counts
+SELECT user_id, COUNT(*) as login_count
+FROM user_logins
+WHERE login_date > '2025-01-01'
+GROUP BY user_id
+ORDER BY login_count DESC;
+  </code></pre>
+</details>
+
+---
+
+You can add more `<details>` blocks for multiple queries, and they will each be collapsible and styled similarly.
+
+
+
+The new merged daily file: "" can now be uploaded into RStudio to further analyze the data. 
+NOTE: I named this file 'dailyMerged.csv' I kept the 'merged' wordage here because that is more representative of the data (which we merged) 
+
+---
+title: SQL Code Example
+layout: default
+---
+
+<!-- Add some CSS styles for collapsible code blocks -->
+
+<style>
+details {
+  border: 1px solid #ccc;
+  padding: 12px 16px;
+  border-left: 5px solid #4CAF50; /* green sidebar */
+  background: #f9f9f9;
+  margin-bottom: 1em;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px #ddd;
+  font-family: 'Fira Mono', monospace;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+pre {
+  margin: 0;
+  background: #272822;
+  color: #f8f8f2;
+  padding: 12px;
+  overflow-x: auto;
+  border-radius: 4px;
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+/* Optional: style scrollbar inside code block */
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+pre::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+pre::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+pre::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+</style>
+
+
+
+Below is an example of an SQL query embedded in a collapsible, styled code block.
+
+<details>
+  <summary>Show SQL Query</summary>
+  <pre><code class="language-sql">
+-- Select user IDs and login counts
+SELECT user_id, COUNT(*) as login_count
+FROM user_logins
+WHERE login_date > '2025-01-01'
+GROUP BY user_id
+ORDER BY login_count DESC;
+  </code></pre>
+</details>
+
+---
+
+You can add more `<details>` blocks for multiple queries, and they will each be collapsible and styled similarly.
+
+
+
+### Daily Data
+ 
+---
+title: SQL Code Example
+layout: default
+---
+
+<!-- Add some CSS styles for collapsible code blocks -->
+
+<style>
+details {
+  border: 1px solid #ccc;
+  padding: 12px 16px;
+  border-left: 5px solid #4CAF50; /* green sidebar */
+  background: #f9f9f9;
+  margin-bottom: 1em;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px #ddd;
+  font-family: 'Fira Mono', monospace;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+pre {
+  margin: 0;
+  background: #272822;
+  color: #f8f8f2;
+  padding: 12px;
+  overflow-x: auto;
+  border-radius: 4px;
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+/* Optional: style scrollbar inside code block */
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+pre::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+pre::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+pre::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+</style>
+
+
+
+Below is an example of an SQL query embedded in a collapsible, styled code block.
+
+<details>
+  <summary>Show SQL Query</summary>
+  <pre><code class="language-sql">
+-- Select user IDs and login counts
+SELECT user_id, COUNT(*) as login_count
+FROM user_logins
+WHERE login_date > '2025-01-01'
+GROUP BY user_id
+ORDER BY login_count DESC;
+  </code></pre>
+</details>
+
+---
+
+You can add more `<details>` blocks for multiple queries, and they will each be collapsible and styled similarly.
+
 
 -Insert file name here
   give example why this was included 

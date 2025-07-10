@@ -86,7 +86,7 @@ I began with raw .csv files from the FitBit Fitness Tracker dataset.
 
 I completed basic cleaning including: 
   
-- Removed null and duplicate values   
+- Removed nulls, blanks, and duplicate values   
 - Converted `datetime` columns for compatibility into SQL 
 - Used =COUNTA(UNIQUE()) function to compare user ID counts across datasets
 
@@ -103,17 +103,18 @@ The table below represents a summary of the cleaning completed on Excel:
 
 
 
-<li><span style="color:gray;">`dailyActivity_merged.csv` → `dailyActivity.csv`</span></li>  
-<li><span style="color:gray;">`sleepDay_merged.csv` → `sleepDay.csv`</span></li>  
-<li><span style="color:gray;">`hourlyCalories_merged.csv` → `hourlyCalories.csv`</span></li>  
-<li><span style="color:gray;">`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</span></li>  
-<li><span style="color:gray;">`hourlySteps_merged.csv` → `hourlySteps.csv`</span></li>
+Many datasets were too large to process on excel. Additionally, there were a few datasets that lacked too much information to be helpful or provide much insights. Also, there were datasets that contained repetitive data and overlapped with other existing datasets. Those datasets were dropped from further exploration. 
 
-I decided that the data was too intolerabel to continue processing on Excel other than the basic cleaning mentioned above. So I decided to move over to the BigQueary platform and continue analyzing the necessary data. Nonetheless, Excel was extremely helpful in providing the first step in cleaning the data. Overall, Excel provided a quick and straightforward way to clean the data during the early stages of processing. 
+<li><span style="color:green;">`dailyActivity_merged.csv` → `dailyActivity.csv`</span></li>  
+<li><span style="color:green;">`sleepDay_merged.csv` → `sleepDay.csv`</span></li>  
+<li><span style="color:green;">`hourlyCalories_merged.csv` → `hourlyCalories.csv`</span></li>  
+<li><span style="color:green;">`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</span></li>  
+<li><span style="color:green;">`hourlySteps_merged.csv` → `hourlySteps.csv`</span></li>
+
+ After cleaning the proper data on excel the files were saved without the unnecessary "merged" title. For example 'dailyCalories_merged' was changed to 'dailyCalories' and so on.
+I decided that the data was too intolerabel to continue processing on Excel other than the basic cleaning mentioned above. So I decided to move over to the BigQueary platform and continue analyzing the necessary data. Overall, Excel provided a quick and straightforward way to clean the data during the early stages of processing. 
 
 NOTE: Moving forward I will be processing the data by grouping similiar datasets by datatype (e.g., daily, hourly) to help keep things organized and simple. 
-
-NOTE: After cleaning the proper data on excel the files were saved without the unnecessary "merged" title. For example 'dailyCalories_merged' was changed to 'dailyCalories' and so on. 
 
 ---
 

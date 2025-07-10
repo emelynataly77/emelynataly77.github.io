@@ -407,7 +407,7 @@ The resulting data file: <span style="color:gray;">'daily_Merged.csv'</span> can
 
 NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
 
-## 🖥️ rStudio Analysis <a name="rstudio-analysis"></a>
+## 🖥️ RStudio Analysis <a name="rstudio-analysis"></a>
 This section covers the data cleaning, analysis, and visualization done in RStudio for the Bellabeat project.
 
 ### Hourly Data <a name="rstudio-hourly-data"></a>
@@ -429,7 +429,8 @@ hourly_summary <- hourly_data %>%
 
 print(hourly_summary)
 
-### Daily/Sleep Data <a name="rstudio-daily-sleep-data"></a>
+### Daily Data <a name="rstudio-hourly-data"></a>
+
 
 <details>
   <summary>Show Daily and Sleep Data R Code</summary>

@@ -408,8 +408,24 @@ The resulting data file: <span style="color:gray;">'daily_Merged.csv'</span> can
 NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
 
 ## 🖥️ rStudio Analysis <a name="rstudio-analysis"></a>
-
 This section covers the data cleaning, analysis, and visualization done in RStudio for the Bellabeat project.
 
-<!-- Add your rStudio analysis content here -->
+### Hourly Data <a name="rstudio-hourly-data"></a>
 
+<details>
+  <summary>Show Hourly Data R Code</summary>
+
+```r
+# Example R code for Hourly Data analysis
+
+library(dplyr)
+hourly_data <- read.csv("hourly_data.csv")
+
+hourly_summary <- hourly_data %>%
+  group_by(activity_hour) %>%
+  summarise(
+    avg_steps = mean(steps, na.rm = TRUE),
+    avg_calories = mean(calories, na.rm = TRUE)
+  )
+
+print(hourly_summary) 

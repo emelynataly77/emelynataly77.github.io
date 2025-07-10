@@ -107,6 +107,8 @@ Many datasets were too large to process on excel and even too large to properly 
 
 
 
+
+
 <div style="display: flex; flex-wrap: wrap; gap: 40px;">
 
   <!-- ✅ Used Files -->
@@ -139,8 +141,11 @@ Many datasets were too large to process on excel and even too large to properly 
 
 
 
+
+
  After cleaning the proper data on excel, the files were saved without the unnecessary "merged" title. For example 'dailyCalories_merged' was changed to 'dailyCalories' and so on.
 I decided that the data was too intolerabel to continue processing on Excel other than the basic cleaning mentioned above. So I decided to move over to the BigQueary platform and continue analyzing the necessary data. Overall, Excel provided a quick and straightforward way to clean the data during the early stages of processing. 
+
 
 NOTE: Moving forward I will be processing the data by grouping similiar datasets by their datatype (e.g., daily, hourly) to help keep things organized and straightforward. 
 

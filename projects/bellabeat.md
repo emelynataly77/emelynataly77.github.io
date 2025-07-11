@@ -1,10 +1,6 @@
 <link rel="stylesheet" href="/assets/css/code.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
----
-title: Bellabeat Capstone – Full Analysis
-layout: default
----
 
 # Bellabeat Capstone Project <a name="the-top"></a>
 

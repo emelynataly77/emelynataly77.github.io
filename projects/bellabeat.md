@@ -167,148 +167,22 @@ The hourly datasets above were uploaded into BigQuery. I checked if a smooth upl
 
 Sucessful Upload Check 
 
-<!-- Add some CSS styles for collapsible code blocks -->
+### Hourly Data
 
-<style>
-details {
-  border: 1px solid #ccc;
-  padding: 12px 16px;
-  border-left: 5px solid #4CAF50; /* green sidebar */
-  background: #f9f9f9;
-  margin-bottom: 1em;
-  border-radius: 4px;
-  box-shadow: 1px 1px 5px #ddd;
-  font-family: 'Fira Mono', monospace;
-}
-
-summary {
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  user-select: none;
-  font-size: 1.1em;
-  color: #333;
-  margin-bottom: 8px;
-}
-
-pre {
-  margin: 0;
-  background: #272822;
-  color: #f8f8f2;
-  padding: 12px;
-  overflow-x: auto;
-  border-radius: 4px;
-  font-family: 'Fira Mono', monospace;
-  font-size: 0.95em;
-  line-height: 1.4;
-}
-
-/* Optional: style scrollbar inside code block */
-pre::-webkit-scrollbar {
-  height: 8px;
-}
-pre::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-pre::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-pre::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-</style>
+Analysis of calories and steps by hour...
 
 <details>
-  <summary>Show SQL Query</summary>
-  <pre><code class="language-sql">
--- Select user IDs and login counts
-SELECT user_id, COUNT(*) as login_count
-FROM user_logins
-WHERE login_date > '2025-01-01'
-GROUP BY user_id
-ORDER BY login_count DESC;
-  </code></pre>
-</details>
+<summary>Show R Code</summary>
 
----
+```r
 
-Once I checked for a successful import of the hourly cleane dexcel file I focused on querying the data. Using BigQuery SQL I combined all three hourly datasets together. Keep in mind this must be done carefully as you dont want to create duplicate within the data. Therefore SQL is perfect to properly jpin the data. 
-The Query I used can be found in the code block below: 
-
----
-Merge the hourly datasets
-
-
-<!-- Add some CSS styles for collapsible code blocks -->
-
-<style>
-details {
-  border: 1px solid #ccc;
-  padding: 12px 16px;
-  border-left: 5px solid #4CAF50; /* green sidebar */
-  background: #f9f9f9;
-  margin-bottom: 1em;
-  border-radius: 4px;
-  box-shadow: 1px 1px 5px #ddd;
-  font-family: 'Fira Mono', monospace;
-}
-
-summary {
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  user-select: none;
-  font-size: 1.1em;
-  color: #333;
-  margin-bottom: 8px;
-}
-
-pre {
-  margin: 0;
-  background: #272822;
-  color: #f8f8f2;
-  padding: 12px;
-  overflow-x: auto;
-  border-radius: 4px;
-  font-family: 'Fira Mono', monospace;
-  font-size: 0.95em;
-  line-height: 1.4;
-}
-
-/* Optional: style scrollbar inside code block */
-pre::-webkit-scrollbar {
-  height: 8px;
-}
-pre::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-pre::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-pre::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-</style>
-
-
-<details>
-  <summary>Show SQL Query</summary>
-
-```sql
-SELECT A.Id, A.ActivityHour AS activity_hour, A.Calories, C.StepTotal AS step_total, I.TotalIntensity AS total_intensity, I.AverageIntensity AS average_intensity
-FROM `capstone-case-study-460717.Fitness_Tracker_Data.hourlycalories` A
-LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlysteps` C
-ON A.Id = C.Id
-AND A.ActivityHour = C.ActivityHour
-LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlyintensities` I
-ON A.Id = I.Id
-AND A.ActivityHour = C.ActivityHour
-
+hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-%d")
 ```
 
 </details>
+
+
+ 
 
 ---
 

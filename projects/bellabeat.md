@@ -185,7 +185,7 @@ WHERE StepTotal IS NOT NULL;
 SELECT *
 FROM `bellabeat-case-study.Fitabase.hourlyCalories` AS calories
 JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
-ON calories.Id = steps.Id AND calories.ActivityHour = steps.ActivityHour;
+  ON calories.Id = steps.Id AND calories.ActivityHour = steps.ActivityHour;
 ```
 </details> 
 

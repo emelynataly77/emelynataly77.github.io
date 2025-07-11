@@ -3,8 +3,6 @@ layout: default
 title: Bellabeat Capstone Project
 ---
 
-<link rel="stylesheet" href="/assets/css/code.css">
-
 # Bellabeat Capstone Project <a name="the-top"></a>
 
 **Certificate:** Google Data Analytics  

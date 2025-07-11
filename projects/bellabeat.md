@@ -108,35 +108,40 @@ Many datasets were too large to process on excel and even too large to properly 
 
 
 
-<div style="display: flex; flex-wrap: wrap; gap: 40px;">
+<div style="display: flex; justify-content: space-between; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
 
-  <!-- ✅ Used Files -->
-  <ul style="flex: 1 1 300px; margin: 0; padding-left: 20px; list-style-position: inside;">
-    <li><span style="color:green;">`dailyActivity_merged.csv` → `dailyActivity.csv`</span></li>
-    <li><span style="color:green;">`sleepDay_merged.csv` → `sleepDay.csv`</span></li>
-    <li><span style="color:green;">`hourlyCalories_merged.csv` → `hourlyCalories.csv`</span></li>
-    <li><span style="color:green;">`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</span></li>
-    <li><span style="color:green;">`hourlySteps_merged.csv` → `hourlySteps.csv`</span></li>
-  </ul>
+  <!-- Green bullet point list -->
+  <div style="flex: 1; min-width: 250px;">
+    <ul>
+      <li><span style="color:green;">`dailyActivity_merged.csv` → `dailyActivity.csv`</span></li>
+      <li><span style="color:green;">`sleepDay_merged.csv` → `sleepDay.csv`</span></li>
+      <li><span style="color:green;">`dailyCalories_merged.csv` → removed (duplicate info)</span></li>
+      <li><span style="color:green;">`dailyIntensities_merged.csv` → removed (duplicate info)</span></li>
+      <li><span style="color:green;">`dailySteps_merged.csv` → removed (duplicate info)</span></li>
+      <li><span style="color:green;">`heartrate_seconds_merged.csv` → removed (granularity not needed)</span></li>
+      <li><span style="color:green;">`minuteCaloriesNarrow_merged.csv` → removed (granularity not needed)</span></li>
+      <li><span style="color:green;">`minuteCaloriesWide_merged.csv` → removed (duplicate format)</span></li>
+      <li><span style="color:green;">`minuteIntensitiesNarrow_merged.csv` → removed (granularity not needed)</span></li>
+      <li><span style="color:green;">`minuteIntensitiesWide_merged.csv` → removed (duplicate format)</span></li>
+      <li><span style="color:green;">`minuteStepsNarrow_merged.csv` → removed (granularity not needed)</span></li>
+      <li><span style="color:green;">`minuteStepsWide_merged.csv` → removed (duplicate format)</span></li>
+    </ul>
+  </div>
 
-  <!-- ❌ Unused Files -->
-  <ul style="flex: 1 1 300px; margin: 0; padding-left: 20px; list-style-position: inside;">
-    <li><span style="color:red;">'dailyCalories_merged.csv'</span></li>
-    <li><span style="color:red;">'dailyIntensities_merged.csv'</span></li>
-    <li><span style="color:red;">'dailySteps_merged.csv'</span></li>
-    <li><span style="color:red;">'heartrate_seconds_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteCaloriesNarrow_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteCaloriesWide_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteIntensitiesNarrow_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteIntensitiesWide_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteMETsNarrow_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteSleep_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteStepsNarrow_merged.csv'</span></li>
-    <li><span style="color:red;">'minuteStepsWide_merged.csv'</span></li>
-    <li><span style="color:red;">'weightLogInfo_merged.csv'</span></li>
-  </ul>
+  <!-- Red bullet point list -->
+  <div style="flex: 1; min-width: 250px;">
+    <ul>
+      <li><span style="color:red;">Kept only most complete files</span></li>
+      <li><span style="color:red;">Removed duplicates and unnecessary granularity</span></li>
+      <li><span style="color:red;">Simplified the dataset to 3 core tables</span></li>
+      <li><span style="color:red;">Matched date/time formats for merging</span></li>
+      <li><span style="color:red;">Validated row counts and uniqueness</span></li>
+      <li><span style="color:red;">Cross-checked with documentation for accuracy</span></li>
+    </ul>
+  </div>
 
 </div>
+
 
 
 

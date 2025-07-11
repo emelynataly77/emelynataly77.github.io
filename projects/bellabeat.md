@@ -174,7 +174,7 @@ Analysis of calories and steps by hour...
 <details>
 <summary>Show R Code</summary>
 
-```r
+```sql
 
 hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-%d")
 ```
@@ -281,37 +281,37 @@ NOTE: I reintroduced the 'merged' wordage here because that is more representati
 This section covers the data cleaning, analysis, and visualization done in RStudio for the Bellabeat project.
 
 ### Hourly Data <a name="rstudio-hourly-data"></a>
+Analysis of calories and steps by hour...
 
 <details>
-  <summary>Show Hourly Data R Code</summary>
+<summary>Show R Code</summary>
 
 ```r
 
-library(dplyr)
-hourly_data <- read.csv("hourly_data.csv")
+hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-%d")
+```
 
-hourly_summary <- hourly_data %>%
-  group_by(activity_hour) %>%
-  summarise(
-    avg_steps = mean(steps, na.rm = TRUE),
-    avg_calories = mean(calories, na.rm = TRUE)
-  )
+</details>
 
-print(hourly_summary)
+#### Daily/Sleep Data
 
-### Daily Data <a name="rstudio-hourly-data"></a>
+Exploration of daily activity and sleep patterns...
 
+### Daily/Sleep Data
+
+Exploration of daily activity and sleep patterns...
 
 <details>
-  <summary>Show Daily and Sleep Data R Code</summary>
+<summary>Show R Code</summary>
 
 ```r
 
-library(ggplot2)
-daily_sleep_data <- read.csv("daily_sleep_data.csv")
+dailyActivity1 <- dailyActivity %>%
+  select(Id, ActivityDate, TotalSteps, TotalDistance, Calories)
 
-ggplot(daily_sleep_data, aes(x = sleep_duration, y = calories_burned)) +
-  geom_point() +
-  geom_smooth(method = "lm") +
-  labs(title = "Sleep Duration vs Calories Burned")
 
+sleepDay_clean <- sleepDay %>%
+  select(Id, SleepDay, TotalSleepRecords, TotalMinutesAsleep, TotalTimeInBed)
+```
+
+</details>

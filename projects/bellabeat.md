@@ -109,7 +109,7 @@ Many datasets were too large to process on excel and even too large to properly 
 
 
 <ul>
-  <!-- ✅ Green merged files with arrows -->
+  <!-- ✅ Green merged & renamed files -->
   <li><span style="color:green;">`hourlyCalories_merged.csv` → `hourlyCalories.csv`</span></li>
   <li><span style="color:green;">`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</span></li>
   <li><span style="color:green;">`hourlySteps_merged.csv` → `hourlySteps.csv`</span></li>
@@ -118,7 +118,7 @@ Many datasets were too large to process on excel and even too large to properly 
 </ul>
 
 <ul>
-  <!-- ❌ Red files that were NOT used (13 total) -->
+  <!-- ❌ Red unused or unrenamed files -->
   <li><span style="color:red;">`dailyCalories_merged.csv`</span></li>
   <li><span style="color:red;">`dailyIntensities_merged.csv`</span></li>
   <li><span style="color:red;">`dailySteps_merged.csv`</span></li>
@@ -133,6 +133,7 @@ Many datasets were too large to process on excel and even too large to properly 
   <li><span style="color:red;">`minuteStepsWide_merged.csv`</span></li>
   <li><span style="color:red;">`weightLogInfo_merged.csv`</span></li>
 </ul>
+
 
 
 

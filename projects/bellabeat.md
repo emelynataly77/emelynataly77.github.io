@@ -211,69 +211,21 @@ The daily datasets abover were uploaded into BigQuery. Again i quickly checked i
 
 Successful upload check
 
-<!-- Add some CSS styles for collapsible code blocks -->
 
-<style>
-details {
-  border: 1px solid #ccc;
-  padding: 12px 16px;
-  border-left: 5px solid #4CAF50; /* green sidebar */
-  background: #f9f9f9;
-  margin-bottom: 1em;
-  border-radius: 4px;
-  box-shadow: 1px 1px 5px #ddd;
-  font-family: 'Fira Mono', monospace;
-}
-
-summary {
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  user-select: none;
-  font-size: 1.1em;
-  color: #333;
-  margin-bottom: 8px;
-}
-
-pre {
-  margin: 0;
-  background: #272822;
-  color: #f8f8f2;
-  padding: 12px;
-  overflow-x: auto;
-  border-radius: 4px;
-  font-family: 'Fira Mono', monospace;
-  font-size: 0.95em;
-  line-height: 1.4;
-}
-
-/* Optional: style scrollbar inside code block */
-pre::-webkit-scrollbar {
-  height: 8px;
-}
-pre::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-pre::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-pre::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-</style>
-
-
-<details>
+  <details>
   <summary>Show SQL Query</summary>
-  <pre><code class="language-sql">
--- Select user IDs and login counts
-SELECT user_id, COUNT(*) as login_count
-FROM user_logins
-WHERE login_date > '2025-01-01'
-GROUP BY user_id
-ORDER BY login_count DESC;
-  </code></pre>
+
+```sql
+-- Example SQL query for Daily/Sleep data check
+SELECT *
+FROM `bellabeat-case-study.Fitabase.dailyActivity`
+WHERE TotalSteps IS NOT NULL;
+
+SELECT *
+FROM `bellabeat-case-study.Fitabase.sleepDay`
+WHERE TotalMinutesAsleep IS NOT NULL;
+```
+
 </details>
 
 ---
@@ -299,9 +251,6 @@ hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-
 
 </details>
 
-#### Daily/Sleep Data
-
-Exploration of daily activity and sleep patterns...
 
 ### Daily/Sleep Data
 

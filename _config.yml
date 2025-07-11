@@ -1,5 +1,14 @@
-theme: jekyll-theme-minima
 title: Emely Pineda | Data Analytics Portfolio
+theme: jekyll-theme-slate
+
+sass:
+  style: compressed
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
 
 nav:
   - title: "Home"
@@ -12,12 +21,3 @@ nav:
     url: /projects/bellabeat.html#data-files
   - title: "🖥️ rStudio Analysis"
     url: /projects/bellabeat.html#rstudio-analysis
-
-markdown: kramdown
-highlighter: rouge
-
-kramdown:
-  input: GFM
-
-sass:
-  style: compressed

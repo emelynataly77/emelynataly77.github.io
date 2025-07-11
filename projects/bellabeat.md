@@ -167,22 +167,28 @@ The hourly datasets above were uploaded into BigQuery. I checked if a smooth upl
 
 Sucessful Upload Check 
 
-### Hourly Data
-
-Analysis of calories and steps by hour...
 
 <details>
-<summary>Show R Code</summary>
+<summary>Show SQL Query</summary>
 
 ```sql
+-- Remove NULLs from calories and steps
+SELECT *
+FROM `bellabeat-case-study.Fitabase.hourlyCalories`
+WHERE Calories IS NOT NULL;
 
-hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-%d")
+SELECT *
+FROM `bellabeat-case-study.Fitabase.hourlySteps`
+WHERE StepTotal IS NOT NULL;
+
+-- Join hourly calories and steps
+SELECT *
+FROM `bellabeat-case-study.Fitabase.hourlyCalories` AS calories
+JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
+ON calories.Id = steps.Id AND calories.ActivityHour = steps.ActivityHour;
 ```
+</details> 
 
-</details>
-
-
- 
 
 ---
 

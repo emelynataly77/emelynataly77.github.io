@@ -25,14 +25,20 @@ html, body {
   letter-spacing: 1px;
 }
 
-/* Slightly left-aligned content */
+/* Default centered layout for all pages */
 main.container {
   flex: 1;
   max-width: 960px;
+  margin: auto;
   padding: 20px;
-  margin-left: 40px; /* Slight left alignment to match Bellabeat page */
+}
+
+/* Slightly left-aligned only on the home page */
+body.index main.container {
+  margin-left: 40px;
   margin-right: auto;
 }
+
 
 /* Fixed black footer at the bottom */
 .site-footer {

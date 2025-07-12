@@ -56,6 +56,16 @@ body.homepage main.container {
   margin-top: 30px;
 }
 
+/* Reduce spacing between name and subtitle */
+h1 + p {
+  margin-top: 4px;
+}
+
+/* Reduce spacing under "Projects" and "Contact" section titles */
+h2 {
+  margin-bottom: 8px;
+}
+
 /* Fixed black footer at the bottom */
 .site-footer {
   background-color: #2b2b2b;

@@ -158,9 +158,9 @@ NOTE: Moving forward I will be processing the data by grouping similiar datasets
 
 ### Hourly Data
 
-<li><span style="color:gray;">'hourlyCalories.csv'</span></li>
-<li><span style="color:gray;">'hourlySteps.csv'</span></li>
-<li><span style="color:gray;">'hourlyIntensities.csv'</span></li>
+- <span style="color:gray;">'hourlyCalories.csv'</span>
+- <span style="color:gray;">'hourlySteps.csv'</span>
+- <span style="color:gray;">'hourlyIntensities.csv'</span>
   
 
 The hourly datasets above were uploaded into BigQuery. I checked if a smooth upload was successful by using the a few quick queries: 

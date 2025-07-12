@@ -33,8 +33,9 @@ main.container {
   padding: 20px;
 }
 
-/* Slightly left-aligned only on the home page */
+/* Slightly left-aligned + wider layout only on the home page */
 body.homepage main.container {
+  max-width: 1100px;
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 20px;

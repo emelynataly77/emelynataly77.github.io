@@ -9,7 +9,6 @@ layout: default
 <p class="homepage-intro">
   Welcome to my portfolio! I’m so glad you’re here.  
   Welcome to where my curiosity meets data — here’s a bit of what I’ve done so far.
-<p class="homepage-outro">
   Feel free to explore my projects, code. Don't hesitate to reach out if you have questions or want to connect!
 </p>
 

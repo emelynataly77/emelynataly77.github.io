@@ -34,11 +34,10 @@ main.container {
 }
 
 /* Slightly left-aligned only on the home page */
-body.index main.container {
+body.homepage main.container {
   margin-left: 40px;
   margin-right: auto;
 }
-
 
 /* Fixed black footer at the bottom */
 .site-footer {
@@ -77,12 +76,4 @@ details {
   margin-bottom: 1em;
   border-radius: 4px;
   font-family: 'Fira Mono', monospace;
-}
-
-summary {
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1.1em;
-  color: #333;
-  margin-bottom: 8px;
 }

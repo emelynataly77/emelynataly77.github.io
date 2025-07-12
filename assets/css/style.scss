@@ -35,7 +35,7 @@ main.container {
 
 /* Homepage: wider layout for better balance */
 body.homepage main.container {
-  max-width: 1350px;
+  max-width: 1000px;
   margin: 0 auto;
   padding-left: 60px;
   padding-right: 60px;
@@ -50,10 +50,6 @@ body.homepage main.container {
 .homepage-intro {
   margin-top: 30px;
   margin-bottom: 30px;
-}
-
-.homepage-outro {
-  margin-top: 30px;
 }
 
 /* Reduce spacing between name and subtitle */

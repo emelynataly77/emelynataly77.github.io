@@ -37,10 +37,10 @@ main.container {
 body.homepage main.container {
   max-width: 1350px;     /* Expanded content width */
   margin: 0 auto;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
   box-sizing: border-box;
-  min-height: 75vh;   /* Makes content area at least 75% of viewport height */
+  min-height: 70vh;   /* Makes content area at least 75% of viewport height */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

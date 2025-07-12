@@ -200,11 +200,12 @@ NOTE: I reintroduced the 'merged' wordage here because that is more representati
 
 ### Daily/Sleep Data
 
-<li><span style="color:gray;">'dailyActivity.csv'</span></li>
-<li><span style="color:gray;">'dailyCalories.csv'</span></li>
-<li><span style="color:gray;">'dailyIntensities.csv'</span></li>
-<li><span style="color:gray;">'dailySteps.csv'</span></li>
-<li><span style="color:gray;">'sleepDay.csv'</span></li>
+
+- <span style="color:gray;">'dailyActivity.csv'</span>
+- <span style="color:gray;">'dailyCalories.csv'</span>
+- <span style="color:gray;">'dailyIntensities.csv'</span>
+- <span style="color:gray;">'dailySteps.csv'</span>
+- <span style="color:gray;">'sleepDay.csv'</span>
 
 The daily datasets abover were uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below: 
 

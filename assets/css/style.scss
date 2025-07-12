@@ -18,19 +18,20 @@ html, body {
   background-color: #2b2b2b;
   color: #fff;
   width: 100%;
-  padding: 40px 0;  /* Increased height */
+  padding: 40px 0;
   text-align: center;
-  font-size: 32px;   /* Larger text */
+  font-size: 32px;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-/* Center the main content */
+/* Slightly left-aligned content */
 main.container {
   flex: 1;
   max-width: 960px;
-  margin: auto;
   padding: 20px;
+  margin-left: 40px; /* Slight left alignment to match Bellabeat page */
+  margin-right: auto;
 }
 
 /* Fixed black footer at the bottom */
@@ -41,7 +42,7 @@ main.container {
   text-align: center;
   padding: 20px 0;
   font-size: 14px;
-  margin-top: auto; /* Ensures it sticks to the bottom */
+  margin-top: auto;
 }
 
 .site-footer a {

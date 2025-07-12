@@ -17,6 +17,6 @@ Welcome to my portfolio! I’m so glad you’re here. Welcome to where my curios
 - LinkedIn: [linkedin.com/in/YOUR-LINKEDIN](https://linkedin.com/in/YOUR-LINKEDIN)
 
 
-Feel free to explore my projects, code, and datasets — and don’t hesitate to reach out if you have questions or want to connect!
+Feel free to explore my projects, code. Don't hesitate to reach out if you have questions or want to connect!
 
 

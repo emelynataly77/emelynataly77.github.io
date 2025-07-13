@@ -194,6 +194,7 @@ JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
 
 
 
+
 ---
 
 The resulting data file: <span style="color:gray;">'hourlyMerged.csv'</span> can now be uploaded into RStudio to be further processed. 
@@ -217,15 +218,17 @@ The daily datasets abover were uploaded into BigQuery. Again i quickly checked i
 Successful upload check
 
 
-  <details>
-  <summary>Show SQL Query</summary>
+<details>
+<summary>Show SQL Query</summary>
 
-```sql
+<pre><code class="language-sql">
 -- Remove NULLs from calories and steps
-SELECT * FROM `bellabeat-case-study.Fitabase.hourlyCalories`
+SELECT *
+FROM `bellabeat-case-study.Fitabase.hourlyCalories`
 WHERE Calories IS NOT NULL;
 
-SELECT * FROM `bellabeat-case-study.Fitabase.hourlySteps`
+SELECT *
+FROM `bellabeat-case-study.Fitabase.hourlySteps`
 WHERE StepTotal IS NOT NULL;
 
 -- Join hourly calories and steps
@@ -233,9 +236,10 @@ SELECT *
 FROM `bellabeat-case-study.Fitabase.hourlyCalories` AS calories
 JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
   ON calories.Id = steps.Id AND calories.ActivityHour = steps.ActivityHour;
-```
+</code></pre>
 
 </details>
+
 
 ---
 
@@ -253,13 +257,11 @@ Analysis of calories and steps by hour...
 <details>
 <summary>Show R Code</summary>
 
-```r
-
+<pre><code class="language-r">
 hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-%d")
-```
+</code></pre>
 
 </details>
-
 
 ### Daily/Sleep Data
 
@@ -268,15 +270,13 @@ Exploration of daily activity and sleep patterns...
 <details>
 <summary>Show R Code</summary>
 
-```r
-
+<pre><code class="language-r">
 dailyActivity1 <- dailyActivity %>%
   select(Id, ActivityDate, TotalSteps, TotalDistance, Calories)
 
-
 sleepDay_clean <- sleepDay %>%
   select(Id, SleepDay, TotalSleepRecords, TotalMinutesAsleep, TotalTimeInBed)
-```
+</code></pre>
 
 </details>
 

@@ -219,24 +219,21 @@ Successful upload check
 
 
 
+<details>
 <summary>Show SQL Query</summary>
 
-{% highlight sql %}
--- Remove NULLs from calories and steps
-SELECT * FROM `bellabeat-case-study.Fitabase.hourlyCalories`
-WHERE Calories IS NOT NULL;
-
-SELECT * FROM `bellabeat-case-study.Fitabase.hourlySteps`
-WHERE StepTotal IS NOT NULL;
-
--- Join hourly calories and steps
+<pre><code class="language-sql">
+-- Remove NULLs from daily and sleep
 SELECT *
-FROM `bellabeat-case-study.Fitabase.hourlyCalories` AS calories
-JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
-  ON calories.Id = steps.Id AND calories.ActivityHour = steps.ActivityHour;
-{% endhighlight %}
+FROM `bellabeat-case-study.Fitabase.dailyActivity`
+WHERE TotalSteps IS NOT NULL;
 
+SELECT *
+FROM `bellabeat-case-study.Fitabase.sleepDay`
+WHERE TotalMinutesAsleep IS NOT NULL;
+</code></pre>
 
+</details>
 
 
 ---
@@ -253,11 +250,12 @@ This section covers the data cleaning, analysis, and visualization done in RStud
 Analysis of calories and steps by hour...
 
 
+<details>
 <summary>Show R Code</summary>
 
-{% highlight r %}
+<pre><code class="language-r">
 hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-%d")
-{% endhighlight %}
+</code></pre>
 
 </details>
 
@@ -266,12 +264,12 @@ hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-
 <details>
 <summary>Show R Code</summary>
 
-{% highlight r %}
+<pre><code class="language-r">
 dailyActivity1 <- dailyActivity %>%
   select(Id, ActivityDate, TotalSteps, TotalDistance, Calories)
 
 sleepDay_clean <- sleepDay %>%
   select(Id, SleepDay, TotalSleepRecords, TotalMinutesAsleep, TotalTimeInBed)
-{% endhighlight %}
+</code></pre>
 
-
+</details>

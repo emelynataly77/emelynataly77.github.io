@@ -11,31 +11,31 @@ title: Bellabeat Capstone Project
 
 ---
 
-# 🗭 Navigation
+# 🌝 Navigation
 
 - [Overview](#overview)  
 - [Excel Cleaning](#excel-cleaning)  
 - [SQL Queries](#sql-queries)  
 - [RStudio Analysis](#rstudio-analysis)  
 - [Key Insights](#insights)  
-- [Recommendations](#recommendations)  
-- [Acknowledgements](#Acknowledgements)
+- [Recommendations](#recommendations)
+- [Acknowledgements](#Acknowledgements) 
 
 ---
 
 # 🔍 Project Overview <a name="overview"></a>
 
-This is the Google Data Analytics capstone project I chose to pursue. This case study analyzes smart device fitness data to uncover insights for Bellabeat — a women’s wellness company. The goal was to explore how consumers use fitness devices and provide actionable recommendations to Bellabeat’s marketing strategy.
-
-To further explore Bellabeat, the case study prompt, or the Kaggle dataset used for this case study, please use the links provided below:
-
-- [Bellabeat Official Website](https://bellabeat.com/)
-- <a href="https://github.com/emelynataly77/emelynataly77.github.io/raw/main/projects/bellabeat_case_study.pdf" target="_blank">Case Study PDF</a>
-- [FitBit Dataset on Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit)
+This is the Google Data Analytics capstone project I chose to pursue...
 
 ---
 
-# 🤬️ SQL Queries in BigQuery <a name="sql-queries"></a>
+# 🧼 Data Cleaning in Excel <a name="excel-cleaning"></a>
+
+<!-- Cleaned section retained for brevity -->
+
+---
+
+# 🧲 SQL Queries in BigQuery <a name="sql-queries"></a>
 
 ### Hourly Data
 
@@ -120,3 +120,4 @@ sleepDay_clean <- sleepDay %>%
 ```
 
 </details>
+

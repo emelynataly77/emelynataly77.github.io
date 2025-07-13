@@ -10,7 +10,7 @@
   color: #24292e;
 }
 
-/* Rouge syntax token styles */
+/* Rouge syntax token styles for .highlight blocks */
 .highlight .k  { color: #d73a49; } /* keyword */
 .highlight .s  { color: #032f62; } /* string */
 .highlight .c  { color: #6a737d; font-style: italic; } /* comment */
@@ -20,3 +20,48 @@
 .highlight .mi { color: #005cc5; } /* number */
 .highlight .nf { color: #6f42c1; } /* function */
 .highlight .nb { color: #e36209; } /* built-in */
+
+/* Additional styling and syntax highlighting for code blocks 
+   that use <code class="language-sql"> or <code class="language-r"> directly */
+code.language-sql,
+code.language-r {
+  display: block;
+  padding: 1em;
+  background-color: #f6f8fa;
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 0.9em;
+  line-height: 1.45;
+  overflow-x: auto;
+  color: #24292e;
+}
+
+/* Token colors for SQL and R code blocks */
+code.language-sql .k,
+code.language-r .k { color: #d73a49; }     /* keyword */
+
+code.language-sql .s,
+code.language-r .s { color: #032f62; }     /* string */
+
+code.language-sql .c,
+code.language-r .c { color: #6a737d; font-style: italic; }     /* comment */
+
+code.language-sql .n,
+code.language-r .n { color: #005cc5; }     /* name */
+
+code.language-sql .o,
+code.language-r .o { color: #d73a49; }     /* operator */
+
+code.language-sql .p,
+code.language-r .p { color: #24292e; }     /* punctuation */
+
+code.language-sql .mi,
+code.language-r .mi { color: #005cc5; }     /* number */
+
+code.language-sql .nf,
+code.language-r .nf { color: #6f42c1; }     /* function */
+
+code.language-sql .nb,
+code.language-r .nb { color: #e36209; }     /* built-in */
+

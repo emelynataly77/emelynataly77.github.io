@@ -1,18 +1,31 @@
-.highlight pre, pre.highlight {
-  background-color: #f6f8fa;
+code.language-sql,
+code.language-r {
+  display: block;
   padding: 1em;
-  overflow-x: auto;
-  font-size: 0.9em;
-  border-radius: 6px;
+  background-color: #f6f8fa;
   border: 1px solid #d1d5da;
-  line-height: 1.45;
-  color: #24292e;
+  border-radius: 6px;
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 0.9em;
+  line-height: 1.45;
+  overflow-x: auto;
+  color: #24292e;
 }
 
-.highlight .k { color: #d73a49; }     /* keyword */
-.highlight .s { color: #032f62; }     /* string */
-.highlight .c { color: #6a737d; }     /* comment */
-.highlight .n { color: #005cc5; }     /* name */
-.highlight .o { color: #d73a49; }     /* operator */
-.highlight .p { color: #24292e; }     /* punctuation */
+code.language-sql .k,
+code.language-r .k { color: #d73a49; }     /* keyword */
+
+code.language-sql .s,
+code.language-r .s { color: #032f62; }     /* string */
+
+code.language-sql .c,
+code.language-r .c { color: #6a737d; }     /* comment */
+
+code.language-sql .n,
+code.language-r .n { color: #005cc5; }     /* name */
+
+code.language-sql .o,
+code.language-r .o { color: #d73a49; }     /* operator */
+
+code.language-sql .p,
+code.language-r .p { color: #24292e; }     /* punctuation */

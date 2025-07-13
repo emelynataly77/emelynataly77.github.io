@@ -216,7 +216,7 @@ The daily datasets abover were uploaded into BigQuery. Again i quickly checked i
 Successful upload check
 
 
- <details>
+<details>
 <summary>Show SQL Query</summary>
 
 {% highlight sql %}

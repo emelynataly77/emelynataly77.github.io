@@ -170,7 +170,6 @@ The hourly datasets above were uploaded into BigQuery. I checked if a smooth upl
 Sucessful Upload Check 
 
 
-<details>
 <summary>Show SQL Query</summary>
 
 {% highlight sql %}
@@ -189,8 +188,7 @@ FROM `bellabeat-case-study.Fitabase.hourlyCalories` AS calories
 JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
   ON calories.Id = steps.Id AND calories.ActivityHour = steps.ActivityHour;
 {% endhighlight %}
-
-</details> 
+ 
 
 
 ---
@@ -216,7 +214,7 @@ The daily datasets abover were uploaded into BigQuery. Again i quickly checked i
 Successful upload check
 
 
-<details>
+
 <summary>Show SQL Query</summary>
 
 {% highlight sql %}
@@ -234,7 +232,7 @@ JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
   ON calories.Id = steps.Id AND calories.ActivityHour = steps.ActivityHour;
 {% endhighlight %}
 
-</details>
+
 
 
 ---
@@ -250,7 +248,7 @@ This section covers the data cleaning, analysis, and visualization done in RStud
 ### Hourly Data <a name="rstudio-hourly-data"></a>
 Analysis of calories and steps by hour...
 
-<details>
+
 <summary>Show R Code</summary>
 
 {% highlight r %}
@@ -272,4 +270,4 @@ sleepDay_clean <- sleepDay %>%
   select(Id, SleepDay, TotalSleepRecords, TotalMinutesAsleep, TotalTimeInBed)
 {% endhighlight %}
 
-</details>
+

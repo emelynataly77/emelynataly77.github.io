@@ -108,3 +108,13 @@ details {
   line-height: 1.5;
 }
 
+/* --- Rouge Syntax Highlighting Colors --- */
+.highlight .k     { color: #d73a49; } /* keyword */
+.highlight .s     { color: #032f62; } /* string */
+.highlight .c     { color: #6a737d; font-style: italic; } /* comment */
+.highlight .n     { color: #005cc5; } /* name */
+.highlight .o     { color: #d73a49; } /* operator */
+.highlight .p     { color: #24292e; } /* punctuation */
+.highlight .mi    { color: #005cc5; } /* integer number */
+.highlight .nf    { color: #6f42c1; } /* function name */
+.highlight .nb    { color: #e36209; } /* built-in name */

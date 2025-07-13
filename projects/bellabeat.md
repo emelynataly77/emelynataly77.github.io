@@ -173,7 +173,7 @@ Sucessful Upload Check
 <details>
 <summary>Show SQL Query</summary>
 
-```sql
+<pre><code class="language-sql">
 -- Remove NULLs from calories and steps
 SELECT *
 FROM `bellabeat-case-study.Fitabase.hourlyCalories`
@@ -188,8 +188,10 @@ SELECT *
 FROM `bellabeat-case-study.Fitabase.hourlyCalories` AS calories
 JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
   ON calories.Id = steps.Id AND calories.ActivityHour = steps.ActivityHour;
-```
-</details> 
+</code></pre>
+
+</details>
+
 
 
 ---

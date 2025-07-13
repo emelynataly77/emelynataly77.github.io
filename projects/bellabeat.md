@@ -118,8 +118,8 @@ The following `.csv` files were used during data cleaning and analysis:
 <details>
 <summary>Show SQL Query</summary>
 
-```
-sql
+```sql
+
 -- Remove NULLs from calories and steps
 SELECT *
 FROM `bellabeat-case-study.Fitabase.hourlyCalories`
@@ -151,8 +151,8 @@ JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
 <details>
 <summary>Show SQL Query</summary>
 
-```
-sql
+```sql
+
 -- Remove NULLs from daily and sleep
 SELECT *
 FROM `bellabeat-case-study.Fitabase.dailyActivity`
@@ -174,8 +174,8 @@ WHERE TotalMinutesAsleep IS NOT NULL;
 <details>
 <summary>Show R Code</summary>
 
-```
-r
+```r
+
 hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-%d")
 ```
 
@@ -187,6 +187,7 @@ hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-
 <summary>Show R Code</summary>
 
 ```r
+
 dailyActivity1 <- dailyActivity %>%
   select(Id, ActivityDate, TotalSteps, TotalDistance, Calories)
 

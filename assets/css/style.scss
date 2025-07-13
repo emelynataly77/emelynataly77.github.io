@@ -102,3 +102,9 @@ details {
 }
 @import "{{ site.theme }}"; // keep if you're using the Jekyll theme
 @import "rouge-github";
+.highlight {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+

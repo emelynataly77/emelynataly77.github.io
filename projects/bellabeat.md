@@ -14,7 +14,7 @@ permalink: /bellabeat.html
 
 # 🧭 Navigation
 
-- [Overview](#overview)  
+- [Project Overview](#project-overview)  
 - [Excel Cleaning](#excel-cleaning)  
 - [SQL Queries](#sql-queries)  
 - [RStudio Analysis](#rstudio-analysis)  

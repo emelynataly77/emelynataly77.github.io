@@ -218,19 +218,16 @@ I used the following query to merge the hourly datasets:
 
 <pre><code class="language-sql">
 -- Remove NULLs from calories and steps
-SELECT *
-FROM `bellabeat-case-study.Fitabase.hourlyCalories`
-WHERE Calories IS NOT NULL;
-
-SELECT *
-FROM `bellabeat-case-study.Fitabase.hourlySteps`
-WHERE StepTotal IS NOT NULL;
-
--- Join hourly calories and steps
-SELECT *
-FROM `bellabeat-case-study.Fitabase.hourlyCalories` AS calories
-JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
-  ON calories.Id = steps.Id AND calories.ActivityHour = steps.ActivityHour;
+SELECT A.Id, A.ActivityHour AS activity_hour, A.Calories, C.StepTotal AS step_total, I.TotalIntensity AS total_intensity, I.AverageIntensity AS average_intensity,
+FROM `capstone-case-study-460717.Fitness_Tracker_Data.hourlycalories` A
+LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlysteps` C
+ON
+A.Id=C.Id
+AND A.ActivityHour=C.ActivityHour
+LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlyintensities` I
+ON
+A.Id=I.Id
+AND A.ActivityHour=C.ActivityHour
 </code></pre>
 
 </details>
@@ -273,10 +270,16 @@ FROM `bellabeat-case-study.Fitabase.hourlySteps`
 WHERE StepTotal IS NOT NULL;
 
 -- Join hourly calories and steps
-SELECT *
-FROM `bellabeat-case-study.Fitabase.hourlyCalories` AS calories
-JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
-  ON calories.Id = steps.Id AND calories.ActivityHour = steps.ActivityHour;
+SELECT A.Id, A.ActivityHour AS activity_hour, A.Calories, C.StepTotal AS step_total, I.TotalIntensity AS total_intensity, I.AverageIntensity AS average_intensity,
+FROM `capstone-case-study-460717.Fitness_Tracker_Data.hourlycalories` A
+LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlysteps` C
+ON
+A.Id=C.Id
+AND A.ActivityHour=C.ActivityHour
+LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlyintensities` I
+ON
+A.Id=I.Id
+AND A.ActivityHour=C.ActivityHour
 </code></pre>
 
 </details>
@@ -293,26 +296,19 @@ I used the following query to merge the hourly datasets:
 
 <pre><code class="language-sql">
 -- Remove NULLs from calories and steps
-SELECT *
-FROM `bellabeat-case-study.Fitabase.hourlyCalories`
-WHERE Calories IS NOT NULL;
-
-SELECT *
-FROM `bellabeat-case-study.Fitabase.hourlySteps`
-WHERE StepTotal IS NOT NULL;
-
--- Join hourly calories and steps
-SELECT *
-FROM `bellabeat-case-study.Fitabase.hourlyCalories` AS calories
-JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
-  ON calories.Id = steps.Id AND calories.ActivityHour = steps.ActivityHour;
+SELECT activity.Id, ActivityDate,TotalSteps, TotalDistance, TrackerDistance, LoggedActivitiesDistance, (VeryActiveDistance + ModeratelyActiveDistance) AS LongerDistance,(LightActiveDistance + SedentaryActiveDistance) AS ShorterDistance, (VeryActiveMinutes + FairlyActiveMinutes) AS HeavyActiveMinutes, (LightlyActiveMinutes + SedentaryMinutes) 
+  AS LightActiveMinutes, Calories, sleep.TotalSleepRecords, sleep.TotalMinutesAsleep,sleep.TotalTimeInBed
+FROM  `bellabeat-461300.fittracker.daily_activity` AS activity
+INNER JOIN  `bellabeat-461300.fittracker.sleep_day` AS sleep
+ON activity.Id = sleep.Id AND activity.ActivityDATE = sleep.SleepDay
 </code></pre>
 
 </details>
 
 <br>
 
-The resulting data file: <span style="color:gray;">'daily_Merged.csv'</span> can now be uploaded into RStudio to be further processed. 
+After merging the daily data files i peeked at the correlation coefficients  (r) on excel between the data, i found that sleep and non-active minutes had a somehwat negative correlation (-0.5869588). Suggesting, sleep has a somewhat stronger effect on if an individual will be active the following day. 
+The resulting merged data file: <span style="color:gray;">'daily_Merged.csv'</span> can now be uploaded into RStudio to be further processed. 
 
 NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
 

@@ -213,7 +213,6 @@ Next, I decided to combine the three hourly datasets mentioed above becasue they
 ---
 I used the following query to merge the hourly datasets:
 
-
 <details>
 <summary>Show SQL Query</summary>
 
@@ -284,6 +283,7 @@ JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
 
 
 The resulting data file: <span style="color:gray;">'daily_Merged.csv'</span> can now be uploaded into RStudio to be further processed. 
+
 NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
 
 # 🖥️ RStudio Analysis <a name="rstudio-analysis"></a>

@@ -90,6 +90,8 @@ I completed basic cleaning including:
 - Converted `datetime` columns for compatibility into SQL 
 - Used =COUNTA(UNIQUE()) function to compare user ID counts across datasets
 
+<br>
+
 The table below represents a summary of the cleaning completed on Excel: 
 
 
@@ -100,7 +102,7 @@ The table below represents a summary of the cleaning completed on Excel:
 
 
 
-
+<br>
 
 
 Many datasets were too large to process on excel and even too large to properly process on either Rstudio and BigQuery.  Additionally, there were a few datasets that were too inconsistent and incomplete to accurately deduct any type of analysis. Also, there were a ferw datasets that contained repetitive data and overlapped with other existing datasets. For example, dailyCalories_merged, dailyIntensities_merged adn dailySteps_merged overlapped with dailyActivity_merged which included all the information on those three files and then some. Therefore those three were dropped and only dailyActivity_merged would continue to be analyzed. Any datasets that met the criteria describes above were dropped from further exploration (red). Datasets that were eligible for proper processing were uplodaed into BigQueary and further processed

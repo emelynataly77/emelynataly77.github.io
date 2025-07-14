@@ -12,14 +12,15 @@ kramdown:
 
 nav:
   - title: "Overview"
-    url: "/projects/overview.html"
- - title: "Excel Cleaning"
-    url: "/projects/excel-cleaning.html"
+    url: "/overview.html"
+  - title: "Excel Cleaning"
+    url: "/excel-cleaning.html"
   - title: "SQL Queries"
-    url: "/projects/sql-queries.html"
+    url: "/sql-queries.html"
   - title: "RStudio Analysis"
-    url: "/projects/rstudio-analysis.html"
+    url: "/rstudio-analysis.html"
   - title: "Key Insights"
-    url: /Key Insights/
-  - title: "Acknowledgments"
-    url: /acknowledgments/
+    url: "/key-insights.html"
+  - title: "Acknowledgements"
+    url: "/acknowledgements.html"
+

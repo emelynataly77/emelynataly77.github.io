@@ -492,7 +492,7 @@ Looking at the graohs it becomes more clear that the beginning of the work week 
 ### Proposal
 I believe that bellbeat copany....insert proposal ideas an reasoning here
 
-# 🤝 Ackowledgements 
+# 🤝 Acknowledgements
 I would like to thank Ed Garcia for his guidance on RStudio 
   https://www.kaggle.com/code/edgarcia1/bellabeat-case-study-analysis-and-visualizations 
 I would like to thank Tom Leary for his guidance on grouping data by datatype

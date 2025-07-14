@@ -281,7 +281,36 @@ JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
 
 </details>
 
+<br> 
+Next, I decided to combine the three hourly datasets mentioed above becasue they had overlapping data and create one dataset that contained all the necessary information.
+<br>
 
+---
+I used the following query to merge the hourly datasets:
+
+<details>
+<summary>Show SQL Query</summary>
+
+<pre><code class="language-sql">
+-- Remove NULLs from calories and steps
+SELECT *
+FROM `bellabeat-case-study.Fitabase.hourlyCalories`
+WHERE Calories IS NOT NULL;
+
+SELECT *
+FROM `bellabeat-case-study.Fitabase.hourlySteps`
+WHERE StepTotal IS NOT NULL;
+
+-- Join hourly calories and steps
+SELECT *
+FROM `bellabeat-case-study.Fitabase.hourlyCalories` AS calories
+JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
+  ON calories.Id = steps.Id AND calories.ActivityHour = steps.ActivityHour;
+</code></pre>
+
+</details>
+
+<br>
 
 The resulting data file: <span style="color:gray;">'daily_Merged.csv'</span> can now be uploaded into RStudio to be further processed. 
 

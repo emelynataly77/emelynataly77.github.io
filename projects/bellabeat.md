@@ -112,7 +112,7 @@ Many datasets were too large to process on excel and even too large to properly 
 
   <!-- Green Section -->
   <div style="flex: 1;">
-    <h4 style="color:green;">✔️ Renamed Files</h4>
+    <h4 style="color:green;"><span style="color:green;">✔️</span> Renamed Files</h4>
     <ul>
       <li><span style="color:gray;">`hourlyCalories_merged.csv` → `hourlyCalories.csv`</span></li>
       <li><span style="color:gray;">`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</span></li>

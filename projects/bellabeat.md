@@ -217,7 +217,7 @@ I used the following query to merge the hourly datasets:
 <summary>Show SQL Query</summary>
 
 <pre><code class="language-sql">
--- Remove NULLs from calories and steps
+-- Merge hourly data files using left join
 SELECT A.Id, A.ActivityHour AS activity_hour, A.Calories, C.StepTotal AS step_total, I.TotalIntensity AS total_intensity, I.AverageIntensity AS average_intensity,
 FROM `capstone-case-study-460717.Fitness_Tracker_Data.hourlycalories` A
 LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlysteps` C
@@ -289,13 +289,13 @@ Next, I decided to combine the three hourly datasets mentioed above becasue they
 <br>
 
 ---
-I used the following query to merge the hourly datasets:
+I used the following query to merge the daily/sleep datasets:
 
 <details>
 <summary>Show SQL Query</summary>
 
 <pre><code class="language-sql">
--- Remove NULLs from calories and steps
+-- Merge daily/sleep datasets using inner join
 SELECT
   activity.Id,
   ActivityDate,

@@ -206,10 +206,10 @@ JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
 </details>
 
 
-
-
 ---
 
+Next, I decided to combine the three hourly datasets mentioed above becasue they had overlapping data and create one dataset that contained all the necessary information.  
+I used the following query to merge the hourly datasets:
 The resulting data file: <span style="color:gray;">'hourlyMerged.csv'</span> can now be uploaded into RStudio to be further processed. 
 
 NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 

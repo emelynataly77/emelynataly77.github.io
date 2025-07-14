@@ -80,7 +80,7 @@ It is unknown how the data itself was collected. However, the data originated fr
   
 ---
 
-# 🧼 Data Cleaning in Excel <a name="excel-cleaning"></a>
+# 🧹 Data Cleaning in Excel <a name="excel-cleaning"></a>
 
 I began with raw .csv files from the FitBit Fitness Tracker dataset. 
 
@@ -490,7 +490,7 @@ Looking at the graohs it becomes more clear that the beginning of the work week 
 ### Proposal
 I believe that bellbeat copany....insert proposal ideas an reasoning here
 
-# Ackowledgements 
+# 🤝 Ackowledgements 
 I would like to thank Ed Garcia for his guidance on RStudio 
   https://www.kaggle.com/code/edgarcia1/bellabeat-case-study-analysis-and-visualizations 
 I would like to thank Tom Leary for his guidance on grouping data by datatype

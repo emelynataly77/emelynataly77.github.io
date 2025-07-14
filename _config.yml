@@ -13,15 +13,30 @@ kramdown:
 nav:
   - title: "🔍 Project Overview"
     url: "/bellabeat.html#project-overview"
-  - title: "🧹 Excel Cleaning"
-    url: "/bellabeat.html#excel-cleaning"
+    subnav:
+      - title: "The Data"
+        url: "/bellabeat.html#the-data"
   - title: "🧮 SQL Queries in BigQuery"
     url: "/bellabeat.html#sql-queries"
+    subnav:
+      - title: "Hourly Data"
+        url: "/bellabeat.html#hourly-data-sql"
+      - title: "Daily/Sleep Data"
+        url: "/bellabeat.html#daily-sleep-data-sql"
   - title: "🖥️ RStudio Analysis"
     url: "/bellabeat.html#rstudio-analysis"
+    subnav:
+      - title: "Hourly Data"
+        url: "/bellabeat.html#hourly-data-r"
+      - title: "Daily/Sleep Data"
+        url: "/bellabeat.html#daily-sleep-data-r"
   - title: "💡 Key Insights"
     url: "/bellabeat.html#key-insights"
+    subnav:
+      - title: "Proposal"
+        url: "/bellabeat.html#proposal"
   - title: "🤝 Acknowledgements"
     url: "/bellabeat.html#acknowledgements"
+
 
 

@@ -12,15 +12,15 @@ kramdown:
 
 nav:
   - title: "Overview"
-    url: "/overview.html"
+    url: "/bellabeat.html#overview"
   - title: "Excel Cleaning"
-    url: "/excel-cleaning.html"
+    url: "/bellabeat.html#excel-cleaning"
   - title: "SQL Queries"
-    url: "/sql-queries.html"
+    url: "/bellabeat.html#sql-queries"
   - title: "RStudio Analysis"
-    url: "/rstudio-analysis.html"
+    url: "/bellabeat.html#rstudio-analysis"
   - title: "Key Insights"
-    url: "/key-insights.html"
+    url: "/bellabeat.html#key-insights"
   - title: "Acknowledgements"
-    url: "/acknowledgements.html"
+    url: "/bellabeat.html#acknowledgements"
 

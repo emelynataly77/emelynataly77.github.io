@@ -177,6 +177,7 @@ NOTE: Moving forward I will be processing the data by grouping similiar datasets
   
 
 The hourly datasets above were uploaded into BigQuery. I checked if a smooth upload was successful by using the a few quick queries: 
+<br>
 
 ---
 
@@ -206,9 +207,8 @@ JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
 </details>
 
 
----
-
 Next, I decided to combine the three hourly datasets mentioed above becasue they had overlapping data and create one dataset that contained all the necessary information.
+<br>
 
 ---
 I used the following query to merge the hourly datasets:
@@ -248,7 +248,8 @@ NOTE: I reintroduced the 'merged' wordage here because that is more representati
 - <span style="color:gray;">'dailySteps.csv'</span>
 - <span style="color:gray;">'sleepDay.csv'</span>
 
-The daily datasets abover were uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below: 
+The daily datasets abover were uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below
+<br>
 
  
 ---
@@ -279,11 +280,8 @@ JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
 </details>
 
 
----
-
 
 The resulting data file: <span style="color:gray;">'daily_Merged.csv'</span> can now be uploaded into RStudio to be further processed. 
-
 NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
 
 # 🖥️ RStudio Analysis <a name="rstudio-analysis"></a>

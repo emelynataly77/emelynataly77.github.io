@@ -11,16 +11,17 @@ kramdown:
   input: GFM
 
 nav:
-  - title: "Project Overview"
+  - title: "🔍 Project Overview"
     url: "/bellabeat.html#project-overview"
-  - title: "Excel Cleaning"
+  - title: "🧹 Excel Cleaning"
     url: "/bellabeat.html#excel-cleaning"
-  - title: "SQL Queries"
+  - title: "🧮 SQL Queries in BigQuery"
     url: "/bellabeat.html#sql-queries"
-  - title: "RStudio Analysis"
+  - title: "🖥️ RStudio Analysis"
     url: "/bellabeat.html#rstudio-analysis"
-  - title: "Key Insights"
+  - title: "💡 Key Insights"
     url: "/bellabeat.html#key-insights"
-  - title: "Acknowledgements"
+  - title: "🤝 Acknowledgements"
     url: "/bellabeat.html#acknowledgements"
+
 

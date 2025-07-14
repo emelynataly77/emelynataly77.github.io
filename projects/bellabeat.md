@@ -357,7 +357,7 @@ n_distinct(hourly_df$Id)   # Number of unique participants in hourly data
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-%d")
+INSERT CODE
 </code></pre>
 
 </details>

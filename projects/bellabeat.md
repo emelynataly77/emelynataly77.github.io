@@ -84,6 +84,7 @@ It is unknown how the data itself was collected. However, the data originated fr
 
 I began with raw .csv files from the FitBit Fitness Tracker dataset. 
 
+<br>
 I completed basic cleaning including: 
   
 - Removed nulls, blanks, and duplicate values   

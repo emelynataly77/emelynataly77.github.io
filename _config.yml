@@ -11,13 +11,15 @@ kramdown:
   input: GFM
 
 nav:
-  - title: "Home"
-    url: /
-  - title: "Projects"
-    url: /projects/
+  - title: "Overview"
+    url: "/projects/overview.html"
+ - title: "Excel Cleaning"
+    url: "/projects/excel-cleaning.html"
+  - title: "SQL Queries"
+    url: "/projects/sql-queries.html"
+  - title: "RStudio Analysis"
+    url: "/projects/rstudio-analysis.html"
+  - title: "Key Insights"
+    url: /Key Insights/
   - title: "Acknowledgments"
     url: /acknowledgments/
-  - title: "Data Files"
-    url: /projects/bellabeat.html#data-files
-  - title: "🖥️ rStudio Analysis"
-    url: /projects/bellabeat.html#rstudio-analysis

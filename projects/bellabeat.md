@@ -331,7 +331,7 @@ This section covers the data cleaning, analysis, and visualization done in RStud
 ### Hourly Data <a id="hourly-data-r"></a>
 - <span style="color:gray;">'hourlyMerged.csv'</span>
 
-The dataset abover was uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below
+The dataset above was uploaded into BigQuery. Again I quickly checked if the data was uploaded accurately using the code below. 
 <br>
 
 Successful Upload check: 
@@ -353,6 +353,9 @@ n_distinct(hourly_df$Id)   # Number of unique participants in hourly data
 
 </details>
 
+After confirming the file was uploaded correctly, I began analyzing the data from both a day-of-the-week and time-of-day perspective. To do this, I first split the `activity_hour column` (which contains combined date and time values) into two separate columns: `activityDate` for the date and `time` for the time. I then converted the `activityDate` column into proper Date format and used it to create a new weekday column that indicates the day of the week. Similarly, I converted the time column and used it to categorize each entry into time-of-day segments—Night, Morning, Afternoon, and Evening—based on the hour of the activity. You can see the following code below.
+
+
 <details>
 <summary>Show R Code</summary>
 
@@ -362,6 +365,53 @@ INSERT CODE
 
 </details>
 
+I went ahead and also performed a correlation test (similar to what we did in the daily/sleep data). I just wanted to grasp possible relationships amongst the data. 
+
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+INSERT CODE
+</code></pre>
+
+</details>
+
+Shockingly, there didnt seem to be any substantial correlation between intensity and steps taken or intensity and calories burned. Since we split the data into time of day I wanted to also check at which points of the day individuals were being more or less active. I would assume participants would be more active during the morning or evening times considering, work schedules and common physical activity timeslots. However, this assumption dos not account for the weekends.  I wrote up the following two code blocks to analyze time of day activity throught the week (SUN-SAT).
+
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+INSERT CODE
+</code></pre>
+
+</details>
+
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+INSERT CODE
+</code></pre>
+
+</details>
+
+The charts below represent my findings 
+
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+INSERT CODE
+</code></pre>
+
+</details>
+
+INSERT AVERAGE STEPS BY TIME OF DAY 
+INSERT AVERAGE CALORIES BY TIME OF DAY 
+
+ I was a little surprised to find that most users were significantly more active during the afternoon and not the morning and evening. This could be notworthy as to who bellabeats targer customers could be (people who do not usually work a 9-5?) Moreover, that would of course require more data thtan we currently have. Just somthing to keep in mind for future research/refernce. The evening and morning being relatively the same was unsurprising. The sama ecan be said for nightime being the the time users were the least active. 
+ 
 ### Daily/Sleep Data <a id="daily-sleep-data-r"></a>
 - <span style="color:gray;">'dailyMerged.csv'</span>
 
@@ -483,14 +533,19 @@ INSERT AVERAGE HOURS OF SLEEP BY WEEDAY GRAPH
 Looking at the graohs it becomes more clear that the beginning of the work week (mon/tues) tend to be higher on all the generated graphs along wiht saturday. Fridays tend to be the lowest on most of the graphs suggesting a more relaxed Fiday in terms of the data. 
 
 # 💡 Key Insights <a id="key-insights"></a>
-- <span style="color:gray;">'INSIGHT 1'</span>
-- <span style="color:gray;">'INSIGHT 2'</span>
-- <span style="color:gray;">'INSIGHT 3'</span>
+- Early on during the data research phase I discovered gaps and inconsitensies that point to flawed or inadequate data recording/gathering. Meaning, bellabeat needs to work on properly gathering reliable/substantial data from their users. Or they need to find a way to push their customers into logging data more consistently. 
+- There are specific days of the week in which customers are less likely to be more active. Users are more active during the week. excluding friday which is the least active reported day. 
+- Encourage other aspects of health more readily such as, weight and nutritional intake through the fitbit.
+- Users are more active during the week
+- Step counts are generally lower than the recommneded average, encourage walking or set walking goals
+- Sleep is below average recom?
+
 
 ---
 
 ### Proposal <a id="proposal"></a>
-I believe that bellbeat copany....insert proposal ideas an reasoning here
+(make it easier to log make more comfy desigh)
+ Implement design improvments that encourage other aspects of health more readily such as, weight and nutritional intake.
 
 #  🤝 Acknowledgements <a id="acknowledgements"></a>
 

@@ -330,7 +330,8 @@ This section covers the data cleaning, analysis, and visualization done in RStud
 
 ### Hourly Data <a name="rstudio-hourly-data"></a>
 - <span style="color:gray;">'hourlyMerged.csv'</span>
-The style="color:gray;">'hourlyMerged.csv'</span> dataset abover was uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below
+
+The dataset abover was uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below
 <br>
 
 Successful Upload check: 
@@ -354,7 +355,8 @@ hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-
 
 ### Daily/Sleep Data
 - <span style="color:gray;">'dailyMerged.csv'</span>
-The style="color:gray;">'dailyMerged.csv'</span> dataset abover was uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below
+
+The dataset abover was uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below
 <br>
 
 Successful Upload check: 

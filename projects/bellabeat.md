@@ -296,11 +296,26 @@ I used the following query to merge the hourly datasets:
 
 <pre><code class="language-sql">
 -- Remove NULLs from calories and steps
-SELECT activity.Id, ActivityDate,TotalSteps, TotalDistance, TrackerDistance, LoggedActivitiesDistance, (VeryActiveDistance + ModeratelyActiveDistance) AS LongerDistance,(LightActiveDistance + SedentaryActiveDistance) AS ShorterDistance, (VeryActiveMinutes + FairlyActiveMinutes) AS HeavyActiveMinutes, (LightlyActiveMinutes + SedentaryMinutes) 
-  AS LightActiveMinutes, Calories, sleep.TotalSleepRecords, sleep.TotalMinutesAsleep,sleep.TotalTimeInBed
-FROM  `bellabeat-461300.fittracker.daily_activity` AS activity
-INNER JOIN  `bellabeat-461300.fittracker.sleep_day` AS sleep
-ON activity.Id = sleep.Id AND activity.ActivityDATE = sleep.SleepDay
+SELECT
+  activity.Id,
+  ActivityDate,
+  TotalSteps,
+  TotalDistance,
+  TrackerDistance,
+  LoggedActivitiesDistance,
+  (VeryActiveDistance + ModeratelyActiveDistance) AS LongerDistance,
+  (LightActiveDistance + SedentaryActiveDistance) AS ShorterDistance,
+  (VeryActiveMinutes + FairlyActiveMinutes) AS HeavyActiveMinutes,
+  (LightlyActiveMinutes + SedentaryMinutes) AS LightActiveMinutes,
+  Calories,
+  sleep.TotalSleepRecords,
+  sleep.TotalMinutesAsleep,
+  sleep.TotalTimeInBed
+FROM `bellabeat-461300.fittracker.daily_activity` AS activity
+INNER JOIN `bellabeat-461300.fittracker.sleep_day` AS sleep
+  ON activity.Id = sleep.Id
+  AND activity.ActivityDATE = sleep.SleepDay;
+
 </code></pre>
 
 </details>

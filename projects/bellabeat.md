@@ -301,6 +301,15 @@ hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-
 
 </details>
 
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-%d")
+</code></pre>
+
+</details>
+
 ### Daily/Sleep Data
 
 Exploration of daily activity and sleep patterns...
@@ -318,3 +327,15 @@ sleepDay_clean <- sleepDay %>%
 
 </details>
 
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+dailyActivity1 <- dailyActivity %>%
+  select(Id, ActivityDate, TotalSteps, TotalDistance, Calories)
+
+sleepDay_clean <- sleepDay %>%
+  select(Id, SleepDay, TotalSleepRecords, TotalMinutesAsleep, TotalTimeInBed)
+</code></pre>
+
+</details>

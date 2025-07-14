@@ -339,7 +339,16 @@ Successful Upload check:
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-%d")
+library(tidyverse)
+
+# Load data
+hourly_df <- read_csv("SQL hourly_merged.csv")
+
+# View column names
+colnames(hourly_df)
+
+# Check participant counts
+n_distinct(hourly_df$Id)   # Number of unique participants in hourly data
 </code></pre>
 
 </details>
@@ -364,11 +373,16 @@ Successful Upload check:
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-dailyActivity1 <- dailyActivity %>%
-  select(Id, ActivityDate, TotalSteps, TotalDistance, Calories)
+library(tidyverse)
 
-sleepDay_clean <- sleepDay %>%
-  select(Id, SleepDay, TotalSleepRecords, TotalMinutesAsleep, TotalTimeInBed)
+# Load data
+daily_df  <- read_csv("SQL daily_merged.csv")
+
+# View column names
+colnames(hourly_df)
+
+# Check participant counts
+n_distinct(hourly_df$Id)   # Number of unique participants in hourly data
 </code></pre>
 
 </details>
@@ -377,11 +391,107 @@ sleepDay_clean <- sleepDay %>%
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-dailyActivity1 <- dailyActivity %>%
-  select(Id, ActivityDate, TotalSteps, TotalDistance, Calories)
+# Pearson correlation tests
+cor.test(daily_df$TotalMinutesAsleep, daily_df$HeavyActiveMinutes, method = "pearson")
+cor.test(daily_df$TotalMinutesAsleep, daily_df$LightActiveMinutes, method = "pearson")
 
-sleepDay_clean <- sleepDay %>%
-  select(Id, SleepDay, TotalSleepRecords, TotalMinutesAsleep, TotalTimeInBed)
+# Plot sleep vs light activity
+library(ggplot2)
+
+ggplot(data = daily_df, aes(x = TotalMinutesAsleep, y = LightActiveMinutes)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, col = "blue") +
+  labs(
+    y = "Light/Non‑active minutes",
+    x = "Total minutes asleep"
+  ) +
+  ggtitle("Relationship Between Sleep and Light/Non Activity")
+
 </code></pre>
 
 </details>
+
+INSERT GGPLOT GRAPH 
+The graph above suggests that people who sleep more may be more active during the day. The low p value (2.2e-16) confirms statistical significance. I wanted to look further into the day by day breakdown of the data between sleep adn non-activity. In the code block below I filter the data for each day of the week and generate summary statistics for the filtered datasets.
+
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+INSERT CODE
+</code></pre>
+
+</details>
+
+I used the following coded blocks to generate respetive graphs representing my results of the stat summaries. 
+
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+INSERT CODE
+</code></pre>
+
+</details>
+
+INSERT AVERAGE STEPS BY WEEKDAY GRAPH
+
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+INSERT CODE
+</code></pre>
+
+</details>
+
+INSERT AVERAGE ACTIVE MINUTES BY WEEKDAY GRAPH
+
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+INSERT CODE
+</code></pre>
+
+</details>
+
+INSERT AVERAGE SEDENTARY MINUTES BY WEEKDAY GRAPH
+
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+INSERT CODE
+</code></pre>
+
+</details>
+
+INSERT AVERAGE CALORIES BY WEEKDAY GRAPH
+
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+INSERT CODE
+</code></pre>
+
+</details>
+
+INSERT AVERAGE HOURS OF SLEEP BY WEEDAY GRAPH
+
+Looking at the graohs it becomes more clear that the beginning of the work week (mon/tues) tend to be higher on all the generated graphs along wiht saturday. Fridays tend to be the lowest on most of the graphs suggesting a more relaxed Fiday in terms of the data. 
+
+# Key Insight
+- <span style="color:gray;">'INSIGHT 1'</span>
+- <span style="color:gray;">'INSIGHT 2'</span>
+- <span style="color:gray;">'INSIGHT 3'</span>
+
+### Proposal
+I believe that bellbeat copany....insert proposal ideas an reasoning here
+
+# Ackowledgements 
+I would like to thank Ed Garcia for his guidance on RStudio 
+  https://www.kaggle.com/code/edgarcia1/bellabeat-case-study-analysis-and-visualizations 
+I would like to thank Tom Leary for his guidance on grouping data by datatype
+  https://tomleary.net/projects/capstone/ 

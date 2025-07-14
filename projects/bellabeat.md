@@ -108,35 +108,43 @@ The table below represents a summary of the cleaning completed on Excel:
 
 Many datasets were too large to process on excel and even too large to properly process on either Rstudio and BigQuery.  Additionally, there were a few datasets that were too inconsistent and incomplete to accurately deduct any type of analysis. Also, there were a ferw datasets that contained repetitive data and overlapped with other existing datasets. For example, dailyCalories_merged, dailyIntensities_merged adn dailySteps_merged overlapped with dailyActivity_merged which included all the information on those three files and then some. Therefore those three were dropped and only dailyActivity_merged would continue to be analyzed. Any datasets that met the criteria describes above were dropped from further exploration (red). Datasets that were eligible for proper processing were uplodaed into BigQueary and further processed
 
+<div style="display: flex; justify-content: space-between; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
+
+  <!-- Green list on the left -->
+  <div style="flex: 1;">
+    <h4 style="color: green; margin-bottom: 10px;">✔️ Cleaned & Renamed Files</h4>
+    <ul style="color: green;">
+      <li><code>`hourlyCalories_merged.csv` → `hourlyCalories.csv`</code></li>
+      <li><code>`hourlySteps_merged.csv` → `hourlySteps.csv`</code></li>
+      <li><code>`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</code></li>
+      <li><code>`sleepDay_merged.csv` → `sleepDay.csv`</code></li>
+      <li><code>`dailyActivity_merged.csv` → `dailyActivity.csv`</code></li>
+      <li><code>`dailyCalories_merged.csv` → `dailyCalories.csv`</code></li>
+      <li><code>`dailyIntensities_merged.csv` → `dailyIntensities.csv`</code></li>
+      <li><code>`dailySteps_merged.csv` → `dailySteps.csv`</code></li>
+    </ul>
+  </div>
+
+  <!-- Red list on the right -->
+  <div style="flex: 1;">
+    <h4 style="color: red; margin-bottom: 10px;">🗑️ Removed Original Files</h4>
+    <ul style="color: red;">
+      <li><code>`hourlyCalories_merged.csv`</code></li>
+      <li><code>`hourlySteps_merged.csv`</code></li>
+      <li><code>`hourlyIntensities_merged.csv`</code></li>
+      <li><code>`sleepDay_merged.csv`</code></li>
+      <li><code>`dailyActivity_merged.csv`</code></li>
+      <li><code>`dailyCalories_merged.csv`</code></li>
+      <li><code>`dailyIntensities_merged.csv`</code></li>
+      <li><code>`dailySteps_merged.csv`</code></li>
+    </ul>
+  </div>
+
+</div>
 
 
 
 
-<ul>
-  <!-- ✅ Green merged & renamed files -->
-  <li><span style="color:green;">`hourlyCalories_merged.csv` → `hourlyCalories.csv`</span></li>
-  <li><span style="color:green;">`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</span></li>
-  <li><span style="color:green;">`hourlySteps_merged.csv` → `hourlySteps.csv`</span></li>
-  <li><span style="color:green;">`sleepDay_merged.csv` → `sleepDay.csv`</span></li>
-  <li><span style="color:green;">`dailyActivity_merged.csv` → `dailyActivity.csv`</span></li>
-</ul>
-
-<ul>
-  <!-- ❌ Red unused or unrenamed files -->
-  <li><span style="color:red;">`dailyCalories_merged.csv`</span></li>
-  <li><span style="color:red;">`dailyIntensities_merged.csv`</span></li>
-  <li><span style="color:red;">`dailySteps_merged.csv`</span></li>
-  <li><span style="color:red;">`heartrate_seconds_merged.csv`</span></li>
-  <li><span style="color:red;">`minuteCaloriesNarrow_merged.csv`</span></li>
-  <li><span style="color:red;">`minuteCaloriesWide_merged.csv`</span></li>
-  <li><span style="color:red;">`minuteIntensitiesNarrow_merged.csv`</span></li>
-  <li><span style="color:red;">`minuteIntensitiesWide_merged.csv`</span></li>
-  <li><span style="color:red;">`minuteMETsNarrow_merged.csv`</span></li>
-  <li><span style="color:red;">`minuteSleep_merged.csv`</span></li>
-  <li><span style="color:red;">`minuteStepsNarrow_merged.csv`</span></li>
-  <li><span style="color:red;">`minuteStepsWide_merged.csv`</span></li>
-  <li><span style="color:red;">`weightLogInfo_merged.csv`</span></li>
-</ul>
 
 
 

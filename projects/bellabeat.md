@@ -329,8 +329,11 @@ NOTE: I reintroduced the 'merged' wordage here because that is more representati
 This section covers the data cleaning, analysis, and visualization done in RStudio for the Bellabeat project.
 
 ### Hourly Data <a name="rstudio-hourly-data"></a>
-<span style="color:gray;">'hourlyMerged.csv'</span>
+- <span style="color:gray;">'hourlyMerged.csv'</span>
+The style="color:gray;">'hourlyMerged.csv'</span> dataset abover was uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below
+<br>
 
+Successful Upload check: 
 <details>
 <summary>Show R Code</summary>
 
@@ -350,8 +353,11 @@ hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-
 </details>
 
 ### Daily/Sleep Data
-<span style="color:gray;">'dailyMerged.csv'</span>
+- <span style="color:gray;">'dailyMerged.csv'</span>
+The style="color:gray;">'dailyMerged.csv'</span> dataset abover was uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below
+<br>
 
+Successful Upload check: 
 <details>
 <summary>Show R Code</summary>
 

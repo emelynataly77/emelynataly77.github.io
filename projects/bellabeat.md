@@ -36,7 +36,7 @@ To further explore Bellabeat, the case study prompt or the Kaggle dataset used f
 
 ---
 
-### The Data 
+### The Data <a id="the-data"></a>
 
 The following .csv files were used during data cleaning and analysis:
 
@@ -169,7 +169,7 @@ NOTE: Moving forward I will be processing the data by grouping similiar datasets
 # 🧮 SQL Queries in BigQuery <a id="sql-queries"></a>
 
 
-### Hourly Data
+### Hourly Data <a id="hourly-data-sql"></a>
 
 - <span style="color:gray;">'hourlyCalories.csv'</span>
 - <span style="color:gray;">'hourlySteps.csv'</span>
@@ -238,7 +238,7 @@ The resulting data file: <span style="color:gray;">'hourlyMerged.csv'</span> can
 
 NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
 
-### Daily/Sleep Data
+### Daily/Sleep Data <a id="daily-sleep-data-sql"></a>
 
 
 - <span style="color:gray;">'dailyActivity.csv'</span>
@@ -328,7 +328,7 @@ NOTE: I reintroduced the 'merged' wordage here because that is more representati
 # 🖥️ RStudio Analysis <a id="rstudio-analysis"></a>
 This section covers the data cleaning, analysis, and visualization done in RStudio for the Bellabeat project.
 
-### Hourly Data <a name="rstudio-hourly-data"></a>
+### Hourly Data <a id="hourly-data-r"></a>
 - <span style="color:gray;">'hourlyMerged.csv'</span>
 
 The dataset abover was uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below
@@ -362,7 +362,7 @@ INSERT CODE
 
 </details>
 
-### Daily/Sleep Data
+### Daily/Sleep Data <a id="daily-sleep-data-r"></a>
 - <span style="color:gray;">'dailyMerged.csv'</span>
 
 The dataset abover was uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below
@@ -489,7 +489,7 @@ Looking at the graohs it becomes more clear that the beginning of the work week 
 
 ---
 
-### Proposal
+### Proposal <a id="proposal"></a>
 I believe that bellbeat copany....insert proposal ideas an reasoning here
 
 #  🤝 Acknowledgements <a id="acknowledgements"></a>

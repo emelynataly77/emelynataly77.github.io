@@ -18,7 +18,6 @@ title: Bellabeat Capstone Project
 - [SQL Queries](#sql-queries)  
 - [RStudio Analysis](#rstudio-analysis)  
 - [Key Insights](#insights)  
-- [Recommendations](#recommendations)
 - [Acknowledgements](#Acknowledgements) 
 
 ---

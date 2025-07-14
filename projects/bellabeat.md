@@ -108,39 +108,41 @@ The table below represents a summary of the cleaning completed on Excel:
 
 Many datasets were too large to process on excel and even too large to properly process on either Rstudio and BigQuery.  Additionally, there were a few datasets that were too inconsistent and incomplete to accurately deduct any type of analysis. Also, there were a ferw datasets that contained repetitive data and overlapped with other existing datasets. For example, dailyCalories_merged, dailyIntensities_merged adn dailySteps_merged overlapped with dailyActivity_merged which included all the information on those three files and then some. Therefore those three were dropped and only dailyActivity_merged would continue to be analyzed. Any datasets that met the criteria describes above were dropped from further exploration (red). Datasets that were eligible for proper processing were uplodaed into BigQueary and further processed
 
-<div style="display: flex; justify-content: space-between; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
+<div style="display: flex; justify-content: space-between; gap: 40px;">
 
-  <!-- Green list on the left -->
+  <!-- Green Section -->
   <div style="flex: 1;">
-    <h4 style="color: green; margin-bottom: 10px;">✔️ Cleaned & Renamed Files</h4>
-    <ul style="color: green;">
-      <li><code>`hourlyCalories_merged.csv` → `hourlyCalories.csv`</code></li>
-      <li><code>`hourlySteps_merged.csv` → `hourlySteps.csv`</code></li>
-      <li><code>`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</code></li>
-      <li><code>`sleepDay_merged.csv` → `sleepDay.csv`</code></li>
-      <li><code>`dailyActivity_merged.csv` → `dailyActivity.csv`</code></li>
-      <li><code>`dailyCalories_merged.csv` → `dailyCalories.csv`</code></li>
-      <li><code>`dailyIntensities_merged.csv` → `dailyIntensities.csv`</code></li>
-      <li><code>`dailySteps_merged.csv` → `dailySteps.csv`</code></li>
+    <h4 style="color:green;">✔️ Renamed Files</h4>
+    <ul>
+      <li><span style="color:gray;">`hourlyCalories_merged.csv` → `hourlyCalories.csv`</span></li>
+      <li><span style="color:gray;">`hourlyIntensities_merged.csv` → `hourlyIntensities.csv`</span></li>
+      <li><span style="color:gray;">`hourlySteps_merged.csv` → `hourlySteps.csv`</span></li>
+      <li><span style="color:gray;">`sleepDay_merged.csv` → `sleepDay.csv`</span></li>
+      <li><span style="color:gray;">`dailyActivity_merged.csv` → `dailyActivity.csv`</span></li>
+      <li><span style="color:gray;">`dailyCalories_merged.csv` → `dailyCalories.csv`</span></li>
+      <li><span style="color:gray;">`dailyIntensities_merged.csv` → `dailyIntensities.csv`</span></li>
+      <li><span style="color:gray;">`dailySteps_merged.csv` → `dailySteps.csv`</span></li>
     </ul>
   </div>
 
-  <!-- Red list on the right -->
+  <!-- Red Section -->
   <div style="flex: 1;">
-    <h4 style="color: red; margin-bottom: 10px;">🗑️ Removed Original Files</h4>
-    <ul style="color: red;">
-      <li><code>`hourlyCalories_merged.csv`</code></li>
-      <li><code>`hourlySteps_merged.csv`</code></li>
-      <li><code>`hourlyIntensities_merged.csv`</code></li>
-      <li><code>`sleepDay_merged.csv`</code></li>
-      <li><code>`dailyActivity_merged.csv`</code></li>
-      <li><code>`dailyCalories_merged.csv`</code></li>
-      <li><code>`dailyIntensities_merged.csv`</code></li>
-      <li><code>`dailySteps_merged.csv`</code></li>
+    <h4 style="color:red;">❌ Removed Files</h4>
+    <ul>
+      <li><span style="color:gray;">`minuteCaloriesNarrow.csv`</span></li>
+      <li><span style="color:gray;">`minuteCaloriesWide.csv`</span></li>
+      <li><span style="color:gray;">`minuteIntensitiesNarrow.csv`</span></li>
+      <li><span style="color:gray;">`minuteIntensitiesWide.csv`</span></li>
+      <li><span style="color:gray;">`minuteMETsNarrow.csv`</span></li>
+      <li><span style="color:gray;">`minuteSleep.csv`</span></li>
+      <li><span style="color:gray;">`minuteStepsNarrow.csv`</span></li>
+      <li><span style="color:gray;">`dailyIntensities_merged.csv`</span></li>
+      <li><span style="color:gray;">`dailyCalories_merged.csv`</span></li>
     </ul>
   </div>
 
 </div>
+
 
 
 

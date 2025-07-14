@@ -18,9 +18,9 @@ permalink: /bellabeat.html
 - [Excel Cleaning](#excel-cleaning)  
 - [SQL Queries](#sql-queries)  
 - [RStudio Analysis](#rstudio-analysis)  
-- [Key Insights](#insights)  
-- [Acknowledgements](#Acknowledgements) 
-
+- [Key Insights](#key-insights)
+- [Acknowledgements](#acknowledgements)
+  
 ---
 
 # 🔍 Project Overview <a name="overview"></a>

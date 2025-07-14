@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Bellabeat Capstone Project
-permalink: /bellabeat.html
 ---
 
 # Bellabeat Capstone Project <a name="the-top"></a>

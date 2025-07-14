@@ -487,6 +487,8 @@ Looking at the graohs it becomes more clear that the beginning of the work week 
 - <span style="color:gray;">'INSIGHT 2'</span>
 - <span style="color:gray;">'INSIGHT 3'</span>
 
+---
+
 ### Proposal
 I believe that bellbeat copany....insert proposal ideas an reasoning here
 

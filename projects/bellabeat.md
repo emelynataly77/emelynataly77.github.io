@@ -176,12 +176,12 @@ NOTE: Moving forward I will be processing the data by grouping similiar datasets
 - <span style="color:gray;">'hourlyIntensities.csv'</span>
   
 
-The hourly datasets above were uploaded into BigQuery. I checked if a smooth upload was successful by using the a few quick queries: 
+The hourly datasets above were uploaded into BigQuery. I checked if a smooth upload was successful by using a few quick queries
 <br>
 
 ---
 
-Sucessful Upload Check: 
+Successful Upload Check: 
 
 
 <details>
@@ -207,7 +207,7 @@ JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
 </details>
 
 <br> 
-Next, I decided to combine the three hourly datasets mentioed above becasue they had overlapping data and create one dataset that contained all the necessary information.
+Next, I decided to combine the three hourly datasets mentioned above becasus they had overlapping data and create one dataset that contained all the necessary information.
 <br>
 
 

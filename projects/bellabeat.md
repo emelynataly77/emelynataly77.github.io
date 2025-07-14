@@ -181,7 +181,7 @@ The hourly datasets above were uploaded into BigQuery. I checked if a smooth upl
 
 ---
 
-Sucessful Upload Check 
+Sucessful Upload Check: 
 
 
 <details>
@@ -210,7 +210,7 @@ JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
 Next, I decided to combine the three hourly datasets mentioed above becasue they had overlapping data and create one dataset that contained all the necessary information.
 <br>
 
----
+
 I used the following query to merge the hourly datasets:
 
 <details>
@@ -253,7 +253,7 @@ The daily datasets abover were uploaded into BigQuery. Again i quickly checked i
  
 ---
 
-Successful upload check
+Successful upload check:
 
 
 <details>
@@ -286,9 +286,7 @@ AND A.ActivityHour=C.ActivityHour
 
 <br> 
 Next, I decided to combine the three hourly datasets mentioed above becasue they had overlapping data and create one dataset that contained all the necessary information.
-<br>
 
----
 I used the following query to merge the daily/sleep datasets:
 
 <details>
@@ -323,7 +321,7 @@ INNER JOIN `bellabeat-461300.fittracker.sleep_day` AS sleep
 <br>
 
 After merging the daily data files i peeked at the correlation coefficients  (r) on excel between the data, i found that sleep and non-active minutes had a somehwat negative correlation (-0.5869588). Suggesting, sleep has a somewhat stronger effect on if an individual will be active the following day. 
-The resulting merged data file: <span style="color:gray;">'daily_Merged.csv'</span> can now be uploaded into RStudio to be further processed. 
+The resulting merged data file: <span style="color:gray;">'dailyMerged.csv'</span> can now be uploaded into RStudio to be further processed. 
 
 NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
 
@@ -331,7 +329,7 @@ NOTE: I reintroduced the 'merged' wordage here because that is more representati
 This section covers the data cleaning, analysis, and visualization done in RStudio for the Bellabeat project.
 
 ### Hourly Data <a name="rstudio-hourly-data"></a>
-Analysis of calories and steps by hour...
+<span style="color:gray;">'hourlyMerged.csv'</span>
 
 <details>
 <summary>Show R Code</summary>
@@ -352,8 +350,7 @@ hourlyMerged1$activityDate <- as.Date(hourlyMerged1$activityDate, format="%Y-%m-
 </details>
 
 ### Daily/Sleep Data
-
-Exploration of daily activity and sleep patterns...
+<span style="color:gray;">'dailyMerged.csv'</span>
 
 <details>
 <summary>Show R Code</summary>

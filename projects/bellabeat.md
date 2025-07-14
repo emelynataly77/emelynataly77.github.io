@@ -23,7 +23,7 @@ permalink: /bellabeat.html
   
 ---
 
-# 🔍 Project Overview <a name="overview"></a>
+# 🔍 Project Overview <a id="project-overview"></a>
 
 This is the Google Data Analytics capstone project I chose to persue. This case study analyzes smart device fitness data to uncover insights for Bellabeat — a women’s wellness company.
 The goal was to explore how consumers use fitness devices and provide actionable recommendations to Bellabeat’s marketing strategy. 
@@ -80,7 +80,7 @@ It is unknown how the data itself was collected. However, the data originated fr
   
 ---
 
-# 🧹 Data Cleaning in Excel <a name="excel-cleaning"></a>
+# 🧹 Excel Cleaning <a id="excel-cleaning"></a>
 
 I began with raw .csv files from the FitBit Fitness Tracker dataset. 
 
@@ -166,7 +166,7 @@ NOTE: Moving forward I will be processing the data by grouping similiar datasets
 ---
 
 
-# 🧮 SQL Queries in BigQuery <a name="sql-queries"></a>
+# 🧮 SQL Queries in BigQuery <a id="sql-queries"></a>
 
 
 ### Hourly Data
@@ -325,7 +325,7 @@ The resulting merged data file: <span style="color:gray;">'dailyMerged.csv'</spa
 
 NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
 
-# 🖥️ RStudio Analysis <a name="rstudio-analysis"></a>
+# 🖥️ RStudio Analysis <a id="rstudio-analysis"></a>
 This section covers the data cleaning, analysis, and visualization done in RStudio for the Bellabeat project.
 
 ### Hourly Data <a name="rstudio-hourly-data"></a>
@@ -482,7 +482,7 @@ INSERT AVERAGE HOURS OF SLEEP BY WEEDAY GRAPH
 
 Looking at the graohs it becomes more clear that the beginning of the work week (mon/tues) tend to be higher on all the generated graphs along wiht saturday. Fridays tend to be the lowest on most of the graphs suggesting a more relaxed Fiday in terms of the data. 
 
-# 💡 Key Insights
+# 💡 Key Insights <a id="key-insights"></a>
 - <span style="color:gray;">'INSIGHT 1'</span>
 - <span style="color:gray;">'INSIGHT 2'</span>
 - <span style="color:gray;">'INSIGHT 3'</span>
@@ -492,7 +492,8 @@ Looking at the graohs it becomes more clear that the beginning of the work week 
 ### Proposal
 I believe that bellbeat copany....insert proposal ideas an reasoning here
 
-# 🤝 Acknowledgements
+#  🤝 Acknowledgements <a id="acknowledgements"></a>
+
 I would like to thank Ed Garcia for his guidance on RStudio 
   https://www.kaggle.com/code/edgarcia1/bellabeat-case-study-analysis-and-visualizations 
 I would like to thank Tom Leary for his guidance on grouping data by datatype

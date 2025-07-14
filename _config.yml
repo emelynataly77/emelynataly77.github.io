@@ -11,8 +11,8 @@ kramdown:
   input: GFM
 
 nav:
-  - title: "Overview"
-    url: "/bellabeat.html#overview"
+  - title: "Project Overview"
+    url: "/bellabeat.html#project-overview"
   - title: "Excel Cleaning"
     url: "/bellabeat.html#excel-cleaning"
   - title: "SQL Queries"

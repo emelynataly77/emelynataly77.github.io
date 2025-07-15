@@ -166,7 +166,6 @@ NOTE: Moving forward I will be processing the data by grouping similiar datasets
 
 # 🧮 SQL Queries in BigQuery <a id="sql-queries"></a>
 
-
 ### Hourly Data <a id="hourly-data-sql"></a>
 
 - <span style="color:gray;">'hourlyCalories.csv'</span>
@@ -236,10 +235,11 @@ AND A.ActivityHour=C.ActivityHour
 
 <br>
 The resulting data file: <span style="color:gray;">'hourlyMerged.csv'</span> can now be uploaded into RStudio to be further processed. 
-  NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
+
+NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
+
 
 ### Daily/Sleep Data <a id="daily-sleep-data-sql"></a>
-
 
 - <span style="color:gray;">'dailyActivity.csv'</span>
 - <span style="color:gray;">'dailyCalories.csv'</span>
@@ -247,14 +247,13 @@ The resulting data file: <span style="color:gray;">'hourlyMerged.csv'</span> can
 - <span style="color:gray;">'dailySteps.csv'</span>
 - <span style="color:gray;">'sleepDay.csv'</span>
 
-The daily datasets abover were uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below
+
+The daily datasets abover were uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using a few wuick queries.
 <br>
 
+
  
----
-
 Successful upload check:
-
 
 <details>
 <summary>Show SQL Query</summary>
@@ -284,8 +283,13 @@ AND A.ActivityHour=C.ActivityHour
 
 </details>
 
+
+
 <br> 
 Next, I decided to combine the three hourly datasets mentioed above becasue they had overlapping data and create one dataset that contained all the necessary information.
+<br>
+
+
 
 I used the following query to merge the daily/sleep datasets:
 
@@ -313,13 +317,13 @@ FROM `bellabeat-461300.fittracker.daily_activity` AS activity
 INNER JOIN `bellabeat-461300.fittracker.sleep_day` AS sleep
   ON activity.Id = sleep.Id
   AND activity.ActivityDATE = sleep.SleepDay;
-
 </code></pre>
 
 </details>
 
-<br>
 
+
+<br>
 After merging the daily data files i peeked at the correlation coefficients  (r) on excel between the data, i found that sleep and non-active minutes had a somehwat negative correlation (-0.5869588). Suggesting, sleep has a somewhat stronger effect on if an individual will be active the following day. 
 The resulting merged data file: <span style="color:gray;">'dailyMerged.csv'</span> can now be uploaded into RStudio to be further processed. 
 

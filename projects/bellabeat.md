@@ -169,7 +169,7 @@ NOTE: Moving forward I will be processing the data by grouping similiar datasets
 
 ### Hourly Data <a id="hourly-data-sql"></a>
 
-- <span style="color:gray;">'hourlyCalories.csv'</span>
+- <span style="color:gray;">'hourlyCalories.csv'</span> → renamed `hourly_Calories.csv`</span></li> on BigQuery
 - <span style="color:gray;">'hourlySteps.csv'</span>
 - <span style="color:gray;">'hourlyIntensities.csv'</span>
   

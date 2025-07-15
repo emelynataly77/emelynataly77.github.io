@@ -424,55 +424,51 @@ I went ahead and also performed a correlation test (similar to what we did in th
 <pre><code class="language-r">
 cor.test(hourly_df$average_intensity, hourly_df$Calories, method = "pearson")
 
-	Pearson's product-moment correlation
+  # Pearson's product-moment correlation
+  # data:  hourly_df$average_intensity and hourly_df$Calories
+  # t = 147.75, df = 15393211, p-value < 2.2e-16
+  # alternative hypothesis: true correlation is not equal to 0
+  # 95 percent confidence interval:
+  # 0.03713366 0.03813135
+  # sample estimates:
+  # cor = 0.03763252
 
-data:  hourly_df$average_intensity and hourly_df$Calories
-t = 147.75, df = 15393211, p-value < 2.2e-16
-alternative hypothesis: true correlation is not equal to 0
-95 percent confidence interval:
- 0.03713366 0.03813135
-sample estimates:
-       cor 
-0.03763252 
 cor.test(hourly_df$total_intensity, hourly_df$Calories, method = "pearson")
 
-	Pearson's product-moment correlation
+  # Pearson's product-moment correlation
+  # data:  hourly_df$total_intensity and hourly_df$Calories
+  # t = 147.75, df = 15393211, p-value < 2.2e-16
+  # alternative hypothesis: true correlation is not equal to 0
+  # 95 percent confidence interval:
+  # 0.03713366 0.03813136
+  # sample estimates:
+  # cor = 0.03763252
 
-data:  hourly_df$total_intensity and hourly_df$Calories
-t = 147.75, df = 15393211, p-value < 2.2e-16
-alternative hypothesis: true correlation is not equal to 0
-95 percent confidence interval:
- 0.03713366 0.03813136
-sample estimates:
-       cor 
-0.03763252 
 cor.test(hourly_df$total_intensity, hourly_df$step_total, method = "pearson")
 
-	Pearson's product-moment correlation
+  # Pearson's product-moment correlation
+  # data:  hourly_df$total_intensity and hourly_df$step_total
+  # t = 170.87, df = 15393211, p-value < 2.2e-16
+  # alternative hypothesis: true correlation is not equal to 0
+  # 95 percent confidence interval:
+  # 0.04301144 0.04400866
+  # sample estimates:
+  # cor = 0.04351006
 
-data:  hourly_df$total_intensity and hourly_df$step_total
-t = 170.87, df = 15393211, p-value < 2.2e-16
-alternative hypothesis: true correlation is not equal to 0
-95 percent confidence interval:
- 0.04301144 0.04400866
-sample estimates:
-       cor 
-0.04351006 
 cor.test(hourly_df$average_intensity, hourly_df$step_total, method = "pearson")
 
-	Pearson's product-moment correlation
-
-data:  hourly_df$average_intensity and hourly_df$step_total
-t = 170.87, df = 15393211, p-value < 2.2e-16
-alternative hypothesis: true correlation is not equal to 0
-95 percent confidence interval:
- 0.04301144 0.04400866
-sample estimates:
-       cor 
-0.04351006
+  # Pearson's product-moment correlation
+  # data:  hourly_df$average_intensity and hourly_df$step_total
+  # t = 170.87, df = 15393211, p-value < 2.2e-16
+  # alternative hypothesis: true correlation is not equal to 0
+  # 95 percent confidence interval:
+  # 0.04301144 0.04400866
+  # sample estimates:
+  # cor = 0.04351006
 </code></pre>
 
 </details>
+
 
 Shockingly, there didnt seem to be any substantial correlation between intensity and steps taken or intensity and calories burned. Since we split the data into time of day I wanted to also check at which points of the day individuals were being more or less active. I would assume participants would be more active during the morning or evening times considering, work schedules and common physical activity timeslots. However, this assumption dos not account for the weekends.  I wrote up the following two code blocks to analyze time of day activity throught the week (SUN-SAT).
 

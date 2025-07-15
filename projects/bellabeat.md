@@ -480,7 +480,20 @@ Shockingly, there didnt seem to be any substantial correlation between intensity
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-INSERT CODE
+# Filter data for "Morning" time period and select relevant columns
+morninghr <- hourly_df1 %>%
+  filter(TimeOfDay == "Morning") %>%
+  select(step_total, total_intensity, calories)
+
+# View summary statistics for the morning activity
+summary(morninghr)
+   step_total     total_intensity     Calories    
+ Min.   :   0.0   Min.   :  0.00   Min.   : 42.0  
+ 1st Qu.:   0.0   1st Qu.:  0.00   1st Qu.: 68.0  
+ Median : 104.0   Median :  3.00   Median : 84.0  
+ Mean   : 374.8   Mean   : 12.06   Mean   :101.7  
+ 3rd Qu.: 467.0   3rd Qu.: 16.00   3rd Qu.:117.0  
+ Max.   :8976.0   Max.   :180.00   Max.   :544.0
 </code></pre>
 
 </details>

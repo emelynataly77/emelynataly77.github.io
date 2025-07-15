@@ -339,7 +339,7 @@ Load packages and merged data into RStudio
 library(tidyverse)
 library(lubridate)
 #import hourly_merged dataset
-> hourl_df<- read_csv("hourly_merged.csv")
+> hourly_df<- read_csv("hourly_merged.csv")
 </code></pre>
 
 </details>
@@ -352,18 +352,39 @@ Successful Upload check:
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-library(tidyverse)
-
-# Load data
-hourly_df <- read_csv("SQL hourly_merged.csv")
-
-# View column names
-colnames(hourly_df)
-
-# Check participant counts
-n_distinct(hourly_df$Id)  
-
-# Number of unique participants in hourly data
+# Preview the data
+> head(hourly_df)
+# A tibble: 6 × 6
+          Id activity_hour       Calories step_total total_intensity average_intensity
+       <dbl> <dttm>                 <dbl>      <dbl>           <dbl>             <dbl>
+1 7086361926 2016-04-23 01:00:00       68          0               1            0.0167
+2 7086361926 2016-04-23 01:00:00       68          0               1            0.0167
+3 7086361926 2016-04-23 01:00:00       68          0               1            0.0167
+4 7086361926 2016-04-23 01:00:00       68          0               2            0.0333
+5 7086361926 2016-04-23 01:00:00       68          0               2            0.0333
+6 7086361926 2016-04-23 01:00:00       68          0               2            0.0333
+# Check the struture of the data
+> str(hourly_df)
+spc_tbl_ [15,393,213 × 6] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ Id               : num [1:15393213] 7.09e+09 7.09e+09 7.09e+09 7.09e+09 7.09e+09 ...
+ $ activity_hour    : POSIXct[1:15393213], format: "2016-04-23 01:00:00" "2016-04-23 01:00:00" "2016-04-23 01:00:00" ...
+ $ Calories         : num [1:15393213] 68 68 68 68 68 68 68 68 68 68 ...
+ $ step_total       : num [1:15393213] 0 0 0 0 0 0 0 0 0 0 ...
+ $ total_intensity  : num [1:15393213] 1 1 1 2 2 2 2 4 4 4 ...
+ $ average_intensity: num [1:15393213] 0.0167 0.0167 0.0167 0.0333 0.0333 ...
+ - attr(*, "spec")=
+  .. cols(
+  ..   Id = col_double(),
+  ..   activity_hour = col_datetime(format = ""),
+  ..   Calories = col_double(),
+  ..   step_total = col_double(),
+  ..   total_intensity = col_double(),
+  ..   average_intensity = col_double()
+  .. )
+ - attr(*, "problems")=<externalptr>   
+#check dimensions
+> dim(hourly_df)
+[1] 15393213        6  
 </code></pre>
 
 </details>

@@ -214,14 +214,14 @@ I used the following query to merge the hourly datasets:
 <summary>Show SQL Query</summary>
 
 <pre><code class="language-sql">
--- -- Merge hourly calories, steps, and intensities datasets using LEFT JOIN on Id and ActivityHour
+-- Merge hourly calories, steps, and intensities datasets using LEFT JOIN on Id and ActivityHour
 SELECT A.Id, A.ActivityHour AS activity_hour, A.Calories, C.StepTotal AS step_total, I.TotalIntensity AS total_intensity, I.AverageIntensity AS average_intensity,
-FROM `capstone-case-study-460717.Fitness_Tracker_Data.hourlycalories` A
-LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlysteps` C
+FROM `bellabeat-461300.fittracker.hourly_calories` A
+LEFT JOIN `bellabeat-461300.fittracker.hourly_steps` C
 ON
 A.Id=C.Id
 AND A.ActivityHour=C.ActivityHour
-LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlyintensities` I
+LEFT JOIN `bellabeat-461300.fittracker.hourly_intensities` I
 ON
 A.Id=I.Id
 AND A.ActivityHour=C.ActivityHour
@@ -257,26 +257,20 @@ Successful upload check:
 <summary>Show SQL Query</summary>
 
 <pre><code class="language-sql">
--- Remove NULLs from calories and steps
+-- Row count
+SELECT COUNT (*) as row_count
+FROM `bellabeat-461300.fittracker.sleep_day` 
+--Check for NULL values in columns
+SELECT
+  COUNTIF(Id IS NULL) AS id_nulls,
+  COUNTIF(SleepDay IS NULL) AS sleep_day_nulls,
+  COUNTIF(TotalSleepRecords IS NULL) AS total_sleep_records_nulls,
+  COUNTIF(TotalMinutesAsleep IS NULL) AS total_minutes_asleep_nulls,
+  COUNTIF(TotalTimeInBed IS NULL) AS total_time_in_bed_nulls
+FROM `bellabeat-461300.fittracker.sleep_day`;
+-- Preview Data
 SELECT *
-FROM `bellabeat-case-study.Fitabase.hourlyCalories`
-WHERE Calories IS NOT NULL;
-
-SELECT *
-FROM `bellabeat-case-study.Fitabase.hourlySteps`
-WHERE StepTotal IS NOT NULL;
-
--- Join hourly calories and steps
-SELECT A.Id, A.ActivityHour AS activity_hour, A.Calories, C.StepTotal AS step_total, I.TotalIntensity AS total_intensity, I.AverageIntensity AS average_intensity,
-FROM `capstone-case-study-460717.Fitness_Tracker_Data.hourlycalories` A
-LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlysteps` C
-ON
-A.Id=C.Id
-AND A.ActivityHour=C.ActivityHour
-LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlyintensities` I
-ON
-A.Id=I.Id
-AND A.ActivityHour=C.ActivityHour
+FROM `bellabeat-461300.fittracker.sleep_day` LIMIT 10;
 </code></pre>
 
 </details>
@@ -284,7 +278,7 @@ AND A.ActivityHour=C.ActivityHour
 
 
 <br> 
-Next, I decided to combine the three hourly datasets mentioed above becasue they had overlapping data and create one dataset that contained all the necessary information.
+I completed the above querys for all daily datasets as well. Next, I decided to combine the daily and sleepday datasets. The daily datasets had overlapping data. It was also cleaner to just develop two datasets (hourly and daily/sleep) so sleepday was also added to the daily dataset. 
 <br>
 
 

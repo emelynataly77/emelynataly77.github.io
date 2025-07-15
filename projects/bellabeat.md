@@ -387,7 +387,6 @@ spc_tbl_ [15,393,213 × 6] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
 > dim(hourly_df)
 [1] 15393213        6  
 </code></pre>
-
 </details>
 
 After confirming the file was uploaded correctly, I began analyzing the data from both a day-of-the-week and time-of-day perspective. To do this, I first split the `activity_hour column` (which contains combined date and time values) into two separate columns: `activityDate` for the date and `time` for the time. I then converted the `activityDate` column into proper Date format and used it to create a new weekday column that indicates the day of the week. Similarly, I converted the time column and used it to categorize each entry into time-of-day segments—Night, Morning, Afternoon, and Evening—based on the hour of the activity. You can see the following code below.

@@ -102,6 +102,7 @@ details {
 }
 @import "{{ site.theme }}"; // keep if you're using the Jekyll theme
 @import "rouge-github";
+@import "rconsole";
 .highlight {
   overflow-x: auto;
   white-space: pre-wrap;
@@ -119,4 +120,4 @@ details {
 .highlight .nf    { color: #6f42c1; } /* function name */
 .highlight .nb    { color: #e36209; } /* built-in name */
 
-@import "rconsole";
+

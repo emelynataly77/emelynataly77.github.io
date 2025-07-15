@@ -184,20 +184,18 @@ Successful Upload Check:
 <summary>Show SQL Query</summary>
 
 <pre><code class="language-sql">
--- Remove NULLs from calories and steps
+-- Row count
+SELECT COUNT (*) as row_count
+FROM `bellabeat-461300.fittracker.hourly_calories` 
+--Check for NULL values in columns
+SELECT
+  COUNTIF(Id IS NULL) AS id_nulls,
+  COUNTIF(ActivityHour IS NULL) AS activity_date_nulls,
+  COUNTIF(Calories IS NULL) AS calories_nulls
+FROM `bellabeat-461300.fittracker.hourly_calories`;
+-- Preview Data
 SELECT *
-FROM `bellabeat-case-study.Fitabase.hourlyCalories`
-WHERE Calories IS NOT NULL;
-
-SELECT *
-FROM `bellabeat-case-study.Fitabase.hourlySteps`
-WHERE StepTotal IS NOT NULL;
-
--- Join hourly calories and steps
-SELECT *
-FROM `bellabeat-case-study.Fitabase.hourlyCalories` AS calories
-JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
-  ON calories.Id = steps.Id AND calories.ActivityHour = steps.ActivityHour;
+FROM `bellabeat-461300.fittracker.hourly_calories` LIMIT 10;
 </code></pre>
 
 </details>

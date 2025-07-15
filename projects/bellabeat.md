@@ -169,7 +169,7 @@ NOTE: Moving forward I will be processing the data by grouping similiar datasets
 
 ### Hourly Data <a id="hourly-data-sql"></a>
 
-- <span style="color:gray;">'hourlyCalories.csv'</span> → renamed <span style="color:gray;">'hourly_Calories' on BigQuery
+- <span style="color:gray;">'hourlyCalories.csv'</span>
 - <span style="color:gray;">'hourlySteps.csv'</span>
 - <span style="color:gray;">'hourlyIntensities.csv'</span>
   
@@ -177,10 +177,9 @@ NOTE: Moving forward I will be processing the data by grouping similiar datasets
 The hourly datasets above were uploaded into BigQuery. I checked if a smooth upload was successful by using a few quick queries
 <br>
 
----
+
 
 Successful Upload Check: 
-
 
 <details>
 <summary>Show SQL Query</summary>
@@ -204,9 +203,12 @@ JOIN `bellabeat-case-study.Fitabase.hourlySteps` AS steps
 
 </details>
 
+
+
 <br> 
 Next, I decided to combine the three hourly datasets mentioned above becasus they had overlapping data and create one dataset that contained all the necessary information.
 <br>
+
 
 
 I used the following query to merge the hourly datasets:
@@ -230,11 +232,11 @@ AND A.ActivityHour=C.ActivityHour
 
 </details>
 
+
+
 <br>
-
 The resulting data file: <span style="color:gray;">'hourlyMerged.csv'</span> can now be uploaded into RStudio to be further processed. 
-
-NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
+  NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
 
 ### Daily/Sleep Data <a id="daily-sleep-data-sql"></a>
 

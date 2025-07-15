@@ -217,7 +217,7 @@ I used the following query to merge the hourly datasets:
 <summary>Show SQL Query</summary>
 
 <pre><code class="language-sql">
--- Merge hourly data files using left join
+-- -- Merge hourly calories, steps, and intensities datasets using LEFT JOIN on Id and ActivityHour
 SELECT A.Id, A.ActivityHour AS activity_hour, A.Calories, C.StepTotal AS step_total, I.TotalIntensity AS total_intensity, I.AverageIntensity AS average_intensity,
 FROM `capstone-case-study-460717.Fitness_Tracker_Data.hourlycalories` A
 LEFT JOIN `capstone-case-study-460717.Fitness_Tracker_Data.hourlysteps` C
@@ -293,7 +293,7 @@ I used the following query to merge the daily/sleep datasets:
 <summary>Show SQL Query</summary>
 
 <pre><code class="language-sql">
--- Merge daily/sleep datasets using inner join
+-- Join daily activity and sleep datasets using INNER JOIN on Id and matching date fields
 SELECT
   activity.Id,
   ActivityDate,

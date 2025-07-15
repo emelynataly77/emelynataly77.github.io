@@ -339,7 +339,7 @@ Load packages and merged data into RStudio
 library(tidyverse)
 library(lubridate)
 #import hourly_merged dataset
-> hourly_df<- read_csv("hourly_merged.csv")
+hourly_df<- read_csv("hourly_merged.csv")
 </code></pre>
 
 </details>
@@ -354,7 +354,7 @@ Successful Upload check:
 
 <pre><code class="language-r">
 # Preview the data
-> head(hourly_df)
+head(hourly_df)
 # A tibble: 6 × 6
           Id activity_hour       Calories step_total total_intensity average_intensity
        <dbl> <dttm>                 <dbl>      <dbl>           <dbl>             <dbl>
@@ -365,7 +365,7 @@ Successful Upload check:
 5 7086361926 2016-04-23 01:00:00       68          0               2            0.0333
 6 7086361926 2016-04-23 01:00:00       68          0               2            0.0333
 # Check the struture of the data
-> str(hourly_df)
+str(hourly_df)
 spc_tbl_ [15,393,213 × 6] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
  $ Id               : num [1:15393213] 7.09e+09 7.09e+09 7.09e+09 7.09e+09 7.09e+09 ...
  $ activity_hour    : POSIXct[1:15393213], format: "2016-04-23 01:00:00" "2016-04-23 01:00:00" "2016-04-23 01:00:00" ...
@@ -384,7 +384,7 @@ spc_tbl_ [15,393,213 × 6] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
   .. )
  - attr(*, "problems")=<externalptr>   
 #check dimensions
-> dim(hourly_df)
+dim(hourly_df)
 [1] 15393213        6  
 </code></pre>
 </details>
@@ -397,17 +397,17 @@ After confirming the file was uploaded correctly, I began analyzing the data fro
 
 <pre><code class="language-r">
 #split data and assigned metrics
->hourly_df$activityDate <- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 1]
->hourly_df$time <- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 2]
->hourly_df$activityDate <- as.Date(hourly_df$activityDate, format="%Y-%m-%d")
->hourly_df$DayOfWeek <- format(as.Date(hourly_df$activityDate), "%A")
->breaks <- hour(hms("00:00:00", "05:59:59", "11:59:59", "17:59:59", "23:59:59"))
->labels <- c("Night", "Morning", "Afternoon", "Evening")
->hourly_df$time  <- as.POSIXct(hourly_df$time, format = "%H:%M:%S")
->hourly_df$TimeOfDay <- cut(x =  hour(hourly_df$time), breaks = breaks, labels = labels, include.lowest=TRUE)
+hourly_df$activityDate <- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 1]
+hourly_df$time <- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 2]
+hourly_df$activityDate <- as.Date(hourly_df$activityDate, format="%Y-%m-%d")
+hourly_df$DayOfWeek <- format(as.Date(hourly_df$activityDate), "%A")
+breaks <- hour(hms("00:00:00", "05:59:59", "11:59:59", "17:59:59", "23:59:59"))
+labels <- c("Night", "Morning", "Afternoon", "Evening")
+hourly_df$time  <- as.POSIXct(hourly_df$time, format = "%H:%M:%S")
+hourly_df$TimeOfDay <- cut(x =  hour(hourly_df$time), breaks = breaks, labels = labels, include.lowest=TRUE)
   
 #check for na values after pushing metrics and splitting data
->colSums(is.na(hourly_df))
+colSums(is.na(hourly_df))
                Id     activity_hour          Calories        step_total   total_intensity 
                 0                 0                 0                 0                 0 
 average_intensity      activityDate              time         DayOfWeek         TimeOfDay 
@@ -422,7 +422,7 @@ I went ahead and also performed a correlation test (similar to what we did in th
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-> cor.test(hourly_df$average_intensity, hourly_df$Calories, method = "pearson")
+cor.test(hourly_df$average_intensity, hourly_df$Calories, method = "pearson")
 
 	Pearson's product-moment correlation
 
@@ -434,7 +434,7 @@ alternative hypothesis: true correlation is not equal to 0
 sample estimates:
        cor 
 0.03763252 
-> cor.test(hourly_df$total_intensity, hourly_df$Calories, method = "pearson")
+cor.test(hourly_df$total_intensity, hourly_df$Calories, method = "pearson")
 
 	Pearson's product-moment correlation
 
@@ -446,7 +446,7 @@ alternative hypothesis: true correlation is not equal to 0
 sample estimates:
        cor 
 0.03763252 
-> cor.test(hourly_df$total_intensity, hourly_df$step_total, method = "pearson")
+cor.test(hourly_df$total_intensity, hourly_df$step_total, method = "pearson")
 
 	Pearson's product-moment correlation
 
@@ -458,7 +458,7 @@ alternative hypothesis: true correlation is not equal to 0
 sample estimates:
        cor 
 0.04351006 
-> cor.test(hourly_df$average_intensity, hourly_df$step_total, method = "pearson")
+cor.test(hourly_df$average_intensity, hourly_df$step_total, method = "pearson")
 
 	Pearson's product-moment correlation
 

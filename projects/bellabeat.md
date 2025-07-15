@@ -348,7 +348,7 @@ Again I quickly checked if the data was uploaded accurately using the code below
 <br>
 
 Successful Upload check: 
-<details>
+<details>	
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
@@ -420,6 +420,8 @@ I went ahead and also performed a correlation test (similar to what we did in th
 
 <details>
 <summary>Show R Code</summary>
+
+<pre><code class="language-r">
 > cor.test(hourly_df$average_intensity, hourly_df$Calories, method = "pearson")
 
 	Pearson's product-moment correlation

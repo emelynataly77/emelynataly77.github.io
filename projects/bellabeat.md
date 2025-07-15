@@ -136,6 +136,7 @@ Many datasets were too large to process on excel and even too large to properly 
       <li><span style="color:gray;">`minuteStepsNarrow.csv`</span></li>
       <li><span style="color:gray;">`dailyIntensities_merged.csv`</span></li>
       <li><span style="color:gray;">`dailyCalories_merged.csv`</span></li>
+      <li><span style="color:gray;">'weightLogInfo_merged.csv'</span></li>
     </ul>
   </div>
 
@@ -278,12 +279,12 @@ FROM `bellabeat-461300.fittracker.sleep_day` LIMIT 10;
 
 
 <br> 
-I completed the above querys for all daily datasets as well. Next, I decided to combine the daily and sleepday datasets. The daily datasets had overlapping data. It was also cleaner to just develop two datasets (hourly and daily/sleep) so sleepday was also added to the daily dataset. 
+I completed the above querys for the dailyactivity dataset as well. Next, I decided to combine the dailyactivity and sleepday datasets as they had some correspondonding data. It was also cleaner to just develop two datasets (hourly and daily/sleep) so sleepday was also added to the daily dataset. 
 <br>
 
 
 
-I used the following query to merge the daily/sleep datasets:
+I used the following query to merge the dailyactivity sleepday datasets:
 
 <details>
 <summary>Show SQL Query</summary>
@@ -316,7 +317,7 @@ INNER JOIN `bellabeat-461300.fittracker.sleep_day` AS sleep
 
 
 <br>
-After merging the daily data files i peeked at the correlation coefficients  (r) on excel between the data, i found that sleep and non-active minutes had a somehwat negative correlation (-0.5869588). Suggesting, sleep has a somewhat stronger effect on if an individual will be active the following day. 
+After merging the daily/sleep data files i peeked at the correlation coefficients  (r) on excbetween the data, i found that sleep and non-active minutes had a somehwat negative correlation (-0.5869588). Suggesting, sleep has a somewhat stronger effect on if an individual will be active the following day. 
 The resulting merged data file: <span style="color:gray;">'dailyMerged.csv'</span> can now be uploaded into RStudio to be further processed. 
 
 NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 

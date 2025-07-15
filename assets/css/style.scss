@@ -101,7 +101,7 @@ details {
   font-family: 'Fira Mono', monospace;
 }
 @import "{{ site.theme }}"; // keep if you're using the Jekyll theme
-@import "rouge-github";
+@import "assets/css/rouge-github"; // good path
 @import "rconsole";
 .highlight {
   overflow-x: auto;

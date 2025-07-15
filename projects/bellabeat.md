@@ -396,7 +396,22 @@ After confirming the file was uploaded correctly, I began analyzing the data fro
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-INSERT CODE
+#split data and assigned metrics
+>hourly_df$activityDate <- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 1]
+>hourly_df$time <- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 2]
+>hourly_df$activityDate <- as.Date(hourly_df$activityDate, format="%Y-%m-%d")
+>hourly_df$DayOfWeek <- format(as.Date(hourly_df$activityDate), "%A")
+>breaks <- hour(hms("00:00:00", "05:59:59", "11:59:59", "17:59:59", "23:59:59"))
+>labels <- c("Night", "Morning", "Afternoon", "Evening")
+>hourly_df$time  <- as.POSIXct(hourly_df$time, format = "%H:%M:%S")
+>hourly_df$TimeOfDay <- cut(x =  hour(hourly_df$time), breaks = breaks, labels = labels, include.lowest=TRUE)
+  
+#check for na values after pushing metrics and splitting data
+>colSums(is.na(hourly_df))
+               Id     activity_hour          Calories        step_total   total_intensity 
+                0                 0                 0                 0                 0 
+average_intensity      activityDate              time         DayOfWeek         TimeOfDay 
+                0                 0            650227                 0            650227  
 </code></pre>
 
 </details>
@@ -405,9 +420,56 @@ I went ahead and also performed a correlation test (similar to what we did in th
 
 <details>
 <summary>Show R Code</summary>
+> cor.test(hourly_df$average_intensity, hourly_df$Calories, method = "pearson")
 
+	Pearson's product-moment correlation
+
+data:  hourly_df$average_intensity and hourly_df$Calories
+t = 147.75, df = 15393211, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.03713366 0.03813135
+sample estimates:
+       cor 
+0.03763252 
+> cor.test(hourly_df$total_intensity, hourly_df$Calories, method = "pearson")
+
+	Pearson's product-moment correlation
+
+data:  hourly_df$total_intensity and hourly_df$Calories
+t = 147.75, df = 15393211, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.03713366 0.03813136
+sample estimates:
+       cor 
+0.03763252 
+> cor.test(hourly_df$total_intensity, hourly_df$step_total, method = "pearson")
+
+	Pearson's product-moment correlation
+
+data:  hourly_df$total_intensity and hourly_df$step_total
+t = 170.87, df = 15393211, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.04301144 0.04400866
+sample estimates:
+       cor 
+0.04351006 
+> cor.test(hourly_df$average_intensity, hourly_df$step_total, method = "pearson")
+
+	Pearson's product-moment correlation
+
+data:  hourly_df$average_intensity and hourly_df$step_total
+t = 170.87, df = 15393211, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.04301144 0.04400866
+sample estimates:
+       cor 
+0.04351006 
 <pre><code class="language-r">
-INSERT CODE
+
 </code></pre>
 
 </details>

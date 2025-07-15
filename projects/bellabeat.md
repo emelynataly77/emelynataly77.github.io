@@ -317,7 +317,6 @@ INNER JOIN `bellabeat-461300.fittracker.sleep_day` AS sleep
 
 
 <br>
-After merging the daily/sleep data files i peeked at the correlation coefficients  (r) on excbetween the data, i found that sleep and non-active minutes had a somehwat negative correlation (-0.5869588). Suggesting, sleep has a somewhat stronger effect on if an individual will be active the following day. 
 The resulting merged data file: <span style="color:gray;">'dailyMerged.csv'</span> can now be uploaded into RStudio to be further processed. 
 
 NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
@@ -328,7 +327,23 @@ This section covers the data cleaning, analysis, and visualization done in RStud
 ### Hourly Data <a id="hourly-data-r"></a>
 - <span style="color:gray;">'hourlyMerged.csv'</span>
 
-The dataset above was uploaded into BigQuery. Again I quickly checked if the data was uploaded accurately using the code below. 
+First I loaded the packages that I will be needing for the analysis in RStudio. I will be using tidyverse and lubridate.
+
+Load packages:
+
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+  
+#load packages needed for analysis
+library(tidyverse)
+library(lubridate)
+</code></pre>
+
+</details>
+
+Next, I uploaded both my hourly_merged and daily_merged datasets. Again I quickly checked if the data was uploaded accurately using the code below. 
 <br>
 
 Successful Upload check: 
@@ -345,7 +360,9 @@ hourly_df <- read_csv("SQL hourly_merged.csv")
 colnames(hourly_df)
 
 # Check participant counts
-n_distinct(hourly_df$Id)   # Number of unique participants in hourly data
+n_distinct(hourly_df$Id)  
+
+# Number of unique participants in hourly data
 </code></pre>
 
 </details>

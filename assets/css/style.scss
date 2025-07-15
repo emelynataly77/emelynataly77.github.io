@@ -100,6 +100,7 @@ details {
   border-radius: 4px;
   font-family: 'Fira Mono', monospace;
 }
+@import "{{ site.theme }}"; // keep if you're using the Jekyll theme
 @import "rouge-github";
 @import "rconsole";
 .highlight {

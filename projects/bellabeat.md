@@ -469,9 +469,7 @@ alternative hypothesis: true correlation is not equal to 0
  0.04301144 0.04400866
 sample estimates:
        cor 
-0.04351006 
-<pre><code class="language-r">
-
+0.04351006
 </code></pre>
 
 </details>

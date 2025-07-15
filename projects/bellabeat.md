@@ -327,23 +327,24 @@ This section covers the data cleaning, analysis, and visualization done in RStud
 ### Hourly Data <a id="hourly-data-r"></a>
 - <span style="color:gray;">'hourlyMerged.csv'</span>
 
-First I loaded the packages that I will be needing for the analysis in RStudio. I will be using tidyverse and lubridate.
+First I loaded the packages that I will be needing for the hourly and daily data analysis in RStudio. I will be using tidyverse and lubridate. Next, I uploaded both my hourly_merged datasets. 
 
-Load packages:
+Load packages and merged data into RStudio
 
 <details>
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-  
 #load packages needed for analysis
 library(tidyverse)
 library(lubridate)
+#import hourly_merged dataset
+> hourl_df<- read_csv("hourly_merged.csv")
 </code></pre>
 
 </details>
 
-Next, I uploaded both my hourly_merged and daily_merged datasets. Again I quickly checked if the data was uploaded accurately using the code below. 
+Again I quickly checked if the data was uploaded accurately using the code below. 
 <br>
 
 Successful Upload check: 

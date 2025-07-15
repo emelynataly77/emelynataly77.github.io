@@ -190,7 +190,7 @@ FROM `bellabeat-461300.fittracker.hourly_calories`
 --Check for NULL values in columns
 SELECT
   COUNTIF(Id IS NULL) AS id_nulls,
-  COUNTIF(ActivityHour IS NULL) AS activity_date_nulls,
+  COUNTIF(ActivityHour IS NULL) AS activity_hour_nulls,
   COUNTIF(Calories IS NULL) AS calories_nulls
 FROM `bellabeat-461300.fittracker.hourly_calories`;
 -- Preview Data
@@ -203,7 +203,7 @@ FROM `bellabeat-461300.fittracker.hourly_calories` LIMIT 10;
 
 
 <br> 
-Next, I decided to combine the three hourly datasets mentioned above becasus they had overlapping data and create one dataset that contained all the necessary information.
+I completed the above three querires for all of the hourly data sets after uploading. After I felt comfprtable that the data was ploaded correctly I decided to combine the three hourly datasets. The hourly datasets contained overlapping data that was repetiative and unncescesary. I combined them into one data set so that they owuld beocme easier to handle and analyze later on. 
 <br>
 
 

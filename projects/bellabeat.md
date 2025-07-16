@@ -349,8 +349,28 @@ Again I quickly checked if the data was uploaded accurately using the code below
 
 Successful Upload check: 
 
-After confirming the file was uploaded correctly, I began analyzing the data from both a day-of-the-week and time-of-day perspective. To do this, I first split the `activity_hour column` (which contains combined date and time values) into two separate columns: `activityDate` for the date and `time` for the time. I then converted the `activityDate` column into proper Date format and used it to create a new weekday column that indicates the day of the week. Similarly, I converted the time column and used it to categorize each entry into time-of-day segments—Night, Morning, Afternoon, and Evening—based on the hour of the activity. You can see the following code below.
+<details>
+<summary>Show R Code</summary>
 
+<pre><code class="language-r">
+#Preview the data
+head(hourly_df)
+  # A tibble: 6 × 10
+          Id activity_hour       Calories step_total total_intensity average_intensity activityDate time               
+       <dbl> <dttm>                 <dbl>      <dbl>           <dbl>             <dbl> <date>       <dttm>             
+1 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
+2 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
+3 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
+4 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
+5 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
+6 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
+# ℹ 2 more variables: DayOfWeek <chr>, TimeOfDay <fct>
+#check the structure of the data
+</code></pre>
+
+</details>
+  
+After confirming the file was uploaded correctly, I began analyzing the data from both a day-of-the-week and time-of-day perspective. To do this, I first split the `activity_hour column` (which contains combined date and time values) into two separate columns: `activityDate` for the date and `time` for the time. I then converted the `activityDate` column into proper Date format and used it to create a new weekday column that indicates the day of the week. Similarly, I converted the time column and used it to categorize each entry into time-of-day segments—Night, Morning, Afternoon, and Evening—based on the hour of the activity. You can see the following code below.
 
 <details>
 <summary>Show R Code</summary>

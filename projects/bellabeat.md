@@ -336,8 +336,10 @@ Load packages and merged data into RStudio
 
 <pre><code class="language-r">
 # load packages needed for analysis
+install.packages
 library(tidyverse)
 library(lubridate)
+library(qwraps2)
 # import hourly_merged dataset
 hourly_df <- read_csv("hourly_merged.csv")
 </code></pre>
@@ -474,6 +476,18 @@ alternative hypothesis: true correlation is not equal to 0
 0.04301144 0.04400866
 sample estimates:
 cor = 0.04351006
+> cor.test(hourly_df$step_total, hourly_df$Calories, method = "pearson")
+
+	Pearson's product-moment correlation
+
+data:  hourly_df$step_total and hourly_df$Calories
+t = 5498.6, df = 15393211, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.8138534 0.8141904
+sample estimates:
+     cor 
+0.814022
 </code></pre>
 
 </details>

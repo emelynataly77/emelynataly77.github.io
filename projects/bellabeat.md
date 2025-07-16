@@ -357,7 +357,7 @@ Successful Upload check:
 head(hourly_df)
 # A tibble: 6 × 10
           Id activity_hour       Calories step_total total_intensity average_intensity activityDate time               
-       <dbl> <dttm>                 <dbl>      <dbl>           <dbl>             <dbl> <date>       <dttm>             
+      # <dbl> <dttm>                 <dbl>      <dbl>           <dbl>             <dbl> <date>       <dttm>             
 1 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
 2 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
 3 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00

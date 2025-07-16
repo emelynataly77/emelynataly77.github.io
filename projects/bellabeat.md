@@ -730,15 +730,15 @@ Im going to go ahead and make a bar graph of my findings on top of the chart we 
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-# visual bar graph for average steps by time of day
-ggplot(timeofday_summary1, aes(x = reorder(TimeOfDay, -Total_Steps_Avg), y = Total_Steps_Avg)) +
-+ geom_bar(stat = "identity", fill = "pink") +
-+ labs(title = "Average Steps by Time of Day", x = "", y = "Average Total Steps") 
-
 # visual bar graph for average calories by time time of day
 ggplot(timeofday_summary1, aes(x = reorder(TimeOfDay, -Calories_Avg), y = Calories_Avg)) +
 + geom_bar(stat = "identity", fill = "#FF69B4") +
 + labs(title = "Average Calories by Time of Day", x = "", y = "Average Calories")
+
+# visual bar graph for average steps by time of day
+ggplot(timeofday_summary1, aes(x = reorder(TimeOfDay, -Total_Steps_Avg), y = Total_Steps_Avg)) +
++ geom_bar(stat = "identity", fill = "pink") +
++ labs(title = "Average Steps by Time of Day", x = "", y = "Average Total Steps") 
 </code></pre>
 
 </details>

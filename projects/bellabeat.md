@@ -853,22 +853,45 @@ dim(daily_df)
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-# Pearson correlation tests
-cor.test(daily_df$TotalMinutesAsleep, daily_df$HeavyActiveMinutes, method = "pearson")
+# Pearson correlation test: total minutes asleep vs heavy active minutes
+cor.test(daily_df$TotalMinutesAsleep, daily_df$HeavyActiveMinutes, method = "pearson" )
+
+	Pearson's product-moment correlation
+
+data:  daily_df$TotalMinutesAsleep and daily_df$HeavyActiveMinutes
+t = -3.7286, df = 408, p-value = 0.0002197
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.27356474 -0.08619484
+sample estimates:
+       cor 
+-0.1815268 
+
+#Pearson correlation test: total minutes asleep light/non active minutes
 cor.test(daily_df$TotalMinutesAsleep, daily_df$LightActiveMinutes, method = "pearson")
+
+	Pearson's product-moment correlation
+
+data:  daily_df$TotalMinutesAsleep and daily_df$LightActiveMinutes
+t = -14.644, df = 408, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.6470247 -0.5196501
+sample estimates:
+       cor 
+-0.5869577
 
 # Plot sleep vs light activity
 library(ggplot2)
 
 ggplot(data = daily_df, aes(x = TotalMinutesAsleep, y = LightActiveMinutes)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = FALSE, col = "blue") +
+  geom_jitter(width = 0.3, height = 0.3, alpha = 0.6, color = "blue") +
+  geom_smooth(method = "lm", se = FALSE, color = "darkred") +
   labs(
-    y = "Light/Non‑active minutes",
-    x = "Total minutes asleep"
-  ) +
-  ggtitle("Relationship Between Sleep and Light/Non Activity")
-
+    x = "Total minutes asleep",
+    y = "Light/Non-active minutes",
+    title = "Relationship Between Sleep and Light/Non Activity"
+  )
 </code></pre>
 
 </details>

@@ -334,13 +334,14 @@ Load packages and merged data into RStudio
 <details>
 <summary>Show R Code</summary>
 
-```r
+<pre><code class="language-r">
 # load packages needed for analysis
 library(tidyverse)
 library(lubridate)
 # import hourly_merged dataset
 hourly_df <- read_csv("hourly_merged.csv")
-```
+</code></pre>
+
 </details>
 
 Again I quickly checked if the data was uploaded accurately using the code below. 

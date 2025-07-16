@@ -743,8 +743,16 @@ ggplot(timeofday_summary1, aes(x = reorder(TimeOfDay, -Total_Steps_Avg), y = Tot
 
 </details>
 
-INSERT AVERAGE STEPS BY TIME OF DAY 
-INSERT AVERAGE CALORIES BY TIME OF DAY 
+
+<p align="center">
+  <img src="../projects/Average%20Steps%20by%20Time%20of%20Day.png" width="600" alt="Average Steps by Time of Day">
+</p>
+
+<p align="center">
+  <img src="../projects/Average%20Calories%20by%20Time%20of%20Day.png" width="600" alt="Average Calories by Time of Day">
+</p>
+
+
 
  I was a little surprised to find that most users were significantly more active during the afternoon and not the morning and evening. This could be notworthy as to who bellabeats targer customers could be (people who do not usually work a 9-5?) Moreover, that would of course require more data thtan we currently have. Just somthing to keep in mind for future research/refernce. The evening and morning being relatively the same was unsurprising. The sama ecan be said for nightime being the the time users were the least active. 
  

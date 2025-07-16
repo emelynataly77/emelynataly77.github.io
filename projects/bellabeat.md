@@ -476,7 +476,8 @@ alternative hypothesis: true correlation is not equal to 0
 0.04301144 0.04400866
 sample estimates:
 cor = 0.04351006
-> cor.test(hourly_df$step_total, hourly_df$Calories, method = "pearson")
+	
+cor.test(hourly_df$step_total, hourly_df$Calories, method = "pearson")
 
 	Pearson's product-moment correlation
 
@@ -493,16 +494,16 @@ sample estimates:
 </details>
 
 
-Shockingly, there didnt seem to be any substantial correlation between intensity and steps taken or intensity and calories burned. Since we split the data into time of day I wanted to also check at which points of the day individuals were being more or less active. I would assume participants would be more active during the morning or evening times considering, work schedules and common physical activity timeslots. However, this assumption dos not account for the weekends.  I wrote up the following two code blocks to analyze time of day activity throught the week (SUN-SAT).
+Shockingly, there didnt seem to be any substantial linear correlation between intensity and steps taken or intensity and calories burned. Since we split the data into time of day I wanted to also check at which points of the day individuals were being more or less active. I would assume participants would be more active during the morning or evening times considering, work schedules and common physical activity timeslots. However, this assumption dos not account for the weekends.  I wrote up the following two code blocks to analyze time of day activity throught the week (SUN-SAT).
 
 <details>
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
 # Filter data for "Morning" time period and select relevant columns
-morninghr <- hourly_df1 %>%
+morninghr <- hourly_df %>%
   filter(TimeOfDay == "Morning") %>%
-  select(step_total, total_intensity, calories)
+  select(step_total, total_intensity, Calories)
 
 # View summary statistics for the morning activity
 summary(morninghr)
@@ -530,7 +531,7 @@ summary(afternoonhr)
  Max.   :10554.0   Max.   :180.00   Max.   :948.0  
 
 # Filter data for "Evening" time period and select relevant columns  
-veninghr <- hourly_df %>%
+Eveninghr <- hourly_df %>%
 + filter(hourly_df$TimeOfDay == "Evening") %>%
 + select(c(step_total, total_intensity, Calories))
   
@@ -566,7 +567,40 @@ summary(nighthr)
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-INSERT CODE
+#create morning list
+morninghr_list <- 
++ list(
++ list("Total_Steps_Avg" = ~mean(morninghr$step_total)),
++ list("Calories_Avg" = ~ mean(morninghr$Calories))
++ )
+morninghr_sum <- summary_table(morninghr, morninghr_list)
+print.default(morninghr_sum)
+                          morninghr (N = 3,886,786)
+[1,] "\\bf{}"             "~"                      
+[2,] "~~ Total_Steps_Avg" "374.758472938825"       
+[3,] "\\bf{}"             "~"                      
+[4,] "~~ Calories_Avg"    "101.664592287818"       
+attr(,"class")
+[1] "qwraps2_summary_table" "qwraps2_qable"        
+attr(,"qable_args")
+attr(,"qable_args")$rtitle
+[1] ""
+
+attr(,"qable_args")$rgroup
+[1] 1 1
+
+attr(,"qable_args")$rnames
+[1] "Total_Steps_Avg" "Calories_Avg"   
+
+attr(,"qable_args")$cnames
+[1] ""                          "morninghr (N = 3,886,786)"
+
+attr(,"qable_args")$markup
+[1] "latex"
+
+attr(,"qable_args")$kable_args
+list()
+
 </code></pre>
 
 </details>

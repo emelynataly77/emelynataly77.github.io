@@ -890,20 +890,67 @@ ggplot(data = daily_df, aes(x = TotalMinutesAsleep, y = LightActiveMinutes)) +
   labs(
     x = "Total minutes asleep",
     y = "Light/Non-active minutes",
-    title = "Relationship Between Sleep and Light/Non Activity"
+    title = "Sleep vs. Light/Non Activity Patterns"
   )
 </code></pre>
 
 </details>
 
 INSERT GGPLOT GRAPH 
+
+People who sleep more tend to have fewer non-active minutes during the day (a stronger relationship)
+They also tend to have slightly fewer active minutes, but this relationship is weak....
+The negative correlations suggest more sleep might be associated with more overall movement or less sedentary time, especially the stronger relationship with non-active minutes.
 The graph above suggests that people who sleep more may be more active during the day. The low p value (2.2e-16) confirms statistical significance. I wanted to look further into the day by day breakdown of the data between sleep adn non-activity. In the code block below I filter the data for each day of the week and generate summary statistics for the filtered datasets.
+Again i want to break the data into time frames and days of the week to grasp when users are getting the most out of device usage or the least usage. Simple summaries of the data could help up pinpoint genreal calculations of the columns. 
 
 <details>
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-INSERT CODE
+# convert the Activity_Date into date format
+daily_df$ActivityDate <- as.Date(daily_df$ActivityDate, format = "%m/%d/%Y")
+	
+# create a weekday column 
+daily_df$weekday <- weekdays(daily_df$ActivityDate)
+	
+# seperate mon data from daily
+monday_data <- daily_df %>%
++     filter(weekday == "Monday") %>%
++     select(-c(Id, ActivityDate))
+	
+# summary of the new seperated mon data
+summary(monday_data)
+   TotalSteps    TotalDistance    TrackerDistance  LoggedActivitiesDistance LongerDistance 
+ Min.   : 1831   Min.   : 1.170   Min.   : 1.170   Min.   :0.0000           Min.   :0.000  
+ 1st Qu.: 6937   1st Qu.: 4.788   1st Qu.: 4.788   1st Qu.:0.0000           1st Qu.:0.410  
+ Median : 9831   Median : 6.815   Median : 6.815   Median :0.0000           Median :1.975  
+ Mean   : 9273   Mean   : 6.541   Mean   : 6.536   Mean   :0.3113           Mean   :2.519  
+ 3rd Qu.:11559   3rd Qu.: 8.265   3rd Qu.: 8.265   3rd Qu.:0.0000           3rd Qu.:3.980  
+ Max.   :16520   Max.   :11.050   Max.   :11.050   Max.   :3.1678           Max.   :8.020  
+ ShorterDistance HeavyActiveMinutes LightActiveMinutes    Calories    TotalSleepRecords
+ Min.   :1.120   Min.   :  0.00     Min.   : 322.0     Min.   :1248   Min.   :1.000    
+ 1st Qu.:3.045   1st Qu.: 10.25     1st Qu.: 882.5     1st Qu.:1998   1st Qu.:1.000    
+ Median :3.930   Median : 44.50     Median : 931.5     Median :2232   Median :1.000    
+ Mean   :4.016   Mean   : 49.80     Mean   : 940.8     Mean   :2432   Mean   :1.109    
+ 3rd Qu.:4.855   3rd Qu.: 77.50     3rd Qu.:1000.0     3rd Qu.:3007   3rd Qu.:1.000    
+ Max.   :6.790   Max.   :167.00     Max.   :1278.0     Max.   :4157   Max.   :2.000    
+ TotalMinutesAsleep TotalTimeInBed    weekday         
+ Min.   : 62.0      Min.   : 65.0   Length:46         
+ 1st Qu.:368.5      1st Qu.:399.8   Class :character  
+ Median :434.0      Median :467.5   Mode  :character  
+ Mean   :419.5      Mean   :457.3                     
+ 3rd Qu.:492.8      3rd Qu.:528.8                     
+ Max.   :796.0      Max.   :961.0 
+
+# Calculate average steps, activity, sleep, and calories for Mondays only.
+mon_data_summary <- monday_data %>%
++     summarise(
++         Total_Steps_Avg = mean(TotalSteps, na.rm = TRUE),
++         Active_Minutes_Avg = mean(HeavyActiveMinutes, na.rm = TRUE),
++         Sedentary_Minutes_Avg = mean(LightActiveMinutes, na.rm = TRUE),
++         Calories_Avg = mean(Calories, na.rm = TRUE),
++         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
 </code></pre>
 
 </details>

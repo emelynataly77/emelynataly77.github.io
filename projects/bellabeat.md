@@ -771,24 +771,83 @@ ggplot(timeofday_summary1, aes(x = reorder(TimeOfDay, -Total_Steps_Avg), y = Tot
 The dataset abover was uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below
 <br>
 
-Successful Upload check: 
+Import data into Rstudio:
+
 <details>
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-library(tidyverse)
-
-# Load data
-daily_df  <- read_csv("SQL daily_merged.csv")
-
-# View column names
-colnames(hourly_df)
-
-# Check participant counts
-n_distinct(hourly_df$Id)   # Number of unique participants in hourly data
+# import daily_merged dataset
+daily_df <- read_csv("daily_merged.csv")
 </code></pre>
 
 </details>
+
+Successful Upload check: 
+
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+# Preview the data
+head(daily_df)
+
+# A tibble: 6 × 14
+#        Id     ActivityDate TotalSteps TotalDistance TrackerDistance LoggedActivitiesDistance LongerDistance ShorterDistance
+#     &lt;dbl&gt;     &lt;chr&gt;            &lt;dbl&gt;         &lt;dbl&gt;           &lt;dbl&gt;                    &lt;dbl&gt;          &lt;dbl&gt;           &lt;dbl&gt;
+# 1 1644430081  4/30/2016        18213         13.2            13.2                         0           3.77            9.46
+# 2 2347167796  4/14/2016        10129          6.70            6.70                        0           2.76            3.94
+# 3 3977333714  4/16/2016        13459          9.00            9.00                        0           6.03            2.97
+# 4 3977333714  4/17/2016        10415          6.97            6.97                        0           3.05            3.92
+# 5 3977333714  4/19/2016        12414          8.78            8.78                        0           4.69            3.96
+# 6 3977333714  4/20/2016        11658          7.83            7.83                        0           4.55            3.28
+# ℹ 6 more variables: HeavyActiveMinutes &lt;dbl&gt;, LightActiveMinutes &lt;dbl&gt;, Calories &lt;dbl&gt;, TotalSleepRecords &lt;dbl&gt;,
+#   TotalMinutesAsleep &lt;dbl&gt;, TotalTimeInBed &lt;dbl&gt;
+
+# Check the structure of the data
+str(daily_df)
+
+# spc_tbl_ [410 × 14] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+#  $ Id                      : num [1:410] 1.64e+09 2.35e+09 ...
+#  $ ActivityDate            : chr [1:410] "4/30/2016" "4/14/2016" ...
+#  $ TotalSteps              : num [1:410] 18213 10129 ...
+#  $ TotalDistance           : num [1:410] 13.24 6.7 ...
+#  $ TrackerDistance         : num [1:410] 13.24 6.7 ...
+#  $ LoggedActivitiesDistance: num [1:410] 0 0 ...
+#  $ LongerDistance          : num [1:410] 3.77 2.76 ...
+#  $ ShorterDistance         : num [1:410] 9.46 3.94 ...
+#  $ HeavyActiveMinutes      : num [1:410] 80 49 ...
+#  $ LightActiveMinutes      : num [1:410] 1218 911 ...
+#  $ Calories                : num [1:410] 3846 2010 ...
+#  $ TotalSleepRecords       : num [1:410] 1 1 ...
+#  $ TotalMinutesAsleep      : num [1:410] 124 445 ...
+#  $ TotalTimeInBed          : num [1:410] 142 489 ...
+# - attr(*, "spec")=
+#   .. cols(
+#   ..   Id = col_double(),
+#   ..   ActivityDate = col_character(),
+#   ..   TotalSteps = col_double(),
+#   ..   TotalDistance = col_double(),
+#   ..   TrackerDistance = col_double(),
+#   ..   LoggedActivitiesDistance = col_double(),
+#   ..   LongerDistance = col_double(),
+#   ..   ShorterDistance = col_double(),
+#   ..   HeavyActiveMinutes = col_double(),
+#   ..   LightActiveMinutes = col_double(),
+#   ..   Calories = col_double(),
+#   ..   TotalSleepRecords = col_double(),
+#   ..   TotalMinutesAsleep = col_double(),
+#   ..   TotalTimeInBed = col_double()
+#   .. )
+# - attr(*, "problems")=&lt;externalptr&gt;
+
+# Check the dimensions
+dim(daily_df)
+# [1] 410  14
+</code></pre>
+
+</details>
+
 
 <details>
 <summary>Show R Code</summary>

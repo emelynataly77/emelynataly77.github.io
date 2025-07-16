@@ -744,13 +744,22 @@ ggplot(timeofday_summary1, aes(x = reorder(TimeOfDay, -Total_Steps_Avg), y = Tot
 </details>
 
 
-<p align="center">
-  <img src="../projects/Average%20Steps%20by%20Time%20of%20Day.png" width="600" alt="Average Steps by Time of Day">
-</p>
+<div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; text-align: center;">
 
-<p align="center">
-  <img src="../projects/Average%20Calories%20by%20Time%20of%20Day.png" width="600" alt="Average Calories by Time of Day">
-</p>
+  <!-- Average Steps -->
+  <div>
+    <h3 style="color:#333; font-weight:bold;">Average Steps by Time of Day</h3>
+    <img src="../projects/Average%20Steps%20by%20Time%20of%20Day.png" alt="Average Steps by Time of Day" width="400">
+  </div>
+
+  <!-- Average Calories -->
+  <div>
+    <h3 style="color:#333; font-weight:bold;">Average Calories by Time of Day</h3>
+    <img src="../projects/Average%20Calories%20by%20Time%20of%20Day.png" alt="Average Calories by Time of Day" width="400">
+  </div>
+
+</div>
+
 
 
 

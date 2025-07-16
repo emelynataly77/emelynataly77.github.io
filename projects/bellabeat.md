@@ -348,15 +348,17 @@ Again I quickly checked if the data was uploaded accurately using the code below
 
 Successful Upload check: 
 
+Successful Upload check:
+
 <details>
 <summary>Show R Code</summary>
 
-```r
+<pre><code class="language-r">
 # Preview the data
-> head(hourly_df)
+head(hourly_df)
 # A tibble: 6 × 10
-          Id activity_hour       Calories step_total total_intensity average_intensity activityDate time               
-       <dbl> <dttm>                 <dbl>      <dbl>           <dbl>             <dbl> <date>       <dttm>             
+          Id activity_hour       Calories step_total total_intensity average_intensity activityDate time
+       <dbl> <dttm>                 <dbl>      <dbl>           <dbl>             <dbl> <date>       <dttm>
 1 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
 2 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
 3 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
@@ -364,19 +366,20 @@ Successful Upload check:
 5 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
 6 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
 # ℹ 2 more variables: DayOfWeek <chr>, TimeOfDay <fct>
-# check the structure of the data
-> str(hourly_df)
+
+# Check the structure of the data
+str(hourly_df)
 spc_tbl_ [15,393,213 × 10] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
- $ Id               : num [1:15393213] 7.09e+09 7.09e+09 7.09e+09 7.09e+09 7.09e+09 ...
- $ activity_hour    : POSIXct[1:15393213], format: "2016-04-23 01:00:00" "2016-04-23 01:00:00" "2016-04-23 01:00:00" "2016-04-23 01:00:00" ...
- $ Calories         : num [1:15393213] 68 68 68 68 68 68 68 68 68 68 ...
- $ step_total       : num [1:15393213] 0 0 0 0 0 0 0 0 0 0 ...
- $ total_intensity  : num [1:15393213] 1 1 1 2 2 2 2 4 4 4 ...
- $ average_intensity: num [1:15393213] 0.0167 0.0167 0.0167 0.0333 0.0333 ...
- $ activityDate     : Date[1:15393213], format: "2016-04-23" "2016-04-23" "2016-04-23" "2016-04-23" ...
- $ time             : POSIXct[1:15393213], format: "2025-07-15 01:00:00" "2025-07-15 01:00:00" "2025-07-15 01:00:00" "2025-07-15 01:00:00" ...
- $ DayOfWeek        : chr [1:15393213] "Saturday" "Saturday" "Saturday" "Saturday" ...
- $ TimeOfDay        : Factor w/ 4 levels "Night","Morning",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ Id               : num [1:15393213] 7.09e+09 7.09e+09 7.09e+09 ...
+ $ activity_hour    : POSIXct[1:15393213], format: "2016-04-23 01:00:00" ...
+ $ Calories         : num [1:15393213] 68 68 68 ...
+ $ step_total       : num [1:15393213] 0 0 0 ...
+ $ total_intensity  : num [1:15393213] 1 1 1 ...
+ $ average_intensity: num [1:15393213] 0.0167 0.0167 ...
+ $ activityDate     : Date[1:15393213], format: "2016-04-23" ...
+ $ time             : POSIXct[1:15393213], format: "2025-07-15 01:00:00" ...
+ $ DayOfWeek        : chr [1:15393213] "Saturday" "Saturday" ...
+ $ TimeOfDay        : Factor w/ 4 levels "Night","Morning",..: 1 1 1 ...
  - attr(*, "spec")=
   .. cols(
   ..   Id = col_double(),
@@ -387,11 +390,14 @@ spc_tbl_ [15,393,213 × 10] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
   ..   average_intensity = col_double()
   .. )
  - attr(*, "problems")=<externalptr>
-#Check the dimensions of the data
-> dim(hourly_df)
+
+# Check the dimensions
+dim(hourly_df)
 [1] 15393213       10
-```
+</code></pre>
+
 </details>
+
   
 After confirming the file was uploaded correctly, I began analyzing the data from both a day-of-the-week and time-of-day perspective. To do this, I first split the `activity_hour column` (which contains combined date and time values) into two separate columns: `activityDate` for the date and `time` for the time. I then converted the `activityDate` column into proper Date format and used it to create a new weekday column that indicates the day of the week. Similarly, I converted the time column and used it to categorize each entry into time-of-day segments—Night, Morning, Afternoon, and Evening—based on the hour of the activity. You can see the following code below.
 

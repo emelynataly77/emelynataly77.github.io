@@ -357,18 +357,18 @@ Successful Upload check:
 head(hourly_df)
 # A tibble: 6 x 10
           Id activity_hour       Calories step_total total_intensity average_intensity activityDate time
-       <dbl> <dttm>                 <dbl>      <dbl>           <dbl>             <dbl> <date>       <dttm>
+       &lt;dbl&gt; &lt;dttm&gt;                 &lt;dbl&gt;      &lt;dbl&gt;           &lt;dbl&gt;             &lt;dbl&gt; &lt;date&gt;       &lt;dttm&gt;
 1 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
 2 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
 3 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
 4 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
 5 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
 6 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
-# ℹ 2 more variables: DayOfWeek <chr>, TimeOfDay <fct>
+# ℹ 2 more variables: DayOfWeek &lt;chr&gt;, TimeOfDay &lt;fct&gt;
 
 # Check the structure of the data
 str(hourly_df)
-spc_tbl_ [15,393,213 × 10] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+spc_tbl_ [15,393,213 x 10] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
  $ Id               : num [1:15393213] 7.09e+09 7.09e+09 7.09e+09 ...
  $ activity_hour    : POSIXct[1:15393213], format: "2016-04-23 01:00:00" ...
  $ Calories         : num [1:15393213] 68 68 68 ...
@@ -388,7 +388,7 @@ spc_tbl_ [15,393,213 × 10] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
   ..   total_intensity = col_double(),
   ..   average_intensity = col_double()
   .. )
- - attr(*, "problems")=<externalptr>
+ - attr(*, "problems")=&lt;externalptr&gt;
 
 # Check the dimensions
 dim(hourly_df)

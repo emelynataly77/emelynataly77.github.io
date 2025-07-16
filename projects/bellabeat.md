@@ -563,6 +563,9 @@ summary(nighthr)
 
 </details>
 
+We can see by looking at the summaries that Night has a really low step count(~21) compared to the oter times of day. This makes sense as most people are asleep during the "Night" time-frame. 
+Moreover, let go ahead and calculate only for the average stps and calories as thats how we will tell more or less how activity levels based on time of day. 
+
 <details>
 <summary>Show R Code</summary>
 
@@ -710,17 +713,32 @@ attr(,"qable_args")$markup
 
 attr(,"qable_args")$kable_args
 list()
+
+# comparative list of all of out day by day summaries (only mean of steps and calories)
+timeofday_summary1 <- data.frame(
++ TimeOfDay = c("Afternoon", "Morning", "Evening", "Night"),
++ Total_Steps_Avg = c(519.599624506321, 374.758472938824, 370.922424933024, 21.2780518695702),
++ Calories_Avg = c(115.86621, 101.66459, 102.14637, 71.73854))
++)
 </code></pre>
 
 </details>
 
-The charts below represent my findings 
+Im going to go ahead and make a bar graph of my findings on top of the chart we just made on RStudio (timeofday_summary1). This will visulaly make clear average calories and steps by day of week and the order they will fall in. 
 
 <details>
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-INSERT CODE
+# visual bar graph for average steps by time of day
+ggplot(timeofday_summary1, aes(x = reorder(TimeOfDay, -Total_Steps_Avg), y = Total_Steps_Avg)) +
++ geom_bar(stat = "identity", fill = "pink") +
++ labs(title = "Average Steps by Time of Day", x = "", y = "Average Total Steps") 
+
+# visual bar graph for average calories by time time of day
+ggplot(timeofday_summary1, aes(x = reorder(TimeOfDay, -Calories_Avg), y = Calories_Avg)) +
++ geom_bar(stat = "identity", fill = "#FF69B4") +
++ labs(title = "Average Calories by Time of Day", x = "", y = "Average Calories")
 </code></pre>
 
 </details>

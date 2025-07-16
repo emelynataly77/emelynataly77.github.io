@@ -499,6 +499,51 @@ summary(morninghr)
  Mean   : 374.8   Mean   : 12.06   Mean   :101.7  
  3rd Qu.: 467.0   3rd Qu.: 16.00   3rd Qu.:117.0  
  Max.   :8976.0   Max.   :180.00   Max.   :544.0
+  
+# Filter data for "Afternoon" time period and select relevant columns
+afternoonhr <- hourly_df %>%
++ filter(hourly_df$TimeOfDay == "Afternoon") %>%
++ select(c(step_total, total_intensity, Calories))
+
+# View summary statistics for the afternoon activity
+summary(afternoonhr)
+   step_total      total_intensity     Calories    
+ Min.   :    0.0   Min.   :  0.00   Min.   : 42.0  
+ 1st Qu.:   37.0   1st Qu.:  0.00   1st Qu.: 77.0  
+ Median :  259.0   Median :  3.00   Median : 96.0  
+ Mean   :  519.6   Mean   : 12.06   Mean   :115.9  
+ 3rd Qu.:  620.0   3rd Qu.: 16.00   3rd Qu.:131.0  
+ Max.   :10554.0   Max.   :180.00   Max.   :948.0  
+
+# Filter data for "Evening" time period and select relevant columns  
+veninghr <- hourly_df %>%
++ filter(hourly_df$TimeOfDay == "Evening") %>%
++ select(c(step_total, total_intensity, Calories))
+  
+# View summary statistics for the evening activity
+summary(eveninghr)
+   step_total     total_intensity     Calories    
+ Min.   :   0.0   Min.   :  0.00   Min.   : 42.0  
+ 1st Qu.:   0.0   1st Qu.:  0.00   1st Qu.: 69.0  
+ Median : 114.0   Median :  3.00   Median : 86.0  
+ Mean   : 370.9   Mean   : 12.06   Mean   :102.1  
+ 3rd Qu.: 398.0   3rd Qu.: 16.00   3rd Qu.:113.0  
+ Max.   :8586.0   Max.   :180.00   Max.   :834.0   
+
+# Filter data for "Night" time period and select relevant columns  
+nighthr <- hourly_df %>%
++ filter(hourly_df$TimeOfDay == "Night") %>% 
++ select(c(step_total, total_intensity, Calories))
+
+# View summary statistics for the night activity
+summary(nighthr)
+   step_total      total_intensity     Calories     
+ Min.   :   0.00   Min.   :  0.00   Min.   : 42.00  
+ 1st Qu.:   0.00   1st Qu.:  0.00   1st Qu.: 56.00  
+ Median :   0.00   Median :  3.00   Median : 68.00  
+ Mean   :  21.28   Mean   : 12.06   Mean   : 71.68  
+ 3rd Qu.:   0.00   3rd Qu.: 16.00   3rd Qu.: 83.00  
+ Max.   :2844.00   Max.   :180.00   Max.   :669.00   
 </code></pre>
 
 </details>

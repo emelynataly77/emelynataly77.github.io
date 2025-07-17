@@ -896,22 +896,6 @@ ggplot(data = daily_df, aes(x = TotalMinutesAsleep, y = LightActiveMinutes)) +
 
 </details>
 
-<div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; text-align: center;">
-
-  <!-- Average Steps -->
-  <div>
-    <h3 style="color:#333; font-weight:bold;">Average Steps by Time of Day</h3>
-    <img src="../projects/Average%20Steps%20by%20Time%20of%20Day.png" alt="Average Steps by Time of Day" width="400">
-  </div>
-
-  <!-- Average Calories -->
-  <div>
-    <h3 style="color:#333; font-weight:bold;">Average Calories by Time of Day</h3>
-    <img src="../projects/Average%20Calories%20by%20Time%20of%20Day.png" alt="Average Calories by Time of Day" width="400">
-  </div>
-
-</div>
-
 <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Sleep%20vs%20LightNon%20Activity%20Patterns.png" alt="Sleep vs Light/Non Activity Patterns">
 
 

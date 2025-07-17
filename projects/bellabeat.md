@@ -955,6 +955,363 @@ mon_data_summary <- monday_data %>%
 +         Sedentary_Minutes_Avg = mean(LightActiveMinutes, na.rm = TRUE),
 +         Calories_Avg = mean(Calories, na.rm = TRUE),
 +         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
+
+# view mon data sum
+print.default(mon_data_summary)
+$Total_Steps_Avg
+[1] 9273.217
+
+$Active_Minutes_Avg
+[1] 49.80435
+
+$Sedentary_Minutes_Avg
+[1] 940.7826
+
+$Calories_Avg
+[1] 2431.978
+
+$Total_Hours_Asleep_Avg
+[1] 6.991667
+
+attr(,"class")
+[1] "tbl_df"     "tbl"        "data.frame"
+
+# seperate tues data from daily 
+> tuesday_data <- daily_df %>%
++     filter(weekday == "Tuesday") %>%
++     select(-c(Id, ActivityDate))
+	
+# summary of the new seperated tues data
+summary(tuesday_data)
+   TotalSteps    TotalDistance   TrackerDistance LoggedActivitiesDistance LongerDistance  ShorterDistance
+ Min.   :  254   Min.   : 0.16   Min.   : 0.16   Min.   :0.0000           Min.   :0.000   Min.   :0.160  
+ 1st Qu.: 6582   1st Qu.: 4.95   1st Qu.: 4.95   1st Qu.:0.0000           1st Qu.:0.000   1st Qu.:2.580  
+ Median : 9648   Median : 6.76   Median : 6.76   Median :0.0000           Median :2.400   Median :3.950  
+ Mean   : 9183   Mean   : 6.43   Mean   : 6.43   Mean   :0.1387           Mean   :2.535   Mean   :3.888  
+ 3rd Qu.:11886   3rd Qu.: 8.39   3rd Qu.: 8.39   3rd Qu.:0.0000           3rd Qu.:4.510   3rd Qu.:5.030  
+ Max.   :16358   Max.   :12.85   Max.   :12.85   Max.   :2.2531           Max.   :8.430   Max.   :8.410  
+ HeavyActiveMinutes LightActiveMinutes    Calories    TotalSleepRecords TotalMinutesAsleep TotalTimeInBed 
+ Min.   :  0.00     Min.   : 754.0     Min.   :1141   Min.   :1.000     Min.   :103.0      Min.   :121.0  
+ 1st Qu.:  7.00     1st Qu.: 897.0     1st Qu.:2026   1st Qu.:1.000     1st Qu.:342.0      1st Qu.:391.0  
+ Median : 43.00     Median : 956.0     Median :2291   Median :1.000     Median :417.0      Median :446.0  
+ Mean   : 50.66     Mean   : 956.6     Mean   :2496   Mean   :1.108     Mean   :404.5      Mean   :443.3  
+ 3rd Qu.: 86.00     3rd Qu.:1014.0     3rd Qu.:2944   3rd Qu.:1.000     3rd Qu.:465.0      3rd Qu.:498.0  
+ Max.   :141.00     Max.   :1345.0     Max.   :4092   Max.   :3.000     Max.   :750.0      Max.   :775.0  
+   weekday         
+ Length:65         
+ Class :character  
+ Mode  :character  
+	
+# Calculate average steps, activity, sleep, and calories for Tuesdays only
+tues_data_summary <- tuesday_data %>%
++     summarise(
++         Total_Steps_Avg = mean(TotalSteps, na.rm = TRUE),
++         Active_Minutes_Avg = mean(HeavyActiveMinutes, na.rm = TRUE),
++         Sedentary_Minutes_Avg = mean(LightActiveMinutes, na.rm = TRUE),
++         Calories_Avg = mean(Calories, na.rm = TRUE),
++         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
+
+# view tues data sum
+print.default(tues_data_summary)
+$Total_Steps_Avg
+[1] 9182.692
+
+$Active_Minutes_Avg
+[1] 50.66154
+
+$Sedentary_Minutes_Avg
+[1] 956.6308
+
+$Calories_Avg
+[1] 2496.2
+
+$Total_Hours_Asleep_Avg
+[1] 6.742308
+
+attr(,"class")
+[1] "tbl_df"     "tbl"        "data.frame"
+
+#seperate wed data from daily
+wednesday_data <- daily_df %>%
++ filter(weekday == "Wednesday") %>%
++ select(-c(Id, ActivityDate))
+	
+#summary of the new seperated wed data
+summary(wednesday_data)
+   TotalSteps    TotalDistance    TrackerDistance  LoggedActivitiesDistance LongerDistance  ShorterDistance
+ Min.   :  356   Min.   : 0.250   Min.   : 0.250   Min.   :0.0000           Min.   :0.000   Min.   :0.250  
+ 1st Qu.: 5318   1st Qu.: 3.748   1st Qu.: 3.748   1st Qu.:0.0000           1st Qu.:0.000   1st Qu.:2.418  
+ Median : 8686   Median : 6.175   Median : 6.175   Median :0.0000           Median :1.805   Median :3.590  
+ Mean   : 8023   Mean   : 5.720   Mean   : 5.720   Mean   :0.0951           Mean   :2.062   Mean   :3.652  
+ 3rd Qu.:10516   3rd Qu.: 7.418   3rd Qu.: 7.418   3rd Qu.:0.0000           3rd Qu.:2.910   3rd Qu.:5.063  
+ Max.   :15108   Max.   :12.190   Max.   :12.190   Max.   :2.0921           Max.   :9.810   Max.   :7.110  
+ HeavyActiveMinutes LightActiveMinutes    Calories    TotalSleepRecords TotalMinutesAsleep TotalTimeInBed
+ Min.   :  0.00     Min.   : 320.0     Min.   :1377   Min.   :1.000     Min.   :152.0      Min.   :260   
+ 1st Qu.:  0.00     1st Qu.: 878.5     1st Qu.:1789   1st Qu.:1.000     1st Qu.:392.0      1st Qu.:425   
+ Median : 33.50     Median : 924.5     Median :2207   Median :1.000     Median :444.5      Median :469   
+ Mean   : 38.08     Mean   : 922.4     Mean   :2378   Mean   :1.152     Mean   :434.7      Mean   :470   
+ 3rd Qu.: 58.50     3rd Qu.: 977.8     3rd Qu.:2942   3rd Qu.:1.000     3rd Qu.:477.0      3rd Qu.:525   
+ Max.   :130.00     Max.   :1138.0     Max.   :4079   Max.   :3.000     Max.   :658.0      Max.   :679   
+   weekday         
+ Length:66         
+ Class :character  
+ Mode  :character  
+
+#Calculate average steps, activity, sleep and calories for wednesday only
+wed_data_summary <- wednesday_data %>%
++     summarise(
++         Total_Steps_Avg = mean(TotalSteps, na.rm = TRUE),
++         Active_Minutes_Avg = mean(HeavyActiveMinutes, na.rm = TRUE),
++         Sedentary_Minutes_Avg = mean(LightActiveMinutes, na.rm = TRUE),
++         Calories_Avg = mean(Calories, na.rm = TRUE),
++         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
+
+# view wednesday data sum 
+print.default(wed_data_summary)
+$Total_Steps_Avg
+[1] 8022.864
+
+$Active_Minutes_Avg
+[1] 38.07576
+
+$Sedentary_Minutes_Avg
+[1] 922.4242
+
+$Calories_Avg
+[1] 2378.242
+
+$Total_Hours_Asleep_Avg
+[1] 7.244697
+
+attr(,"class")
+[1] "tbl_df"     "tbl"        "data.frame"
+
+# seperate thurs data from daily
+thursday_data <- daily_df %>%
++     filter(weekday == "Thursday") %>%
++     select(-c(Id, ActivityDate))
+
+# summary of the new seperated thurs data 
+summary(thursday_data)
+   TotalSteps    TotalDistance    TrackerDistance  LoggedActivitiesDistance LongerDistance  ShorterDistance
+ Min.   :   17   Min.   : 0.010   Min.   : 0.010   Min.   :0.0000           Min.   :0.000   Min.   :0.010  
+ 1st Qu.: 4363   1st Qu.: 2.925   1st Qu.: 2.925   1st Qu.:0.0000           1st Qu.:0.000   1st Qu.:2.652  
+ Median : 8752   Median : 6.355   Median : 6.355   Median :0.0000           Median :1.360   Median :3.610  
+ Mean   : 8184   Mean   : 5.773   Mean   : 5.745   Mean   :0.1694           Mean   :1.912   Mean   :3.699  
+ 3rd Qu.:10971   3rd Qu.: 7.735   3rd Qu.: 7.735   3rd Qu.:0.0000           3rd Qu.:3.072   3rd Qu.:4.827  
+ Max.   :19542   Max.   :15.010   Max.   :15.010   Max.   :4.0817           Max.   :7.720   Max.   :7.700  
+ HeavyActiveMinutes LightActiveMinutes    Calories    TotalSleepRecords TotalMinutesAsleep TotalTimeInBed 
+ Min.   :  0.00     Min.   :   2.0     Min.   : 257   Min.   :1.000     Min.   : 59.0      Min.   : 65.0  
+ 1st Qu.:  0.00     1st Qu.: 873.0     1st Qu.:1788   1st Qu.:1.000     1st Qu.:377.2      1st Qu.:416.0  
+ Median : 23.00     Median : 951.5     Median :2168   Median :1.000     Median :423.5      Median :457.0  
+ Mean   : 38.72     Mean   : 901.3     Mean   :2307   Mean   :1.031     Mean   :401.3      Mean   :434.9  
+ 3rd Qu.: 66.25     3rd Qu.: 993.2     3rd Qu.:2868   3rd Qu.:1.000     3rd Qu.:467.2      3rd Qu.:492.8  
+ Max.   :184.00     Max.   :1299.0     Max.   :4900   Max.   :2.000     Max.   :545.0      Max.   :568.0  
+   weekday         
+ Length:64         
+ Class :character  
+ Mode  :character 
+
+# calculate average steps, activity, sleep, and calories for thursdays only
+thurs_data_summary <- thursday_data %>%
++     summarise(
++         Total_Steps_Avg = mean(TotalSteps, na.rm = TRUE),
++         Active_Minutes_Avg = mean(HeavyActiveMinutes, na.rm = TRUE),
++         Sedentary_Minutes_Avg = mean(LightActiveMinutes, na.rm = TRUE),
++         Calories_Avg = mean(Calories, na.rm = TRUE),
++         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
+
+# view thurs data sum 
+print.default(thurs_data_summary)
+$Total_Steps_Avg
+[1] 8183.516
+
+$Active_Minutes_Avg
+[1] 38.71875
+
+$Sedentary_Minutes_Avg
+[1] 901.3125
+
+$Calories_Avg
+[1] 2306.672
+
+$Total_Hours_Asleep_Avg
+[1] 6.688281
+
+attr(,"class")
+[1] "tbl_df"     "tbl"        "data.frame"
+
+# seperate fri data from daily
+friday_data <- daily_df %>%
++     filter(weekday == "Friday") %>%
++     select(-c(Id, ActivityDate))
+
+# summary of the new seperated fri data 
+summary(friday_data)
+   TotalSteps    TotalDistance    TrackerDistance  LoggedActivitiesDistance LongerDistance  ShorterDistance
+ Min.   :   42   Min.   : 0.030   Min.   : 0.030   Min.   :0.00000          Min.   :0.000   Min.   :0.03   
+ 1st Qu.: 5563   1st Qu.: 3.680   1st Qu.: 3.680   1st Qu.:0.00000          1st Qu.:0.000   1st Qu.:2.67   
+ Median : 8198   Median : 5.630   Median : 5.630   Median :0.00000          Median :0.880   Median :3.77   
+ Mean   : 7901   Mean   : 5.512   Mean   : 5.512   Mean   :0.07341          Mean   :1.722   Mean   :3.78   
+ 3rd Qu.:10465   3rd Qu.: 7.110   3rd Qu.: 7.110   3rd Qu.:0.00000          3rd Qu.:3.150   3rd Qu.:4.91   
+ Max.   :16556   Max.   :11.470   Max.   :11.470   Max.   :2.09215          Max.   :6.140   Max.   :7.24   
+ HeavyActiveMinutes LightActiveMinutes    Calories    TotalSleepRecords TotalMinutesAsleep TotalTimeInBed 
+ Min.   :  0.00     Min.   :   6.0     Min.   : 403   Min.   :1.00      Min.   : 82.0      Min.   : 85.0  
+ 1st Qu.:  0.00     1st Qu.: 899.0     1st Qu.:1850   1st Qu.:1.00      1st Qu.:355.0      1st Qu.:386.0  
+ Median : 21.00     Median : 987.0     Median :2196   Median :1.00      Median :405.0      Median :448.0  
+ Mean   : 35.74     Mean   : 965.8     Mean   :2330   Mean   :1.07      Mean   :405.4      Mean   :445.1  
+ 3rd Qu.: 61.00     3rd Qu.:1032.0     3rd Qu.:2846   3rd Qu.:1.00      3rd Qu.:465.0      3rd Qu.:510.0  
+ Max.   :169.00     Max.   :1332.0     Max.   :4044   Max.   :2.00      Max.   :658.0      Max.   :961.0  
+   weekday         
+ Length:57         
+ Class :character  
+ Mode  :character   
+
+# calculate average steps, activity, sleep, and calories for fridays only
+fri_data_summary <- friday_data %>%
++     summarise(
++         Total_Steps_Avg = mean(TotalSteps, na.rm = TRUE),
++         Active_Minutes_Avg = mean(HeavyActiveMinutes, na.rm = TRUE),
++         Sedentary_Minutes_Avg = mean(LightActiveMinutes, na.rm = TRUE),
++         Calories_Avg = mean(Calories, na.rm = TRUE),
++         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
+
+# view fri data sum 
+print.default(fri_data_summary)
+$Total_Steps_Avg
+[1] 7901.404
+
+$Active_Minutes_Avg
+[1] 35.73684
+
+$Sedentary_Minutes_Avg
+[1] 965.7719
+
+$Calories_Avg
+[1] 2329.649
+
+$Total_Hours_Asleep_Avg
+[1] 6.757018
+
+attr(,"class")
+[1] "tbl_df"     "tbl"        "data.frame"
+
+# seperate sat data from daily
+saturday_data <- daily_df %>%
++     filter(weekday == "Saturday") %>%
++     select(-c(Id, ActivityDate))
+
+# summary of the new seperated sat data 
+ summary(saturday_data)
+   TotalSteps    TotalDistance    TrackerDistance  LoggedActivitiesDistance LongerDistance   ShorterDistance
+ Min.   : 1202   Min.   : 0.780   Min.   : 0.780   Min.   :0                Min.   : 0.000   Min.   :0.590  
+ 1st Qu.: 5079   1st Qu.: 3.420   1st Qu.: 3.420   1st Qu.:0                1st Qu.: 0.000   1st Qu.:2.730  
+ Median :10144   Median : 7.710   Median : 7.710   Median :0                Median : 2.010   Median :3.770  
+ Mean   : 9871   Mean   : 7.016   Mean   : 7.016   Mean   :0                Mean   : 2.747   Mean   :4.266  
+ 3rd Qu.:13238   3rd Qu.: 9.240   3rd Qu.: 9.240   3rd Qu.:0                3rd Qu.: 4.160   3rd Qu.:5.330  
+ Max.   :22770   Max.   :17.540   Max.   :17.540   Max.   :0                Max.   :13.320   Max.   :9.480  
+ HeavyActiveMinutes LightActiveMinutes    Calories    TotalSleepRecords TotalMinutesAsleep TotalTimeInBed 
+ Min.   :  0.00     Min.   : 402.0     Min.   :1373   Min.   :1.000     Min.   : 61.0      Min.   : 69.0  
+ 1st Qu.:  0.00     1st Qu.: 850.0     1st Qu.:1863   1st Qu.:1.000     1st Qu.:340.0      1st Qu.:382.0  
+ Median : 44.00     Median : 911.0     Median :2363   Median :1.000     Median :426.0      Median :470.0  
+ Mean   : 50.28     Mean   : 927.2     Mean   :2507   Mean   :1.193     Mean   :419.1      Mean   :459.8  
+ 3rd Qu.: 80.00     3rd Qu.: 998.0     3rd Qu.:3073   3rd Qu.:1.000     3rd Qu.:507.0      3rd Qu.:539.0  
+ Max.   :252.00     Max.   :1371.0     Max.   :4501   Max.   :2.000     Max.   :775.0      Max.   :961.0  
+   weekday         
+ Length:57         
+ Class :character  
+ Mode  :character  
+
+# calculate average steps, activity, sleep, and calories for saturdays only
+sat_data_summary <- saturday_data %>%
++     summarise(
++         Total_Steps_Avg = mean(TotalSteps, na.rm = TRUE),
++         Active_Minutes_Avg = mean(HeavyActiveMinutes, na.rm = TRUE),
++         Sedentary_Minutes_Avg = mean(LightActiveMinutes, na.rm = TRUE),
++         Calories_Avg = mean(Calories, na.rm = TRUE),
++         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
+
+# view sat data sum 
+print.default(sat_data_summary)
+$Total_Steps_Avg
+[1] 9871.123
+
+$Active_Minutes_Avg
+[1] 50.2807
+
+$Sedentary_Minutes_Avg
+[1] 927.2105
+
+$Calories_Avg
+[1] 2506.895
+
+$Total_Hours_Asleep_Avg
+[1] 6.984503
+
+attr(,"class")
+[1] "tbl_df"     "tbl"        "data.frame"
+
+
+
+
+
+
+
+# seperate sun data from daily
+sunday_data <- daily_df %>%
++     filter(weekday == "Sunday") %>%
++     select(-c(Id, ActivityDate))
+
+# summary of the new seperated sun data 
+summary(sunday_data)
+   TotalSteps    TotalDistance    TrackerDistance  LoggedActivitiesDistance LongerDistance   ShorterDistance
+ Min.   :  655   Min.   : 0.430   Min.   : 0.430   Min.   :0                Min.   : 0.000   Min.   :0.430  
+ 1st Qu.: 3688   1st Qu.: 2.600   1st Qu.: 2.600   1st Qu.:0                1st Qu.: 0.000   1st Qu.:2.260  
+ Median : 6543   Median : 4.330   Median : 4.330   Median :0                Median : 0.000   Median :3.230  
+ Mean   : 7298   Mean   : 5.185   Mean   : 5.185   Mean   :0                Mean   : 1.893   Mean   :3.289  
+ 3rd Qu.:10334   3rd Qu.: 7.020   3rd Qu.: 7.020   3rd Qu.:0                3rd Qu.: 3.520   3rd Qu.:4.035  
+ Max.   :17298   Max.   :14.380   Max.   :14.380   Max.   :0                Max.   :11.150   Max.   :6.730  
+ HeavyActiveMinutes LightActiveMinutes    Calories    TotalSleepRecords TotalMinutesAsleep TotalTimeInBed 
+ Min.   :  0.00     Min.   : 566.0     Min.   :1214   Min.   :1.000     Min.   : 58.0      Min.   : 61.0  
+ 1st Qu.:  0.00     1st Qu.: 758.5     1st Qu.:1698   1st Qu.:1.000     1st Qu.:380.0      1st Qu.:436.0  
+ Median :  0.00     Median : 868.0     Median :2027   Median :1.000     Median :481.0      Median :527.0  
+ Mean   : 38.91     Mean   : 887.7     Mean   :2277   Mean   :1.182     Mean   :452.7      Mean   :503.5  
+ 3rd Qu.: 58.50     3rd Qu.: 945.5     3rd Qu.:2676   3rd Qu.:1.000     3rd Qu.:550.5      3rd Qu.:602.5  
+ Max.   :275.00     Max.   :1379.0     Max.   :4552   Max.   :3.000     Max.   :700.0      Max.   :961.0  
+   weekday         
+ Length:55         
+ Class :character  
+ Mode  :character   
+
+# calculate average steps, activity, sleep, and calories for sundays only
+sun_data_summary <- sunday_data %>%
++     summarise(
++         Total_Steps_Avg = mean(TotalSteps, na.rm = TRUE),
++         Active_Minutes_Avg = mean(HeavyActiveMinutes, na.rm = TRUE),
++         Sedentary_Minutes_Avg = mean(LightActiveMinutes, na.rm = TRUE),
++         Calories_Avg = mean(Calories, na.rm = TRUE),
++         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
+
+# view sun data sum 
+print.default(sun_data_summary)
+$Total_Steps_Avg
+[1] 7297.855
+
+$Active_Minutes_Avg
+[1] 38.90909
+
+$Sedentary_Minutes_Avg
+[1] 887.6727
+
+$Calories_Avg
+[1] 2276.6
+
+$Total_Hours_Asleep_Avg
+[1] 7.545758
+
+attr(,"class")
+[1] "tbl_df"     "tbl"        "data.frame"
+
 </code></pre>
 
 </details>

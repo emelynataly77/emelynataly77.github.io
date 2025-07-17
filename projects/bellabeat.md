@@ -1413,15 +1413,15 @@ ggplot(data = weekday_sum,
 <div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <div style="text-align: center;">
     <h4>Average Calories by Weekday</h4>
-    <img src="avg calories final.png" alt="Average Calories" width="300">
+    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/assets/images/avg%20calories%20final.png" alt="Average Calories" width="300">
   </div>
   <div style="text-align: center;">
     <h4>Average Active Minutes by Weekday</h4>
-    <img src="avg active minutes.png" alt="Average Active Minutes" width="300">
+    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/assets/images/avg%20active%20minutes.png" alt="Average Active Minutes" width="300">
   </div>
   <div style="text-align: center;">
     <h4>Average Sedentary Minutes by Weekday</h4>
-    <img src="Avg sedentary minutes.png" alt="Average Sedentary Minutes" width="300">
+    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/assets/images/Avg%20sedentary%20minutes.png" alt="Average Sedentary Minutes" width="300">
   </div>
 </div>
 
@@ -1431,13 +1431,14 @@ ggplot(data = weekday_sum,
 <div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <div style="text-align: center;">
     <h4>Average Hours of Sleep by Weekday</h4>
-    <img src="avg hours of sleep by weekday.png" alt="Average Sleep" width="300">
+    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/assets/images/avg%20hours%20of%20sleep%20by%20weekday.png" alt="Average Sleep" width="300">
   </div>
   <div style="text-align: center;">
     <h4>Average Steps by Weekday</h4>
-    <img src="avg steps by weekday.png" alt="Average Steps" width="300">
+    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/assets/images/avg%20steps%20by%20weekday.png" alt="Average Steps" width="300">
   </div>
 </div>
+
 
 
 Looking at the graohs it becomes more clear that the beginning of the work week (mon/tues) tend to be higher on all the generated graphs along wiht saturday. Fridays tend to be the lowest on most of the graphs suggesting a more relaxed Fiday in terms of the data. 

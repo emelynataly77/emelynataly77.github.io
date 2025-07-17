@@ -896,10 +896,23 @@ ggplot(data = daily_df, aes(x = TotalMinutesAsleep, y = LightActiveMinutes)) +
 
 </details>
 
-<div style="text-align: center; margin: 2em 0;">
-  <img src=<img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/assets/images/Sleep%20vs%20LightNon%20Activity%20Patterns.png" alt="Sleep vs Light/Non Activity Patterns" style="max-width: 90%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+<div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; text-align: center;">
+
+  <!-- Average Steps -->
+  <div>
+    <h3 style="color:#333; font-weight:bold;">Average Steps by Time of Day</h3>
+    <img src="../projects/Average%20Steps%20by%20Time%20of%20Day.png" alt="Average Steps by Time of Day" width="400">
+  </div>
+
+  <!-- Average Calories -->
+  <div>
+    <h3 style="color:#333; font-weight:bold;">Average Calories by Time of Day</h3>
+    <img src="../projects/Average%20Calories%20by%20Time%20of%20Day.png" alt="Average Calories by Time of Day" width="400">
+  </div>
 
 </div>
+
+<img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Sleep%20vs%20LightNon%20Activity%20Patterns.png" alt="Sleep vs Light/Non Activity Patterns">
 
 
 People who sleep more tend to have fewer non-active minutes during the day (a stronger relationship)
@@ -1413,15 +1426,15 @@ ggplot(data = weekday_sum,
 <div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <div style="text-align: center;">
     <h4>Average Calories by Weekday</h4>
-    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/assets/images/avg%20calories%20final.png" alt="Average Calories" width="300">
+    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20calories%20final.png" alt="Average Calories" width="300">
   </div>
   <div style="text-align: center;">
     <h4>Average Active Minutes by Weekday</h4>
-    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/assets/images/avg%20active%20minutes.png" alt="Average Active Minutes" width="300">
+    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20active%20minutes.png" alt="Average Active Minutes" width="300">
   </div>
   <div style="text-align: center;">
     <h4>Average Sedentary Minutes by Weekday</h4>
-    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/assets/images/Avg%20sedentary%20minutes.png" alt="Average Sedentary Minutes" width="300">
+    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Avg%20sedentary%20minutes.png" alt="Average Sedentary Minutes" width="300">
   </div>
 </div>
 
@@ -1431,13 +1444,14 @@ ggplot(data = weekday_sum,
 <div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <div style="text-align: center;">
     <h4>Average Hours of Sleep by Weekday</h4>
-    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/assets/images/avg%20hours%20of%20sleep%20by%20weekday.png" alt="Average Sleep" width="300">
+    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20hours%20of%20sleep%20by%20weekday.png" alt="Average Sleep" width="300">
   </div>
   <div style="text-align: center;">
     <h4>Average Steps by Weekday</h4>
-    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/assets/images/avg%20steps%20by%20weekday.png" alt="Average Steps" width="300">
+    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20steps%20by%20weekday.png" alt="Average Steps" width="300">
   </div>
 </div>
+
 
 
 

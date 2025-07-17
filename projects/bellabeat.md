@@ -1322,56 +1322,95 @@ I used the following coded blocks to generate respetive graphs representing my r
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-INSERT CODE
+# merge daily sums into single data frame
+weekday_sum <- rbind(mon_data_summary, tues_data_summary, wed_data_summary, thurs_data_summary, fri_data_summary, sat_data_summary, sun_data_summary)
+
+
+# assign weekday names to the rows
+rownames(weekday_sum) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
+
 </code></pre>
 
 </details>
-
-INSERT AVERAGE STEPS BY WEEKDAY GRAPH
 
 <details>
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-INSERT CODE
+#sorting weekly averages by metric 
+sort(weekday_sum[[1]], decreasing = TRUE)
+[1] 9871.123 9273.217 9182.692 8183.516 8022.864 7901.404 7297.855
+sort(weekday_sum[[2]], decreasing = TRUE)
+[1] 50.66154 50.28070 49.80435 38.90909 38.71875 38.07576 35.73684
+sort(weekday_sum[[3]], decreasing = TRUE)
+[1] 965.7719 956.6308 940.7826 927.2105 922.4242 901.3125 887.6727
+sort(weekday_sum[[4]], decreasing = TRUE)
+[1] 2506.895 2496.200 2431.978 2378.242 2329.649 2306.672 2276.600
+sort(weekday_sum[[5]], decreasing = TRUE)
+[1] 7.545758 7.244697 6.991667 6.984503 6.757018 6.742308 6.688281
 </code></pre>
 
 </details>
-
-INSERT AVERAGE ACTIVE MINUTES BY WEEKDAY GRAPH
 
 <details>
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-INSERT CODE
+# average calories by weekday
+> ggplot(data = weekday_sum, 
++        aes(x = reorder(as.character(row.names(weekday_sum)), -Calories_Avg), 
++            y = Calories_Avg)) +
++     geom_bar(stat = "identity", fill = "purple") +
++     labs(title = "Average Calories by Weekday", 
++          x = "Weekday", 
++          y = "Avg Calories") +
++     theme(axis.text.x = element_text(angle = 45, hjust = 1))
+# average active minutes by weekday
+ggplot(data = weekday_sum, 
++           aes(x = reorder(as.character(row.names(weekday_sum)), -Active_Minutes_Avg), 
++               y = Active_Minutes_Avg)) +
++       geom_bar(stat = "identity", fill = "red") +
++       labs(title = "Average Active Minutes by Weekday", 
++             x = "Weekday", 
++             y = "Avg Active Minutes") +
++     theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+#average sedentary minutes by weekday
+ggplot(data = weekday_sum, 
++            aes(x = reorder(as.character(row.names(weekday_sum)), -Sedentary_Minutes_Avg), 
++             y = Sedentary_Minutes_Avg)) +
++      geom_bar(stat = "identity", fill = "green") +
++          labs(title = "Average Sedentary Minutes by Weekday", 
++             x = "Weekday", 
++             y = "Avg Sedentary Minutes") +
++     theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# average hours asleep by weekday
+ggplot(data = weekday_sum, 
++              aes(x = reorder(as.character(row.names(weekday_sum)), -Total_Hours_Asleep_Avg), 
++               y = Total_Hours_Asleep_Avg)) +
++         geom_bar(stat = "identity", fill = "blue") +
++         labs(title = "Average Hours of Sleep by Weekday", 
++             x = "Weekday", 
++             y = "Avg Hours of Sleep") +
++       theme(axis.text.x = element_text(angle = 45, hjust = 1))
+	
+# average steps by weekday
+ ggplot(data = weekday_sum, 
++              aes(x = reorder(as.character(row.names(weekday_sum)), -Total_Steps_Avg), 
++                   y = Total_Steps_Avg)) +
++          geom_bar(stat = "identity", fill = "orange") +
++          labs(title = "Average Steps by Weekday", 
++               x = "Weekday", 
++               y = "Avg Steps") +
++    theme(axis.text.x = element_text(angle = 45, hjust = 1))	
 </code></pre>
 
 </details>
 
-INSERT AVERAGE SEDENTARY MINUTES BY WEEKDAY GRAPH
+IMAGES HERE
 
-<details>
-<summary>Show R Code</summary>
-
-<pre><code class="language-r">
-INSERT CODE
-</code></pre>
-
-</details>
-
-INSERT AVERAGE CALORIES BY WEEKDAY GRAPH
-
-<details>
-<summary>Show R Code</summary>
-
-<pre><code class="language-r">
-INSERT CODE
-</code></pre>
-
-</details>
-
-INSERT AVERAGE HOURS OF SLEEP BY WEEDAY GRAPH
 
 Looking at the graohs it becomes more clear that the beginning of the work week (mon/tues) tend to be higher on all the generated graphs along wiht saturday. Fridays tend to be the lowest on most of the graphs suggesting a more relaxed Fiday in terms of the data. 
 

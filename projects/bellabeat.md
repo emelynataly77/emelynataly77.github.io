@@ -1439,36 +1439,6 @@ ggplot(data = weekday_sum,
   </div>
 </div>
 
-<!-- Row 1: Calories, Active Minutes, Sedentary Minutes -->
-<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <div style="text-align: center;">
-    <h4>Average Calories by Weekday</h4>
-    <img src="avg calories final.png" alt="Average Calories" width="300">
-  </div>
-  <div style="text-align: center;">
-    <h4>Average Active Minutes by Weekday</h4>
-    <img src="avg active minutes.png" alt="Average Active Minutes" width="300">
-  </div>
-  <div style="text-align: center;">
-    <h4>Average Sedentary Minutes by Weekday</h4>
-    <img src="Avg sedentary minutes.png" alt="Average Sedentary Minutes" width="300">
-  </div>
-</div>
-
-<br>
-
-<!-- Row 2: Hours of Sleep, Steps -->
-<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <div style="text-align: center;">
-    <h4>Average Hours of Sleep by Weekday</h4>
-    <img src="avg hours of sleep by weekday.png" alt="Average Sleep" width="300">
-  </div>
-  <div style="text-align: center;">
-    <h4>Average Steps by Weekday</h4>
-    <img src="avg steps by weekday.png" alt="Average Steps" width="300">
-  </div>
-</div>
-
 
 Looking at the graohs it becomes more clear that the beginning of the work week (mon/tues) tend to be higher on all the generated graphs along wiht saturday. Fridays tend to be the lowest on most of the graphs suggesting a more relaxed Fiday in terms of the data. 
 

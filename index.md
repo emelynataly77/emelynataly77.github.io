@@ -21,10 +21,11 @@ layout: default
 - LinkedIn: [linkedin.com/in/YOUR-LINKEDIN](https://linkedin.com/in/YOUR-LINKEDIN)
 
 
-<div style="position: absolute; top: 100px; right: 20px;">
+<div style="position: absolute; top: 120px; right: 20px;">
   <img 
-    src="assets/img/profile.png" 
+    src="assets/img/practice.png" 
     alt="Profile Picture" 
     style="width: 100px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
+
 

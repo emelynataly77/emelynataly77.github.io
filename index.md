@@ -6,11 +6,17 @@ layout: default
 # Emely Pineda  
 **Data Analyst | Excel • SQL • R • Tableau**
 
-<div style="display: flex; justify-content: flex-end; margin-top: 1em; margin-bottom: 2em;">
-  <img 
-    src="assets/img/practice.png" 
-    alt="Profile Picture" 
-    style="width: 100px; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+<div style="position: relative;">
+
+  <!-- Container for the content below banner -->
+
+  <div style="position: absolute; top: 60px; right: 0; width: 140px; z-index: 10;">
+    <img 
+      src="assets/img/practice.png" 
+      alt="Profile Picture" 
+      style="width: 140px; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+  </div>
+
 </div>
 
 

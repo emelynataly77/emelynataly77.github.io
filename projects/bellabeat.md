@@ -1461,7 +1461,31 @@ ggplot(data = weekday_sum,
 <!-- Bottom row: 2 centered images under full grid -->
 <div style="display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
   <div style="text-align: center; width: 300px;">
-    <h4>Averag
+    <h4>Average Hours of Sleep by Weekday</h4>
+    <img 
+      src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20hours%20of%20sleep%20by%20weekday.png" 
+      alt="Average Hours of Sleep" 
+      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  </div>
+
+  <div style="text-align: center; width: 300px;">
+    <h4>Average Steps by Weekday</h4>
+    <img 
+      src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20steps%20by%20weekday.png" 
+      alt="Average Steps" 
+      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
 
 </div>
 

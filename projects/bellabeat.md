@@ -901,9 +901,10 @@ ggplot(data = daily_df, aes(x = TotalMinutesAsleep, y = LightActiveMinutes)) +
   <img 
     src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Sleep%20vs%20LightNon%20Activity%20Patterns.png" 
     alt="Sleep vs Light/Non Activity Patterns" 
-    style="max-width: 90%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);"
+    style="max-width: 85%; max-height: 400px; border-radius: 10px; object-fit: contain; box-shadow: 0 4px 8px rgba(0,0,0,0.15);"
   >
 </div>
+
 
 
 

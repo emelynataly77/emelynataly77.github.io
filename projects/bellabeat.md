@@ -1428,47 +1428,53 @@ ggplot(data = weekday_sum,
 </details>
 
 	
-<!-- Top Row: Calories, Active Minutes, Sedentary Minutes -->
-<div align="center" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 2em;">
-  <div style="text-align: center; max-width: 300px;">
+<!-- Grid layout for graphs -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; justify-items: center; max-width: 1000px; margin: 0 auto;">
+
+  <!-- Row 1 -->
+  <div style="text-align: center; width: 300px;">
     <h4>Average Calories by Weekday</h4>
     <img 
       src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20calories%20final.png" 
       alt="Average Calories" 
-      style="width: 100%; height: 200px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: white; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
   </div>
-  <div style="text-align: center; max-width: 300px;">
+
+  <div style="text-align: center; width: 300px;">
     <h4>Average Active Minutes by Weekday</h4>
     <img 
       src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20active%20minutes.png" 
       alt="Average Active Minutes" 
-      style="width: 100%; height: 200px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: white; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
   </div>
-  <div style="text-align: center; max-width: 300px;">
+
+  <div style="text-align: center; width: 300px;">
     <h4>Average Sedentary Minutes by Weekday</h4>
     <img 
       src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Avg%20sedentary%20minutes.png" 
       alt="Average Sedentary Minutes" 
-      style="width: 100%; height: 200px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: white; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
   </div>
-</div>
 
-<!-- Bottom Row: Sleep, Steps -->
-<div align="center" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-  <div style="text-align: center; max-width: 300px;">
+  <!-- Row 2 (empty cell to center 2 images) -->
+  <div></div>
+
+  <div style="text-align: center; width: 300px;">
     <h4>Average Hours of Sleep by Weekday</h4>
     <img 
       src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20hours%20of%20sleep%20by%20weekday.png" 
-      alt="Average Hours of Sleep" 
-      style="width: 100%; height: 200px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      alt="Average Sleep" 
+      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: white; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
   </div>
-  <div style="text-align: center; max-width: 300px;">
+
+  <div style="text-align: center; width: 300px;">
     <h4>Average Steps by Weekday</h4>
     <img 
       src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20steps%20by%20weekday.png" 
       alt="Average Steps" 
-      style="width: 100%; height: 200px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: white; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
   </div>
+
 </div>
 
 

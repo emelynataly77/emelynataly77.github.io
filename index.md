@@ -4,21 +4,6 @@ layout: default
 ---
 
 # Emely Pineda 
-
-<div style="width: 100%; position: relative; min-height: 1px;">
-  <img 
-    src="assets/img/practice.png" 
-    alt="Profile Picture" 
-    style="
-      position: absolute;
-      top: 10px;
-      right: 0;
-      width: 130px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    ">
-</div>
-
 **Data Analyst | Excel • SQL • R • Tableau**
 
 <p class="homepage-intro">
@@ -34,3 +19,12 @@ layout: default
 - Email: yourname@email.co  
 - GitHub: [github.com/emelynataly77](https://github.com/emelynataly77)  
 - LinkedIn: [linkedin.com/in/YOUR-LINKEDIN](https://linkedin.com/in/YOUR-LINKEDIN)
+
+
+<div style="position: absolute; top: 20px; right: 20px;">
+  <img 
+    src="assets/img/profile.png" 
+    alt="Profile Picture" 
+    style="width: 100px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</div>
+

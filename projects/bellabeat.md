@@ -1449,6 +1449,7 @@ ggplot(data = weekday_sum,
 
 
 
+
 Looking at the graohs it becomes more clear that the beginning of the work week (mon/tues) tend to be higher on all the generated graphs along wiht saturday. Fridays tend to be the lowest on most of the graphs suggesting a more relaxed Fiday in terms of the data. 
 
 # 💡 Key Insights <a id="key-insights"></a>

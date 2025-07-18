@@ -2,27 +2,27 @@
 title: Emely Pineda | Data Analytics Portfolio
 layout: default
 ---
+<div style="position: relative; min-height: 1px;">
 
-# Emely Pineda  
-**Data Analyst | Excel • SQL • R • Tableau**
-
-<div>
   <img
     src="assets/img/practice.png"
     alt="Profile Picture"
     style="
-      position: fixed;
-      top: 80px;  /* adjust this to your banner height */
-      right: 20px;
-      width: 140px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 130px;
       height: auto;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      z-index: 1000;
+      z-index: 10;
     "
   >
+
 </div>
 
+# Emely Pineda  
+**Data Analyst | Excel • SQL • R • Tableau**
 
 
 ## Projects

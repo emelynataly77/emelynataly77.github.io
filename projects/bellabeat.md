@@ -1431,13 +1431,13 @@ ggplot(data = weekday_sum,
 <!-- Grid layout for graphs -->
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; justify-items: center; max-width: 1000px; margin: 0 auto;">
 
-  <!-- Row 1 -->
+  <!-- Row 1: 3 perfectly aligned images -->
   <div style="text-align: center; width: 300px;">
     <h4>Average Calories by Weekday</h4>
     <img 
       src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20calories%20final.png" 
       alt="Average Calories" 
-      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: white; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
   </div>
 
   <div style="text-align: center; width: 300px;">
@@ -1445,7 +1445,7 @@ ggplot(data = weekday_sum,
     <img 
       src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20active%20minutes.png" 
       alt="Average Active Minutes" 
-      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: white; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
   </div>
 
   <div style="text-align: center; width: 300px;">
@@ -1453,27 +1453,15 @@ ggplot(data = weekday_sum,
     <img 
       src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Avg%20sedentary%20minutes.png" 
       alt="Average Sedentary Minutes" 
-      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: white; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
   </div>
 
-  <!-- Row 2 (empty cell to center 2 images) -->
-  <div></div>
+</div>
 
+<!-- Bottom row: 2 centered images under full grid -->
+<div style="display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
   <div style="text-align: center; width: 300px;">
-    <h4>Average Hours of Sleep by Weekday</h4>
-    <img 
-      src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20hours%20of%20sleep%20by%20weekday.png" 
-      alt="Average Sleep" 
-      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: white; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-  </div>
-
-  <div style="text-align: center; width: 300px;">
-    <h4>Average Steps by Weekday</h4>
-    <img 
-      src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20steps%20by%20weekday.png" 
-      alt="Average Steps" 
-      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: white; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-  </div>
+    <h4>Averag
 
 </div>
 

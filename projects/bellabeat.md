@@ -80,13 +80,8 @@ The FitBit Fitness Tracker dataset, provided by Kaggle user Mobius, serves as th
 
 </div>
 
+After doing some research on the data, I found that it was collected in 2016 and includes data from 33 Bellabeat users who voluntarily agreed to share their information for analysis. Although historical health data can provide helpful insights, using data from 2016 might not be the best way to guide marketing strategies for today’s consumers. It would seem more effective to analyze data that accurately reflects Bellabeat's current customer base. Additionally, all of the data has been anonymized, and it remains unclear how these users were selected. We don't know if these users represent a randomly selected group or if they met some other criteria. The lack of available information, combined with the small sample size, makes it hard to determine how representative and reliable the data actually is. The data is also inconsistent — many datasets include fewer than 33 users, and entire days of data are absent. The data itself is sourced from a third party and made available on Kaggle by the user Mobius. Overall, the data quality could use some improvement. That said, I will continue with the analysis for the sake of this case study — onward!
 
-After doing som research on the data ive learned that the data was collected in 2016 and represents 33 indivduals who decided to participate in having the data anlyzed. 2016 is not very recent, health data from previous years can be useful but for the purpose of planningmarketing strategies for a current market it seems more likely the company should use data that represents their current customer clientail. Moreover, there are no identities associated with the participants as everything has been left anonoymous. The data itself is not very reliable or consistent. Futhermore, many of the participants did not log data for many days, many datasets lack the 33 participants analyzed in this case study. Additionally, the way in which the participants were chosen is not shared meaning we do not know if these participants were chosen randomly, whether they were part a more active customer group, or whther they were part of a lesser active group. Because of the lack of consistent information and no information on thebackground of many of the participants the data seems to be unreliable. 
-
-It is unknown how the data itself was collected. However, the data originated from a third party. Lastly, I owuld like to make it clear that this data was provided by th authors of the capstone project and the dataset itself was downloaded from a Kaggle user, any other information on how this user obained the data is not made clear. In my opinion the data quality is not great alas, I will continue to process and analyze, for the purpose of completing the case study. Onward!
-
-  
-  
 ---
 
 # 🧹 Excel Cleaning <a id="excel-cleaning"></a>

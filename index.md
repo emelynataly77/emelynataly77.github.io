@@ -3,7 +3,23 @@ title: Emely Pineda | Data Analytics Portfolio
 layout: default
 ---
 
-# Emely Pineda  
+# Emely Pineda 
+
+<!-- Floating Profile Picture -->
+<img 
+  src="assets/img/practice.png" 
+  alt="Profile Picture" 
+  style="
+    position: absolute;
+    top: 100px;
+    right: 40px;
+    width: 130px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+  ">
+
 **Data Analyst | Excel • SQL • R • Tableau**
 
 <p class="homepage-intro">
@@ -19,11 +35,3 @@ layout: default
 - Email: yourname@email.co  
 - GitHub: [github.com/emelynataly77](https://github.com/emelynataly77)  
 - LinkedIn: [linkedin.com/in/YOUR-LINKEDIN](https://linkedin.com/in/YOUR-LINKEDIN)
-
-<!-- Profile picture in top right corner -->
-<div style="position: absolute; top: 20px; right: 20px;">
-  <img 
-    src="assets/img/practice.jpg" 
-    alt="Profile Photo" 
-    style="width: 100px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-</div>

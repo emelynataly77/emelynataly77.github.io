@@ -1429,54 +1429,64 @@ ggplot(data = weekday_sum,
 
 </div>	
 
-<!-- Top Row: Calories, Active Minutes, Sedentary Minutes -->
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; justify-items: center; max-width: 1100px; margin: 0 auto;">
-  <div style="text-align: center; width: 340px;">
-    <h4>Avg Calories by Weekday</h4>
-    <img 
-      src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20calories%20final.png" 
-      alt="Avg Calories" 
-      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-  </div>
 
-  <div style="text-align: center; width: 340px;">
-    <h4>Avg Active Minutes by Weekday</h4>
-    <img 
-      src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20active%20minutes.png" 
-      alt="Avg Active Minutes" 
-      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-  </div>
-
-  <div style="text-align: center; width: 340px;">
-    <h4>Avg Sedentary Minutes by Weekday</h4>
-    <img 
-      src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Avg%20sedentary%20minutes.png" 
-      alt="Avg Sedentary Minutes" 
-      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-  </div>
-</div>
-
-<!-- Bottom Row: Sleep, Steps -->
-<div style="display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
-  <div style="text-align: center; width: 340px;">
-    <h4>Avg Hours of Sleep by Weekday</h4>
-    <img 
-      src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20hours%20of%20sleep%20by%20weekday.png" 
-      alt="Avg Hours of Sleep" 
-      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-  </div>
-
-  <div style="text-align: center; width: 340px;">
-    <h4>Avg Steps by Weekday</h4>
-    <img 
-      src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20steps%20by%20weekday.png" 
-      alt="Avg Steps" 
-      style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-  </div>
 </div>
 
 
 
+<!-- Wrapper to center everything as a unit -->
+<div style="display: flex; flex-direction: column; align-items: center; margin: 0 auto;">
+
+  <!-- Top Row: 3 Images -->
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; justify-items: center; max-width: 1100px;">
+    <div style="text-align: center; width: 340px;">
+      <h4>Avg Calories by Weekday</h4>
+      <img 
+        src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20calories%20final.png" 
+        alt="Avg Calories" 
+        style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+
+    <div style="text-align: center; width: 340px;">
+      <h4>Avg Active Minutes by Weekday</h4>
+      <img 
+        src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20active%20minutes.png" 
+        alt="Avg Active Minutes" 
+        style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+
+    <div style="text-align: center; width: 340px;">
+      <h4>Avg Sedentary Minutes by Weekday</h4>
+      <img 
+        src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Avg%20sedentary%20minutes.png" 
+        alt="Avg Sedentary Minutes" 
+        style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+  </div>
+
+  <!-- Spacer -->
+  <div style="height: 40px;"></div>
+
+  <!-- Bottom Row: 2 Images -->
+  <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+    <div style="text-align: center; width: 340px;">
+      <h4>Avg Hours of Sleep by Weekday</h4>
+      <img 
+        src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20hours%20of%20sleep%20by%20weekday.png" 
+        alt="Avg Hours of Sleep" 
+        style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+
+    <div style="text-align: center; width: 340px;">
+      <h4>Avg Steps by Weekday</h4>
+      <img 
+        src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20steps%20by%20weekday.png" 
+        alt="Avg Steps" 
+        style="width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+  </div>
+
+</div>
 
 
 

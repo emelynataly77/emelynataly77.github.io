@@ -86,15 +86,14 @@ After doing some research on the data, I found that it was collected in 2016 and
 
 # 🧹 Excel Cleaning <a id="excel-cleaning"></a>
 
-I began with 18 raw .csv files from the FitBit Fitness Tracker dataset. I performed basic data cleaning, which included:
--Removing null, blank, and duplicate values
--Converting datetime columns for SQL compatibility
--Using the =COUNTA(UNIQUE()) function to compare user ID counts across datasets"
-<br>
+I began with 18 raw .csv files from the FitBit Fitness Tracker dataset. 
+I completed basic data cleaning including: 
+  
+- Removing nulls, blanks, and duplicate values   
+- Converting datetime columns for compatibility into SQL/R 
+- Using =COUNTA(UNIQUE()) function to compare user ID counts across datasets 
 
 The table below represents a summary of the cleaning completed on Excel: 
-
-
 
 
 
@@ -104,8 +103,9 @@ The table below represents a summary of the cleaning completed on Excel:
 
 <br>
 
+Many of the original datasets were too large to be processed efficiently using Excel, RStudio, or even BigQuery. In addition, several datasets were too inconsistent or incomplete to support any meaningful analysis. Some also contained repetitive or overlapping information. For instance, dailyCalories_merged, dailyIntensities_merged, and dailySteps_merged all overlapped with dailyActivity_merged, which already included the same data and more. As a result, those files were removed, and only dailyActivity_merged was kept for further analysis.
 
-Many datasets were too large to process on excel and even too large to properly process on either Rstudio and BigQuery.  Additionally, there were a few datasets that were too inconsistent and incomplete to accurately deduct any type of analysis. Also, there were a ferw datasets that contained repetitive data and overlapped with other existing datasets. For example, dailyCalories_merged, dailyIntensities_merged adn dailySteps_merged overlapped with dailyActivity_merged which included all the information on those three files and then some. Therefore those three were dropped and only dailyActivity_merged would continue to be analyzed. Any datasets that met the criteria describes above were dropped from further exploration (red). Datasets that were eligible for proper processing were uplodaed into BigQueary and further processed
+Any datasets that were incomplete, redundant, or too large to process were excluded from further exploration (as shown on the right). The remaining datasets (listed on the left) were uploaded into BigQuery for continued analysis.
 
 <div style="display: flex; justify-content: space-between; gap: 40px;">
 
@@ -142,17 +142,6 @@ Many datasets were too large to process on excel and even too large to properly 
   </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

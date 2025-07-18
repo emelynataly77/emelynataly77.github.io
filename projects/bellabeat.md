@@ -896,14 +896,22 @@ ggplot(data = daily_df, aes(x = TotalMinutesAsleep, y = LightActiveMinutes)) +
 
 </details>
 
-<div style="text-align: center; margin: 2em auto;">
-  <h3 style="color:#333; font-weight:bold; margin-bottom: 0.5em;">Sleep vs Light/Non Activity Patterns</h3>
+<div style="text-align: center; margin: 2em auto; max-width: 720px;">
+  <h3 style="color:#333; font-weight:bold; margin-bottom: 1em;">Sleep vs Light/Non Activity Patterns</h3>
   <img 
     src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Sleep%20vs%20LightNon%20Activity%20Patterns.png" 
     alt="Sleep vs Light/Non Activity Patterns" 
-    style="width: 700px; height: auto; max-width: 90%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"
+    style="
+      width: 100%;          /* fills container width */
+      height: auto;         /* keeps aspect ratio */
+      max-height: 400px;    /* caps height so it won’t stretch tall */
+      border-radius: 10px; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      object-fit: contain;  /* keeps image fully visible, no cropping */
+      "
   >
 </div>
+
 
 
 

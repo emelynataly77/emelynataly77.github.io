@@ -1415,33 +1415,22 @@ ggplot(data = weekday_sum,
 
 </details>
 
-<!-- Row 1: Calories, Active Minutes, Sedentary Minutes -->
-<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <div style="text-align: center;">
-    <h4>Average Calories by Weekday</h4>
-    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20calories%20final.png" alt="Average Calories" width="300">
-  </div>
-  <div style="text-align: center;">
-    <h4>Average Active Minutes by Weekday</h4>
-    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20active%20minutes.png" alt="Average Active Minutes" width="300">
-  </div>
-  <div style="text-align: center;">
-    <h4>Average Sedentary Minutes by Weekday</h4>
-    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Avg%20sedentary%20minutes.png" alt="Average Sedentary Minutes" width="300">
-  </div>
+	
 </div>
 
-<br>
-
 <!-- Row 2: Hours of Sleep, Steps -->
-<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+<div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
   <div style="text-align: center;">
-    <h4>Average Hours of Sleep by Weekday</h4>
-    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20hours%20of%20sleep%20by%20weekday.png" alt="Average Sleep" width="300">
+    <h4 style="margin-bottom: 10px;">Average Hours of Sleep by Weekday</h4>
+    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20hours%20of%20sleep%20by%20weekday.png" 
+         alt="Average Hours of Sleep" 
+         style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </div>
   <div style="text-align: center;">
-    <h4>Average Steps by Weekday</h4>
-    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20steps%20by%20weekday.png" alt="Average Steps" width="300">
+    <h4 style="margin-bottom: 10px;">Average Steps by Weekday</h4>
+    <img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/avg%20steps%20by%20weekday.png" 
+         alt="Average Steps" 
+         style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </div>
 </div>
 

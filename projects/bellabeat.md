@@ -86,13 +86,10 @@ After doing some research on the data, I found that it was collected in 2016 and
 
 # 🧹 Excel Cleaning <a id="excel-cleaning"></a>
 
-I began with raw .csv files from the FitBit Fitness Tracker dataset. 
-I completed basic cleaning including: 
-  
-- Removed nulls, blanks, and duplicate values   
-- Converted `datetime` columns for compatibility into SQL 
-- Used =COUNTA(UNIQUE()) function to compare user ID counts across datasets
-
+I began with 18 raw .csv files from the FitBit Fitness Tracker dataset. I performed basic data cleaning, which included:
+-Removing null, blank, and duplicate values
+-Converting datetime columns for SQL compatibility
+-Using the =COUNTA(UNIQUE()) function to compare user ID counts across datasets"
 <br>
 
 The table below represents a summary of the cleaning completed on Excel: 

@@ -160,12 +160,12 @@ NOTE: Moving forward I will be processing the data by grouping similiar datasets
 - <span style="color:gray;">'hourlyIntensities.csv'</span>
   
 
-The hourly datasets above were uploaded into BigQuery. I checked if a smooth upload was successful by using a few quick queries
+After uploading the hourly datasets to BigQuery, I ran a few quick queries to ensure the data had been imported correctly. 
 <br>
 
 
 
-Successful Upload Check: 
+Upload Check: 
 
 <details>
 <summary>Show SQL Query</summary>
@@ -190,7 +190,7 @@ FROM `bellabeat-461300.fittracker.hourly_calories` LIMIT 10;
 
 
 <br> 
-I completed the above three querires for all of the hourly data sets after uploading. After I felt comfprtable that the data was ploaded correctly I decided to combine the three hourly datasets. The hourly datasets contained overlapping data that was repetiative and unncescesary. I combined them into one data set so that they owuld beocme easier to handle and analyze later on. 
+After running the three queries on each of the hourly datasets, I was confident everything uploaded correctly. Because the datasets shared some common data (like ID and activity hour) but each also contained different information (such as calories, steps, and intensities), I combined them into one complete 'hourly' dataset.
 <br>
 
 

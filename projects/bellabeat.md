@@ -25,9 +25,8 @@ permalink: /bellabeat.html
 
 # 🔍 Project Overview <a id="project-overview"></a>
 
-This is the Google Data Analytics capstone project I chose to persue. This case study analyzes smart device fitness data to uncover insights for Bellabeat — a women’s wellness company.
-The goal was to explore how consumers use fitness devices and provide actionable recommendations to Bellabeat’s marketing strategy. 
-I myself am very passionate about heath and wellness and reaching ones fitness goals and deeply enjoyed working on this subject matter. 
+This is the Google Data Analytics Capstone Project, focused on analyzing smart device fitness data to uncover insights for Bellabeat — a women’s wellness company. The goal was to explore how consumers use fitness devices and provide actionable recommendations to Bellabeat’s marketing strategy
+I myself am very passionate about heath and wellness and reaching ones fitness goals and really enjoyed working on this project. 
 To further explore Bellabeat, the case study prompt or the Kaggle dataset used for this case study, please use the links provided below:
 
 - [Bellabeat Official Website](https://bellabeat.com/)
@@ -35,6 +34,29 @@ To further explore Bellabeat, the case study prompt or the Kaggle dataset used f
 - [FitBit Dataset on Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit)
 
 ---
+### Stakeholders
+Urška Sršen: Bellabeat’s cofounder and Chief Creative Officer
+
+Sando Mur: Bellabeat’s cofounder; key member of the Bellabeat executive team
+
+### Bellabeat products
+Bellabeat app: The app provides users with health data related to their activity, sleep, stress,
+menstrual cycle, and mindfulness habits. The Bellabeat app connects to their line of smart wellness products.
+
+Leaf: Wellness tracker can be worn as a bracelet, necklace, or clip. The Leaf tracker connects
+to the Bellabeat app to track activity, sleep, and stress
+
+Time: Wellness watch combines the timeless look of a classic timepiece with smart technology to track user
+activity, sleep, and stress. The Time watch connects to the Bellabeat app to provide you with insights into your
+daily wellness.
+
+Spring: A water bottle that tracks daily water intake using smart technology to ensure that you are
+appropriately hydrated throughout the day. The Spring bottle connects to the Bellabeat app to track your
+hydration levels
+
+Bellabeat membership:  A subscription-based membership program for users.
+Membership gives users 24/7 access to fully personalized guidance on nutrition, activity, sleep, health and
+beauty, and mindfulness based on their lifestyle and goals.
 
 ### The Data <a id="the-data"></a>
 

@@ -25,7 +25,7 @@ permalink: /bellabeat.html
 
 # 🔍 Project Overview <a id="project-overview"></a>
 
-This is the Google Data Analytics Capstone Project, focused on analyzing smart device fitness data to uncover insights for Bellabeat — a women’s wellness company. The goal was to explore how consumers use fitness devices and provide actionable recommendations to Bellabeat’s marketing strategy
+This is the Google Data Analytics Capstone Project, focused on analyzing smart device fitness data to uncover insights for Bellabeat — a women’s wellness company. The goal was to explore how consumers use fitness devices and provide actionable recommendations to Bellabeat’s marketing strategy.
 I myself am very passionate about heath and wellness and reaching ones fitness goals and really enjoyed working on this project. 
 To further explore Bellabeat, the case study prompt or the Kaggle dataset used for this case study, please use the links provided below:
 
@@ -47,7 +47,7 @@ To further explore Bellabeat, the case study prompt or the Kaggle dataset used f
 
 ### The Data <a id="the-data"></a>
 
-The following .csv files were used during data cleaning and analysis:
+The FitBit Fitness Tracker dataset, provided by Kaggle user Mobius, serves as the basis for this case study. It includes the 18 .csv files that I will use for procsessing, cleaning and analyzing. 
 
 <div style="display: flex; gap: 40px;">
 

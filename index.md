@@ -21,3 +21,10 @@ layout: default
 - GitHub: [github.com/emelynataly77](https://github.com/emelynataly77)  
 - LinkedIn: [linkedin.com/in/YOUR-LINKEDIN](https://linkedin.com/in/YOUR-LINKEDIN)
 
+<!-- Profile picture in top right corner -->
+<div style="position: absolute; top: 20px; right: 20px;">
+  <img 
+    src="assets/img/practice.jpg" 
+    alt="Profile Photo" 
+    style="width: 100px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</div>

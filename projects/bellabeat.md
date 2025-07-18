@@ -143,11 +143,7 @@ Any datasets that were incomplete, redundant, or too large to process were exclu
 
 </div>
 
-
-
-
- After cleaning the proper data on excel, the files were saved without the unnecessary "merged" title. For example 'dailyCalories_merged' was changed to 'dailyCalories' and so on.
-I decided that the data was too intolerabel to continue processing on Excel other than the basic cleaning mentioned above. So I decided to move over to the BigQueary platform and continue analyzing the necessary data. Overall, Excel provided a quick and straightforward way to clean the data during the early stages of processing. 
+After completing the initial cleaning in Excel—such as removing nulls and duplicates—the files were renamed to drop the unnecessary 'merged' label (e.g., 'dailyCalories_merged' became 'dailyCalories,' as shown above). While Excel worked well for early-stage cleanup, the data soon became too large and difficult to manage efficiently. So, I moved everything over to BigQuery, where working with the datasets was much more manageable.
 
 
 NOTE: Moving forward I will be processing the data by grouping similiar datasets by their datatype (e.g., daily/sleep, hourly) to help keep things organized and straightforward. 

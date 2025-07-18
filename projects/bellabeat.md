@@ -896,7 +896,15 @@ ggplot(data = daily_df, aes(x = TotalMinutesAsleep, y = LightActiveMinutes)) +
 
 </details>
 
-<img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Sleep%20vs%20LightNon%20Activity%20Patterns.png" alt="Sleep vs Light/Non Activity Patterns">
+<div style="text-align: center; margin: 2em auto;">
+  <h3 style="color:#333; font-weight:bold; margin-bottom: 0.5em;">Sleep vs Light/Non Activity Patterns</h3>
+  <img 
+    src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Sleep%20vs%20LightNon%20Activity%20Patterns.png" 
+    alt="Sleep vs Light/Non Activity Patterns" 
+    style="max-width: 90%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);"
+  >
+</div>
+
 
 
 People who sleep more tend to have fewer non-active minutes during the day (a stronger relationship)

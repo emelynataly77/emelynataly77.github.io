@@ -896,6 +896,7 @@ ggplot(data = daily_df, aes(x = TotalMinutesAsleep, y = LightActiveMinutes)) +
 
 </details>
 
+
 <div style="text-align: center; margin: 2em auto; max-width: 720px;">
   <h3 style="color:#333; font-weight:bold; margin-bottom: 1em;">Sleep vs Light/Non Activity Patterns</h3>
   <img 
@@ -911,6 +912,7 @@ ggplot(data = daily_df, aes(x = TotalMinutesAsleep, y = LightActiveMinutes)) +
       "
   >
 </div>
+
 
 
 

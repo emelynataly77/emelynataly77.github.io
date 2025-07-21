@@ -325,7 +325,6 @@ Load packages and hourly dataset:
 install.packages
 library(tidyverse)
 library(lubridate)
-library(dplyr)
 library(qwraps2)
 # import hourlyMerged dataset, rename (df=dataframe)
 hourly_df <- read_csv("hourlyMerged.csv")
@@ -420,7 +419,7 @@ I went ahead and also performed a correlation test. I just wanted to see any pot
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-#correlation tests for hourly data
+#Pearson correlation test: average_intensity vs Calories
 with(hourly_df, cor.test(average_intensity, Calories, method = "pearson"))
 
 	Pearson's product-moment correlation
@@ -434,6 +433,7 @@ sample estimates:
        cor 
 0.03763252 
 
+#Pearson corelation test: total_intensity vs Calories
 with(hourly_df, cor.test(total_intensity, Calories, method = "pearson"))
 
 	Pearson's product-moment correlation
@@ -447,6 +447,7 @@ sample estimates:
        cor 
 0.03763252 
 
+#Pearson correlation test: total_intensity vs step_total
 with(hourly_df, cor.test(total_intensity, step_total, method = "pearson"))
 
 	Pearson's product-moment correlation
@@ -460,6 +461,7 @@ sample estimates:
        cor 
 0.04351006 
 
+#Pearson correlation test: average_intensity vs step_total
 with(hourly_df, cor.test(average_intensity, step_total, method = "pearson"))
 
 	Pearson's product-moment correlation
@@ -472,7 +474,8 @@ alternative hypothesis: true correlation is not equal to 0
 sample estimates:
        cor 
 0.04351006 
-	
+
+#Pearson correlation test: step _total vs Calories
 with(hourly_df, cor.test(step_total, Calories, method = "pearson"))
 
 	Pearson's product-moment correlation

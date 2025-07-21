@@ -856,11 +856,11 @@ I ran another correlation test—similar to the one I used with the hourly datas
 
 <pre><code class="language-r">
 # Pearson correlation test: total minutes asleep vs heavy active minutes
-cor.test(daily_df$TotalMinutesAsleep, daily_df$HeavyActiveMinutes, method = "pearson" )
+with(daily_df, cor.test(TotalMinutesAsleep, HeavyActiveMinutes, method = "pearson"))
 
 	Pearson's product-moment correlation
 
-data:  daily_df$TotalMinutesAsleep and daily_df$HeavyActiveMinutes
+data:  TotalMinutesAsleep and HeavyActiveMinutes
 t = -3.7286, df = 408, p-value = 0.0002197
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
@@ -869,12 +869,12 @@ sample estimates:
        cor 
 -0.1815268 
 
-#Pearson correlation test: total minutes asleep light/non active minutes
-cor.test(daily_df$TotalMinutesAsleep, daily_df$LightActiveMinutes, method = "pearson")
+#Pearson correlation test: total minutes asleep vs light/non active minutes
+with(daily_df, cor.test(TotalMinutesAsleep, LightActiveMinutes, method = "pearson"))
 
 	Pearson's product-moment correlation
 
-data:  daily_df$TotalMinutesAsleep and daily_df$LightActiveMinutes
+data:  TotalMinutesAsleep and LightActiveMinutes
 t = -14.644, df = 408, p-value < 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
@@ -883,7 +883,21 @@ sample estimates:
        cor 
 -0.5869577
 
-# Plot sleep vs light activity
+# Pearson correlation test: total minutes asleep vs calories
+with(daily_df, cor.test(TotalMinutesAsleep, Calories, method = "pearson"))
+
+	Pearson's product-moment correlation
+
+data:  TotalMinutesAsleep and Calories
+t = -0.64061, df = 408, p-value = 0.5221
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.12815287  0.06534893
+sample estimates:
+        cor 
+-0.03169899 
+
+# Plot sleep vs light/non activity
 library(ggplot2)
 
 ggplot(data = daily_df, aes(x = TotalMinutesAsleep, y = LightActiveMinutes)) +

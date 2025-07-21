@@ -872,16 +872,16 @@ First, I analyzed how frequently users engaged with their smart devices (though 
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-#assign usage type
+# assign usage type
 user_usage <- daily_df %>%
   count(Id) %>% 
   mutate(user_type = case_when(
-    n >= 1 & n <= 10 ~ "sparse",
-    n >= 11 & n <= 20 ~ "modest",
-    n >= 21 & n <= 31 ~ "frequent"
+    n &gt;= 1 &amp;&amp; n &lt;= 10 ~ "sparse",
+    n &gt;= 11 &amp;&amp; n &lt;= 20 ~ "modest",
+    n &gt;= 21 &amp;&amp; n &lt;= 31 ~ "frequent"
   ))
 
-#assign usage percentage
+# assign usage percentage
 user_usage_percent <- user_usage %>%
   count(user_type) %>%
   mutate(
@@ -890,16 +890,16 @@ user_usage_percent <- user_usage %>%
     user_type = factor(user_type, levels = c("frequent", "modest", "sparse"))
   )
 
-#check results
+# check results
 print(user_usage_percent)
-#A tibble: 3 × 4
-#user_type     n total_percent labels
-#<fct>     <int>         <dbl> <chr> 
-#1 frequent     12         0.5   50%   
-#2 modest        3         0.125 12%   
-#3 sparse        9         0.375 38% 
+# A tibble: 3 × 4
+# user_type     n total_percent labels
+# <fct>     <int>         <dbl> <chr> 
+# 1 frequent     12         0.5   50%   
+# 2 modest        3         0.125 12%   
+# 3 sparse        9         0.375 38% 
 
-#create ggplot donut chart
+# create ggplot donut chart
 ggplot(user_usage_percent, aes(x = 2, y = total_percent, fill = user_type)) +
   geom_bar(stat = "identity", width = 1, color = "white") +
   coord_polar("y") +
@@ -922,6 +922,7 @@ ggplot(user_usage_percent, aes(x = 2, y = total_percent, fill = user_type)) +
 </code></pre>
 
 </details>
+
 
 <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; text-align: center;">
 

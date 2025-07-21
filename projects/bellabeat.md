@@ -868,6 +868,10 @@ dim(daily_df)
 
 First, I analyzed how frequently users engaged with their smart devices (though the specific device types remain unknown). My goal was to understand how many Bellabeat users were consistently using their devices versus those who hardly used them. This could give a better sense of how engaged users are overall.
 
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
 #assign usage type
 user_usage <- daily_df %>%
   count(Id) %>% 
@@ -915,6 +919,9 @@ ggplot(user_usage_percent, aes(x = 2, y = total_percent, fill = user_type)) +
     legend.position = "bottom",
     legend.title = element_blank()
   )
+</code></pre>
+
+</details>
 
 <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; text-align: center;">
 
@@ -924,11 +931,12 @@ ggplot(user_usage_percent, aes(x = 2, y = total_percent, fill = user_type)) +
     <img 
       src="projects/donut%20chart.png" 
       alt="Donut Chart" 
-      width="280" 
+      width="400" 
       style="border-radius: 12px; background-color: white; padding: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
   </div>
 
 </div>
+
 
 
 

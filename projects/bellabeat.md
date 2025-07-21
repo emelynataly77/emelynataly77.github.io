@@ -869,6 +869,60 @@ dim(daily_df)
 First, I analyzed how frequently users engaged with their smart devices (though the specific device types remain unknown). My goal was to understand how many Bellabeat users were consistently using their devices versus those who hardly used them. This could give a better sense of how engaged users are overall.
 
 
+<details>
+<summary>Show R Code</summary>
+
+<pre><code class="language-r">
+# assign usage type
+user_usage &lt;- daily_df %&gt;%
+  count(Id) %&gt;% 
+  mutate(user_type = case_when(
+    n &gt;= 1 &amp;&amp; n &lt;= 10 ~ "sparse",
+    n &gt;= 11 &amp;&amp; n &lt;= 20 ~ "modest",
+    n &gt;= 21 &amp;&amp; n &lt;= 31 ~ "frequent"
+  ))
+
+# assign usage percentage
+user_usage_percent &lt;- user_usage %&gt;%
+  count(user_type) %&gt;%
+  mutate(
+    total_percent = n / sum(n),
+    labels = scales::percent(total_percent),
+    user_type = factor(user_type, levels = c("frequent", "modest", "sparse"))
+  )
+
+# check results
+print(user_usage_percent)
+# A tibble: 3 × 4
+# user_type     n total_percent labels
+# &lt;fct&gt;     &lt;int&gt;         &lt;dbl&gt; &lt;chr&gt; 
+# 1 frequent     12         0.5   50%   
+# 2 modest        3         0.125 12%   
+# 3 sparse        9         0.375 38% 
+
+# create ggplot donut chart
+ggplot(user_usage_percent, aes(x = 2, y = total_percent, fill = user_type)) +
+  geom_bar(stat = "identity", width = 1, color = "white") +
+  coord_polar("y") +
+  xlim(0.5, 2.5) +
+  scale_fill_manual(values = c(
+    "frequent" = "#2a9d8f", 
+    "modest" = "#70c1b3", 
+    "sparse" = "#b2dfdb"
+  )) +
+  geom_text(aes(label = labels), 
+            position = position_stack(vjust = 0.5), 
+            color = "white", size = 4) +
+  theme_void() +
+  labs(title = "Smart Device Usage Frequency") +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    legend.position = "bottom",
+    legend.title = element_blank()
+  )
+</code></pre>
+
+</details>
 
 
 I ran another correlation test—similar to the one I used with the hourly dataset—to explore the relationship between sleep and activity levels.

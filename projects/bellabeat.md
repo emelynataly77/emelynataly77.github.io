@@ -97,7 +97,20 @@ The table below represents a summary of the cleaning completed on Excel:
 
 
 
-<img src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Screenshot%20(69).png" alt="Excel Table Screenshot" width="92%"> 
+<div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; text-align: center; margin-top: 20px;">
+
+  <!-- Excel Table Image -->
+  <div>
+    <h3 style="color:#333; font-weight:bold;">Excel Table Screenshot</h3>
+    <img 
+      src="https://raw.githubusercontent.com/emelynataly77/emelynataly77.github.io/main/projects/Screenshot%20(69).png" 
+      alt="Excel Table Screenshot" 
+      width="580" 
+      style="border-radius: 12px; background-color: white; padding: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+  </div>
+
+</div>
+
 
 
 

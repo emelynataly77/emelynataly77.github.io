@@ -903,8 +903,9 @@ ggplot(user_usage_percent, aes(x = 2, y = total_percent, fill = user_type)) +
 
 
 <div style="background-color: white; padding: 15px; border-radius: 12px; width: fit-content; margin: 1em auto; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-  <img src="assets/img/practice.png" alt="Profile Picture" style="display: block; border-radius: 12px; max-width: 300px; height: auto;"/>
+  <img src="assets/img/donut%20chart.png" alt="Donut Chart" style="display: block; border-radius: 12px; max-width: 300px; height: auto;"/>
 </div>
+
  
 	  
 </code></pre>

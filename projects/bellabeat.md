@@ -902,8 +902,18 @@ ggplot(user_usage_percent, aes(x = 2, y = total_percent, fill = user_type)) +
   )
 
 
-<div style="background-color: white; padding: 15px; border-radius: 12px; width: fit-content; margin: 1em auto; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-  <img src="assets/img/donut%20chart.png" alt="Donut Chart" style="display: block; border-radius: 12px; max-width: 300px; height: auto;"/>
+<div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; text-align: center;">
+
+  <!-- Donut Chart -->
+  <div>
+    <h3 style="color:#333; font-weight:bold;">Donut Chart</h3>
+    <img 
+      src="assets/img/donut%20chart.png" 
+      alt="Donut Chart" 
+      width="280" 
+      style="border-radius: 12px; background-color: white; padding: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+  </div>
+
 </div>
 
  

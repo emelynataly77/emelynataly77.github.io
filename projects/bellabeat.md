@@ -549,7 +549,7 @@ summary(nighthr)
 
 </details>
 
-Looking at the summaries, it's clear that step counts are lower at night, ~21 steps om average—which makes sense since most peopole are asleep during that time. To get a better idea of activity levels throughout the day, I decided to focus on calculating the average steps and calories burned by time of day.
+Looking at the summaries, it's clear that step counts are lower at night, ~21 steps on average—which makes sense since most peopole are asleep during that time. To get a better idea of activity levels throughout the day, I decided to focus on calculating the average steps and calories burned by time of day.
 
 <details>
 <summary>Show R Code</summary>
@@ -759,22 +759,21 @@ I was a bit surprised to find that most users were significantly more active in 
 ### Daily/Sleep Data <a id="daily-sleep-data-r"></a>
 - <span style="color:gray;">'dailyMerged.csv'</span>
 
-The dataset abover was uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using the code below
+I uploaded my dailyMerged dataset into RStudio and checked the data imported correctly. 
 <br>
 
-Import data into Rstudio:
-
+Upload check: 
 <details>
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-# import daily_merged dataset
-daily_df <- read_csv("daily_merged.csv")
+# import dailyMerged dataset, rename (df = dataframe)
+daily_df <- read_csv("dailyMerged.csv")
 </code></pre>
 
 </details>
 
-Successful Upload check: 
+Upload check: 
 
 <details>
 <summary>Show R Code</summary>
@@ -840,6 +839,7 @@ dim(daily_df)
 
 </details>
 
+I ran another correlation test—similar to the one I used with the hourly dataset—to explore the relationship between sleep and activity levels.
 
 <details>
 <summary>Show R Code</summary>
@@ -905,18 +905,11 @@ ggplot(data = daily_df, aes(x = TotalMinutesAsleep, y = LightActiveMinutes)) +
   >
 </div>
 
+The results show that people who sleep more tend to have fewer light/non-active minutes during the day—a moderately strong relationship. There’s also a slight decrease in active minutes with more sleep, but that correlation is much weaker. Overall, the negative correlations suggest that more sleep may be linked to less sedentary time. The graph above supports this, indicating that individuals who get more sleep may also be more active overall.
+
+To dig deeper into the data, I broke it down by day of the week to compare sleep and light/non-active minutes across different days. In the code block below, I filtered the data by weekday and generated summary stats for each group. This helps show when users are getting the most—or least—engagement with their smart device. These summaries show how sleep and activity levels change throughout the week.
 
 
-
-
-
-
-
-People who sleep more tend to have fewer non-active minutes during the day (a stronger relationship)
-They also tend to have slightly fewer active minutes, but this relationship is weak....
-The negative correlations suggest more sleep might be associated with more overall movement or less sedentary time, especially the stronger relationship with non-active minutes.
-The graph above suggests that people who sleep more may be more active during the day. The low p value (2.2e-16) confirms statistical significance. I wanted to look further into the day by day breakdown of the data between sleep adn non-activity. In the code block below I filter the data for each day of the week and generate summary statistics for the filtered datasets.
-Again i want to break the data into time frames and days of the week to grasp when users are getting the most out of device usage or the least usage. Simple summaries of the data could help up pinpoint genreal calculations of the columns. 
 
 <details>
 <summary>Show R Code</summary>
@@ -1326,7 +1319,8 @@ attr(,"class")
 
 </details>
 
-I used the following coded blocks to generate respetive graphs representing my results of the stat summaries. 
+I used the following code blocks to generate graphs that represent the results of the stat summaries.
+
 
 <details>
 <summary>Show R Code</summary>
@@ -1419,12 +1413,6 @@ ggplot(data = weekday_sum,
 
 </details>
 
-</div>	
-
-
-</div>
-
-
 
 <!-- Wrapper to center everything as a unit -->
 <div style="display: flex; flex-direction: column; align-items: center; margin: 0 auto;">
@@ -1481,21 +1469,9 @@ ggplot(data = weekday_sum,
 </div>
 
 
+Looking at the graphs, it becomes clear that the start of the workweek—Monday and Tuesday—along with Saturday, tend to be higher across most of the graphs. In contrast, Fridays consistently show lower values, suggesting that user activity tends to slow down as the week wraps up.
 
 
-
-
-
-
-</div>
-
-
-
-
-
-
-
-Looking at the graohs it becomes more clear that the beginning of the work week (mon/tues) tend to be higher on all the generated graphs along wiht saturday. Fridays tend to be the lowest on most of the graphs suggesting a more relaxed Fiday in terms of the data. 
 
 # 💡 Key Insights <a id="key-insights"></a>
 - Early on during the data research phase I discovered gaps and inconsitensies that point to flawed or inadequate data recording/gathering. Meaning, bellabeat needs to work on properly gathering reliable/substantial data from their users. Or they need to find a way to push their customers into logging data more consistently. 

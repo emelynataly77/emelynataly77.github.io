@@ -480,7 +480,7 @@ sample estimates:
 </details>
 
 
-Shockingly, there didnt seem to be any substantial linear correlation between intensity and steps taken or intensity and calories burned. Since we split the data into time of day I wanted to also check at which points of the day individuals were being more or less active. I would assume participants would be more active during the morning or evening times considering, work schedules and common physical activity timeslots. However, this assumption dos not account for the weekends.  I wrote up the following two code blocks to analyze time of day activity throught the week (SUN-SAT).
+Interestingly, there didn’t appear to be any strong or meaningful linear correlation between intensity and steps taken, or between intensity and calories burned. On the other hand, the number of steps has a strong positive linear correlation with calories burned. This makes sense, as generally the more steps you take the more calories you're likely to burn. Since the dataset was already grouped by time of day, I wanted to take a closer look at when participants were most or least active. I first assumed that activity levels would peak in the morning and evening—times because that usually aligns with common workout windows. But that assumption might not represent weekends, when people's schedules tend to vary. To take a closer look, I used the next two code blocks to check out activity levels at different times of day, from Sunday through Saturday.
 
 <details>
 <summary>Show R Code</summary>
@@ -549,8 +549,7 @@ summary(nighthr)
 
 </details>
 
-We can see by looking at the summaries that Night has a really low step count(~21) compared to the oter times of day. This makes sense as most people are asleep during the "Night" time-frame. 
-Moreover, let go ahead and calculate only for the average stps and calories as thats how we will tell more or less how activity levels based on time of day. 
+Looking at the summaries, it's clear that step counts are lower at night, ~21 steps om average—which makes sense since most peopole are asleep during that time. To get a better idea of activity levels throughout the day, I decided to focus on calculating the average steps and calories burned by time of day.
 
 <details>
 <summary>Show R Code</summary>
@@ -664,7 +663,7 @@ attr(,"qable_args")$markup
 attr(,"qable_args")$kable_args
 list()
 
-#create summary for ngiht list
+#create summary for night list
  night_list <- 
 + list(
 + list("Total_Steps_Avg" = ~ mean(nighthr$step_total)),
@@ -700,7 +699,7 @@ attr(,"qable_args")$markup
 attr(,"qable_args")$kable_args
 list()
 
-# comparative list of all of out day by day summaries (only mean of steps and calories)
+# comparative list of all of the day by day summaries (only mean of steps and calories)
 timeofday_summary1 <- data.frame(
 + TimeOfDay = c("Afternoon", "Morning", "Evening", "Night"),
 + Total_Steps_Avg = c(519.599624506321, 374.758472938824, 370.922424933024, 21.2780518695702),
@@ -710,7 +709,7 @@ timeofday_summary1 <- data.frame(
 
 </details>
 
-Im going to go ahead and make a bar graph of my findings on top of the chart we just made on RStudio (timeofday_summary1). This will visulaly make clear average calories and steps by day of week and the order they will fall in. 
+The following code creates a bar graph that represents the average calories burned and steps taken each day of the week, based on the findings above. It helps visualize how both calories and steps vary across different times of the day. 
 
 <details>
 <summary>Show R Code</summary>
@@ -755,11 +754,8 @@ ggplot(timeofday_summary1, aes(x = reorder(TimeOfDay, -Total_Steps_Avg), y = Tot
 </div>
 
 
+I was a bit surprised to find that most users were significantly more active in the afternoon, rather than in the morning or evening. This could be a sign of Bellabeat’s target audience—possibly individuals who don’t follow a typical 9-to-5 schedule or who have more physically demanding jobs. Of course, drawing solid conclusions would require more data than we currently have access to, but it’s something worth considering for future research. It wasn’t surprising to see that activity levels in the morning and evening were relatively the same. As expected, nighttime was when users were the least active.
 
-
-
- I was a little surprised to find that most users were significantly more active during the afternoon and not the morning and evening. This could be notworthy as to who bellabeats targer customers could be (people who do not usually work a 9-5?) Moreover, that would of course require more data thtan we currently have. Just somthing to keep in mind for future research/refernce. The evening and morning being relatively the same was unsurprising. The sama ecan be said for nightime being the the time users were the least active. 
- 
 ### Daily/Sleep Data <a id="daily-sleep-data-r"></a>
 - <span style="color:gray;">'dailyMerged.csv'</span>
 
@@ -798,6 +794,7 @@ head(daily_df)
 # 6 3977333714  4/20/2016        11658          7.83            7.83                        0           4.55            3.28
 # ℹ 6 more variables: HeavyActiveMinutes &lt;dbl&gt;, LightActiveMinutes &lt;dbl&gt;, Calories &lt;dbl&gt;, TotalSleepRecords &lt;dbl&gt;,
 #   TotalMinutesAsleep &lt;dbl&gt;, TotalTimeInBed &lt;dbl&gt;
+
 
 # Check the structure of the data
 str(daily_df)

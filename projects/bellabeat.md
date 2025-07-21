@@ -987,24 +987,9 @@ mon_data_summary <- monday_data %>%
 +         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
 
 # view mon data sum
-print.default(mon_data_summary)
-$Total_Steps_Avg
-[1] 9273.217
-
-$Active_Minutes_Avg
-[1] 49.80435
-
-$Sedentary_Minutes_Avg
-[1] 940.7826
-
-$Calories_Avg
-[1] 2431.978
-
-$Total_Hours_Asleep_Avg
-[1] 6.991667
-
-attr(,"class")
-[1] "tbl_df"     "tbl"        "data.frame"
+as.data.frame (mon_data_summary)
+  Total_Steps_Avg Active_Minutes_Avg Sedentary_Minutes_Avg Calories_Avg Total_Hours_Asleep_Avg
+1        9273.217           49.80435              940.7826     2431.978               6.991667
 
 # seperate tues data from daily 
 > tuesday_data <- daily_df %>%
@@ -1042,24 +1027,9 @@ tues_data_summary <- tuesday_data %>%
 +         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
 
 # view tues data sum
-print.default(tues_data_summary)
-$Total_Steps_Avg
-[1] 9182.692
-
-$Active_Minutes_Avg
-[1] 50.66154
-
-$Sedentary_Minutes_Avg
-[1] 956.6308
-
-$Calories_Avg
-[1] 2496.2
-
-$Total_Hours_Asleep_Avg
-[1] 6.742308
-
-attr(,"class")
-[1] "tbl_df"     "tbl"        "data.frame"
+as.data.frame(tues_data_summary)
+  Total_Steps_Avg Active_Minutes_Avg Sedentary_Minutes_Avg Calories_Avg Total_Hours_Asleep_Avg
+1        9182.692           50.66154              956.6308       2496.2               6.742308
 
 #seperate wed data from daily
 wednesday_data <- daily_df %>%
@@ -1097,24 +1067,9 @@ wed_data_summary <- wednesday_data %>%
 +         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
 
 # view wednesday data sum 
-print.default(wed_data_summary)
-$Total_Steps_Avg
-[1] 8022.864
-
-$Active_Minutes_Avg
-[1] 38.07576
-
-$Sedentary_Minutes_Avg
-[1] 922.4242
-
-$Calories_Avg
-[1] 2378.242
-
-$Total_Hours_Asleep_Avg
-[1] 7.244697
-
-attr(,"class")
-[1] "tbl_df"     "tbl"        "data.frame"
+as.data.frame (wed_data_summary)
+  Total_Steps_Avg Active_Minutes_Avg Sedentary_Minutes_Avg Calories_Avg Total_Hours_Asleep_Avg
+1        8022.864           38.07576              922.4242     2378.242               7.244697
 
 # seperate thurs data from daily
 thursday_data <- daily_df %>%
@@ -1152,24 +1107,9 @@ thurs_data_summary <- thursday_data %>%
 +         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
 
 # view thurs data sum 
-print.default(thurs_data_summary)
-$Total_Steps_Avg
-[1] 8183.516
-
-$Active_Minutes_Avg
-[1] 38.71875
-
-$Sedentary_Minutes_Avg
-[1] 901.3125
-
-$Calories_Avg
-[1] 2306.672
-
-$Total_Hours_Asleep_Avg
-[1] 6.688281
-
-attr(,"class")
-[1] "tbl_df"     "tbl"        "data.frame"
+as.data.frame (thurs_data_summary)
+  Total_Steps_Avg Active_Minutes_Avg Sedentary_Minutes_Avg Calories_Avg Total_Hours_Asleep_Avg
+1        8183.516           38.71875              901.3125     2306.672               6.688281
 
 # seperate fri data from daily
 friday_data <- daily_df %>%
@@ -1207,24 +1147,9 @@ fri_data_summary <- friday_data %>%
 +         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
 
 # view fri data sum 
-print.default(fri_data_summary)
-$Total_Steps_Avg
-[1] 7901.404
-
-$Active_Minutes_Avg
-[1] 35.73684
-
-$Sedentary_Minutes_Avg
-[1] 965.7719
-
-$Calories_Avg
-[1] 2329.649
-
-$Total_Hours_Asleep_Avg
-[1] 6.757018
-
-attr(,"class")
-[1] "tbl_df"     "tbl"        "data.frame"
+as.data.frame (fri_data_summary)
+  Total_Steps_Avg Active_Minutes_Avg Sedentary_Minutes_Avg Calories_Avg Total_Hours_Asleep_Avg
+1        7901.404           35.73684              965.7719     2329.649               6.757018
 
 # seperate sat data from daily
 saturday_data <- daily_df %>%
@@ -1262,30 +1187,9 @@ sat_data_summary <- saturday_data %>%
 +         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
 
 # view sat data sum 
-print.default(sat_data_summary)
-$Total_Steps_Avg
-[1] 9871.123
-
-$Active_Minutes_Avg
-[1] 50.2807
-
-$Sedentary_Minutes_Avg
-[1] 927.2105
-
-$Calories_Avg
-[1] 2506.895
-
-$Total_Hours_Asleep_Avg
-[1] 6.984503
-
-attr(,"class")
-[1] "tbl_df"     "tbl"        "data.frame"
-
-
-
-
-
-
+as.data.frame (sat_data_summary)
+  Total_Steps_Avg Active_Minutes_Avg Sedentary_Minutes_Avg Calories_Avg Total_Hours_Asleep_Avg
+1        9871.123            50.2807              927.2105     2506.895               6.984503
 
 # seperate sun data from daily
 sunday_data <- daily_df %>%
@@ -1323,24 +1227,9 @@ sun_data_summary <- sunday_data %>%
 +         Total_Hours_Asleep_Avg = mean(TotalMinutesAsleep / 60, na.rm = TRUE))
 
 # view sun data sum 
-print.default(sun_data_summary)
-$Total_Steps_Avg
-[1] 7297.855
-
-$Active_Minutes_Avg
-[1] 38.90909
-
-$Sedentary_Minutes_Avg
-[1] 887.6727
-
-$Calories_Avg
-[1] 2276.6
-
-$Total_Hours_Asleep_Avg
-[1] 7.545758
-
-attr(,"class")
-[1] "tbl_df"     "tbl"        "data.frame"
+as.data.frame (sun_data_summary)
+  Total_Steps_Avg Active_Minutes_Avg Sedentary_Minutes_Avg Calories_Avg Total_Hours_Asleep_Avg
+1        7297.855           38.90909              887.6727       2276.6               7.545758
 
 </code></pre>
 

@@ -919,10 +919,10 @@ ggplot(user_usage_percent, aes(x = 2, y = total_percent, fill = user_type)) +
 
   <!-- Donut Chart -->
   <div>
-    <h3 style="color:#333; font-weight:bold;">Donut Chart</h3>
+    <h3 style="color:#333; font-weight:bold;">donut chart</h3>
     <img 
       src="assets/img/donut%20chart.png" 
-      alt="Donut Chart" 
+      alt="donut chart" 
       width="280" 
       style="border-radius: 12px; background-color: white; padding: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
   </div>

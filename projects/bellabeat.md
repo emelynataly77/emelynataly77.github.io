@@ -854,43 +854,44 @@ dim(daily_df)
 
 First, I analyzed how frequently users engaged with their smart devices (though the specific device types remain unknown). My goal was to understand how many Bellabeat users were consistently using their devices versus those who hardly used them. This could give a better sense of how engaged users are overall.
 
-<details>
-<summary>Show R Code</summary>
+#assign usage type
+user_usage <- daily_df %>%
+  count(Id) %>% 
+  mutate(user_type = case_when(
+    n >= 1 & n <= 10 ~ "sparse",
+    n >= 11 & n <= 20 ~ "modest",
+    n >= 21 & n <= 31 ~ "frequent"
+  ))
 
-<pre><code class="language-r">
-# assign usage type
-user_usage <- daily_df%>%
-+    count(Id) %>% 
-+     mutate(user_type = case_when(
-+      n >= 1 & n <= 10 ~ "sparse",
-+              n >= 11 & n <= 20 ~ "modest",
-+            n >= 21 & n <= 31 ~ "frequent"
-+  ))
-# assign usage percentage
+#assign usage percentage
 user_usage_percent <- user_usage %>%
-+     count(user_type) %>%
-+     mutate(
-+         total_percent = n / sum(n),
-+         labels = scales::percent(total_percent),
-+         user_type = factor(user_type, levels = c("frequent", "modest", "sparse"))
-+ )
+  count(user_type) %>%
+  mutate(
+    total_percent = n / sum(n),
+    labels = scales::percent(total_percent),
+    user_type = factor(user_type, levels = c("frequent", "modest", "sparse"))
+  )
+
 #check results
 print(user_usage_percent)
-# A tibble: 3 × 4
-  user_type     n total_percent labels
-  <fct>     <int>         <dbl> <chr> 
-1 frequent     12         0.5   50%   
-2 modest        3         0.125 12%   
-3 sparse        9         0.375 38% 
+#A tibble: 3 × 4
+#user_type     n total_percent labels
+#<fct>     <int>         <dbl> <chr> 
+#1 frequent     12         0.5   50%   
+#2 modest        3         0.125 12%   
+#3 sparse        9         0.375 38% 
+
 #create ggplot donut chart
 ggplot(user_usage_percent, aes(x = 2, y = total_percent, fill = user_type)) +
   geom_bar(stat = "identity", width = 1, color = "white") +
   coord_polar("y") +
   xlim(0.5, 2.5) +
-  scale_fill_manual(values = c("frequent" = "#2a9d8f", 
-                               "modest" = "#70c1b3", 
-                               "sparse" = "#b2dfdb")) +
-  geom_text(aes(label = scales::percent(total_percent)), 
+  scale_fill_manual(values = c(
+    "frequent" = "#2a9d8f", 
+    "modest" = "#70c1b3", 
+    "sparse" = "#b2dfdb"
+  )) +
+  geom_text(aes(label = labels), 
             position = position_stack(vjust = 0.5), 
             color = "white", size = 4) +
   theme_void() +
@@ -900,6 +901,7 @@ ggplot(user_usage_percent, aes(x = 2, y = total_percent, fill = user_type)) +
     legend.position = "bottom",
     legend.title = element_blank()
   )
+
 
 
 I ran another correlation test—similar to the one I used with the hourly dataset—to explore the relationship between sleep and activity levels.

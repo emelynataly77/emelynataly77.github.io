@@ -325,6 +325,7 @@ Load packages and hourly dataset:
 install.packages
 library(tidyverse)
 library(lubridate)
+library(dplyr)
 library(qwraps2)
 # import hourlyMerged dataset, rename (df=dataframe)
 hourly_df <- read_csv("hourlyMerged.csv")
@@ -419,62 +420,71 @@ I went ahead and also performed a correlation test. I just wanted to see any pot
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-cor.test(hourly_df$average_intensity, hourly_df$Calories, method = "pearson")
-
-   Pearson's product-moment correlation
-data:  hourly_df$average_intensity and hourly_df$Calories
-t = 147.75, df = 15393211, p-value < 2.2e-16
-alternative hypothesis: true correlation is not equal to 0
-95 percent confidence interval:
-0.03713366 0.03813135
-sample estimates:
-cor = 0.03763252
-
-cor.test(hourly_df$total_intensity, hourly_df$Calories, method = "pearson")
-
-   Pearson's product-moment correlation
-data:  hourly_df$total_intensity and hourly_df$Calories
-t = 147.75, df = 15393211, p-value < 2.2e-16
-alternative hypothesis: true correlation is not equal to 0
-95 percent confidence interval:
-0.03713366 0.03813136
-sample estimates:
-cor = 0.03763252
-
-cor.test(hourly_df$total_intensity, hourly_df$step_total, method = "pearson")
-
-   Pearson's product-moment correlation
-data:  hourly_df$total_intensity and hourly_df$step_total
-t = 170.87, df = 15393211, p-value < 2.2e-16
-alternative hypothesis: true correlation is not equal to 0
-95 percent confidence interval:
-0.04301144 0.04400866
-sample estimates:
-cor = 0.04351006
-
-cor.test(hourly_df$average_intensity, hourly_df$step_total, method = "pearson")
-
-   Pearson's product-moment correlation
-data:  hourly_df$average_intensity and hourly_df$step_total
-t = 170.87, df = 15393211, p-value < 2.2e-16
-alternative hypothesis: true correlation is not equal to 0
-95 percent confidence interval:
-0.04301144 0.04400866
-sample estimates:
-cor = 0.04351006
-	
-cor.test(hourly_df$step_total, hourly_df$Calories, method = "pearson")
+#correlation tests for hourly data
+with(hourly_df, cor.test(average_intensity, Calories, method = "pearson"))
 
 	Pearson's product-moment correlation
 
-data:  hourly_df$step_total and hourly_df$Calories
+data:  average_intensity and Calories
+t = 147.75, df = 15393211, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.03713366 0.03813135
+sample estimates:
+       cor 
+0.03763252 
+
+with(hourly_df, cor.test(total_intensity, Calories, method = "pearson"))
+
+	Pearson's product-moment correlation
+
+data:  total_intensity and Calories
+t = 147.75, df = 15393211, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.03713366 0.03813136
+sample estimates:
+       cor 
+0.03763252 
+
+with(hourly_df, cor.test(total_intensity, step_total, method = "pearson"))
+
+	Pearson's product-moment correlation
+
+data:  total_intensity and step_total
+t = 170.87, df = 15393211, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.04301144 0.04400866
+sample estimates:
+       cor 
+0.04351006 
+
+with(hourly_df, cor.test(average_intensity, step_total, method = "pearson"))
+
+	Pearson's product-moment correlation
+
+data:  average_intensity and step_total
+t = 170.87, df = 15393211, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.04301144 0.04400866
+sample estimates:
+       cor 
+0.04351006 
+	
+with(hourly_df, cor.test(step_total, Calories, method = "pearson"))
+
+	Pearson's product-moment correlation
+
+data:  step_total and Calories
 t = 5498.6, df = 15393211, p-value < 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
  0.8138534 0.8141904
 sample estimates:
      cor 
-0.814022
+0.814022 
 </code></pre>
 
 </details>

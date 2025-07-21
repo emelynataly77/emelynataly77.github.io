@@ -190,7 +190,7 @@ FROM `bellabeat-461300.fittracker.hourly_calories` LIMIT 10;
 
 
 <br> 
-After running the three queries on each of the hourly datasets, I was confident everything uploaded correctly. Because the datasets shared some common data (like ID and activity hour) but each also contained different information (such as calories, steps, and intensities), I combined them into one complete 'hourly' dataset.
+After running the three queries on each of the hourly datasets, I was confident everything uploaded correctly. Because the datasets shared some common data (like ID and activity hour) but each also contained different information (such as calories, steps, and intensities), I combined them into one comprehensive hourly dataset.
 <br>
 
 
@@ -221,7 +221,7 @@ AND A.ActivityHour=C.ActivityHour
 <br>
 The resulting data file: <span style="color:gray;">'hourlyMerged.csv'</span> can now be uploaded into RStudio to be further processed. 
 
-NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data (which we merged). 
+NOTE: I reintroduced the 'merged' wordage here because that is more representative of the data now (which we just merged). 
 
 
 ### Daily/Sleep Data <a id="daily-sleep-data-sql"></a>
@@ -233,7 +233,7 @@ NOTE: I reintroduced the 'merged' wordage here because that is more representati
 - <span style="color:gray;">'sleepDay.csv'</span>
 
 
-The daily datasets abover were uploaded into BigQuery. Again i quickly checked if the data was uploaded accurately using a few wuick queries.
+The daily and sleep datasets above were uploaded into BigQuery. Once again, I ran a few quik checks to ensure everything was imported correctly. 
 <br>
 
 
@@ -265,12 +265,12 @@ FROM `bellabeat-461300.fittracker.sleep_day` LIMIT 10;
 
 
 <br> 
-I completed the above querys for the dailyactivity dataset as well. Next, I decided to combine the dailyactivity and sleepday datasets as they had some correspondonding data. It was also cleaner to just develop two datasets (hourly and daily/sleep) so sleepday was also added to the daily dataset. 
+I ran the same set of queries on the dailyActivity dataset as well.  Next, I decided to combine the dailyactivity and sleepday datasets as they had some correspondonding data. Bringing the two datasets together also made things simpler, letting me focus on just two main datasets: hourly and daily/sleep. 
 <br>
 
 
 
-I used the following query to merge the dailyactivity sleepday datasets:
+Merging dailyactivity and sleepday datasets:
 
 <details>
 <summary>Show SQL Query</summary>
@@ -313,9 +313,9 @@ This section covers the data cleaning, analysis, and visualization done in RStud
 ### Hourly Data <a id="hourly-data-r"></a>
 - <span style="color:gray;">'hourlyMerged.csv'</span>
 
-First I loaded the packages that I will be needing for the hourly and daily data analysis in RStudio. I will be using tidyverse and lubridate. Next, I uploaded both my hourly_merged datasets. 
+First I loaded the packages that I will be needing for the hourly and daily data analysis in RStudio. Next, I uploaded my hourlyMerged dataset. 
 
-Load packages and merged data into RStudio
+Load packages and hourly dataset:
 
 <details>
 <summary>Show R Code</summary>
@@ -326,17 +326,17 @@ install.packages
 library(tidyverse)
 library(lubridate)
 library(qwraps2)
-# import hourly_merged dataset
-hourly_df <- read_csv("hourly_merged.csv")
+# import hourlyMerged dataset, rename (df=dataframe)
+hourly_df <- read_csv("hourlyMerged.csv")
 </code></pre>
 
 </details>
 
-Again I quickly checked if the data was uploaded accurately using the code below. 
+Same as before, I ran a quick check using the code below to make sure the data improted properly. 
 <br>
 
 
-Successful Upload check:
+Upload check:
 
 <details>
 <summary>Show R Code</summary>
@@ -387,7 +387,7 @@ dim(hourly_df)
 </details>
 
   
-After confirming the file was uploaded correctly, I began analyzing the data from both a day-of-the-week and time-of-day perspective. To do this, I first split the `activity_hour column` (which contains combined date and time values) into two separate columns: `activityDate` for the date and `time` for the time. I then converted the `activityDate` column into proper Date format and used it to create a new weekday column that indicates the day of the week. Similarly, I converted the time column and used it to categorize each entry into time-of-day segments—Night, Morning, Afternoon, and Evening—based on the hour of the activity. You can see the following code below.
+After confirming the file uploaded correctly, I decided to analyze the data by both day of the week and time of day. This allowed me to examine user activity across a Monday–Sunday timeframe and throughout different parts of the day. To do this, I first split the activity_hour column—which contains both date and time values—into two separate columns: activityDate for the date and time for the time. I then converted the activityDate column into a proper date format and used it to create a new column indicating the day of the week. Similarly, I converted the time column and categorized each entry into one of four time-of-day segments—Night, Morning, Afternoon, and Evening—based on the activity hour. You can see the following code below.
 
 <details>
 <summary>Show R Code</summary>
@@ -413,7 +413,7 @@ average_intensity      activityDate              time         DayOfWeek         
 
 </details>
 
-I went ahead and also performed a correlation test (similar to what we did in the daily/sleep data). I just wanted to grasp possible relationships amongst the data. 
+I went ahead and also performed a correlation test. I just wanted to see any potential relationships amongst the data. This could help identify how different variables of data might be connected. 
 
 <details>
 <summary>Show R Code</summary>

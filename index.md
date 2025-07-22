@@ -17,7 +17,7 @@ layout: default
 - [Chess Stats Visualization(In Progress)](projects/chess.md)   
   
 ## Contact
-- Email: yourname@email.co  
+- Email:  [enpineda17@gmail.com](mailto:enpineda17@gmail.com)  
 - GitHub: [github.com/emelynataly77](https://github.com/emelynataly77)  
 - LinkedIn: [linkedin.com/in/YOUR-LINKEDIN](https://linkedin.com/in/YOUR-LINKEDIN)
 

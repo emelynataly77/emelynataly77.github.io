@@ -937,7 +937,7 @@ The results show that people who sleep more tend to have fewer light/non-active 
 
 To dig deeper into the data, I broke it down by day of the week to compare sleep and light/non-active minutes across different days. In the code block below, I filtered the data by weekday and generated summary stats for each group. This helps show when users are getting the most—or least—engagement with their smart device. These summaries show how sleep and activity levels change throughout the week.
 
-
+<br>
 
 <details>
 <summary>Show R Code</summary>
@@ -1134,8 +1134,9 @@ Median : 21.00     Median : 987.0     Median :2196   Median :1.00      Median :4
 
 </details>
 
-I used the following code blocks to generate graphs that represent the results of the stat summaries.
+<br>
 
+I used the following code blocks to generate graphs that represent the results of the stat summaries:
 
 <details>
 <summary>Show R Code</summary>
@@ -1250,6 +1251,7 @@ ggplot(data = weekday_sum,
 
 </details>
 
+<br>
 
 <!-- Wrapper to center everything as a unit -->
 <div style="display: flex; flex-direction: column; align-items: center; margin: 0 auto;">
@@ -1339,6 +1341,6 @@ Finally, understanding the target audience more clearly could help improve Bella
 #  🤝 Acknowledgements <a id="acknowledgements"></a>
 
 I would like to thank Ed Garcia for his guidance on RStudio 
-  https://www.kaggle.com/code/edgarcia1/bellabeat-case-study-analysis-and-visualizations 
+   - https://www.kaggle.com/code/edgarcia1/bellabeat-case-study-analysis-and-visualizations 
 I would like to thank Tom Leary for his guidance on grouping data by datatype
-  https://tomleary.net/projects/capstone/ 
+   - https://tomleary.net/projects/capstone/ 

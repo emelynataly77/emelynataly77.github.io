@@ -351,7 +351,7 @@ library(lubridate)
 library(qwraps2)
 
 # import hourlyMerged dataset, rename (df=dataframe)
-hourly_df &lt;- read_csv("hourlyMerged.csv")
+hourly_df <- read_csv("hourlyMerged.csv")
 </code></pre>
 
 </details>

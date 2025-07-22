@@ -14,7 +14,7 @@ layout: default
 
 ## Projects
 - [Bellabeat Capstone Project](projects/bellabeat.md)
-- [Chess Stats Visualization](projects/chess.md)
+- [Chess Stats Visualization(In Progress)](projects/chess.md)   
   
 ## Contact
 - Email: yourname@email.co  

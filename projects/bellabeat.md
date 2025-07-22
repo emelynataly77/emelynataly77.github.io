@@ -350,7 +350,7 @@ library(lubridate)
 library(qwraps2)
 
 # import hourlyMerged dataset, rename (df=dataframe)
-hourly_df &lt;- read_csv("hourlyMerged.csv")
+hourly_df <- read_csv("hourlyMerged.csv")
 
 </code></pre>
 
@@ -537,8 +537,8 @@ Interestingly, there didn’t appear to be any strong or meaningful linear corre
 
 <pre><code class="language-r">
 # Filter data for "Morning" time period and select relevant columns
-morninghr &lt;- hourly_df %&gt;%
-  filter(TimeOfDay == "Morning") %&gt;%
+morninghr <- hourly_df %>%
+  filter(TimeOfDay == "Morning") %>%
   select(step_total, total_intensity, Calories)
 
 # View summary statistics for the morning activity
@@ -554,8 +554,8 @@ summary(morninghr)
  Max.   :8976.0   Max.   :180.00   Max.   :544.0  
 
 # Filter data for "Afternoon" time period and select relevant columns
-afternoonhr &lt;- hourly_df %&gt;%
-  filter(hourly_df$TimeOfDay == "Afternoon") %&gt;%
+afternoonhr <- hourly_df %>%
+  filter(hourly_df$TimeOfDay == "Afternoon") %>%
   select(c(step_total, total_intensity, Calories))
 
 # View summary statistics for the afternoon activity
@@ -571,8 +571,8 @@ summary(afternoonhr)
  Max.   :10554.0   Max.   :180.00   Max.   :948.0  
 
 # Filter data for "Evening" time period and select relevant columns  
-Eveninghr &lt;- hourly_df %&gt;%
-  filter(hourly_df$TimeOfDay == "Evening") %&gt;%
+Eveninghr <- hourly_df %>%
+  filter(hourly_df$TimeOfDay == "Evening") %>%
   select(c(step_total, total_intensity, Calories))
 
 # View summary statistics for the evening activity
@@ -588,8 +588,8 @@ summary(eveninghr)
  Max.   :8586.0   Max.   :180.00   Max.   :834.0  
 
 # Filter data for "Night" time period and select relevant columns  
-nighthr &lt;- hourly_df %&gt;%
-  filter(hourly_df$TimeOfDay == "Night") %&gt;% 
+nighthr <- hourly_df %>%
+  filter(hourly_df$TimeOfDay == "Night") %>% 
   select(c(step_total, total_intensity, Calories))
 
 # View summary statistics for the night activity
@@ -613,158 +613,9 @@ Looking at the summaries, it's clear that step counts are lower at night, ~21 st
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-# Create morning list
-morninghr_list <- 
-  list(
-    list("Total_Steps_Avg" = ~mean(morninghr$step_total)),
-    list("Calories_Avg" = ~ mean(morninghr$Calories))
-  )
-# Create morning summary list and view summary
-morninghr_sum <- summary_table(morninghr, morninghr_list)
-print.default(morninghr_sum)
+   
 
-# Output:
-                          morninghr (N = 3,886,786)
-[1,] "\\bf{}"             "~"                      
-[2,] "~~ Total_Steps_Avg" "374.758472938825"       
-[3,] "\\bf{}"             "~"                      
-[4,] "~~ Calories_Avg"    "101.664592287818"       
-attr(,"class")
-[1] "qwraps2_summary_table" "qwraps2_qable"        
-attr(,"qable_args")
-attr(,"qable_args")$rtitle
-[1] ""
-
-attr(,"qable_args")$rgroup
-[1] 1 1
-
-attr(,"qable_args")$rnames
-[1] "Total_Steps_Avg" "Calories_Avg"   
-
-attr(,"qable_args")$cnames
-[1] ""                          "morninghr (N = 3,886,786)"
-
-attr(,"qable_args")$markup
-[1] "latex"
-
-attr(,"qable_args")$kable_args
-list()
-
-# Create afternoon list 
-afternoonhr_list <-
-  list(
-    list("Total_Steps_Avg" = ~ mean(afternoonhr$step_total)),
-    list("Calories_Avg" = ~ mean(afternoonhr$Calories))
-  )
-
-# Create summary table for afternoon and view summary
-afternoonhr_sum <- summary_table(afternoonhr, afternoonhr_list)
-print.default(afternoonhr_sum)
-
-# Output:
-                          afternoonhr (N = 3,825,364)
-[1,] "\\bf{}"             "~"                        
-[2,] "~~ Total_Steps_Avg" "519.599624506321"         
-[3,] "\\bf{}"             "~"                        
-[4,] "~~ Calories_Avg"    "115.866206457738"         
-attr(,"class")
-[1] "qwraps2_summary_table" "qwraps2_qable"        
-attr(,"qable_args")
-attr(,"qable_args")$rtitle
-[1] ""
-
-attr(,"qable_args")$rgroup
-[1] 1 1
-
-attr(,"qable_args")$rnames
-[1] "Total_Steps_Avg" "Calories_Avg"   
-
-attr(,"qable_args")$cnames
-[1] ""                            "afternoonhr (N = 3,825,364)"
-
-attr(,"qable_args")$markup
-[1] "latex"
-
-attr(,"qable_args")$kable_args
-list()
-
-# Create evening list
-eveninghr_list <- 
-  list(
-    list("Total_Steps_Avg" = ~ mean(eveninghr$step_total)),
-    list("Calories_Avg" = ~ mean(eveninghr$Calories))
-  )
-
-# Create summary for evening list and view summary
-eveninghr_sum <- summary_table(eveninghr, eveninghr_list)
-print.default(eveninghr_sum)
-
-# Output:
-                          eveninghr (N = 3,784,154)
-[1,] "\\bf{}"             "~"                      
-[2,] "~~ Total_Steps_Avg" "370.922424933024"       
-[3,] "\\bf{}"             "~"                      
-[4,] "~~ Calories_Avg"    "102.146365607742"       
-attr(,"class")
-[1] "qwraps2_summary_table" "qwraps2_qable"        
-attr(,"qable_args")
-attr(,"qable_args")$rtitle
-[1] ""
-
-attr(,"qable_args")$rgroup
-[1] 1 1
-
-attr(,"qable_args")$rnames
-[1] "Total_Steps_Avg" "Calories_Avg"   
-
-attr(,"qable_args")$cnames
-[1] ""                          "eveninghr (N = 3,784,154)"
-
-attr(,"qable_args")$markup
-[1] "latex"
-
-attr(,"qable_args")$kable_args
-list()
-
-# Create summary for night list
-night_list <- 
-  list(
-    list("Total_Steps_Avg" = ~ mean(nighthr$step_total)),
-    list("Calories_Avg" = ~ mean(nighthr$Calories))
-  )
-
-# Create summary for night list and view summary 
-nighthr_sum <- summary_table(nighthr, night_list)
-print.default(nighthr_sum)
-
-# Output:
-                          nighthr (N = 3,246,682)
-[1,] "\\bf{}"             "~"                    
-[2,] "~~ Total_Steps_Avg" "21.2780518695702"     
-[3,] "\\bf{}"             "~"                    
-[4,] "~~ Calories_Avg"    "71.6811997602475"     
-attr(,"class")
-[1] "qwraps2_summary_table" "qwraps2_qable"        
-attr(,"qable_args")
-attr(,"qable_args")$rtitle
-[1] ""
-
-attr(,"qable_args")$rgroup
-[1] 1 1
-
-attr(,"qable_args")$rnames
-[1] "Total_Steps_Avg" "Calories_Avg"   
-
-attr(,"qable_args")$cnames
-[1] ""                        "nighthr (N = 3,246,682)"
-
-attr(,"qable_args")$markup
-[1] "latex"
-
-attr(,"qable_args")$kable_args
-list()
-
-# Comparative list of all of the day by day summaries (only mean of steps and calories)
+# Comparative list of all of the day-by-day summaries (only mean of steps and calories)
 timeofday_summary1 <- data.frame(
   TimeOfDay = c("Afternoon", "Morning", "Evening", "Night"),
   Total_Steps_Avg = c(519.599624506321, 374.758472938824, 370.922424933024, 21.2780518695702),
@@ -781,15 +632,21 @@ The following code creates a bar graph that represents the average calories burn
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-# visual bar graph for average calories by time time of day
+# Visual bar graph for average calories by time of day
 ggplot(timeofday_summary1, aes(x = reorder(TimeOfDay, -Calories_Avg), y = Calories_Avg)) +
-+ geom_bar(stat = "identity", fill = "#FF69B4") +
-+ labs(title = "Average Calories by Time of Day", x = "", y = "Average Calories")
+  geom_bar(stat = "identity", fill = "#FF69B4") +
+  labs(title = "Average Calories by Time of Day", x = "", y = "Average Calories")
 
-# visual bar graph for average steps by time of day
+# Output:
+# (Plot showing Average Calories by Time of Day)
+
+# Visual bar graph for average steps by time of day
 ggplot(timeofday_summary1, aes(x = reorder(TimeOfDay, -Total_Steps_Avg), y = Total_Steps_Avg)) +
-+ geom_bar(stat = "identity", fill = "pink") +
-+ labs(title = "Average Steps by Time of Day", x = "", y = "Average Total Steps") 
+  geom_bar(stat = "identity", fill = "pink") +
+  labs(title = "Average Steps by Time of Day", x = "", y = "Average Total Steps")
+
+# Output:
+# (Plot showing Average Steps by Time of Day)
 </code></pre>
 
 </details>

@@ -417,22 +417,23 @@ After confirming the file uploaded correctly, I decided to analyze the data by b
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-#split data and assigned metrics
-hourly_df$activityDate <- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 1]
-hourly_df$time <- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 2]
-hourly_df$activityDate <- as.Date(hourly_df$activityDate, format="%Y-%m-%d")
-hourly_df$DayOfWeek <- format(as.Date(hourly_df$activityDate), "%A")
-breaks <- hour(hms("00:00:00", "05:59:59", "11:59:59", "17:59:59", "23:59:59"))
-labels <- c("Night", "Morning", "Afternoon", "Evening")
-hourly_df$time  <- as.POSIXct(hourly_df$time, format = "%H:%M:%S")
-hourly_df$TimeOfDay <- cut(x =  hour(hourly_df$time), breaks = breaks, labels = labels, include.lowest=TRUE)
-  
-#check for na values after pushing metrics and splitting data
+# split data and assign metrics
+hourly_df$activityDate &lt;- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 1]
+hourly_df$time &lt;- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 2]
+hourly_df$activityDate &lt;- as.Date(hourly_df$activityDate, format = "%Y-%m-%d")
+hourly_df$DayOfWeek &lt;- format(as.Date(hourly_df$activityDate), "%A")
+
+breaks &lt;- hour(hms("00:00:00", "05:59:59", "11:59:59", "17:59:59", "23:59:59"))
+labels &lt;- c("Night", "Morning", "Afternoon", "Evening")
+hourly_df$time &lt;- as.POSIXct(hourly_df$time, format = "%H:%M:%S")
+hourly_df$TimeOfDay &lt;- cut(x = hour(hourly_df$time), breaks = breaks, labels = labels, include.lowest = TRUE)
+
+# check for NA values after pushing metrics and splitting data
 colSums(is.na(hourly_df))
-               Id     activity_hour          Calories        step_total   total_intensity 
-                0                 0                 0                 0                 0 
-average_intensity      activityDate              time         DayOfWeek         TimeOfDay 
-                0                 0            650227                 0            650227  
+#                Id     activity_hour          Calories        step_total   total_intensity 
+#                 0                 0                 0                 0                 0 
+# average_intensity      activityDate              time         DayOfWeek         TimeOfDay 
+#                 0                 0            650227                 0            650227
 </code></pre>
 
 </details>

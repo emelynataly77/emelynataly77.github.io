@@ -257,7 +257,7 @@ The daily and sleep datasets above were uploaded into BigQuery. Once again, I ra
 
 
  
-Successful upload check:
+Upload check:
 
 <details>
 <summary>Show SQL Query</summary>
@@ -356,6 +356,8 @@ hourly_df <- read_csv("hourlyMerged.csv")
 
 </details>
 
+<br>
+
 Same as before, I ran a quick check using the code below to make sure the data improted properly. 
 <br>
 
@@ -416,7 +418,8 @@ dim(hourly_df)
 
 </details>
 
-  
+<br>
+
 After confirming the file uploaded correctly, I decided to analyze the data by both day of the week and time of day. This allowed me to examine user activity across a Monday–Sunday timeframe and throughout different parts of the day. To do this, I first split the activity_hour column—which contains both date and time values—into two separate columns: activityDate for the date and time for the time. I then converted the activityDate column into a proper date format and used it to create a new column indicating the day of the week. Similarly, I converted the time column and categorized each entry into one of four time-of-day segments—Night, Morning, Afternoon, and Evening—based on the activity hour. You can see the following code below.
 
 <details>
@@ -445,6 +448,7 @@ average_intensity      activityDate              time         DayOfWeek         
 
 </details>
 
+<br>
 
 I went ahead and also performed a correlation test. I just wanted to see any potential relationships amongst the data. This could help identify how different variables of data might be connected. 
 
@@ -530,6 +534,7 @@ sample estimates:
 
 </details>
 
+<br>
 
 Interestingly, there didn’t appear to be any strong or meaningful linear correlation between intensity and steps taken, or between intensity and calories burned. On the other hand, the number of steps has a strong positive linear correlation with calories burned. This makes sense, as generally the more steps you take the more calories you're likely to burn. Since the dataset was already grouped by time of day, I wanted to take a closer look at when participants were most or least active. I first assumed that activity levels would peak in the morning and evening—times because that usually aligns with common workout windows. But that assumption might not represent weekends, when people's schedules tend to vary. To take a closer look, I used the next two code blocks to check out activity levels at different times of day, from Sunday through Saturday.
 
@@ -608,6 +613,8 @@ summary(nighthr)
 
 </details>
 
+<br>
+
 Looking at the summaries, it's clear that step counts are lower at night, ~21 steps on average—which makes sense since most peopole are asleep during that time. To get a better idea of activity levels throughout the day, I decided to focus on calculating the average steps and calories burned by time of day.
 
 <details>
@@ -624,6 +631,7 @@ timeofday_summary1 <- data.frame(
 
 </details>
 
+<br>
 
 The following code creates a bar graph that represents the average calories burned and steps taken each day of the week, based on the findings above. It helps visualize how both calories and steps vary across different times of the day. 
 
@@ -696,6 +704,8 @@ daily_df <- read_csv("dailyMerged.csv")
 
 </details>
 
+<br>
+
 Upload check: 
 
 <details>
@@ -760,6 +770,8 @@ dim(daily_df)
 </code></pre>
 
 </details>
+
+<br>
 
 First, I analyzed how frequently users engaged with their smart devices (though the specific device types remain unknown). My goal was to understand how many Bellabeat users were consistently using their devices versus those who hardly used them. This could give a better sense of how engaged users are overall.
 
@@ -826,7 +838,7 @@ ggplot(user_usage_percent, aes(x = 2, y = total_percent, fill = user_type)) +
 
   <!-- Donut Chart -->
   <div>
-    <h3 style="color:#333; font-weight:bold;">Donut Chart</h3>
+    <h3 style="color:#333; font-weight:bold;">User Usage</h3>
     <img 
       src="projects/donut%20chart.png" 
       alt="Donut Chart" 

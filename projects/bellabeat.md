@@ -424,14 +424,14 @@ After confirming the file uploaded correctly, I decided to analyze the data by b
 
 <pre><code class="language-r">
 # split data and assign metrics
-hourly_df$activityDate &lt;- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 1]
-hourly_df$time &lt;- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 2]
-hourly_df$activityDate &lt;- as.Date(hourly_df$activityDate, format = "%Y-%m-%d")
-hourly_df$DayOfWeek &lt;- format(as.Date(hourly_df$activityDate), "%A")
-breaks &lt;- hour(hms("00:00:00", "05:59:59", "11:59:59", "17:59:59", "23:59:59"))
-labels &lt;- c("Night", "Morning", "Afternoon", "Evening")
-hourly_df$time &lt;- as.POSIXct(hourly_df$time, format = "%H:%M:%S")
-hourly_df$TimeOfDay &lt;- cut(x = hour(hourly_df$time), breaks = breaks, labels = labels, include.lowest = TRUE)
+hourly_df$activityDate <- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 1]
+hourly_df$time <- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 2]
+hourly_df$activityDate <- as.Date(hourly_df$activityDate, format = "%Y-%m-%d")
+hourly_df$DayOfWeek <- format(as.Date(hourly_df$activityDate), "%A")
+breaks <- hour(hms("00:00:00", "05:59:59", "11:59:59", "17:59:59", "23:59:59"))
+labels <- c("Night", "Morning", "Afternoon", "Evening")
+hourly_df$time <- as.POSIXct(hourly_df$time, format = "%H:%M:%S")
+hourly_df$TimeOfDay <- cut(x = hour(hourly_df$time), breaks = breaks, labels = labels, include.lowest = TRUE)
 
 # check for NA values after pushing metrics and splitting data
 colSums(is.na(hourly_df))
@@ -444,6 +444,7 @@ average_intensity      activityDate              time         DayOfWeek         
 </code></pre>
 
 </details>
+
 
 I went ahead and also performed a correlation test. I just wanted to see any potential relationships amongst the data. This could help identify how different variables of data might be connected. 
 
@@ -570,9 +571,9 @@ summary(afternoonhr)
  3rd Qu.:  620.0   3rd Qu.: 16.00   3rd Qu.:131.0  
  Max.   :10554.0   Max.   :180.00   Max.   :948.0  
 
-# Filter data for "Evening" time period and select relevant columns  
-Eveninghr <- hourly_df %>%
-  filter(hourly_df$TimeOfDay == "Evening") %>%
+# Filter data for "Morning" time period and select relevant columns
+morninghr <- hourly_df %>%
+  filter(hourly_df$TimeOfDay == "Morning") %>%
   select(c(step_total, total_intensity, Calories))
 
 # View summary statistics for the evening activity
@@ -613,18 +614,16 @@ Looking at the summaries, it's clear that step counts are lower at night, ~21 st
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-   
-
 # Comparative list of all of the day-by-day summaries (only mean of steps and calories)
 timeofday_summary1 <- data.frame(
   TimeOfDay = c("Afternoon", "Morning", "Evening", "Night"),
   Total_Steps_Avg = c(519.599624506321, 374.758472938824, 370.922424933024, 21.2780518695702),
   Calories_Avg = c(115.86621, 101.66459, 102.14637, 71.73854)
 )
-
 </code></pre>
 
 </details>
+
 
 The following code creates a bar graph that represents the average calories burned and steps taken each day of the week, based on the findings above. It helps visualize how both calories and steps vary across different times of the day. 
 

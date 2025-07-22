@@ -1300,23 +1300,24 @@ Looking at the graphs, it becomes clear that the start of the workweek—Monday 
 
 # 💡 Key Insights <a id="key-insights"></a>
 
--Users tend to average around 8,533 steps a day, which is below the recommended daily target of 10,000 steps.
-- Early in the data review process, I noticed several gaps and inconsistencies that point to possible issues with how the data is being recorded or 	collected. 
-- Activity levels vary throughout the week, with users generally being more active at the start of the workweek. Users tend to show the lowest activity levels on Fridays.
-- Encourage other aspects of health more readily such as, weight and nutritional intake through the fitbit.
-- Users are more active during the week
-- Sleep is below arecommended average, right now users get 6.7562 hrsof sleep a night, maybe implement a night cap or nightime reminder
-- Sleep is also missing a lot of data logs from users meaning not many users are loggin their sleep, we need to improve that. 
-- weight is important to help log in a health app, especially since we can compare to caloric intake and burn. 
+- Users tend to average around 8,533 steps a day, which is below the recommended daily target of 10,000 steps.
+- Steps and calories burned have a strong positive relationship
+- Activity levels vary throughout the week, with users generally being more active at the start of the workweek (mon/tues). Users tend to show the lowest activity levels on Fridays.
+- Users are currently averaging 6.76 hours of sleep a night, which is below the recommended 8 hours.
+- Users aren’t logging their weight often, even though it’s a key part of tracking health progress. Finding simple, user-friendly ways to encourage more regular weight entries could make a big difference.
+- Early in the data review process, I noticed several gaps and inconsistencies that point to possible issues with how the data is being recorded or 	collected. It's also important to keep in mind the possibility of sampling bias when interpreting the results.
+-Although a few clear trends stand out, most patterns among participants are relatively subtle.
 
 
 ---
 
-### Proposal <a id="proposal"></a>
--This indicates a lower level of daily activity and presents an opportunity to encourage more walking through personalized goals or step-based challenges.
--This highlights a need for Bellabeat to improve its data collection methods or find ways to encourage users to log their information more consistently.
-(make it easier to log make more comfy desigh)
- Implement design improvments that encourage other aspects of health more readily such as, weight and nutritional intake.
+### Proposal <a id="proposal"></a> 
+-This indicates a lower level of daily activity and presents an opportunity to encourage more walking through personalized goals or step-based challenges. or health education
+-This highlights a need for Bellabeat to improve its data collection methods or find ways to encourage users to log their information more consistently. they need to be collecting data bettter or on par with their competitors.
+-Implementing features like a nighttime reminder or wind-down notification could help encourage better sleep habits.
+-Implementing features that prompt or motivate regular weight entries could help address this gap. Make it easier, and insert body image disclaimer
+ Implement design improvments that encourage other aspects of health more readily such as, weight and sleep, etc.
+ target user specific needs
 
 #  🤝 Acknowledgements <a id="acknowledgements"></a>
 

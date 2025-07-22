@@ -937,8 +937,6 @@ The results show that people who sleep more tend to have fewer light/non-active 
 
 To dig deeper into the data, I broke it down by day of the week to compare sleep and light/non-active minutes across different days. In the code block below, I filtered the data by weekday and generated summary stats for each group. This helps show when users are getting the most—or least—engagement with their smart device. These summaries show how sleep and activity levels change throughout the week.
 
-<br>
-
 <details>
 <summary>Show R Code</summary>
 

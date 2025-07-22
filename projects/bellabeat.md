@@ -1307,27 +1307,22 @@ Looking at the graphs, it becomes clear that the start of the workweek—Monday 
 - Users aren’t logging their weight often, even though it’s a key part of tracking health progress. Finding simple, user-friendly ways to encourage more regular weight entries could make a big difference.
 - Early in the data review process, I noticed several gaps and inconsistencies that point to possible issues with how the data is being recorded or 	collected. It's also important to keep in mind the possibility of sampling bias when interpreting the results.
 - Although a few clear trends stand out, most patterns among participants are relatively subtle.
+  
 ---
 
 ### Proposal <a id="proposal"></a> 
 
+Users aren’t meeting the recommended daily step count, which suggests lower activity levels overall. This creates a great opportunity for Bellabeat to boost engagement through personalized step goals and fun in-app challenges. Real-time alerts, like showing how many steps are left to reach a daily goal, can help keep users motivated throughout the day. Tracking steps is especially helpful because it doesn’t require any manual input from the user, making it an easy and effective way to stay active. And since step count is closely tied to calories burned, encouraging more movement can help users stay on track with both their calorie and overall health goals. 
 
+In addition to physical activity, sleep data shows another area where users may be falling short. On average, users are getting less than the recommended 8 hours of sleep per night. Adding features like nighttime reminders or wind-down notifications could help promote better sleep habits. Since good sleep supports weight management, energy, and overall health, it’s important to encourage users to wear their smart device while they sleep. Bellabeat could advertise a new, more comfortable design specifically made for wearing overnight. This could help collect more accurate and consistent sleep data without asking users to do anything extra (except sleep more). 
 
+Another area for improvement is weight tracking. It’s an important metric for staying on top of health goals, but many users aren’t logging it regularly. Since Bellabeat’s current smart devices don’t appear to track weight automatically, users probably have to enter this information manually through the app, which may explain the low engagement. Introducing a smart scale that syncs with the Bellabeat app could make weight tracking easier and more convenient. The scale could automatically log weight at a set time each day, so users wouldn’t have to do anything extra—just step on the scale. To maintain a supportive environment, the app should include a clear disclaimer emphasizing that weight tracking is meant to support overall health, not promote unhealthy diet culture. Bellabeat should aim to foster a positive, empowering experience for users, building trust and focusing on long-term wellness rather than just weight loss.
 
+Moreover, when looking at daily activity trends, Friday stood out as the most sedentary day overall. However, most patterns in the data were subtle, with only a few strong correlations. This suggests that user activity varies quite a bit from person to person. Bellabeat should consider tailoring reminders and goals to individual user needs. For example, while Friday was generally the least active day, it wasn’t the case for everyone, so the app could focus on motivating users on their own least active days. Making the app more personalized and user-specific could go a long way in boosting engagement and helping users reach their health goals.
 
+That said, one challenge with the data was how incomplete and unreliable it was, probably because users weren't logging their data consistently. This shows that Bellabeat needs to improve how it collects user information. It should also look for more effective ways to encourage users to log their data more regularly (as mentioned above). The goal would be to meet or outdo the standards set by similar products on the current market. Getting more users from different backgrounds and collecting more data would help reduce bias and give clearer and more helpful insights. To help keep users more engaged, Bellabeat could add a rewards system or share simple, helpful tips about health and wellness. When users understand the value of the data they’re tracking, they’re more likely to stay committed and feel more connected to their goals. In the end, the easier, more helpful, and more personalized the Bellabeat experience becomes, the more likely users are to stay engaged and motivated in their journey toward better health.
 
-
-
-
-
-
-
--This indicates a lower level of daily activity and presents an opportunity to encourage more walking through personalized goals or step-based challenges. or health education
--This highlights a need for Bellabeat to improve its data collection methods or find ways to encourage users to log their information more consistently. they need to be collecting data bettter or on par with their competitors.
--Implementing features like a nighttime reminder or wind-down notification could help encourage better sleep habits.
--Implementing features that prompt or motivate regular weight entries could help address this gap. Make it easier, and insert body image disclaimer
- Implement design improvments that encourage other aspects of health more readily such as, weight and sleep, etc.
- target user specific needs
+Finally, understanding the target audience more clearly could help improve Bellabeat’s overall marketing strategy. Right now, the branding and website seem to be mostly geared toward women—but that’s just a guess. By collecting more detailed user demographics, Bellabeat could tailor its marketing and create features that better fit the needs of different user groups.
 
 #  🤝 Acknowledgements <a id="acknowledgements"></a>
 

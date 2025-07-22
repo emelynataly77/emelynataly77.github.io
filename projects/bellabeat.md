@@ -651,6 +651,7 @@ ggplot(timeofday_summary1, aes(x = reorder(TimeOfDay, -Total_Steps_Avg), y = Tot
 </details>
 
 
+
 <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; text-align: center;">
 
   <!-- Average Steps -->
@@ -705,58 +706,57 @@ Upload check:
 head(daily_df)
 
 # A tibble: 6 × 14
-#        Id     ActivityDate TotalSteps TotalDistance TrackerDistance LoggedActivitiesDistance LongerDistance ShorterDistance
-#     &lt;dbl&gt;     &lt;chr&gt;            &lt;dbl&gt;         &lt;dbl&gt;           &lt;dbl&gt;                    &lt;dbl&gt;          &lt;dbl&gt;           &lt;dbl&gt;
-# 1 1644430081  4/30/2016        18213         13.2            13.2                         0           3.77            9.46
-# 2 2347167796  4/14/2016        10129          6.70            6.70                        0           2.76            3.94
-# 3 3977333714  4/16/2016        13459          9.00            9.00                        0           6.03            2.97
-# 4 3977333714  4/17/2016        10415          6.97            6.97                        0           3.05            3.92
-# 5 3977333714  4/19/2016        12414          8.78            8.78                        0           4.69            3.96
-# 6 3977333714  4/20/2016        11658          7.83            7.83                        0           4.55            3.28
+       Id     ActivityDate TotalSteps TotalDistance TrackerDistance LoggedActivitiesDistance LongerDistance ShorterDistance
+    &lt;dbl&gt;     &lt;chr&gt;            &lt;dbl&gt;         &lt;dbl&gt;           &lt;dbl&gt;                    &lt;dbl&gt;          &lt;dbl&gt;           &lt;dbl&gt;
+ 1 1644430081  4/30/2016        18213         13.2            13.2                         0           3.77            9.46
+ 2 2347167796  4/14/2016        10129          6.70            6.70                        0           2.76            3.94
+ 3 3977333714  4/16/2016        13459          9.00            9.00                        0           6.03            2.97
+ 4 3977333714  4/17/2016        10415          6.97            6.97                        0           3.05            3.92
+ 5 3977333714  4/19/2016        12414          8.78            8.78                        0           4.69            3.96
+ 6 3977333714  4/20/2016        11658          7.83            7.83                        0           4.55            3.28
 # ℹ 6 more variables: HeavyActiveMinutes &lt;dbl&gt;, LightActiveMinutes &lt;dbl&gt;, Calories &lt;dbl&gt;, TotalSleepRecords &lt;dbl&gt;,
 #   TotalMinutesAsleep &lt;dbl&gt;, TotalTimeInBed &lt;dbl&gt;
-
 
 # Check the structure of the data
 str(daily_df)
 
-# spc_tbl_ [410 × 14] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
-#  $ Id                      : num [1:410] 1.64e+09 2.35e+09 ...
-#  $ ActivityDate            : chr [1:410] "4/30/2016" "4/14/2016" ...
-#  $ TotalSteps              : num [1:410] 18213 10129 ...
-#  $ TotalDistance           : num [1:410] 13.24 6.7 ...
-#  $ TrackerDistance         : num [1:410] 13.24 6.7 ...
-#  $ LoggedActivitiesDistance: num [1:410] 0 0 ...
-#  $ LongerDistance          : num [1:410] 3.77 2.76 ...
-#  $ ShorterDistance         : num [1:410] 9.46 3.94 ...
-#  $ HeavyActiveMinutes      : num [1:410] 80 49 ...
-#  $ LightActiveMinutes      : num [1:410] 1218 911 ...
-#  $ Calories                : num [1:410] 3846 2010 ...
-#  $ TotalSleepRecords       : num [1:410] 1 1 ...
-#  $ TotalMinutesAsleep      : num [1:410] 124 445 ...
-#  $ TotalTimeInBed          : num [1:410] 142 489 ...
-# - attr(*, "spec")=
-#   .. cols(
-#   ..   Id = col_double(),
-#   ..   ActivityDate = col_character(),
-#   ..   TotalSteps = col_double(),
-#   ..   TotalDistance = col_double(),
-#   ..   TrackerDistance = col_double(),
-#   ..   LoggedActivitiesDistance = col_double(),
-#   ..   LongerDistance = col_double(),
-#   ..   ShorterDistance = col_double(),
-#   ..   HeavyActiveMinutes = col_double(),
-#   ..   LightActiveMinutes = col_double(),
-#   ..   Calories = col_double(),
-#   ..   TotalSleepRecords = col_double(),
-#   ..   TotalMinutesAsleep = col_double(),
-#   ..   TotalTimeInBed = col_double()
-#   .. )
-# - attr(*, "problems")=&lt;externalptr&gt;
+spc_tbl_ [410 × 14] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ Id                      : num [1:410] 1.64e+09 2.35e+09 ...
+ $ ActivityDate            : chr [1:410] "4/30/2016" "4/14/2016" ...
+ $ TotalSteps              : num [1:410] 18213 10129 ...
+ $ TotalDistance           : num [1:410] 13.24 6.7 ...
+ $ TrackerDistance         : num [1:410] 13.24 6.7 ...
+ $ LoggedActivitiesDistance: num [1:410] 0 0 ...
+ $ LongerDistance          : num [1:410] 3.77 2.76 ...
+ $ ShorterDistance         : num [1:410] 9.46 3.94 ...
+ $ HeavyActiveMinutes      : num [1:410] 80 49 ...
+ $ LightActiveMinutes      : num [1:410] 1218 911 ...
+ $ Calories                : num [1:410] 3846 2010 ...
+ $ TotalSleepRecords       : num [1:410] 1 1 ...
+ $ TotalMinutesAsleep      : num [1:410] 124 445 ...
+ $ TotalTimeInBed          : num [1:410] 142 489 ...
+ - attr(*, "spec")=
+   .. cols(
+   ..   Id = col_double(),
+   ..   ActivityDate = col_character(),
+   ..   TotalSteps = col_double(),
+   ..   TotalDistance = col_double(),
+   ..   TrackerDistance = col_double(),
+   ..   LoggedActivitiesDistance = col_double(),
+   ..   LongerDistance = col_double(),
+   ..   ShorterDistance = col_double(),
+   ..   HeavyActiveMinutes = col_double(),
+   ..   LightActiveMinutes = col_double(),
+   ..   Calories = col_double(),
+   ..   TotalSleepRecords = col_double(),
+   ..   TotalMinutesAsleep = col_double(),
+   ..   TotalTimeInBed = col_double()
+   .. )
+ - attr(*, "problems")=&lt;externalptr&gt;
 
 # Check the dimensions
 dim(daily_df)
-# [1] 410  14
+[1] 410  14
 </code></pre>
 
 </details>
@@ -769,17 +769,17 @@ First, I analyzed how frequently users engaged with their smart devices (though 
 
 <pre><code class="language-r">
 # assign usage type
-user_usage &lt;- daily_df %&gt;%
-  count(Id) %&gt;% 
+user_usage <- daily_df %>%
+  count(Id) %>% 
   mutate(user_type = case_when(
-    n &gt;= 1 &amp;&amp; n &lt;= 10 ~ "sparse",
-    n &gt;= 11 &amp;&amp; n &lt;= 20 ~ "modest",
-    n &gt;= 21 &amp;&amp; n &lt;= 31 ~ "frequent"
+    n >= 1 && n <= 10 ~ "sparse",
+    n >= 11 && n <= 20 ~ "modest",
+    n >= 21 && n <= 31 ~ "frequent"
   ))
 
 # assign usage percentage
-user_usage_percent &lt;- user_usage %&gt;%
-  count(user_type) %&gt;%
+user_usage_percent <- user_usage %>%
+  count(user_type) %>%
   mutate(
     total_percent = n / sum(n),
     labels = scales::percent(total_percent),
@@ -788,12 +788,14 @@ user_usage_percent &lt;- user_usage %&gt;%
 
 # check results
 print(user_usage_percent)
+
+# Output:
 # A tibble: 3 × 4
-# user_type     n total_percent labels
-# &lt;fct&gt;     &lt;int&gt;         &lt;dbl&gt; &lt;chr&gt; 
-# 1 frequent     12         0.5   50%   
-# 2 modest        3         0.125 12%   
-# 3 sparse        9         0.375 38% 
+user_type     n total_percent labels
+&lt;fct&gt;     &lt;int&gt;         &lt;dbl&gt; &lt;chr&gt; 
+1 frequent     12         0.5   50%   
+2 modest        3         0.125 12%   
+3 sparse        9         0.375 38% 
 
 # create ggplot donut chart
 ggplot(user_usage_percent, aes(x = 2, y = total_percent, fill = user_type)) +

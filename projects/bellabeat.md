@@ -1143,27 +1143,27 @@ rownames(weekday_sum) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-# sorting weekly averages 
+# avg steps
 sort(weekday_sum[[1]], decreasing = TRUE)
 # Output
 # [1] 9871.123 9273.217 9182.692 8183.516 8022.864 7901.404 7297.855
 
-# sorting weekly averages
+# avg active min
 sort(weekday_sum[[2]], decreasing = TRUE)
 # Output
 # [1] 50.66154 50.28070 49.80435 38.90909 38.71875 38.07576 35.73684
 
-# sorting weekly averages
+# avg non active min
 sort(weekday_sum[[3]], decreasing = TRUE)
 # Output
 # [1] 965.7719 956.6308 940.7826 927.2105 922.4242 901.3125 887.6727
 
-# sorting weekly averages 
+# avg calories 
 sort(weekday_sum[[4]], decreasing = TRUE)
 # Output
 # [1] 2506.895 2496.200 2431.978 2378.242 2329.649 2306.672 2276.600
 
-# sorting weekly averages 
+# avg hours asleep
 sort(weekday_sum[[5]], decreasing = TRUE)
 # Output
 # [1] 7.545758 7.244697 6.991667 6.984503 6.757018 6.742308 6.688281
@@ -1299,17 +1299,22 @@ Looking at the graphs, it becomes clear that the start of the workweek—Monday 
 
 
 # 💡 Key Insights <a id="key-insights"></a>
-- Early on during the data research phase I discovered gaps and inconsitensies that point to flawed or inadequate data recording/gathering. Meaning, bellabeat needs to work on properly gathering reliable/substantial data from their users. Or they need to find a way to push their customers into logging data more consistently. 
-- There are specific days of the week in which customers are less likely to be more active. Users are more active during the week. excluding friday which is the least active reported day. 
+
+-Users tend to average around 8,533 steps a day, which is below the recommended daily target of 10,000 steps.
+- Early in the data review process, I noticed several gaps and inconsistencies that point to possible issues with how the data is being recorded or 	collected. 
+- Activity levels vary throughout the week, with users generally being more active at the start of the workweek. Users tend to show the lowest activity levels on Fridays.
 - Encourage other aspects of health more readily such as, weight and nutritional intake through the fitbit.
 - Users are more active during the week
-- Step counts are generally lower than the recommneded average, encourage walking or set walking goals
-- Sleep is below average recom?
+- Sleep is below arecommended average, right now users get 6.7562 hrsof sleep a night, maybe implement a night cap or nightime reminder
+- Sleep is also missing a lot of data logs from users meaning not many users are loggin their sleep, we need to improve that. 
+- weight is important to help log in a health app, especially since we can compare to caloric intake and burn. 
 
 
 ---
 
 ### Proposal <a id="proposal"></a>
+-This indicates a lower level of daily activity and presents an opportunity to encourage more walking through personalized goals or step-based challenges.
+-This highlights a need for Bellabeat to improve its data collection methods or find ways to encourage users to log their information more consistently.
 (make it easier to log make more comfy desigh)
  Implement design improvments that encourage other aspects of health more readily such as, weight and nutritional intake.
 

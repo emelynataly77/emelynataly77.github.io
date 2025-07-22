@@ -351,7 +351,7 @@ library(lubridate)
 library(qwraps2)
 
 # import hourlyMerged dataset, rename (df=dataframe)
-hourly_df <- read_csv("hourlyMerged.csv")
+hourly_df &lt;- read_csv("hourlyMerged.csv")
 </code></pre>
 
 </details>
@@ -369,43 +369,43 @@ Upload check:
 # Preview the data
 head(hourly_df)
 # A tibble: 6 x 10
-          Id activity_hour       Calories step_total total_intensity average_intensity activityDate time
-       &lt;dbl&gt; &lt;dttm&gt;                 &lt;dbl&gt;      &lt;dbl&gt;           &lt;dbl&gt;             &lt;dbl&gt; &lt;date&gt;       &lt;dttm&gt;
-1 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
-2 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
-3 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
-4 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
-5 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
-6 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
+#          Id activity_hour       Calories step_total total_intensity average_intensity activityDate time
+#       &lt;dbl&gt; &lt;dttm&gt;                 &lt;dbl&gt;      &lt;dbl&gt;           &lt;dbl&gt;             &lt;dbl&gt; &lt;date&gt;       &lt;dttm&gt;
+# 1 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
+# 2 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
+# 3 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
+# 4 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
+# 5 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
+# 6 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
 # ℹ 2 more variables: DayOfWeek &lt;chr&gt;, TimeOfDay &lt;fct&gt;
 
 # Check the structure of the data
 str(hourly_df)
-spc_tbl_ [15,393,213 x 10] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
- $ Id               : num [1:15393213] 7.09e+09 7.09e+09 7.09e+09 ...
- $ activity_hour    : POSIXct[1:15393213], format: "2016-04-23 01:00:00" ...
- $ Calories         : num [1:15393213] 68 68 68 ...
- $ step_total       : num [1:15393213] 0 0 0 ...
- $ total_intensity  : num [1:15393213] 1 1 1 ...
- $ average_intensity: num [1:15393213] 0.0167 0.0167 ...
- $ activityDate     : Date[1:15393213], format: "2016-04-23" ...
- $ time             : POSIXct[1:15393213], format: "2025-07-15 01:00:00" ...
- $ DayOfWeek        : chr [1:15393213] "Saturday" "Saturday" ...
- $ TimeOfDay        : Factor w/ 4 levels "Night","Morning",..: 1 1 1 ...
- - attr(*, "spec")=
-  .. cols(
-  ..   Id = col_double(),
-  ..   activity_hour = col_datetime(format = ""),
-  ..   Calories = col_double(),
-  ..   step_total = col_double(),
-  ..   total_intensity = col_double(),
-  ..   average_intensity = col_double()
-  .. )
- - attr(*, "problems")=&lt;externalptr&gt;
+# spc_tbl_ [15,393,213 x 10] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+#  $ Id               : num [1:15393213] 7.09e+09 7.09e+09 7.09e+09 ...
+#  $ activity_hour    : POSIXct[1:15393213], format: "2016-04-23 01:00:00" ...
+#  $ Calories         : num [1:15393213] 68 68 68 ...
+#  $ step_total       : num [1:15393213] 0 0 0 ...
+#  $ total_intensity  : num [1:15393213] 1 1 1 ...
+#  $ average_intensity: num [1:15393213] 0.0167 0.0167 ...
+#  $ activityDate     : Date[1:15393213], format: "2016-04-23" ...
+#  $ time             : POSIXct[1:15393213], format: "2025-07-15 01:00:00" ...
+#  $ DayOfWeek        : chr [1:15393213] "Saturday" "Saturday" ...
+#  $ TimeOfDay        : Factor w/ 4 levels "Night","Morning",..: 1 1 1 ...
+#  - attr(*, "spec")=
+#   .. cols(
+#   ..   Id = col_double(),
+#   ..   activity_hour = col_datetime(format = ""),
+#   ..   Calories = col_double(),
+#   ..   step_total = col_double(),
+#   ..   total_intensity = col_double(),
+#   ..   average_intensity = col_double()
+#   .. )
+#  - attr(*, "problems")=&lt;externalptr&gt;
 
 # Check the dimensions
 dim(hourly_df)
-[1] 15393213       10
+# [1] 15393213       10
 </code></pre>
 
 </details>

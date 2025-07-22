@@ -186,17 +186,20 @@ Upload Check:
 
 <pre><code class="language-sql">
 -- Row count
-SELECT COUNT (*) as row_count
-FROM `bellabeat-461300.fittracker.hourly_calories` 
---Check for NULL values in columns
+SELECT COUNT(*) AS row_count
+FROM `bellabeat-461300.fittracker.hourly_calories`;
+
+-- Check for NULL values in columns
 SELECT
   COUNTIF(Id IS NULL) AS id_nulls,
   COUNTIF(ActivityHour IS NULL) AS activity_hour_nulls,
   COUNTIF(Calories IS NULL) AS calories_nulls
 FROM `bellabeat-461300.fittracker.hourly_calories`;
+
 -- Preview Data
 SELECT *
-FROM `bellabeat-461300.fittracker.hourly_calories` LIMIT 10;
+FROM `bellabeat-461300.fittracker.hourly_calories`
+LIMIT 10;
 </code></pre>
 
 </details>
@@ -216,16 +219,18 @@ I used the following query to merge the hourly datasets:
 
 <pre><code class="language-sql">
 -- Merge hourly calories, steps, and intensities datasets using LEFT JOIN on Id and ActivityHour
-SELECT A.Id, A.ActivityHour AS activity_hour, A.Calories, C.StepTotal AS step_total, I.TotalIntensity AS total_intensity, I.AverageIntensity AS average_intensity,
+SELECT 
+  A.Id, 
+  A.ActivityHour AS activity_hour, 
+  A.Calories, 
+  C.StepTotal AS step_total, 
+  I.TotalIntensity AS total_intensity, 
+  I.AverageIntensity AS average_intensity
 FROM `bellabeat-461300.fittracker.hourly_calories` A
 LEFT JOIN `bellabeat-461300.fittracker.hourly_steps` C
-ON
-A.Id=C.Id
-AND A.ActivityHour=C.ActivityHour
+  ON A.Id = C.Id AND A.ActivityHour = C.ActivityHour
 LEFT JOIN `bellabeat-461300.fittracker.hourly_intensities` I
-ON
-A.Id=I.Id
-AND A.ActivityHour=C.ActivityHour
+  ON A.Id = I.Id AND A.ActivityHour = C.ActivityHour;
 </code></pre>
 
 </details>
@@ -259,9 +264,10 @@ Successful upload check:
 
 <pre><code class="language-sql">
 -- Row count
-SELECT COUNT (*) as row_count
-FROM `bellabeat-461300.fittracker.sleep_day` 
---Check for NULL values in columns
+SELECT COUNT(*) AS row_count
+FROM `bellabeat-461300.fittracker.sleep_day`;
+
+-- Check for NULL values in columns
 SELECT
   COUNTIF(Id IS NULL) AS id_nulls,
   COUNTIF(SleepDay IS NULL) AS sleep_day_nulls,
@@ -269,9 +275,11 @@ SELECT
   COUNTIF(TotalMinutesAsleep IS NULL) AS total_minutes_asleep_nulls,
   COUNTIF(TotalTimeInBed IS NULL) AS total_time_in_bed_nulls
 FROM `bellabeat-461300.fittracker.sleep_day`;
+
 -- Preview Data
 SELECT *
-FROM `bellabeat-461300.fittracker.sleep_day` LIMIT 10;
+FROM `bellabeat-461300.fittracker.sleep_day`
+LIMIT 10;
 </code></pre>
 
 </details>
@@ -309,7 +317,7 @@ SELECT
 FROM `bellabeat-461300.fittracker.daily_activity` AS activity
 INNER JOIN `bellabeat-461300.fittracker.sleep_day` AS sleep
   ON activity.Id = sleep.Id
-  AND activity.ActivityDATE = sleep.SleepDay;
+  AND activity.ActivityDate = sleep.SleepDay;
 </code></pre>
 
 </details>
@@ -335,13 +343,15 @@ Load packages and hourly dataset:
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
+<pre><code class="language-r">
 # load packages needed for analysis
 install.packages
 library(tidyverse)
 library(lubridate)
 library(qwraps2)
+
 # import hourlyMerged dataset, rename (df=dataframe)
-hourly_df <- read_csv("hourlyMerged.csv")
+hourly_df &lt;- read_csv("hourlyMerged.csv")
 </code></pre>
 
 </details>

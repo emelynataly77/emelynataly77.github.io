@@ -1132,11 +1132,9 @@ I used the following code blocks to generate graphs that represent the results o
 # merge daily sums into single data frame
 weekday_sum <- rbind(mon_data_summary, tues_data_summary, wed_data_summary, thurs_data_summary, fri_data_summary, sat_data_summary, sun_data_summary)
 
-
+	
 # assign weekday names to the rows
 rownames(weekday_sum) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
-
-
 </code></pre>
 
 </details>
@@ -1145,17 +1143,30 @@ rownames(weekday_sum) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-#sorting weekly averages by metric 
+# sorting weekly averages 
 sort(weekday_sum[[1]], decreasing = TRUE)
-[1] 9871.123 9273.217 9182.692 8183.516 8022.864 7901.404 7297.855
+# Output
+# [1] 9871.123 9273.217 9182.692 8183.516 8022.864 7901.404 7297.855
+
+# sorting weekly averages
 sort(weekday_sum[[2]], decreasing = TRUE)
-[1] 50.66154 50.28070 49.80435 38.90909 38.71875 38.07576 35.73684
+# Output
+# [1] 50.66154 50.28070 49.80435 38.90909 38.71875 38.07576 35.73684
+
+# sorting weekly averages
 sort(weekday_sum[[3]], decreasing = TRUE)
-[1] 965.7719 956.6308 940.7826 927.2105 922.4242 901.3125 887.6727
+# Output
+# [1] 965.7719 956.6308 940.7826 927.2105 922.4242 901.3125 887.6727
+
+# sorting weekly averages 
 sort(weekday_sum[[4]], decreasing = TRUE)
-[1] 2506.895 2496.200 2431.978 2378.242 2329.649 2306.672 2276.600
+# Output
+# [1] 2506.895 2496.200 2431.978 2378.242 2329.649 2306.672 2276.600
+
+# sorting weekly averages 
 sort(weekday_sum[[5]], decreasing = TRUE)
-[1] 7.545758 7.244697 6.991667 6.984503 6.757018 6.742308 6.688281
+# Output
+# [1] 7.545758 7.244697 6.991667 6.984503 6.757018 6.742308 6.688281
 </code></pre>
 
 </details>
@@ -1165,53 +1176,64 @@ sort(weekday_sum[[5]], decreasing = TRUE)
 
 <pre><code class="language-r">
 # average calories by weekday
-> ggplot(data = weekday_sum, 
-+        aes(x = reorder(as.character(row.names(weekday_sum)), -Calories_Avg), 
-+            y = Calories_Avg)) +
-+     geom_bar(stat = "identity", fill = "purple") +
-+     labs(title = "Average Calories by Weekday", 
-+          x = "Weekday", 
-+          y = "Avg Calories") +
-+     theme(axis.text.x = element_text(angle = 45, hjust = 1))
+ggplot(data = weekday_sum, 
+       aes(x = reorder(as.character(row.names(weekday_sum)), -Calories_Avg), 
+           y = Calories_Avg)) +
+    geom_bar(stat = "identity", fill = "purple") +
+    labs(title = "Average Calories by Weekday", 
+         x = "Weekday", 
+         y = "Avg Calories") +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+# Output
+# Plot: Bar chart showing Average Calories by Weekday
+
 # average active minutes by weekday
 ggplot(data = weekday_sum, 
-+           aes(x = reorder(as.character(row.names(weekday_sum)), -Active_Minutes_Avg), 
-+               y = Active_Minutes_Avg)) +
-+       geom_bar(stat = "identity", fill = "red") +
-+       labs(title = "Average Active Minutes by Weekday", 
-+             x = "Weekday", 
-+             y = "Avg Active Minutes") +
-+     theme(axis.text.x = element_text(angle = 45, hjust = 1))
+       aes(x = reorder(as.character(row.names(weekday_sum)), -Active_Minutes_Avg), 
+           y = Active_Minutes_Avg)) +
+    geom_bar(stat = "identity", fill = "red") +
+    labs(title = "Average Active Minutes by Weekday", 
+         x = "Weekday", 
+         y = "Avg Active Minutes") +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+# Output
+# Plot: Bar chart showing Average Active Minutes by Weekday
 
-#average sedentary minutes by weekday
+# average sedentary minutes by weekday
 ggplot(data = weekday_sum, 
-+            aes(x = reorder(as.character(row.names(weekday_sum)), -Sedentary_Minutes_Avg), 
-+             y = Sedentary_Minutes_Avg)) +
-+      geom_bar(stat = "identity", fill = "green") +
-+          labs(title = "Average Sedentary Minutes by Weekday", 
-+             x = "Weekday", 
-+             y = "Avg Sedentary Minutes") +
-+     theme(axis.text.x = element_text(angle = 45, hjust = 1))
+       aes(x = reorder(as.character(row.names(weekday_sum)), -Sedentary_Minutes_Avg), 
+           y = Sedentary_Minutes_Avg)) +
+    geom_bar(stat = "identity", fill = "green") +
+    labs(title = "Average Sedentary Minutes by Weekday", 
+         x = "Weekday", 
+         y = "Avg Sedentary Minutes") +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+# Output
+# Plot: Bar chart showing Average Sedentary Minutes by Weekday
 
 # average hours asleep by weekday
 ggplot(data = weekday_sum, 
-+              aes(x = reorder(as.character(row.names(weekday_sum)), -Total_Hours_Asleep_Avg), 
-+               y = Total_Hours_Asleep_Avg)) +
-+         geom_bar(stat = "identity", fill = "blue") +
-+         labs(title = "Average Hours of Sleep by Weekday", 
-+             x = "Weekday", 
-+             y = "Avg Hours of Sleep") +
-+       theme(axis.text.x = element_text(angle = 45, hjust = 1))
-	
+       aes(x = reorder(as.character(row.names(weekday_sum)), -Total_Hours_Asleep_Avg), 
+           y = Total_Hours_Asleep_Avg)) +
+    geom_bar(stat = "identity", fill = "blue") +
+    labs(title = "Average Hours of Sleep by Weekday", 
+         x = "Weekday", 
+         y = "Avg Hours of Sleep") +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+# Output
+# Plot: Bar chart showing Average Hours of Sleep by Weekday
+
 # average steps by weekday
- ggplot(data = weekday_sum, 
-+              aes(x = reorder(as.character(row.names(weekday_sum)), -Total_Steps_Avg), 
-+                   y = Total_Steps_Avg)) +
-+          geom_bar(stat = "identity", fill = "orange") +
-+          labs(title = "Average Steps by Weekday", 
-+               x = "Weekday", 
-+               y = "Avg Steps") +
-+    theme(axis.text.x = element_text(angle = 45, hjust = 1))	
+ggplot(data = weekday_sum, 
+       aes(x = reorder(as.character(row.names(weekday_sum)), -Total_Steps_Avg), 
+           y = Total_Steps_Avg)) +
+    geom_bar(stat = "identity", fill = "orange") +
+    labs(title = "Average Steps by Weekday", 
+         x = "Weekday", 
+         y = "Avg Steps") +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+# Output
+# Plot: Bar chart showing Average Steps by Weekday
 </code></pre>
 
 </details>

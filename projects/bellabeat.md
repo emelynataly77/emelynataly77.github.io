@@ -343,7 +343,6 @@ Load packages and hourly dataset:
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-<pre><code class="language-r">
 # load packages needed for analysis
 install.packages
 library(tidyverse)
@@ -368,44 +367,50 @@ Upload check:
 <pre><code class="language-r">
 # Preview the data
 head(hourly_df)
-# A tibble: 6 x 10
-#          Id activity_hour       Calories step_total total_intensity average_intensity activityDate time
-#       &lt;dbl&gt; &lt;dttm&gt;                 &lt;dbl&gt;      &lt;dbl&gt;           &lt;dbl&gt;             &lt;dbl&gt; &lt;date&gt;       &lt;dttm&gt;
-# 1 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
-# 2 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
-# 3 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
-# 4 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
-# 5 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
-# 6 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
-# ℹ 2 more variables: DayOfWeek &lt;chr&gt;, TimeOfDay &lt;fct&gt;
+
+# Output:
+A tibble: 6 x 10
+         Id activity_hour       Calories step_total total_intensity average_intensity activityDate time
+      &lt;dbl&gt; &lt;dttm&gt;                 &lt;dbl&gt;      &lt;dbl&gt;           &lt;dbl&gt;             &lt;dbl&gt; &lt;date&gt;       &lt;dttm&gt;
+1 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
+2 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
+3 7086361926 2016-04-23 01:00:00       68          0               1            0.0167 2016-04-23   2025-07-15 01:00:00
+4 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
+5 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
+6 7086361926 2016-04-23 01:00:00       68          0               2            0.0333 2016-04-23   2025-07-15 01:00:00
+ℹ 2 more variables: DayOfWeek &lt;chr&gt;, TimeOfDay &lt;fct&gt;
 
 # Check the structure of the data
 str(hourly_df)
-# spc_tbl_ [15,393,213 x 10] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
-#  $ Id               : num [1:15393213] 7.09e+09 7.09e+09 7.09e+09 ...
-#  $ activity_hour    : POSIXct[1:15393213], format: "2016-04-23 01:00:00" ...
-#  $ Calories         : num [1:15393213] 68 68 68 ...
-#  $ step_total       : num [1:15393213] 0 0 0 ...
-#  $ total_intensity  : num [1:15393213] 1 1 1 ...
-#  $ average_intensity: num [1:15393213] 0.0167 0.0167 ...
-#  $ activityDate     : Date[1:15393213], format: "2016-04-23" ...
-#  $ time             : POSIXct[1:15393213], format: "2025-07-15 01:00:00" ...
-#  $ DayOfWeek        : chr [1:15393213] "Saturday" "Saturday" ...
-#  $ TimeOfDay        : Factor w/ 4 levels "Night","Morning",..: 1 1 1 ...
-#  - attr(*, "spec")=
-#   .. cols(
-#   ..   Id = col_double(),
-#   ..   activity_hour = col_datetime(format = ""),
-#   ..   Calories = col_double(),
-#   ..   step_total = col_double(),
-#   ..   total_intensity = col_double(),
-#   ..   average_intensity = col_double()
-#   .. )
-#  - attr(*, "problems")=&lt;externalptr&gt;
+
+# Output:
+spc_tbl_ [15,393,213 x 10] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ Id               : num [1:15393213] 7.09e+09 7.09e+09 7.09e+09 ...
+ $ activity_hour    : POSIXct[1:15393213], format: "2016-04-23 01:00:00" ...
+ $ Calories         : num [1:15393213] 68 68 68 ...
+ $ step_total       : num [1:15393213] 0 0 0 ...
+ $ total_intensity  : num [1:15393213] 1 1 1 ...
+ $ average_intensity: num [1:15393213] 0.0167 0.0167 ...
+ $ activityDate     : Date[1:15393213], format: "2016-04-23" ...
+ $ time             : POSIXct[1:15393213], format: "2025-07-15 01:00:00" ...
+ $ DayOfWeek        : chr [1:15393213] "Saturday" "Saturday" ...
+ $ TimeOfDay        : Factor w/ 4 levels "Night","Morning",..: 1 1 1 ...
+ - attr(*, "spec")=
+  .. cols(
+  ..   Id = col_double(),
+  ..   activity_hour = col_datetime(format = ""),
+  ..   Calories = col_double(),
+  ..   step_total = col_double(),
+  ..   total_intensity = col_double(),
+  ..   average_intensity = col_double()
+  .. )
+ - attr(*, "problems")=&lt;externalptr&gt;
 
 # Check the dimensions
 dim(hourly_df)
-# [1] 15393213       10
+
+# Output:
+[1] 15393213       10
 </code></pre>
 
 </details>
@@ -422,7 +427,6 @@ hourly_df$activityDate &lt;- str_split_fixed(hourly_df$activity_hour, " ", n = 2
 hourly_df$time &lt;- str_split_fixed(hourly_df$activity_hour, " ", n = 2)[, 2]
 hourly_df$activityDate &lt;- as.Date(hourly_df$activityDate, format = "%Y-%m-%d")
 hourly_df$DayOfWeek &lt;- format(as.Date(hourly_df$activityDate), "%A")
-
 breaks &lt;- hour(hms("00:00:00", "05:59:59", "11:59:59", "17:59:59", "23:59:59"))
 labels &lt;- c("Night", "Morning", "Afternoon", "Evening")
 hourly_df$time &lt;- as.POSIXct(hourly_df$time, format = "%H:%M:%S")
@@ -430,10 +434,12 @@ hourly_df$TimeOfDay &lt;- cut(x = hour(hourly_df$time), breaks = breaks, labels 
 
 # check for NA values after pushing metrics and splitting data
 colSums(is.na(hourly_df))
-#                Id     activity_hour          Calories        step_total   total_intensity 
-#                 0                 0                 0                 0                 0 
-# average_intensity      activityDate              time         DayOfWeek         TimeOfDay 
-#                 0                 0            650227                 0            650227
+
+# Output:
+               Id     activity_hour          Calories        step_total   total_intensity 
+                0                 0                 0                 0                 0 
+average_intensity      activityDate              time         DayOfWeek         TimeOfDay 
+                0                 0            650227                 0            650227 
 </code></pre>
 
 </details>
@@ -444,69 +450,74 @@ I went ahead and also performed a correlation test. I just wanted to see any pot
 <summary>Show R Code</summary>
 
 <pre><code class="language-r">
-#Pearson correlation test: average_intensity vs Calories
+# Pearson correlation test: average_intensity vs Calories
 with(hourly_df, cor.test(average_intensity, Calories, method = "pearson"))
 
-	Pearson's product-moment correlation
+# Output:
+Pearson's product-moment correlation
 
 data:  average_intensity and Calories
-t = 147.75, df = 15393211, p-value < 2.2e-16
+t = 147.75, df = 15393211, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
  0.03713366 0.03813135
 sample estimates:
-       cor 
+      cor 
 0.03763252 
 
-#Pearson corelation test: total_intensity vs Calories
+# Pearson correlation test: total_intensity vs Calories
 with(hourly_df, cor.test(total_intensity, Calories, method = "pearson"))
 
-	Pearson's product-moment correlation
+# Output:
+Pearson's product-moment correlation
 
 data:  total_intensity and Calories
-t = 147.75, df = 15393211, p-value < 2.2e-16
+t = 147.75, df = 15393211, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
  0.03713366 0.03813136
 sample estimates:
-       cor 
+      cor 
 0.03763252 
 
-#Pearson correlation test: total_intensity vs step_total
+# Pearson correlation test: total_intensity vs step_total
 with(hourly_df, cor.test(total_intensity, step_total, method = "pearson"))
 
-	Pearson's product-moment correlation
+# Output:
+Pearson's product-moment correlation
 
 data:  total_intensity and step_total
-t = 170.87, df = 15393211, p-value < 2.2e-16
+t = 170.87, df = 15393211, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
  0.04301144 0.04400866
 sample estimates:
-       cor 
+      cor 
 0.04351006 
 
-#Pearson correlation test: average_intensity vs step_total
+# Pearson correlation test: average_intensity vs step_total
 with(hourly_df, cor.test(average_intensity, step_total, method = "pearson"))
 
-	Pearson's product-moment correlation
+# Output:
+Pearson's product-moment correlation
 
 data:  average_intensity and step_total
-t = 170.87, df = 15393211, p-value < 2.2e-16
+t = 170.87, df = 15393211, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
  0.04301144 0.04400866
 sample estimates:
-       cor 
+      cor 
 0.04351006 
 
-#Pearson correlation test: step _total vs Calories
+# Pearson correlation test: step_total vs Calories
 with(hourly_df, cor.test(step_total, Calories, method = "pearson"))
 
-	Pearson's product-moment correlation
+# Output:
+Pearson's product-moment correlation
 
 data:  step_total and Calories
-t = 5498.6, df = 15393211, p-value < 2.2e-16
+t = 5498.6, df = 15393211, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
  0.8138534 0.8141904

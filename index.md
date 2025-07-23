@@ -24,7 +24,7 @@ layout: default
 
 <div style="position: absolute; top: 120px; right: 20px;">
   <img 
-    src="assets/img/practice.png" 
+    src="assets/img/practice1.png" 
     alt="Profile Picture" 
     style="width: 130px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>

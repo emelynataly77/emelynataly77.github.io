@@ -14,7 +14,7 @@ layout: default
 
 ## Projects
 - [Bellabeat Capstone Project](projects/bellabeat.md)
-- [Chess Stats Visualization(In Progress)](projects/chess.md)   
+- [Chess Stats Visualization on Tableau(In Progress)](projects/chess.md)   
   
 ## Contact
 - Email:  [enpineda17@gmail.com](mailto:enpineda17@gmail.com)  

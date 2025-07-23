@@ -1339,6 +1339,7 @@ Finally, understanding the target audience more clearly could help improve Bella
 #  🤝 Acknowledgements <a id="acknowledgements"></a>
 
 I would like to thank Ed Garcia for his guidance on RStudio 
-   - https://www.kaggle.com/code/edgarcia1/bellabeat-case-study-analysis-and-visualizations 
+   - https://www.kaggle.com/code/edgarcia1/bellabeat-case-study-analysis-and-visualizations
+     
 I would like to thank Tom Leary for his guidance on grouping data by datatype
    - https://tomleary.net/projects/capstone/ 

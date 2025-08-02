@@ -19,7 +19,7 @@ layout: default
 ## Contact
 - Email:  [enpineda17@gmail.com](mailto:enpineda17@gmail.com)  
 - GitHub: [github.com/emelynataly77](https://github.com/emelynataly77)  
-- LinkedIn: [linkedin.com/in/YOUR-LINKEDIN](https://linkedin.com/in/YOUR-LINKEDIN)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/emely-pineda-7480b72a8/)
 
 
 <div style="position: absolute; top: 120px; right: 20px;">

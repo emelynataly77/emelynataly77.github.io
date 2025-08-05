@@ -8,22 +8,22 @@ title: Chess Stats Visualization
 Hello fellow chess fanatic! This project explores trends in chess openings using a [Kaggle](https://www.kaggle.com/datasets/alexandrelemercier/all-chess-openings) dataset of thousands of online games. The dataset was uploaded by the user: Alexandre Le Mercier, and updated a year ago. The dashboard, built in Tableau Public, highlights player win rates, draw percentages, and performance ratings across various chess openings. It helps answer questions like which openings are most successful, which color tends to win, and how player strength affects outcomes.
 
 The data cosists of the following fields: 
-- Opening: The name of the chess opening or defense variation.
-- Colour: The side (White or Black) that the opening is more favorable towards.
-- Num Games: The total number of games played with this opening.
-- ECO: The Encyclopaedia of Chess Openings classification code.
-- Last Played: The date of the latest game in the dataset utilizing this opening.
-- Perf Rating: The average performance rating of players who have played this opening.
-- Avg Player: The overall average rating of players in the dataset.
-- Player Win %: The win rate for players using the opening.
-- Draw %: The percentage of games that ended in a draw.
-- Opponent Win %: The win rate against players using the opening.
-- Moves: A sequence of the initial moves in standard chess notation.
-- Moves_list: A comprehensive list of all moves made in the opening sequence.
-- Move1w to Move4b: Detailed opening moves for both White and Black, up to the fourth move.
-- White_win%, Black_win%: The win percentages for White and Black.
-- White_odds: The odds ratio favoring White based on win rates.
-- White_Wins, Black_Wins: The total number of wins by White and Black.
+- **Opening**: The name of the chess opening or defense variation.
+- **Colour**: The side (White or Black) that the opening is more favorable towards.
+- **Num Games**: The total number of games played with this opening.
+- **ECO**: The Encyclopaedia of Chess Openings classification code.
+- **Last Played**: The date of the latest game in the dataset utilizing this opening.
+- **Perf Rating**: The average performance rating of players who have played this opening.
+- **Avg Player**: The overall average rating of players in the dataset.
+- **Player Win** %: The win rate for players using the opening.
+- **Draw %**: The percentage of games that ended in a draw.
+- **Opponent Win %**: The win rate against players using the opening.
+- **Moves**: A sequence of the initial moves in standard chess notation.
+- **Moves_list**: A comprehensive list of all moves made in the opening sequence.
+- **Move1w to Move4b**: Detailed opening moves for both White and Black, up to the 4th move
+- **White_win%, Black_win%**: The win percentages for White and Black.
+- **White_odds**: The odds ratio favoring White based on win rates.
+- **White_Wins, Black_Wins**: The total number of wins by White and Black.
 
 
 <!-- Full dashboard preview image -->

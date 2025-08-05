@@ -46,7 +46,7 @@ The data cosists of the following fields:
 
 What’s immediately clear from the data is that popularity doesn’t always equal success. For example, the most commonly played opening is the Sicilian Defense, Closed Variation, appearing in 32,617 games. However, it has a relatively low average win rate of just 32.17%. On the other hand, the Sicilian Defense, Nyezhmetdinov-Rossolimo Attack shows up in only 17,184 games, yet has the highest win rate at 41.80%.
 
-So while certain openings are widely used, that doesn’t necessarily make them the most effective — sometimes the best moves are the ones less played. Keep in mind that this viz did not take player skill level into account.  S
+So while certain openings are widely used, that doesn’t necessarily make them the most effective, sometimes the best moves are the ones less played. Keep in mind that this viz did not take player skill level into account. 
     </p>
   </div>
 </div>
@@ -58,7 +58,7 @@ So while certain openings are widely used, that doesn’t necessarily make them 
 
   <div style="flex: 1 1 400px;">
     <p>
-   So, what are the most successful chess openings according to this dataset? The bar chart showcases the top 15 most successful openings, ranked by average player win percentage. This means we're not looking at how often an opening is used, just how effective it is when it is used.
+   So, what are the most successful chess openings according to this dataset? The bar chart showcases the top 15 most successful openings, ranked by average player win percentage. This means we're not looking at how often an opening is used, just how effective it is when it is used (by either White or Black). 
 
 Interestingly, the top 15 most successful openings don’t overlap with the top 15 most common ones. That tells us something important: just because an opening is popular doesn’t necessarily mean it is effective. 
 
@@ -69,6 +69,7 @@ According to the data, the Italian Game, Two Knights Defense, Fried Liver Attack
 Most of the bars in the chart favor White, so does that mean White really has the advantage according to the data? Let’s take a closer look.
 
 NOTE: draws are included in the interactive viz, shown as percentages, since not every game ends with a win for either side.
+
     </p>
   </div>
 </div>
@@ -80,7 +81,7 @@ NOTE: draws are included in the interactive viz, shown as percentages, since not
   <img src="../assets/img/Pie.png" style="flex: 1 1 500px; max-width: 100%; border-radius: 10px;" alt="Pie Chart of Outcomes">
   <div style="flex: 1 1 400px;">
     <p>
-      The pie chart breaks down overall game outcomes across the dataset: wins by White, wins by Black, and draws. It shows that White holds a slight statistical advantage, while draws account for a significant portion of games, especially in balanced or defensive openings.
+   The pie chart breaks down the overall outcomes of games in the dataset: wins by White, wins by Black, and draws. While White has the highest win rate between the two sides, draws actually make up the largest portion of game results. This suggests that White might have a slight edge over Black, but it’s not overwhelming. Of course, we haven’t factored in player skill yet, so let’s dig deeper into the data. 
     </p>
   </div>
 </div>
@@ -92,11 +93,19 @@ NOTE: draws are included in the interactive viz, shown as percentages, since not
   <img src="../assets/img/Scatter.png" style="flex: 1 1 500px; max-width: 100%; border-radius: 10px;" alt="Scatter Plot of Ratings">
   <div style="flex: 1 1 400px;">
     <p>
-      This scatter plot visualizes the average performance rating of players who used each opening. Higher-rated players tend to use more positional or balanced openings. It also highlights which openings are favored among elite versus casual players.
+This scatter plot compares White and Black win percentages across different openings, using only games played by higher-rated players (avg rating between 2200 and 2400). By filtering out lower-level games and limiting the chart to openings with at least 400 games, we’re focusing on data that’s a little bit more reliable and relevant. 
+      
+Each point represents a chess opening. The size of the point shows how many games it was used in, and the color reflects the draw rate. There's a horizontal line showing the average White win rate, points below the line tend to favor White, while those above the line lean more toward Black.
+
+What this chart shows is that even at higher skill levels, many openings still lean in favor of White, with more points falling below the diagonal or to the right of center. That adds some weight to the idea that White might have a slight edge. That said, there are also a few openings where Black holds their ground or even outperforms White, but this happens rarely.
+Overall, White does seem to have a slight edge in the outcomes of the games included in this dataset.
     </p>
   </div>
 </div>
 
+## 🧠 Conclusion
+
+Overall, this project highlights how data can uncover meaningful trends in chess strategy. I personally, love chess and enjoy digging into datasets like these to help gain insights on the game and different strategy points. While some openings are clearly more popular, that doesn’t always translate to higher success rates. In fact, less common openings sometimes outperform the usual favorites. The analysis also suggests that White tends to have a slight edge, amongst different skill levels, though the margin isn't super significant. By combining win rates, draw percentages, and player skill levels, this dataset provides a valuable look at how opening choices impact game outcomes. Good luck on your next game!
 
 ## 🔗 View the Full Interactive Dashboard
 

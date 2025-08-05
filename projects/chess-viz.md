@@ -5,8 +5,8 @@ title: Chess Stats Visualization
 
 # Chess Stats Visualization on Tableau
 
-This dashboard explores win rates, draw percentages, and popular openings from a large chess dataset using Tableau Public.
+This dashboard visualizes trends from a large chess openings dataset using Tableau Public. It explores win rates, draw percentages, and player performance.
 
-<iframe src="https://public.tableau.com/views/ChessStats_17544059915240/Dashboard1?:embed=y&:display_count=yes" width="100%" height="827px" frameborder="0"></iframe>
+![Chess Dashboard Preview](https://public.tableau.com/static/images/Ch/ChessStats_17544059915240/Dashboard1/1.png)
 
-[View Full Dashboard on Tableau Public](https://public.tableau.com/views/ChessStats_17544059915240/Dashboard1)
+[➡️ View Full Interactive Dashboard on Tableau Public](https://public.tableau.com/views/ChessStats_17544059915240/Dashboard1)

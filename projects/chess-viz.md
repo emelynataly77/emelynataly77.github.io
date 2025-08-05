@@ -52,7 +52,7 @@ This project explores trends in chess openings using a Kaggle dataset of thousan
   </div>
 </div>
 
----
+--- 
 
 ## 🔹 Scatter Plot: Player Performance by Opening
 

@@ -38,7 +38,8 @@ The data cosists of the following fields:
 ## 🔹 Treemap: The 15 Most Used Openings
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
-  <img src="../assets/img/Tree.png" style="flex: 1 1 500px; max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" alt="Common Openings Treemap">
+  <img src="../assets/img/Tree.png" style="flex: 1 1 700px; max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" alt="Common Openings Treemap">
+
 
   <div style="flex: 1 1 400px;">
     <p>

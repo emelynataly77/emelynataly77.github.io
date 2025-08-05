@@ -5,47 +5,49 @@ title: Chess Stats Visualization
 
 # Chess Stats Visualization on Tableau
 
-![Full Dashboard](../assets/images/dashboard_preview.png){: style="width: 100%; height: auto;" }
+<!-- Full dashboard preview image -->
+![Full Dashboard](../assets/images/Dashboard.png){: style="width: 100%; height: auto;" }
 
-This project explores trends in chess openings using a Kaggle dataset of thousands of online games. The dashboard was created in Tableau Public and highlights win rates, draw percentages, and performance metrics for different opening strategies. It allows us to understand which openings are most successful, and how game outcomes differ by color and player rating.
+This project explores trends in chess openings using a Kaggle dataset of thousands of online games. The dashboard, built in Tableau Public, highlights player win rates, draw percentages, and performance ratings across various chess openings. It helps answer questions like which openings are most successful, which color tends to win, and how player strength affects outcomes.
 
 ---
 
-## 🔹 Opening Win Rates
+## 🔹 Bar Chart: Top 15 Most Successful Openings
 
 <div style="display: flex; gap: 20px; align-items: flex-start;">
-  <img src="../assets/images/opening_win_rates.png" style="width: 50%; border-radius: 10px;" alt="Opening Win Rates">
+  <img src="../assets/images/Bar.png" style="width: 50%; border-radius: 10px;" alt="Top Openings Bar Chart">
   <p style="width: 50%;">
-    This bar chart displays the top 15 chess openings ranked by player win percentage. Openings such as the Queen’s Gambit and Sicilian Defense show a strong tendency for White or Black to gain an advantage. The visualization highlights which strategies offer the best chance of success.
+    This bar chart displays the top 15 most successful chess openings ranked by player win percentage. It reveals that openings such as the Queen’s Gambit and Sicilian Defense are highly successful for the color they favor. These insights help players choose openings with the best statistical performance.
   </p>
 </div>
 
 ---
 
-## 🔹 Draw vs Win/Loss Breakdown
+## 🔹 Pie Chart: Game Outcome Distribution
 
 <div style="display: flex; gap: 20px; align-items: flex-start;">
-  <img src="../assets/images/draw_distribution.png" style="width: 50%; border-radius: 10px;" alt="Draw Distribution">
+  <img src="../assets/images/Pie.png" style="width: 50%; border-radius: 10px;" alt="Pie Chart of Outcomes">
   <p style="width: 50%;">
-    This stacked bar chart shows the distribution of game outcomes—wins, losses, and draws—for each opening. Some openings, like the Petroff Defense, are highly draw-prone, while others lead to more decisive outcomes. This helps identify conservative vs aggressive strategies.
+    The pie chart breaks down overall game outcomes across the dataset: wins by White, wins by Black, and draws. It shows that White holds a slight statistical advantage, while draws account for a significant portion of games, especially in balanced or defensive openings.
   </p>
 </div>
 
 ---
 
-## 🔹 Performance by Opening
+## 🔹 Scatter Plot: Player Performance by Opening
 
 <div style="display: flex; gap: 20px; align-items: flex-start;">
-  <img src="../assets/images/rating_vs_opening.png" style="width: 50%; border-radius: 10px;" alt="Performance by Opening">
+  <img src="../assets/images/Scatter.png" style="width: 50%; border-radius: 10px;" alt="Scatter Plot of Ratings">
   <p style="width: 50%;">
-    This scatter plot shows the average performance rating of players using each opening. We can observe that stronger players often use balanced or positional openings, while more casual players may favor aggressive lines.
+    This scatter plot visualizes the average performance rating of players who used each opening. Higher-rated players tend to use more positional or balanced openings. It also highlights which openings are favored among elite versus casual players.
   </p>
 </div>
 
 ---
 
-## 🔗 View the Full Dashboard
+## 🔗 View the Full Interactive Dashboard
 
-Click below to explore the interactive Tableau dashboard:
+Click below to explore the full dashboard on Tableau Public:
 
 [➡️ View on Tableau Public](https://public.tableau.com/views/ChessStats_17544059915240/Dashboard1)
+

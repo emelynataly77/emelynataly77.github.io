@@ -14,6 +14,17 @@ title: Chess Stats Visualization
 This project explores trends in chess openings using a Kaggle dataset of thousands of online games. The dashboard, built in Tableau Public, highlights player win rates, draw percentages, and performance ratings across various chess openings. It helps answer questions like which openings are most successful, which color tends to win, and how player strength affects outcomes.
 
 ---
+## 🔹 Treemap: Top 15 Most Successful Openings
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+  <img src="../assets/img/Tree.png" style="flex: 1 1 500px; max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" alt="Common Openings Treemap">
+
+  <div style="flex: 1 1 400px;">
+    <p>
+      This bar chart displays the top 15 most successful chess openings ranked by player win percentage. It reveals that openings such as the Queen’s Gambit and Sicilian Defense are highly successful for the color they favor. These insights help players choose openings with the best statistical performance.
+    </p>
+  </div>
+</div>
 
 ## 🔹 Bar Chart: Top 15 Most Successful Openings
 

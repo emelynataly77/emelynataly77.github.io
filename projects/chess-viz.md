@@ -6,7 +6,10 @@ title: Chess Stats Visualization
 # Chess Stats Visualization on Tableau
 
 <!-- Full dashboard preview image -->
-![Full Dashboard](../assets/img/Dashboard.png){: style="width: 100%; height: auto;" }
+<div style="text-align: center; margin-bottom: 30px;">
+  <img src="../assets/img/Dashboard.png" alt="Full Dashboard Preview" style="max-width: 90%; width: 900px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+</div>
+
 
 This project explores trends in chess openings using a Kaggle dataset of thousands of online games. The dashboard, built in Tableau Public, highlights player win rates, draw percentages, and performance ratings across various chess openings. It helps answer questions like which openings are most successful, which color tends to win, and how player strength affects outcomes.
 

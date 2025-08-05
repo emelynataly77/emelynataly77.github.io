@@ -42,7 +42,11 @@ The data cosists of the following fields:
 
   <div style="flex: 1 1 400px;">
     <p>
-      This bar chart displays the top 15 most successful chess openings ranked by player win percentage. It reveals that openings such as the Queen’s Gambit and Sicilian Defense are highly successful for the color they favor. These insights help players choose openings with the best statistical performance.
+      This treemap highlights the top 15 most popular chess openings from the dataset. The color gradient represents success rates based on player win percentages, with deeper green indicating lower win rates, deeper blue indicating higher success, and white sitting in the middle of the green-to-blue scale. The interactive viz displays each opening along with the total number of games it appears in and its average player win percentage.
+
+What’s immediately clear from the data is that popularity doesn’t always equal success. For example, the most commonly played opening is the Sicilian Defense, Closed Variation, appearing in 32,617 games. However, it has a relatively low average win rate of just 32.17%. On the other hand, the Sicilian Defense, Nyezhmetdinov-Rossolimo Attack shows up in only 17,184 games, yet has the highest win rate at 41.80%.
+
+So while certain openings are widely used, that doesn’t necessarily make them the most effective — sometimes the best moves are the ones less played. Keep in mind that this viz did not take player skill level into account.  S
     </p>
   </div>
 </div>
@@ -54,7 +58,17 @@ The data cosists of the following fields:
 
   <div style="flex: 1 1 400px;">
     <p>
-      This bar chart displays the top 15 most successful chess openings ranked by player win percentage. It reveals that openings such as the Queen’s Gambit and Sicilian Defense are highly successful for the color they favor. These insights help players choose openings with the best statistical performance.
+   So, what are the most successful chess openings according to this dataset? The bar chart showcases the top 15 most successful openings, ranked by average player win percentage. This means we're not looking at how often an opening is used, just how effective it is when it is used.
+
+Interestingly, the top 15 most successful openings don’t overlap with the top 15 most common ones. That tells us something important: just because an opening is popular doesn’t necessarily mean it is effective. 
+
+There’s also a classic debate in the chess world, does White have a natural advantage just by moving first? To explore that, each bar in the chart is color-coded: gray if White tends to win more with that opening, and black if Black is more likely to win.
+
+According to the data, the Italian Game, Two Knights Defense, Fried Liver Attack is the most successful opening, with a 77.60% average win rate, favoring White. It’s not the most played on the list though. The most played is the Scotch Game, General, which shows up in 3,697 games, but has a lower overall win rate.
+
+Most of the bars in the chart favor White, so does that mean White really has the advantage according to the data? Let’s take a closer look.
+
+NOTE: draws are included in the interactive viz, shown as percentages, since not every game ends with a win for either side.
     </p>
   </div>
 </div>

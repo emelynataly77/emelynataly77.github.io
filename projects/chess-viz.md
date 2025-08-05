@@ -5,7 +5,9 @@ title: Chess Stats Visualization
 
 # Chess Stats Visualization on Tableau
 
-This project explores trends in chess openings using a Kaggle dataset of thousands of online games. The dashboard, built in Tableau Public, highlights player win rates, draw percentages, and performance ratings across various chess openings. It helps answer questions like which openings are most successful, which color tends to win, and how player strength affects outcomes.
+This project explores trends in chess openings using a Kaggle dataset of thousands of online games. The dashboard, built in Tableau Public, highlights player win rates, draw percentages, and performance ratings across various chess openings. It helps answer questions like which openings are most successful, which color tends to win, and how player strength affects outcomes. 
+
+Please click on the dashboard to be redirected to the interactive dashboard on Tableau. 
 
 <!-- Full dashboard preview image -->
 <div style="text-align: center; margin-bottom: 30px;">
@@ -16,7 +18,7 @@ This project explores trends in chess openings using a Kaggle dataset of thousan
 </div>
 
 ---
-## 🔹 Treemap: Top 15 Most Successful Openings
+## 🔹 Treemap: The 15 Most Used Openings
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
   <img src="../assets/img/Tree.png" style="flex: 1 1 500px; max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" alt="Common Openings Treemap">

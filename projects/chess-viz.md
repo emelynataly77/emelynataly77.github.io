@@ -91,7 +91,7 @@ NOTE: draws are included in the interactive viz, shown as percentages, since not
 ## 🔹 Scatter Plot: Color Performance by Opening
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
-  <img src="../assets/img/Scatter.png" style="flex: 1 1 500px; max-width: 100%; border-radius: 10px;" alt="Scatter Plot of Ratings">
+  <img src="../assets/img/Scatter1.png" style="flex: 1 1 500px; max-width: 100%; border-radius: 10px;" alt="Scatter Plot of Ratings">
   <div style="flex: 1 1 400px;">
     <p>
 This scatter plot compares White and Black win percentages across different openings, using only games played by higher-rated players (avg rating between 2200 and 2400). By filtering out lower-level games and limiting the chart to openings with at least 400 games, we’re focusing on data that’s a little bit more reliable and relevant. 

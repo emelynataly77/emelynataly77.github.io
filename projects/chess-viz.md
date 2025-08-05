@@ -106,7 +106,7 @@ Overall, White does seem to have a slight edge in the outcomes of the games incl
 
 ## 🧠 Conclusion
 
-Overall, this project highlights how data can uncover meaningful trends in chess strategy. I personally, love chess and enjoy digging into datasets like these to help gain insights on the game and different strategy points. While some openings are clearly more popular, that doesn’t always translate to higher success rates. In fact, less common openings sometimes outperform the usual favorites. The analysis also suggests that White tends to have a slight edge, amongst different skill levels, though the margin isn't super significant. By combining win rates, draw percentages, and player skill levels, this dataset provides a valuable look at how opening choices impact game outcomes. Good luck on your next game!
+Overall, this project highlights some trends in chess strategy. I personally, love chess and enjoy digging into datasets like these to help gain insights on the game and data tactics. While some openings are clearly more popular, that doesn’t always translate to higher success rates. In fact, less common openings sometimes outperform the usual favorites. The analysis also suggests that White tends to have a slight edge, amongst different skill levels, though the margin isn't super significant. By combining win rates, draw percentages, and player skill levels, this dataset provides a valuable look at how opening choices impact game outcomes. So maybe look into learning more niche openings and gravitate to playing white. Good luck on your next game!
 
 ## 🔗 View the Full Interactive Dashboard
 

@@ -59,7 +59,7 @@ Please click on the dashboard to be redirected to the interactive dashboard on T
 
 --- 
 
-## 🔹 Scatter Plot: Player Performance by Opening
+## 🔹 Scatter Plot: Color Performance by Opening
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
   <img src="../assets/img/Scatter.png" style="flex: 1 1 500px; max-width: 100%; border-radius: 10px;" alt="Scatter Plot of Ratings">
